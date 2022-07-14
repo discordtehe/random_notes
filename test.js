@@ -127,7 +127,7 @@
   }
   function _0xa94d2e(_0x34decb) {
     switch (_0x34decb) {
-      case 1:
+      case 1: //dirt
         return [116, 66, 0]
       case _0x56432a.lava:
         return [166, 25, 6]
@@ -1211,7 +1211,7 @@
         'https://discord.com/api/oauth2/authorize?client_id=995547764983341057&redirect_uri=' +
         encodeURIComponent(window.location.origin + '/discord') +
         '&response_type=code&scope=identify&state=' +
-        encodeURIComponent(btoa(_0x4c0353)))
+        encodeURIComponent(btoa(accid)))
   }
   const _0x4aaa30 = document.querySelector('.logout-btn')
   function _0x3e858b(_0x4a4315, _0x441a5a) {
@@ -1220,9 +1220,9 @@
     }
   }
   _0x4aaa30.onclick = function () {
-    _0x4c0353 == localStorage.account_id && delete localStorage.account_id
+    accid == localStorage.account_id && delete localStorage.account_id
     delete localStorage.discord_data
-    _0x5461c4 && _0x5461c4.close()
+    ws && ws.close()
   }
   _0x3e858b('.discord-btn', 'https://discord.gg/WkYHsUQF5a')
   _0x3e858b('.reddit-btn', 'https://www.reddit.com/r/digworm/')
@@ -1366,8 +1366,8 @@
   _0x43ebf1.onclick = function () {
     _0x428202.classList.remove('minimize-show')
     _0x484ced.classList.remove('game-show')
-    _0x5461c4 &&
-      _0x5461c4.readyState === _0x5461c4.OPEN &&
+    ws &&
+      ws.readyState === ws.OPEN &&
       setTimeout(function () {
         _0x13cd5d.classList.add('grid-show')
       }, 500)
@@ -1626,7 +1626,7 @@
     return _0x46eb4b
   }
   const _0x4a1682 = []
-  let _0x3e3b1a, _0x99a5a4, _0x5461c4, _0x676061, _0x23f220
+  let _0x3e3b1a, _0x99a5a4, ws, _0x676061, _0x23f220
   function _0xaeee8d(_0xaf314c) {
     if (
       (console.log('Connecting to ' + _0xaf314c + '...'),
@@ -1655,24 +1655,24 @@
         _0x1cb108.style.display =
         _0x4f81b4.style.display =
           'none'),
-      _0x5461c4)
+      ws)
     ) {
       try {
-        _0x5461c4.close()
+        ws.close()
       } catch (_0x28418e) {}
-      _0x5461c4.onopen = _0x5461c4.onmessage = _0x5461c4.onclose = null
-      _0x5461c4 = null
+      ws.onopen = ws.onmessage = ws.onclose = null
+      ws = null
     }
-    _0x5461c4 = new WebSocket(_0xaf314c)
-    _0x5461c4.binaryType = 'arraybuffer'
-    _0x5461c4.onopen = _0x2149ba
-    _0x5461c4.onmessage = _0x10a4b7
-    _0x5461c4.onclose = _0x1f47a0
+    ws = new WebSocket(_0xaf314c)
+    ws.binaryType = 'arraybuffer'
+    ws.onopen = _0x2149ba
+    ws.onmessage = _0x10a4b7
+    ws.onclose = _0x1f47a0
   }
   const _0x28dd9d = document.querySelector('.avatar'),
     _0x261806 = document.querySelector('.username'),
     _0x4f81b4 = document.querySelector('.user')
-  let _0x4c0353, _0x420821
+  let accid, _0x420821
   function _0x2149ba() {
     var _0x2ffc81
     if (
@@ -1702,7 +1702,7 @@
       })(),
       _0x132df4(localStorage.account_id) ||
         (localStorage.account_id = crypto.randomUUID()),
-      (_0x4c0353 = localStorage.account_id),
+      (accid = localStorage.account_id),
       (_0x420821 = localStorage.discord_data),
       _0x420821 ||
         ('discord_data',
@@ -1730,7 +1730,7 @@
         ) {
           throw new Error('invalid uuid')
         }
-        _0x4c0353 = _0x420821.accountId
+        accid = _0x420821.accountId
         _0x261806.setAttribute('stroke', _0x420821.name)
         _0x420821.avatar &&
           (_0x28dd9d.style.backgroundImage = 'url(' + _0x420821.avatar + ')')
@@ -1741,11 +1741,11 @@
         console.error(_0x2f76b4)
       }
     }
-    const _0x36476a = new DataView(new ArrayBuffer(5 + _0x4c0353.length))
+    const _0x36476a = new DataView(new ArrayBuffer(5 + accid.length))
     _0x36476a.setUint8(0, _0x119776(3, 0))
     _0x36476a.setUint32(1, 1)
-    for (let _0x52843f = 0; _0x52843f < _0x4c0353.length; _0x52843f++) {
-      _0x36476a.setUint8(5 + _0x52843f, _0x4c0353.charCodeAt(_0x52843f))
+    for (let _0x52843f = 0; _0x52843f < accid.length; _0x52843f++) {
+      _0x36476a.setUint8(5 + _0x52843f, accid.charCodeAt(_0x52843f))
     }
     wssender(_0x36476a)
   }
@@ -2481,30 +2481,30 @@
   }
   function _0x1f47a0() {
     console.log('Disconnected.')
-    _0xaeee8d(_0x5461c4.url)
+    _0xaeee8d(ws.url)
   }
-  let _0x5b44b7 = 0
-  function wssender(_0x596064) {
-    if (_0x5461c4 && _0x5461c4.readyState === _0x5461c4.OPEN) {
-      if (((_0x596c53 += _0x596064.byteLength), _0x45bb9e)) {
-        const _0x2a2a02 = new Uint8Array(_0x596064.buffer)
-        for (let _0xfce57d = 0; _0xfce57d < _0x2a2a02.length; _0xfce57d++) {
-          _0x2a2a02[_0xfce57d] ^=
-            _0x45bb9e[(_0x5b44b7 + _0xfce57d) % _0x45bb9e.length]
+  let cnt = 0
+  function wssender(data) {
+    if (ws && ws.readyState === ws.OPEN) {
+      if (((_0x596c53 += data.byteLength), _0x45bb9e)) {
+        const buf = new Uint8Array(data.buffer)
+        for (let i = 0; i < buf.length; i++) {
+          buf[i] ^=
+            _0x45bb9e[(cnt + i) % _0x45bb9e.length]
         }
       }
-      _0x5b44b7 = (_0x5b44b7 + 1) % 1000
-      _0x45bb9e = new Uint8Array(_0x596064.buffer)
-      _0x5461c4.send(_0x596064)
+      cnt = (cnt + 1) % 1000
+      _0x45bb9e = new Uint8Array(data.buffer)
+      ws.send(data)
     }
   }
-  const _0x2db2d4 = 2 * Math.PI
+  const twopi = 2 * Math.PI
   function _0x47adf7(_0xaddfb3) {
     if (!_0x99a5a4 || _0x99a5a4.isDead) {
       return
     }
-    ;(_0xaddfb3 %= _0x2db2d4) < 0 && (_0xaddfb3 += _0x2db2d4)
-    _0xaddfb3 /= _0x2db2d4
+    ;(_0xaddfb3 %= twopi) < 0 && (_0xaddfb3 += twopi)
+    _0xaddfb3 /= twopi
     _0xaddfb3 = Math[0.75 === _0xaddfb3 ? 'ceil' : 'floor'](4095 * _0xaddfb3)
     const _0x309844 = new DataView(new ArrayBuffer(2))
     _0x309844.setUint8(0, _0x119776(1, _0xaddfb3 >> 8))
