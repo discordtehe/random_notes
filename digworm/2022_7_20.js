@@ -371,9 +371,9 @@
           '),t.rgb)<0.1'
         i !== ores.length - 1 && (oreProgramStr += '||')
       }
-      const _0x5900b9 = (function (_0xcbe078, _0x35f8d8) {
-        const vertexShader = _0x86d0ee('vertex', _0xcbe078),
-          fragmentShader = _0x86d0ee('fragment', _0x35f8d8),
+      const shaderProgram = (function (vertex, fragment) {
+        const vertexShader = _0x86d0ee('vertex', vertex),
+          fragmentShader = _0x86d0ee('fragment', fragment),
           program = gl.createProgram()
         return (
           gl.attachShader(program, vertexShader),
@@ -391,7 +391,7 @@
           oreProgramStr +
           '){\n\t\t\treturn t;\n\t\t}\n\t\treturn vec4(0.0);\n\t}\n\n\tvoid main(){\n\t\tvec4 a;\n\t\tvec4 sum;\n\t\tvec2 uv=vPos*0.5+0.5;\n\t\tif(uGlow){\n\t\t\tsum += getColor(vec2(uv.x - 4.0*blurSize.x, uv.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x - 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x - 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x - blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x + blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x + 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x + 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x + 4.0*blurSize.x, uv.y)) * 0.05;\n\n\t\t\t//y\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 4.0*blurSize.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 4.0*blurSize.y)) * 0.05;\n\t\t}\n\t\tif(u3d){\n\t\t\tfor (int i=0;i<=STEPS;i++) {\n\t\t\t\tfloat s=(float(i)/float(STEPS));\n\t\t\t\tvec2 p = vPos*(1.0+0.15*s);\n\t\t\t\tvec4 b = texture2D(tex, p*0.5+0.5);\n\t\t\t\tif (length(b.rgb-groundColor)<0.1) {\n\t\t\t\t\tif(i!=STEPS) {\n\t\t\t\t\t\tb.a = 0.0;\n\t\t\t\t\t}\n\t\t\t\t} else if(i!=0) {\n\t\t\t\t\tb.rgb=groundColor*0.8;\n\t\t\t\t}\n\t\t\t\ta.rgb = a.rgb*a.a + b.rgb*b.a*(1.0-a.a);\n\t\t\t\ta.a = a.a+b.a * (1.0-a.a);\n\t\t\t}\n\t\t}\n\t\tgl_FragColor = (u3d?a:texture2D(tex,uv)) + sum*(sin(uTime)*0.5+1.5);\n\t}\n\t'
       )
-      gl.useProgram(_0x5900b9)
+      gl.useProgram(shaderProgram)
       gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer())
       gl.bufferData(
         gl.ARRAY_BUFFER,
@@ -422,28 +422,28 @@
         gl.TEXTURE_MAG_FILTER,
         gl.NEAREST
       )
-      gl.uniform1i(gl.getUniformLocation(_0x5900b9, 'tex'), 0)
-      const _0x5a1142 = gl.getUniformLocation(_0x5900b9, 'u3d'),
-        _0x253aab = gl.getUniformLocation(_0x5900b9, 'uGlow'),
-        _0x3889ee = gl.getUniformLocation(_0x5900b9, 'uTime'),
-        _0x11fb1c = gl.getUniformLocation(_0x5900b9, 'blurSize')
-      function _0x86d0ee(_0x22ecad, _0x5df792) {
-        const _0x189e8b = gl.createShader(
-          'vertex' == _0x22ecad
+      gl.uniform1i(gl.getUniformLocation(shaderProgram, 'tex'), 0)
+      const u3d = gl.getUniformLocation(shaderProgram, 'u3d'),
+        uGlow = gl.getUniformLocation(shaderProgram, 'uGlow'),
+        uTime = gl.getUniformLocation(shaderProgram, 'uTime'),
+        blurSize = gl.getUniformLocation(shaderProgram, 'blurSize')
+      function _0x86d0ee(shaderType, originalSource) {
+        const shader = gl.createShader(
+          'vertex' == shaderType
             ? gl.VERTEX_SHADER
             : gl.FRAGMENT_SHADER
         )
         return (
-          gl.shaderSource(_0x189e8b, _0x5df792),
-          gl.compileShader(_0x189e8b),
-          gl.getShaderParameter(_0x189e8b, gl.COMPILE_STATUS) ||
+          gl.shaderSource(shader, originalSource),
+          gl.compileShader(shader),
+          gl.getShaderParameter(shader, gl.COMPILE_STATUS) ||
             console.log(
               'Error compiling ' +
-                _0x22ecad +
+                shaderType +
                 ' shader. ' +
-                gl.getShaderInfoLog(_0x189e8b)
+                gl.getShaderInfoLog(shader)
             ),
-          _0x189e8b
+          shader
         )
       }
       return function () {
@@ -453,13 +453,13 @@
             ((canvas.width = canvasEl.width),
             (canvas.height = canvasEl.height),
             gl.viewport(0, 0, canvasEl.width, canvasEl.height)),
-          gl.uniform1f(_0x3889ee, 0.005 * performance.now()),
-          gl.uniform2fv(_0x11fb1c, [
+          gl.uniform1f(uTime, 0.005 * performance.now()),
+          gl.uniform2fv(blurSize, [
             1 / canvasEl.width,
             1 / canvasEl.height,
           ]),
-          gl.uniform1i(_0x5a1142, enable3DEl.checked),
-          gl.uniform1i(_0x253aab, enableGlowEl.checked),
+          gl.uniform1i(u3d, enable3DEl.checked),
+          gl.uniform1i(uGlow, enableGlowEl.checked),
           gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true),
           gl.texImage2D(
             gl.TEXTURE_2D,
