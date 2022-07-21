@@ -357,9 +357,9 @@
   try {
     _0x312405 = (function () {
       const canvas = document.createElement('canvas'),
-        ctx =
-          canvas.getContext('webgl', _0x19e12e) ||
-          canvas.getContext('experimental-webgl', _0x19e12e),
+        gl =
+          canvas.getContext('webgl', contextAttributes) ||
+          canvas.getContext('experimental-webgl', contextAttributes),
         ores = ['gold', 'uranium', 'diamond', 'lava']
       let _0x4846ca = ''
       for (let i = 0; i < ores.length; i++) {
@@ -372,18 +372,18 @@
         i !== ores.length - 1 && (_0x4846ca += '||')
       }
       const _0x5900b9 = (function (_0xcbe078, _0x35f8d8) {
-        const _0x27e3c6 = _0x86d0ee('vertex', _0xcbe078),
-          _0x309276 = _0x86d0ee('fragment', _0x35f8d8),
-          _0x464086 = ctx.createProgram()
+        const vertexShader = _0x86d0ee('vertex', _0xcbe078),
+          fragmentShader = _0x86d0ee('fragment', _0x35f8d8),
+          program = gl.createProgram()
         return (
-          ctx.attachShader(_0x464086, _0x27e3c6),
-          ctx.attachShader(_0x464086, _0x309276),
-          ctx.linkProgram(_0x464086),
-          ctx.getProgramParameter(_0x464086, ctx.LINK_STATUS) ||
+          gl.attachShader(program, vertexShader),
+          gl.attachShader(program, fragmentShader),
+          gl.linkProgram(program),
+          gl.getProgramParameter(program, gl.LINK_STATUS) ||
             console.log(
-              'Error linking program. ' + ctx.getProgramInfoLog(_0x464086)
+              'Error linking program. ' + gl.getProgramInfoLog(program)
             ),
-          _0x464086
+          program
         )
       })(
         '\n\tattribute vec2 pos;\n\tvarying vec2 vPos;\n\tvoid main() {\n\t\tvPos=pos;\n\t\tgl_Position=vec4(pos,0.0,1.0);\n\t}\n\t',
@@ -391,57 +391,57 @@
           _0x4846ca +
           '){\n\t\t\treturn t;\n\t\t}\n\t\treturn vec4(0.0);\n\t}\n\n\tvoid main(){\n\t\tvec4 a;\n\t\tvec4 sum;\n\t\tvec2 uv=vPos*0.5+0.5;\n\t\tif(uGlow){\n\t\t\tsum += getColor(vec2(uv.x - 4.0*blurSize.x, uv.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x - 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x - 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x - blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x + blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x + 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x + 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x + 4.0*blurSize.x, uv.y)) * 0.05;\n\n\t\t\t//y\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 4.0*blurSize.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 4.0*blurSize.y)) * 0.05;\n\t\t}\n\t\tif(u3d){\n\t\t\tfor (int i=0;i<=STEPS;i++) {\n\t\t\t\tfloat s=(float(i)/float(STEPS));\n\t\t\t\tvec2 p = vPos*(1.0+0.15*s);\n\t\t\t\tvec4 b = texture2D(tex, p*0.5+0.5);\n\t\t\t\tif (length(b.rgb-groundColor)<0.1) {\n\t\t\t\t\tif(i!=STEPS) {\n\t\t\t\t\t\tb.a = 0.0;\n\t\t\t\t\t}\n\t\t\t\t} else if(i!=0) {\n\t\t\t\t\tb.rgb=groundColor*0.8;\n\t\t\t\t}\n\t\t\t\ta.rgb = a.rgb*a.a + b.rgb*b.a*(1.0-a.a);\n\t\t\t\ta.a = a.a+b.a * (1.0-a.a);\n\t\t\t}\n\t\t}\n\t\tgl_FragColor = (u3d?a:texture2D(tex,uv)) + sum*(sin(uTime)*0.5+1.5);\n\t}\n\t'
       )
-      ctx.useProgram(_0x5900b9)
-      ctx.bindBuffer(ctx.ARRAY_BUFFER, ctx.createBuffer())
-      ctx.bufferData(
-        ctx.ARRAY_BUFFER,
+      gl.useProgram(_0x5900b9)
+      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer())
+      gl.bufferData(
+        gl.ARRAY_BUFFER,
         new Float32Array([-1, 1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1]),
-        ctx.STATIC_DRAW
+        gl.STATIC_DRAW
       )
-      ctx.enableVertexAttribArray(0)
-      ctx.vertexAttribPointer(0, 2, ctx.FLOAT, false, 0, 0)
-      ctx.activeTexture(ctx.TEXTURE0)
-      ctx.bindTexture(ctx.TEXTURE_2D, ctx.createTexture())
-      ctx.texParameteri(
-        ctx.TEXTURE_2D,
-        ctx.TEXTURE_WRAP_S,
-        ctx.CLAMP_TO_EDGE
+      gl.enableVertexAttribArray(0)
+      gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0)
+      gl.activeTexture(gl.TEXTURE0)
+      gl.bindTexture(gl.TEXTURE_2D, gl.createTexture())
+      gl.texParameteri(
+        gl.TEXTURE_2D,
+        gl.TEXTURE_WRAP_S,
+        gl.CLAMP_TO_EDGE
       )
-      ctx.texParameteri(
-        ctx.TEXTURE_2D,
-        ctx.TEXTURE_WRAP_T,
-        ctx.CLAMP_TO_EDGE
+      gl.texParameteri(
+        gl.TEXTURE_2D,
+        gl.TEXTURE_WRAP_T,
+        gl.CLAMP_TO_EDGE
       )
-      ctx.texParameteri(
-        ctx.TEXTURE_2D,
-        ctx.TEXTURE_MIN_FILTER,
-        ctx.NEAREST
+      gl.texParameteri(
+        gl.TEXTURE_2D,
+        gl.TEXTURE_MIN_FILTER,
+        gl.NEAREST
       )
-      ctx.texParameteri(
-        ctx.TEXTURE_2D,
-        ctx.TEXTURE_MAG_FILTER,
-        ctx.NEAREST
+      gl.texParameteri(
+        gl.TEXTURE_2D,
+        gl.TEXTURE_MAG_FILTER,
+        gl.NEAREST
       )
-      ctx.uniform1i(ctx.getUniformLocation(_0x5900b9, 'tex'), 0)
-      const _0x5a1142 = ctx.getUniformLocation(_0x5900b9, 'u3d'),
-        _0x253aab = ctx.getUniformLocation(_0x5900b9, 'uGlow'),
-        _0x3889ee = ctx.getUniformLocation(_0x5900b9, 'uTime'),
-        _0x11fb1c = ctx.getUniformLocation(_0x5900b9, 'blurSize')
+      gl.uniform1i(gl.getUniformLocation(_0x5900b9, 'tex'), 0)
+      const _0x5a1142 = gl.getUniformLocation(_0x5900b9, 'u3d'),
+        _0x253aab = gl.getUniformLocation(_0x5900b9, 'uGlow'),
+        _0x3889ee = gl.getUniformLocation(_0x5900b9, 'uTime'),
+        _0x11fb1c = gl.getUniformLocation(_0x5900b9, 'blurSize')
       function _0x86d0ee(_0x22ecad, _0x5df792) {
-        const _0x189e8b = ctx.createShader(
+        const _0x189e8b = gl.createShader(
           'vertex' == _0x22ecad
-            ? ctx.VERTEX_SHADER
-            : ctx.FRAGMENT_SHADER
+            ? gl.VERTEX_SHADER
+            : gl.FRAGMENT_SHADER
         )
         return (
-          ctx.shaderSource(_0x189e8b, _0x5df792),
-          ctx.compileShader(_0x189e8b),
-          ctx.getShaderParameter(_0x189e8b, ctx.COMPILE_STATUS) ||
+          gl.shaderSource(_0x189e8b, _0x5df792),
+          gl.compileShader(_0x189e8b),
+          gl.getShaderParameter(_0x189e8b, gl.COMPILE_STATUS) ||
             console.log(
               'Error compiling ' +
                 _0x22ecad +
                 ' shader. ' +
-                ctx.getShaderInfoLog(_0x189e8b)
+                gl.getShaderInfoLog(_0x189e8b)
             ),
           _0x189e8b
         )
@@ -452,27 +452,27 @@
             canvas.height === canvasEl.height) ||
             ((canvas.width = canvasEl.width),
             (canvas.height = canvasEl.height),
-            ctx.viewport(0, 0, canvasEl.width, canvasEl.height)),
-          ctx.uniform1f(_0x3889ee, 0.005 * performance.now()),
-          ctx.uniform2fv(_0x11fb1c, [
+            gl.viewport(0, 0, canvasEl.width, canvasEl.height)),
+          gl.uniform1f(_0x3889ee, 0.005 * performance.now()),
+          gl.uniform2fv(_0x11fb1c, [
             1 / canvasEl.width,
             1 / canvasEl.height,
           ]),
-          ctx.uniform1i(_0x5a1142, enable3DEl.checked),
-          ctx.uniform1i(_0x253aab, enableGlowEl.checked),
-          ctx.pixelStorei(ctx.UNPACK_FLIP_Y_WEBGL, true),
-          ctx.texImage2D(
-            ctx.TEXTURE_2D,
+          gl.uniform1i(_0x5a1142, enable3DEl.checked),
+          gl.uniform1i(_0x253aab, enableGlowEl.checked),
+          gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true),
+          gl.texImage2D(
+            gl.TEXTURE_2D,
             0,
-            ctx.RGBA,
-            ctx.RGBA,
-            ctx.UNSIGNED_BYTE,
+            gl.RGBA,
+            gl.RGBA,
+            gl.UNSIGNED_BYTE,
             canvasEl
           ),
-          ctx.clear(
-            ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT
+          gl.clear(
+            gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT
           ),
-          ctx.drawArrays(ctx.TRIANGLES, 0, 6),
+          gl.drawArrays(gl.TRIANGLES, 0, 6),
           canvasElCtx.drawImage(
             canvas,
             0,
@@ -2759,12 +2759,12 @@
     delete _0x5cb559[_0xa736e7.button]
     _0x382b09()
   }
-  canvasEl.onmousemove = function (pos) {
+  canvasEl.onmousemove = function (event) {
     kbMovementCbEl.checked ||
       _0x2ebfb5(
         Math.atan2(
-          pos.clientY - window.innerHeight / 2,
-          pos.clientX - window.innerWidth / 2
+          event.clientY - window.innerHeight / 2,
+          event.clientX - window.innerWidth / 2
         )
       )
   }
