@@ -3,7 +3,7 @@
   function _0x4822ce(_0x26df6d, _0x270c5a) {
     return (_0x26df6d << 4) | _0x270c5a
   }
-  const _0xaf001b = {
+  const skins = {
     faceSkins: [
       {
         createdAt: 0,
@@ -99,8 +99,8 @@
       },
     ],
   }
-  for (let _0x143417 in _0xaf001b) {
-    const _0x558f1c = _0xaf001b[_0x143417]
+  for (let _0x143417 in skins) {
+    const _0x558f1c = skins[_0x143417]
     for (let _0x26ada4 = 0; _0x26ada4 < _0x558f1c.length; _0x26ada4++) {
       _0x558f1c[_0x26ada4].id = _0x26ada4
     }
@@ -932,7 +932,7 @@
         _0x4d6d74.fill()
         _0x4d6d74.stroke()
       }
-      const _0x197a07 = (_0xaf001b.faceSkins[this.faceSkin] || { name: 'idk' })
+      const _0x197a07 = (skins.faceSkins[this.faceSkin] || { name: 'idk' })
         .name
       if ('Faceless' === _0x197a07) {
         return
@@ -1413,7 +1413,7 @@
   _0x35cb64.onclick = function () {
     _0x292439 == localStorage.account_id && delete localStorage.account_id
     delete localStorage.discord_data
-    _0x2f4f3d && _0x2f4f3d.close()
+    ws && ws.close()
   }
   _0x243035('.discord-btn', 'https://discord.gg/WkYHsUQF5a')
   _0x243035('.reddit-btn', 'https://www.reddit.com/r/digworm/')
@@ -1557,8 +1557,8 @@
   _0x56f3e3.onclick = function () {
     _0x13afc3.classList.remove('minimize-show')
     _0x5a875d.classList.remove('game-show')
-    _0x2f4f3d &&
-      _0x2f4f3d.readyState === _0x2f4f3d.OPEN &&
+    ws &&
+      ws.readyState === ws.OPEN &&
       setTimeout(function () {
         _0x186185.classList.add('grid-show')
       }, 500)
@@ -1880,7 +1880,7 @@
     _0x2a27ee.restore()
   }
   const _0x31c3e2 = []
-  let _0x1cd091, _0x194da0, _0x2f4f3d, _0x36e905, _0x34e918
+  let _0x1cd091, _0x194da0, ws, _0x36e905, _0x34e918
   function _0x530c53() {
     _0x224d6b = false
     _0xaec281.innerHTML = ''
@@ -1894,9 +1894,9 @@
     _0x314ee2 = 0
     _0xb7f535 = 0
   }
-  function _0x10ea98(_0x1ecaa2) {
+  function _0x10ea98(WS_URL) {
     if (
-      (console.log('Connecting to ' + _0x1ecaa2 + '...'),
+      (console.log('Connecting to ' + WS_URL + '...'),
       _0x4f623f.classList.add('connecting-show'),
       _0x13afc3.classList.remove('minimize-show'),
       _0x56f3e3.click(),
@@ -1911,45 +1911,45 @@
       (_0x2a5982 = null),
       (_0x35cb64.style.display =
         _0x18e771.style.display =
-        _0x4773c6.style.display =
+        userEl.style.display =
           'none'),
-      _0x2f4f3d)
+      ws)
     ) {
       try {
-        _0x2f4f3d.close()
+        ws.close()
       } catch (_0x19f232) {}
-      _0x2f4f3d.onopen = _0x2f4f3d.onmessage = _0x2f4f3d.onclose = null
-      _0x2f4f3d = null
+      ws.onopen = ws.onmessage = ws.onclose = null
+      ws = null
     }
-    _0x2f4f3d = new WebSocket(_0x1ecaa2)
-    _0x2f4f3d.binaryType = 'arraybuffer'
-    _0x2f4f3d.onopen = _0x5cefd4
-    _0x2f4f3d.onmessage = _0x3919da
-    _0x2f4f3d.onclose = _0x2926f5
+    ws = new WebSocket(WS_URL)
+    ws.binaryType = 'arraybuffer'
+    ws.onopen = onOpen
+    ws.onmessage = onMessage
+    ws.onclose = onError
   }
-  const _0x5a5006 = document.querySelector('.avatar'),
-    _0x1a7acd = document.querySelector('.username'),
-    _0x4773c6 = document.querySelector('.user')
+  const avatarEl = document.querySelector('.avatar'),
+    usernameEl = document.querySelector('.username'),
+    userEl = document.querySelector('.user')
   let _0x292439, _0x2a5982
-  function _0x5cefd4() {
+  function onOpen() {
     var _0x1e5734
     if (
       (console.log('Connected!'),
       (function () {
         _0x553cf3.length = 1
-        for (let _0x1cfc0f in _0xaf001b) {
-          const _0x35ca70 = _0xaf001b[_0x1cfc0f]
+        for (let _0x1cfc0f in skins) {
+          const _0x35ca70 = skins[_0x1cfc0f]
           for (let _0x2a345c = 0; _0x2a345c < _0x35ca70.length; _0x2a345c++) {
             delete _0x35ca70[_0x2a345c].owned
             delete _0x35ca70[_0x2a345c].purchaseSent
           }
         }
-        _0x287195(_0xaf001b.faceSkins, _0x413b9c, 'face')
-        _0x287195(_0xaf001b.bodySkins, _0x6917f9, 'body')
+        _0x287195(skins.faceSkins, _0x413b9c, 'face')
+        _0x287195(skins.bodySkins, _0x6917f9, 'body')
         _0x421e37.length = 0
         _0x14cb2c.innerHTML = ''
-        const _0x4775f5 = _0xaf001b.faceSkins
-            .concat(_0xaf001b.bodySkins)
+        const _0x4775f5 = skins.faceSkins
+            .concat(skins.bodySkins)
             .sort(function (_0x24234f, _0x400b22) {
               return _0x400b22.createdAt - _0x24234f.createdAt
             }),
@@ -1988,9 +1988,9 @@
           throw new Error('invalid uuid')
         }
         _0x292439 = _0x2a5982.accountId
-        _0x1a7acd.setAttribute('stroke', _0x2a5982.name)
+        usernameEl.setAttribute('stroke', _0x2a5982.name)
         _0x2a5982.avatar &&
-          (_0x5a5006.style.backgroundImage = 'url(' + _0x2a5982.avatar + ')')
+          (avatarEl.style.backgroundImage = 'url(' + _0x2a5982.avatar + ')')
         localStorage.discord_data = _0x441886
       } catch (_0x4cdce7) {
         _0x2a5982 = null
@@ -2010,24 +2010,24 @@
   const _0x52a128 = []
   let _0x224d6b = false,
     _0x552882 = []
-  function _0x29e019(_0x30824d, _0x408aa0) {
-    const _0x402243 = document.createElement('div')
-    _0x402243.classList.add('lb-item')
-    const _0x3acaf5 = document.createElement('div')
-    _0x3acaf5.classList.add('lb-bar')
-    _0x402243.appendChild(_0x3acaf5)
-    const _0x3d38b7 = document.createElement('span')
-    _0x402243.appendChild(_0x3d38b7)
-    _0xaec281.appendChild(_0x402243)
+  function _0x29e019(name, score) {
+    const lbItemEl = document.createElement('div')
+    lbItemEl.classList.add('lb-item')
+    const lbBarEl = document.createElement('div')
+    lbBarEl.classList.add('lb-bar')
+    lbItemEl.appendChild(lbBarEl)
+    const lbTextEl = document.createElement('span')
+    lbItemEl.appendChild(lbTextEl)
+    _0xaec281.appendChild(lbItemEl)
     const _0x4587b5 = {
-      name: _0x30824d,
-      score: _0x408aa0,
+      name: name,
+      score: score,
       iScore: 0,
       percent: 0,
       iPercent: 0,
-      lbItemEl: _0x402243,
-      lbBarEl: _0x3acaf5,
-      lbTextEl: _0x3d38b7,
+      lbItemEl: lbItemEl,
+      lbBarEl: lbBarEl,
+      lbTextEl: lbTextEl,
       update: function () {
         this.iScore += 0.1 * (this.score - this.iScore)
         this.iPercent += 0.1 * (this.percent - this.iPercent)
@@ -2071,7 +2071,7 @@
   let _0x27c993 = 0
   const _0x127399 = []
   function _0x37c0af(_0x151ef4, _0x5e8647) {
-    const _0x534305 = _0xaf001b[_0x151ef4 + 'Skins'][_0x5e8647]
+    const _0x534305 = skins[_0x151ef4 + 'Skins'][_0x5e8647]
     _0x534305.owned = true
     const _0x54e3cd = _0x534305.shopItemEl.querySelector('.btn')
     _0x54e3cd.classList.remove('gold-btn')
@@ -2100,7 +2100,7 @@
     _0xc7f21b('body')
   }
   function _0xc7f21b(_0x78d58) {
-    const _0x54b5db = _0xaf001b[_0x78d58 + 'Skins']
+    const _0x54b5db = skins[_0x78d58 + 'Skins']
     for (let _0x363b3a = 0; _0x363b3a < _0x54b5db.length; _0x363b3a++) {
       const _0x190004 = _0x54b5db[_0x363b3a]
       if (_0x190004.owned) {
@@ -2211,7 +2211,7 @@
   }
   let _0x1175ff,
     _0x4c2f95 = 0
-  function _0x3919da(_0x330919) {
+  function onMessage(_0x330919) {
     if ('string' == typeof _0x330919.data) {
       return
     }
@@ -2274,7 +2274,7 @@
       case 3:
         if (
           (_0x2a5982
-            ? ((_0x35cb64.style.display = ''), (_0x4773c6.style.display = ''))
+            ? ((_0x35cb64.style.display = ''), (userEl.style.display = ''))
             : (_0x18e771.style.display = ''),
           (_0x27c993 = 0),
           0 === _0x3dce21)
@@ -2723,13 +2723,13 @@
           _0x52bebe.push(_0x52bebe[_0x52bebe.length - 1])
     }
   }
-  function _0x2926f5() {
+  function onError() {
     console.log('Disconnected.')
-    _0x10ea98(_0x2f4f3d.url)
+    _0x10ea98(ws.url)
   }
   let _0x57d1e4 = 0
   function _0x3fe969(_0x239abe) {
-    if (_0x2f4f3d && _0x2f4f3d.readyState === _0x2f4f3d.OPEN) {
+    if (ws && ws.readyState === ws.OPEN) {
       if (((_0x36e069 += _0x239abe.byteLength), _0x1175ff)) {
         const _0x5c493d = new Uint8Array(_0x239abe.buffer)
         for (let _0x481e64 = 0; _0x481e64 < _0x5c493d.length; _0x481e64++) {
@@ -2739,7 +2739,7 @@
       }
       _0x57d1e4 = (_0x57d1e4 + 1) % 1000
       _0x1175ff = new Uint8Array(_0x239abe.buffer)
-      _0x2f4f3d.send(_0x239abe)
+      ws.send(_0x239abe)
     }
   }
   const _0x4fd5e0 = 2 * Math.PI
