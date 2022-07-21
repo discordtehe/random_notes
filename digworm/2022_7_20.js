@@ -1,7 +1,7 @@
 ;(() => {
   'use strict'
-  function _0x4822ce(_0x26df6d, _0x270c5a) {
-    return (_0x26df6d << 4) | _0x270c5a
+  function leftShiftOr(num1, num2) {
+    return (num1 << 4) | num2
   }
   const skins = {
     faceSkins: [
@@ -99,14 +99,14 @@
       },
     ],
   }
-  for (let _0x143417 in skins) {
-    const _0x558f1c = skins[_0x143417]
-    for (let _0x26ada4 = 0; _0x26ada4 < _0x558f1c.length; _0x26ada4++) {
-      _0x558f1c[_0x26ada4].id = _0x26ada4
+  for (let skinType in skins) {
+    const skin = skins[skinType]
+    for (let i = 0; i < skin.length; i++) {
+      skin[i].id = i
     }
   }
-  function _0x1ce1f3(_0xe490a2, _0x57f2c5) {
-    const { viewWidth: _0x185e5b, viewHeight: _0x548d8d } = (function (
+  function _0x1ce1f3(_0xe490a2, bool) {
+    const { viewWidth: viewWidth, viewHeight: viewHeight } = (function (
         _0x1f21d8
       ) {
         _0x1f21d8 -= 30
@@ -116,40 +116,40 @@
           viewWidth: _0x29d507,
           viewHeight: 0.5 * _0x29d507,
         }
-      })(_0x57f2c5 ? _0xe490a2.interpR : _0xe490a2.r),
+      })(bool ? _0xe490a2.interpR : _0xe490a2.r),
       _0x37078e = _0xe490a2.segments[0],
-      _0x504c2c = _0x37078e.x - _0x185e5b / 2,
-      _0xc5e752 = _0x37078e.y - _0x548d8d / 2,
-      _0x36a41e = _0x37078e.x + _0x185e5b / 2,
-      _0x227b80 = _0x37078e.y + _0x548d8d / 2
+      minX = _0x37078e.x - viewWidth / 2,
+      minY = _0x37078e.y - viewHeight / 2,
+      maxX = _0x37078e.x + viewWidth / 2,
+      maxY = _0x37078e.y + viewHeight / 2
     return {
-      minX: _0x504c2c,
-      minY: _0xc5e752,
-      maxX: _0x36a41e,
-      maxY: _0x227b80,
-      sx: Math.max(0, Math.floor(_0x504c2c / 480)),
-      sy: Math.max(0, Math.floor(_0xc5e752 / 480)),
-      ex: Math.min(63, Math.floor(_0x36a41e / 480)),
-      ey: Math.min(63, Math.floor(_0x227b80 / 480)),
-      viewWidth: _0x185e5b,
-      viewHeight: _0x548d8d,
+      minX: minX,
+      minY: minY,
+      maxX: maxX,
+      maxY: maxY,
+      sx: Math.max(0, Math.floor(minX / 480)),
+      sy: Math.max(0, Math.floor(minY / 480)),
+      ex: Math.min(63, Math.floor(maxX / 480)),
+      ey: Math.min(63, Math.floor(maxY / 480)),
+      viewWidth: viewWidth,
+      viewHeight: viewHeight,
     }
   }
-  function _0x1ed3cb(_0x3eb535) {
-    switch (_0x3eb535) {
-      case _0x21ff22.dirt:
+  function oreToColor(ore) {
+    switch (ore) {
+      case oreType.dirt:
         return [116, 66, 0]
-      case _0x21ff22.lava:
+      case oreType.lava:
         return [166, 25, 6]
       case 3:
         return [49, 165, 158]
-      case _0x21ff22.gold:
+      case oreType.gold:
         return [165, 158, 21]
-      case _0x21ff22.uranium:
+      case oreType.uranium:
         return [50, 164, 48]
       case 6:
         return [255, 255, 255]
-      case _0x21ff22.bedrock:
+      case oreType.bedrock:
         return [10, 10, 10]
       case 8:
         return [90, 90, 90]
@@ -192,16 +192,16 @@
         return 10000 * _0x312f83
     }
   }
-  function _0x10e6ea(_0x439a07) {
+  function isValidUuid(str) {
     return (
-      !(!_0x439a07 || 36 !== _0x439a07.length) &&
+      !(!str || 36 !== str.length) &&
       /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
-        _0x439a07
+        str
       )
     )
   }
   const _0x36e559 = [40, 45, 50, 55, 60, 65, 70],
-    _0x33b220 = [
+    changelog = [
       {
         title: 'July 20th 2022',
         content: ['Added maze mode.', 'Connection limit bug fix.'],
@@ -316,72 +316,72 @@
         content: ['Released.'],
       },
     ],
-    _0x23f197 = document.getElementById('enable3D')
-  _0x5f77ca(_0x23f197, 'enable_3d')
-  const _0x34f7af = document.getElementById('enableGlow')
-  _0x5f77ca(_0x34f7af, 'enable_glow')
-  const _0x269cb0 = document.getElementById('highRes')
-  _0x5f77ca(_0x269cb0, 'high_res')
-  const _0x47102f = document.getElementById('deadWorm'),
-    _0x4d366e = _0x47102f.getContext('2d')
+    enable3DEl = document.getElementById('enable3D')
+  _0x5f77ca(enable3DEl, 'enable_3d')
+  const enableGlowEl = document.getElementById('enableGlow')
+  _0x5f77ca(enableGlowEl, 'enable_glow')
+  const highResEl = document.getElementById('highRes')
+  _0x5f77ca(highResEl, 'high_res')
+  const deadWormEl = document.getElementById('deadWorm'),
+    deadWormCtx = deadWormEl.getContext('2d')
   let _0x4868a9, _0x312405
   function _0x8d0f50() {
     if (!_0x194da0 || !_0x194da0.isDead) {
       return
     }
-    _0x47102f.getBoundingClientRect()
+    deadWormEl.getBoundingClientRect()
     const _0x515827 = 200 * _0x19da0e * window.devicePixelRatio
-    _0x47102f.width !== _0x515827 &&
-      ((_0x47102f.width = _0x515827), (_0x47102f.height = _0x515827 / 4))
-    const _0x9d600b = _0x4868a9 || new _0x2561ae(0, 0, 30)
-    _0x4868a9 = _0x9d600b
-    for (let _0x10eb14 = 0; _0x10eb14 < 2; _0x10eb14++) {
-      _0x9d600b.segments[_0x10eb14] = {
-        interpX: -100 * (2 * _0x10eb14 - 1),
+    deadWormEl.width !== _0x515827 &&
+      ((deadWormEl.width = _0x515827), (deadWormEl.height = _0x515827 / 4))
+    const worm = _0x4868a9 || new Worm(0, 0, 30)
+    _0x4868a9 = worm
+    for (let i = 0; i < 2; i++) {
+      worm.segments[i] = {
+        interpX: -100 * (2 * i - 1),
         interpY: 0,
       }
     }
-    _0x9d600b.isDead = true
-    _0x9d600b.faceSkin = _0x194da0.faceSkin
-    _0x4d366e.clearRect(0, 0, _0x47102f.width, _0x47102f.height)
-    const _0x58da47 = (_0x47102f.height / _0x9d600b.interpR / 2) * 0.8
-    _0x4d366e.save()
-    _0x4d366e.translate(_0x47102f.width / 2, _0x47102f.height / 2)
-    _0x4d366e.scale(_0x58da47, _0x58da47)
-    _0x9d600b.draw(0, _0x4d366e)
-    _0x4d366e.restore()
+    worm.isDead = true
+    worm.faceSkin = _0x194da0.faceSkin
+    deadWormCtx.clearRect(0, 0, deadWormEl.width, deadWormEl.height)
+    const _0x58da47 = (deadWormEl.height / worm.interpR / 2) * 0.8
+    deadWormCtx.save()
+    deadWormCtx.translate(deadWormEl.width / 2, deadWormEl.height / 2)
+    deadWormCtx.scale(_0x58da47, _0x58da47)
+    worm.draw(0, deadWormCtx)
+    deadWormCtx.restore()
   }
   window.s = 0.1
   window.x = 0
   window.y = 0
   try {
     _0x312405 = (function () {
-      const _0x41c915 = document.createElement('canvas'),
-        _0x3d368e =
-          _0x41c915.getContext('webgl', _0x19e12e) ||
-          _0x41c915.getContext('experimental-webgl', _0x19e12e),
-        _0x45cbcc = ['gold', 'uranium', 'diamond', 'lava']
+      const canvas = document.createElement('canvas'),
+        ctx =
+          canvas.getContext('webgl', _0x19e12e) ||
+          canvas.getContext('experimental-webgl', _0x19e12e),
+        ores = ['gold', 'uranium', 'diamond', 'lava']
       let _0x4846ca = ''
-      for (let _0x45eb57 = 0; _0x45eb57 < _0x45cbcc.length; _0x45eb57++) {
+      for (let i = 0; i < ores.length; i++) {
         _0x4846ca +=
           'distance(vec3(' +
-          _0x1ed3cb(_0x21ff22[_0x45cbcc[_0x45eb57]])
+          oreToColor(_0x21ff22[ores[i]])
             .map((_0x27afdc) => _0x27afdc / 255)
             .join(',') +
           '),t.rgb)<0.1'
-        _0x45eb57 !== _0x45cbcc.length - 1 && (_0x4846ca += '||')
+        i !== ores.length - 1 && (_0x4846ca += '||')
       }
       const _0x5900b9 = (function (_0xcbe078, _0x35f8d8) {
         const _0x27e3c6 = _0x86d0ee('vertex', _0xcbe078),
           _0x309276 = _0x86d0ee('fragment', _0x35f8d8),
-          _0x464086 = _0x3d368e.createProgram()
+          _0x464086 = ctx.createProgram()
         return (
-          _0x3d368e.attachShader(_0x464086, _0x27e3c6),
-          _0x3d368e.attachShader(_0x464086, _0x309276),
-          _0x3d368e.linkProgram(_0x464086),
-          _0x3d368e.getProgramParameter(_0x464086, _0x3d368e.LINK_STATUS) ||
+          ctx.attachShader(_0x464086, _0x27e3c6),
+          ctx.attachShader(_0x464086, _0x309276),
+          ctx.linkProgram(_0x464086),
+          ctx.getProgramParameter(_0x464086, ctx.LINK_STATUS) ||
             console.log(
-              'Error linking program. ' + _0x3d368e.getProgramInfoLog(_0x464086)
+              'Error linking program. ' + ctx.getProgramInfoLog(_0x464086)
             ),
           _0x464086
         )
@@ -391,104 +391,104 @@
           _0x4846ca +
           '){\n\t\t\treturn t;\n\t\t}\n\t\treturn vec4(0.0);\n\t}\n\n\tvoid main(){\n\t\tvec4 a;\n\t\tvec4 sum;\n\t\tvec2 uv=vPos*0.5+0.5;\n\t\tif(uGlow){\n\t\t\tsum += getColor(vec2(uv.x - 4.0*blurSize.x, uv.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x - 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x - 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x - blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x + blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x + 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x + 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x + 4.0*blurSize.x, uv.y)) * 0.05;\n\n\t\t\t//y\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 4.0*blurSize.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 4.0*blurSize.y)) * 0.05;\n\t\t}\n\t\tif(u3d){\n\t\t\tfor (int i=0;i<=STEPS;i++) {\n\t\t\t\tfloat s=(float(i)/float(STEPS));\n\t\t\t\tvec2 p = vPos*(1.0+0.15*s);\n\t\t\t\tvec4 b = texture2D(tex, p*0.5+0.5);\n\t\t\t\tif (length(b.rgb-groundColor)<0.1) {\n\t\t\t\t\tif(i!=STEPS) {\n\t\t\t\t\t\tb.a = 0.0;\n\t\t\t\t\t}\n\t\t\t\t} else if(i!=0) {\n\t\t\t\t\tb.rgb=groundColor*0.8;\n\t\t\t\t}\n\t\t\t\ta.rgb = a.rgb*a.a + b.rgb*b.a*(1.0-a.a);\n\t\t\t\ta.a = a.a+b.a * (1.0-a.a);\n\t\t\t}\n\t\t}\n\t\tgl_FragColor = (u3d?a:texture2D(tex,uv)) + sum*(sin(uTime)*0.5+1.5);\n\t}\n\t'
       )
-      _0x3d368e.useProgram(_0x5900b9)
-      _0x3d368e.bindBuffer(_0x3d368e.ARRAY_BUFFER, _0x3d368e.createBuffer())
-      _0x3d368e.bufferData(
-        _0x3d368e.ARRAY_BUFFER,
+      ctx.useProgram(_0x5900b9)
+      ctx.bindBuffer(ctx.ARRAY_BUFFER, ctx.createBuffer())
+      ctx.bufferData(
+        ctx.ARRAY_BUFFER,
         new Float32Array([-1, 1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1]),
-        _0x3d368e.STATIC_DRAW
+        ctx.STATIC_DRAW
       )
-      _0x3d368e.enableVertexAttribArray(0)
-      _0x3d368e.vertexAttribPointer(0, 2, _0x3d368e.FLOAT, false, 0, 0)
-      _0x3d368e.activeTexture(_0x3d368e.TEXTURE0)
-      _0x3d368e.bindTexture(_0x3d368e.TEXTURE_2D, _0x3d368e.createTexture())
-      _0x3d368e.texParameteri(
-        _0x3d368e.TEXTURE_2D,
-        _0x3d368e.TEXTURE_WRAP_S,
-        _0x3d368e.CLAMP_TO_EDGE
+      ctx.enableVertexAttribArray(0)
+      ctx.vertexAttribPointer(0, 2, ctx.FLOAT, false, 0, 0)
+      ctx.activeTexture(ctx.TEXTURE0)
+      ctx.bindTexture(ctx.TEXTURE_2D, ctx.createTexture())
+      ctx.texParameteri(
+        ctx.TEXTURE_2D,
+        ctx.TEXTURE_WRAP_S,
+        ctx.CLAMP_TO_EDGE
       )
-      _0x3d368e.texParameteri(
-        _0x3d368e.TEXTURE_2D,
-        _0x3d368e.TEXTURE_WRAP_T,
-        _0x3d368e.CLAMP_TO_EDGE
+      ctx.texParameteri(
+        ctx.TEXTURE_2D,
+        ctx.TEXTURE_WRAP_T,
+        ctx.CLAMP_TO_EDGE
       )
-      _0x3d368e.texParameteri(
-        _0x3d368e.TEXTURE_2D,
-        _0x3d368e.TEXTURE_MIN_FILTER,
-        _0x3d368e.NEAREST
+      ctx.texParameteri(
+        ctx.TEXTURE_2D,
+        ctx.TEXTURE_MIN_FILTER,
+        ctx.NEAREST
       )
-      _0x3d368e.texParameteri(
-        _0x3d368e.TEXTURE_2D,
-        _0x3d368e.TEXTURE_MAG_FILTER,
-        _0x3d368e.NEAREST
+      ctx.texParameteri(
+        ctx.TEXTURE_2D,
+        ctx.TEXTURE_MAG_FILTER,
+        ctx.NEAREST
       )
-      _0x3d368e.uniform1i(_0x3d368e.getUniformLocation(_0x5900b9, 'tex'), 0)
-      const _0x5a1142 = _0x3d368e.getUniformLocation(_0x5900b9, 'u3d'),
-        _0x253aab = _0x3d368e.getUniformLocation(_0x5900b9, 'uGlow'),
-        _0x3889ee = _0x3d368e.getUniformLocation(_0x5900b9, 'uTime'),
-        _0x11fb1c = _0x3d368e.getUniformLocation(_0x5900b9, 'blurSize')
+      ctx.uniform1i(ctx.getUniformLocation(_0x5900b9, 'tex'), 0)
+      const _0x5a1142 = ctx.getUniformLocation(_0x5900b9, 'u3d'),
+        _0x253aab = ctx.getUniformLocation(_0x5900b9, 'uGlow'),
+        _0x3889ee = ctx.getUniformLocation(_0x5900b9, 'uTime'),
+        _0x11fb1c = ctx.getUniformLocation(_0x5900b9, 'blurSize')
       function _0x86d0ee(_0x22ecad, _0x5df792) {
-        const _0x189e8b = _0x3d368e.createShader(
+        const _0x189e8b = ctx.createShader(
           'vertex' == _0x22ecad
-            ? _0x3d368e.VERTEX_SHADER
-            : _0x3d368e.FRAGMENT_SHADER
+            ? ctx.VERTEX_SHADER
+            : ctx.FRAGMENT_SHADER
         )
         return (
-          _0x3d368e.shaderSource(_0x189e8b, _0x5df792),
-          _0x3d368e.compileShader(_0x189e8b),
-          _0x3d368e.getShaderParameter(_0x189e8b, _0x3d368e.COMPILE_STATUS) ||
+          ctx.shaderSource(_0x189e8b, _0x5df792),
+          ctx.compileShader(_0x189e8b),
+          ctx.getShaderParameter(_0x189e8b, ctx.COMPILE_STATUS) ||
             console.log(
               'Error compiling ' +
                 _0x22ecad +
                 ' shader. ' +
-                _0x3d368e.getShaderInfoLog(_0x189e8b)
+                ctx.getShaderInfoLog(_0x189e8b)
             ),
           _0x189e8b
         )
       }
       return function () {
-        ;(_0x23f197.checked || _0x34f7af.checked) &&
-          ((_0x41c915.width === _0x4f5add.width &&
-            _0x41c915.height === _0x4f5add.height) ||
-            ((_0x41c915.width = _0x4f5add.width),
-            (_0x41c915.height = _0x4f5add.height),
-            _0x3d368e.viewport(0, 0, _0x4f5add.width, _0x4f5add.height)),
-          _0x3d368e.uniform1f(_0x3889ee, 0.005 * performance.now()),
-          _0x3d368e.uniform2fv(_0x11fb1c, [
-            1 / _0x4f5add.width,
-            1 / _0x4f5add.height,
+        ;(enable3DEl.checked || enableGlowEl.checked) &&
+          ((canvas.width === canvasEl.width &&
+            canvas.height === canvasEl.height) ||
+            ((canvas.width = canvasEl.width),
+            (canvas.height = canvasEl.height),
+            ctx.viewport(0, 0, canvasEl.width, canvasEl.height)),
+          ctx.uniform1f(_0x3889ee, 0.005 * performance.now()),
+          ctx.uniform2fv(_0x11fb1c, [
+            1 / canvasEl.width,
+            1 / canvasEl.height,
           ]),
-          _0x3d368e.uniform1i(_0x5a1142, _0x23f197.checked),
-          _0x3d368e.uniform1i(_0x253aab, _0x34f7af.checked),
-          _0x3d368e.pixelStorei(_0x3d368e.UNPACK_FLIP_Y_WEBGL, true),
-          _0x3d368e.texImage2D(
-            _0x3d368e.TEXTURE_2D,
+          ctx.uniform1i(_0x5a1142, enable3DEl.checked),
+          ctx.uniform1i(_0x253aab, enableGlowEl.checked),
+          ctx.pixelStorei(ctx.UNPACK_FLIP_Y_WEBGL, true),
+          ctx.texImage2D(
+            ctx.TEXTURE_2D,
             0,
-            _0x3d368e.RGBA,
-            _0x3d368e.RGBA,
-            _0x3d368e.UNSIGNED_BYTE,
-            _0x4f5add
+            ctx.RGBA,
+            ctx.RGBA,
+            ctx.UNSIGNED_BYTE,
+            canvasEl
           ),
-          _0x3d368e.clear(
-            _0x3d368e.COLOR_BUFFER_BIT | _0x3d368e.DEPTH_BUFFER_BIT
+          ctx.clear(
+            ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT
           ),
-          _0x3d368e.drawArrays(_0x3d368e.TRIANGLES, 0, 6),
-          _0x342747.drawImage(
-            _0x41c915,
+          ctx.drawArrays(ctx.TRIANGLES, 0, 6),
+          canvasElCtx.drawImage(
+            canvas,
             0,
             0,
-            _0x4f5add.width,
-            _0x4f5add.height
+            canvasEl.width,
+            canvasEl.height
           ))
       }
     })()
-  } catch (_0x5f596f) {
-    console.error('Error creating post processor. ' + _0x5f596f)
-    _0x91abc2(_0x23f197, false)
-    _0x91abc2(_0x34f7af, false)
-    _0x91abc2(_0x269cb0, false)
+  } catch (err) {
+    console.error('Error creating post processor. ' + err)
+    _0x91abc2(enable3DEl, false)
+    _0x91abc2(enableGlowEl, false)
+    _0x91abc2(highResEl, false)
   }
-  1 === window.devicePixelRatio && _0x91abc2(_0x269cb0, false)
+  1 === window.devicePixelRatio && _0x91abc2(highResEl, false)
   ;(function () {
     for (
       var _0x794544 = 0,
@@ -517,9 +517,9 @@
         clearTimeout(_0x32a71d)
       })
   })()
-  const _0x2b477b = document.querySelector('.killer'),
-    _0xce3c49 = document.getElementById('fixedJoystickCb')
-  _0x5f77ca(_0xce3c49, 'fixed_joystick')
+  const killerEl = document.querySelector('.killer'),
+    fixedJoystickCbEl = document.getElementById('fixedJoystickCb')
+  _0x5f77ca(fixedJoystickCbEl, 'fixed_joystick')
   const _0x39ef23 = (window.mobileAndTabletCheck = function () {
       let _0x4b933b = false
       var _0x56be4a
@@ -535,57 +535,57 @@
         _0x4b933b
       )
     })(),
-    _0x4601a8 = navigator.userAgent.toLowerCase(),
+    ua = navigator.userAgent.toLowerCase(),
     _0x5e06ec =
       /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
-        _0x4601a8
+        ua
       ),
-    _0x13afc3 = document.querySelector('.minimize'),
-    _0x20dc75 = document.querySelector('.minimize-btn')
-  _0x20dc75.onclick = function () {
-    _0x13afc3.classList.add('minimize-show')
-    _0x5a875d.classList.remove('game-show')
-    _0x186185.classList.remove('grid-show')
+    minimizeEl = document.querySelector('.minimize'),
+    minimizeBtnEl = document.querySelector('.minimize-btn')
+  minimizeBtnEl.onclick = function () {
+    minimizeEl.classList.add('minimize-show')
+    gameEl.classList.remove('game-show')
+    gridEl.classList.remove('grid-show')
   }
-  const _0x194e5e = document.querySelector('.hud-common'),
-    _0x41e27f = document.querySelector('.resume'),
-    _0x4f3f05 = document.querySelector('.giveup')
-  _0x41e27f.onclick = function () {
-    _0xe694f5()
-    _0x5a875d.classList.add('game-show')
+  const hudCommonEl = document.querySelector('.hud-common'),
+    resumeEl = document.querySelector('.resume'),
+    giveupEl = document.querySelector('.giveup')
+  resumeEl.onclick = function () {
+    rmDlgs()
+    gameEl.classList.add('game-show')
   }
-  _0x4f3f05.onclick = function () {
+  giveupEl.onclick = function () {
     _0x194da0 &&
       !_0x194da0.isDead &&
-      (_0x3fe969(new Uint8Array([_0x4822ce(6, 0)])),
+      (wsSend(new Uint8Array([leftShiftOr(6, 0)])),
       this.classList.add('btn-disabled'),
-      _0x41e27f.click())
+      resumeEl.click())
   }
-  const _0x31b9a6 = document.getElementById('optimizedRendering')
-  _0x5f77ca(_0x31b9a6, 'optimized_rendering')
-  const _0x7d7288 = document.querySelector('#kbMovementCb')
-  _0x5f77ca(_0x7d7288, 'kb_movement')
-  const _0x44d1d2 = document.querySelector('.nickname')
-  function _0x91abc2(_0x3d24ea, _0xa0ea58) {
-    _0x3d24ea.parentNode.style.display = _0xa0ea58 ? '' : 'none'
+  const optimizedRenderingEl = document.getElementById('optimizedRendering')
+  _0x5f77ca(optimizedRenderingEl, 'optimized_rendering')
+  const kbMovementCbEl = document.querySelector('#kbMovementCb')
+  _0x5f77ca(kbMovementCbEl, 'kb_movement')
+  const nicknameEl = document.querySelector('.nickname')
+  function _0x91abc2(el, shouldDisplay) {
+    el.parentNode.style.display = shouldDisplay ? '' : 'none'
   }
-  function _0x5f77ca(_0x29664c, _0x7b7a0b) {
-    const _0x245513 = localStorage[_0x7b7a0b]
-    _0x29664c.checked =
-      void 0 !== _0x245513 ? 'true' === _0x245513 : _0x29664c.checked
-    _0x29664c.oninput = function () {
-      localStorage[_0x7b7a0b] = this.checked
-      _0x29664c === _0x269cb0 && _0x3c1fa3()
+  function _0x5f77ca(el, key) {
+    const val = localStorage[key]
+    el.checked =
+      undefined !== val ? 'true' === val : el.checked
+    el.oninput = function () {
+      localStorage[key] = this.checked
+      el === highResEl && _0x3c1fa3()
     }
   }
   function _0x3f9782(_0x25f713) {
     for (
-      let _0x1fea3b = 1;
-      _0x1fea3b < _0x25f713.segments.length;
-      _0x1fea3b++
+      let i = 1;
+      i < _0x25f713.segments.length;
+      i++
     ) {
-      const _0x2e95d2 = _0x25f713.segments[_0x1fea3b],
-        _0x3ed8ba = _0x25f713.segments[_0x1fea3b - 1],
+      const _0x2e95d2 = _0x25f713.segments[i],
+        _0x3ed8ba = _0x25f713.segments[i - 1],
         _0x288c8e = _0x2e95d2.x,
         _0x256bea = _0x2e95d2.y
       let _0x4b7acb = _0x2e95d2.x - _0x3ed8ba.x,
@@ -602,39 +602,39 @@
   function _0x3c2605(_0x324150, _0x55965f, _0x15dae2, _0x17dcf3 = 1) {
     const _0x1afd16 = (2 * Math.PI) / _0x15dae2,
       _0x4c45d0 = 0.1 * _0x1afd16 * _0x17dcf3,
-      _0xdb16fe = new Path2D()
-    for (let _0x17fb70 = 0; _0x17fb70 <= _0x15dae2; _0x17fb70++) {
-      const _0x20dac3 = _0x1afd16 * _0x17fb70,
+      path = new Path2D()
+    for (let i = 0; i <= _0x15dae2; i++) {
+      const _0x20dac3 = _0x1afd16 * i,
         _0x5f39f5 = _0x20dac3 - _0x4c45d0,
         _0x2bac11 = _0x20dac3 + _0x4c45d0
-      _0x17fb70 % 2 == 0
-        ? (_0xdb16fe.lineTo(
+      i % 2 == 0
+        ? (path.lineTo(
             Math.cos(_0x5f39f5) * _0x324150,
             Math.sin(_0x5f39f5) * _0x324150
           ),
-          _0xdb16fe.lineTo(
+          path.lineTo(
             Math.cos(_0x2bac11) * _0x55965f,
             Math.sin(_0x2bac11) * _0x55965f
           ))
-        : (_0xdb16fe.lineTo(
+        : (path.lineTo(
             Math.cos(_0x5f39f5) * _0x55965f,
             Math.sin(_0x5f39f5) * _0x55965f
           ),
-          _0xdb16fe.lineTo(
+          path.lineTo(
             Math.cos(_0x2bac11) * _0x324150,
             Math.sin(_0x2bac11) * _0x324150
           ))
     }
-    return _0xdb16fe
+    return path
   }
-  _0x44d1d2.oninput = function () {
+  nicknameEl.oninput = function () {
     localStorage.nickname = this.value
   }
-  _0x44d1d2.maxLength = 14
-  _0x44d1d2.value =
-    void 0 !== localStorage.nickname ? localStorage.nickname : ''
-  _0x91abc2(_0xce3c49, _0x39ef23)
-  _0x91abc2(_0x7d7288, !_0x39ef23)
+  nicknameEl.maxLength = 14
+  nicknameEl.value =
+    undefined !== localStorage.nickname ? localStorage.nickname : ''
+  _0x91abc2(fixedJoystickCbEl, _0x39ef23)
+  _0x91abc2(kbMovementCbEl, !_0x39ef23)
   _0x39ef23 &&
     (document.getElementById('pressEnterInfo').style.display = 'none')
   const _0x1290f5 = _0x3c2605(20, 22.5, 32, 1),
@@ -668,13 +668,13 @@
     _0x55f515 = new Path2D(
       'M2358 5639 c-387 -26 -778 -95 -1438 -255 -257 -62 -569 -134 -738 -169 -91 -19 -166 -36 -168 -38 -1 -1 -6 -108 -10 -237 -7 -255 3 -395 36 -504 22 -70 73 -148 215 -326 110 -137 175 -236 212 -318 13 -30 48 -161 78 -291 135 -580 303 -1120 515 -1651 58 -146 124 -270 190 -359 261 -351 801 -618 1428 -706 454 -64 1044 -24 1403 95 592 198 1041 653 1452 1475 168 338 205 438 301 826 79 319 121 452 186 585 58 119 104 166 190 191 46 13 84 15 235 9 99 -4 199 -11 223 -15 60 -12 117 -55 178 -136 99 -132 158 -272 234 -555 190 -706 443 -1252 758 -1636 102 -125 243 -264 352 -346 422 -319 1015 -508 1596 -508 823 0 1516 333 1926 925 209 301 322 616 488 1355 62 279 148 612 187 730 43 128 117 276 178 352 25 31 80 82 121 114 46 34 81 69 89 88 22 52 26 134 16 276 -7 93 -7 175 1 265 12 150 5 195 -43 249 -33 39 -78 56 -209 81 -143 28 -304 71 -545 145 -326 101 -465 133 -842 195 -550 91 -674 105 -954 105 -485 0 -881 -57 -1844 -266 -1088 -237 -1424 -287 -1940 -288 -484 0 -719 35 -1515 231 -377 92 -569 132 -865 177 -813 126 -1272 163 -1677 135z'
     )
-  class _0x2561ae {
-    constructor(_0x298d8b, _0x18c5be, _0x4cc609 = 0) {
-      this.id = _0x298d8b
+  class Worm {
+    constructor(playerId, angle, interpR = 0) {
+      this.id = playerId
       this.segments = []
       this.updateTime = 0
-      this.dirX = Math.cos(_0x18c5be)
-      this.dirY = Math.sin(_0x18c5be)
+      this.dirX = Math.cos(angle)
+      this.dirY = Math.sin(angle)
       this.newDirX = this.oldDirX = this.dirX
       this.newDirY = this.oldDirY = this.dirY
       this.sad = 0
@@ -683,8 +683,8 @@
       this.bodySkin = -1
       this.energy = 0
       this.iEnergy = 0
-      this.r = this.interpR = this.interpOldR = _0x4cc609
-      this.angle = _0x18c5be
+      this.r = this.interpR = this.interpOldR = interpR
+      this.angle = angle
       this.iEnergyChange = 0
       this.energyChangeCounter = 1
       this.energyAlpha = 0
@@ -692,8 +692,8 @@
     }
     ['interpolate']() {
       const _0x58ed56 = Math.min(1, (Date.now() - this.updateTime) / 100)
-      for (let _0x5dfedf = 0; _0x5dfedf < this.segments.length; _0x5dfedf++) {
-        const _0xe05cb = this.segments[_0x5dfedf]
+      for (let i = 0; i < this.segments.length; i++) {
+        const _0xe05cb = this.segments[i]
         _0xe05cb.interpX =
           _0xe05cb.interpOldX + (_0xe05cb.x - _0xe05cb.interpOldX) * _0x58ed56
         _0xe05cb.interpY =
@@ -773,9 +773,9 @@
       _0x260258.restore()
     }
     ['draw'](_0xb0bd9f, _0x4d6d74, _0x40e682 = true) {
-      const _0x3fe6ad = Date.now()
+      const time = Date.now()
       if (((_0x4d6d74.lineWidth = 5), _0x4d6d74.lineWidth, this.isDead)) {
-        const _0x21aaa2 = (_0x3fe6ad - this.diedAt) / 500
+        const _0x21aaa2 = (time - this.diedAt) / 500
         if (_0x21aaa2 > 1) {
           return void _0x31c3e2.splice(_0xb0bd9f, 1)
         }
@@ -784,18 +784,18 @@
       } else {
         _0x4d6d74.globalAlpha = 1
       }
-      const _0x4c206d = (_0x3fe6ad - this.diggedLavaAt) / 200,
+      const _0x4c206d = (time - this.diggedLavaAt) / 200,
         _0x34189b = [153, 153, 153],
         _0x2215c2 = [124, 124, 124]
       if (_0x4c206d < 1) {
         const _0x1724f0 = [255, 0, 0],
           _0x508e62 = 0.5 * (1 - _0x4c206d),
           _0x2e9fb3 = 1 - _0x508e62
-        for (let _0x23b7aa = 0; _0x23b7aa < 3; _0x23b7aa++) {
-          _0x34189b[_0x23b7aa] =
-            _0x34189b[_0x23b7aa] * _0x2e9fb3 + _0x1724f0[_0x23b7aa] * _0x508e62
-          _0x2215c2[_0x23b7aa] =
-            _0x2215c2[_0x23b7aa] * _0x2e9fb3 + _0x1724f0[_0x23b7aa] * _0x508e62
+        for (let i = 0; i < 3; i++) {
+          _0x34189b[i] =
+            _0x34189b[i] * _0x2e9fb3 + _0x1724f0[i] * _0x508e62
+          _0x2215c2[i] =
+            _0x2215c2[i] * _0x2e9fb3 + _0x1724f0[i] * _0x508e62
         }
       }
       let _0x65247a = (_0x4d6d74.fillStyle =
@@ -803,14 +803,14 @@
         _0x14bbf2 = (_0x4d6d74.strokeStyle = 'rgb(' + _0x2215c2.join(',') + ')')
       const _0x52b6e2 = 1 * this.interpR,
         _0x46ceb7 = this.segments[0]
-      if (this.isDead || _0x31b9a6.checked) {
+      if (this.isDead || optimizedRenderingEl.checked) {
         _0x4d6d74.beginPath()
-        for (let _0x28880d = 0; _0x28880d < this.segments.length; _0x28880d++) {
-          const { interpX: _0x323b12, interpY: _0x191ec9 } =
-            this.segments[_0x28880d]
-          0 === _0x28880d
-            ? _0x4d6d74.moveTo(_0x323b12, _0x191ec9)
-            : _0x4d6d74.lineTo(_0x323b12, _0x191ec9)
+        for (let i = 0; i < this.segments.length; i++) {
+          const { interpX: interpX, interpY: interpY } =
+            this.segments[i]
+          0 === i
+            ? _0x4d6d74.moveTo(interpX, interpY)
+            : _0x4d6d74.lineTo(interpX, interpY)
         }
         _0x4d6d74.lineWidth = 2 * _0x52b6e2 + 10
         _0x4d6d74.lineCap = 'round'
@@ -823,9 +823,9 @@
         _0x4d6d74.lineCap = 'round'
         let _0x3622fe = 0
         const _0x455568 = this.segments.length - 1
-        for (let _0x20403b = 1; _0x20403b <= _0x455568; _0x20403b++) {
-          const _0x2794c6 = this.segments[_0x20403b - 1],
-            _0x4e87bd = this.segments[_0x20403b],
+        for (let i = 1; i <= _0x455568; i++) {
+          const _0x2794c6 = this.segments[i - 1],
+            _0x4e87bd = this.segments[i],
             _0x233633 = _0x4e87bd.interpX - _0x2794c6.interpX,
             _0x47d9be = _0x4e87bd.interpY - _0x2794c6.interpY
           let _0x12698e = Math.hypot(_0x233633, _0x47d9be)
@@ -839,7 +839,7 @@
             (_0x4e87bd.dirY = _0x47d9be / _0x12698e),
             (_0x4e87bd.norX = -_0x4e87bd.dirY),
             (_0x4e87bd.norY = _0x4e87bd.dirX),
-            1 !== _0x20403b)
+            1 !== i)
           ) {
             _0x2794c6.norX += _0x4e87bd.norX
             _0x2794c6.norY += _0x4e87bd.norY
@@ -866,9 +866,9 @@
         )
         _0x4d6d74.fill()
         _0x4d6d74.stroke()
-        for (let _0x1153db = _0x455568; _0x1153db >= 1; _0x1153db--) {
-          const _0x3d0fa0 = this.segments[_0x1153db],
-            _0x5ab5f8 = this.segments[_0x1153db - 1]
+        for (let i = _0x455568; i >= 1; i--) {
+          const _0x3d0fa0 = this.segments[i],
+            _0x5ab5f8 = this.segments[i - 1]
           ;(_0x3d0fa0.interpX === _0x5ab5f8.interpX &&
             _0x3d0fa0.interpY === _0x5ab5f8.interpY) ||
             (_0x4d6d74.beginPath(),
@@ -932,17 +932,17 @@
         _0x4d6d74.fill()
         _0x4d6d74.stroke()
       }
-      const _0x197a07 = (skins.faceSkins[this.faceSkin] || { name: 'idk' })
+      const myFaceSkinName = (skins.faceSkins[this.faceSkin] || { name: 'idk' })
         .name
-      if ('Faceless' === _0x197a07) {
+      if ('Faceless' === myFaceSkinName) {
         return
       }
       _0x4d6d74.save()
       _0x4d6d74.translate(_0x46ceb7.interpX, _0x46ceb7.interpY)
       const _0x2e2f56 =
-        (_0x52b6e2 / 30) * (_0x197a07.startsWith('Kirk') ? 0.7 : 1)
+        (_0x52b6e2 / 30) * (myFaceSkinName.startsWith('Kirk') ? 0.7 : 1)
       let _0x205471 = 0
-      if ('Gear' === _0x197a07) {
+      if ('Gear' === myFaceSkinName) {
         _0x4d6d74.scale(_0x2e2f56, _0x2e2f56)
         _0x4d6d74.fillStyle = '#111'
         _0x4d6d74.fill(_0x1290f5)
@@ -957,7 +957,7 @@
         _0x4d6d74.scale(0.35, 0.35)
         _0x4d6d74.scale(1 / _0x2e2f56, 1 / _0x2e2f56)
       }
-      if ('Cute' === _0x197a07) {
+      if ('Cute' === myFaceSkinName) {
         _0x4d6d74.scale(_0x2e2f56, _0x2e2f56)
         const _0x1905f4 = this.isDead ? 1 : this.sad + this.angry,
           _0x27316a = 1 - _0x1905f4
@@ -985,9 +985,9 @@
           (_0x4d6d74.lineWidth = 1.5 * _0x1905f4),
           _0x4d6d74.stroke())
         _0x4d6d74.restore()
-        for (let _0x14e88b = 0; _0x14e88b < 2; _0x14e88b++) {
-          const _0x1c48bd = 9 * (2 * _0x14e88b - 1),
-            _0x4f7b70 = 0 === _0x14e88b ? 1 : 0,
+        for (let i = 0; i < 2; i++) {
+          const _0x1c48bd = 9 * (2 * i - 1),
+            _0x4f7b70 = 0 === i ? 1 : 0,
             _0x445c62 = 1 ^ _0x4f7b70
           this.isDead
             ? _0x1b9630(0.8 * _0x1c48bd, -6, 6, 2)
@@ -1024,15 +1024,15 @@
               _0x4d6d74.restore())
         }
       } else {
-        'Kirkier' === _0x197a07 &&
+        'Kirkier' === myFaceSkinName &&
           _0x4d6d74.translate(13 * this.dirX, 13 * this.dirY)
-        'Sarcastic' === _0x197a07
+        'Sarcastic' === myFaceSkinName
           ? (_0x205471 = Math.PI)
-          : 'Dizzy' === _0x197a07 &&
+          : 'Dizzy' === myFaceSkinName &&
             (_0x205471 = (Date.now() / 200) % (2 * Math.PI))
         _0x4d6d74.rotate(_0x205471)
         _0x4d6d74.scale(_0x2e2f56, _0x2e2f56)
-        'Bot' === _0x197a07
+        'Bot' === myFaceSkinName
           ? (_0x4d6d74.beginPath(),
             _0x4d6d74.moveTo(-13, 14),
             _0x4d6d74.lineTo(13, 14),
@@ -1048,7 +1048,7 @@
             (_0x4d6d74.lineJoin = _0x4d6d74.lineCap = 'round'),
             _0x4d6d74.stroke(),
             _0x4d6d74.fill())
-          : 'Moyai' === _0x197a07
+          : 'Moyai' === myFaceSkinName
           ? ((_0x4d6d74.fillStyle = '#333'),
             (function (_0x1a3648, _0x2c0d71) {
               _0x1a3648.save()
@@ -1067,7 +1067,7 @@
               }
               _0x1a3648.restore()
             })(_0x4d6d74))
-          : 'Ascii' === _0x197a07
+          : 'Ascii' === myFaceSkinName
           ? (_0x4d6d74.save(),
             _0x4d6d74.rotate(Math.PI / 2),
             (_0x4d6d74.fillStyle = '#222'),
@@ -1083,7 +1083,7 @@
               ? _0x4d6d74.fillText(':(', 0, 0)
               : _0x4d6d74.fillText(':)', 0, 0),
             _0x4d6d74.restore())
-          : 'All Seeing' !== _0x197a07 &&
+          : 'All Seeing' !== myFaceSkinName &&
             (_0x4d6d74.beginPath(),
             _0x4d6d74.moveTo(-7, 9.25),
             _0x4d6d74.quadraticCurveTo(
@@ -1100,7 +1100,7 @@
           _0x52eba1 = Math.cos(-_0x205471),
           _0x3ec2bb = this.dirX * _0x52eba1 - _0x2916d9 * this.dirY,
           _0x4d3fad = this.dirX * _0x2916d9 + _0x52eba1 * this.dirY
-        if ('Too cool' === _0x197a07) {
+        if ('Too cool' === myFaceSkinName) {
           _0x4d6d74.save()
           _0x4d6d74.translate(-27.5, 7)
           _0x4d6d74.scale(0.004200000000000001, -0.004200000000000001)
@@ -1108,9 +1108,9 @@
           _0x4d6d74.fill(_0x55f515)
           _0x4d6d74.restore()
         } else {
-          if ('Ascii' === _0x197a07 || 'Moyai' === _0x197a07) {
+          if ('Ascii' === myFaceSkinName || 'Moyai' === myFaceSkinName) {
           } else {
-            if ('Cyclops' === _0x197a07) {
+            if ('Cyclops' === myFaceSkinName) {
               if (this.isDead) {
                 _0x1b9630(0, -6, 6, 3)
               } else {
@@ -1138,7 +1138,7 @@
                 _0x4d6d74.restore()
               }
             } else {
-              if ('All Seeing' === _0x197a07) {
+              if ('All Seeing' === myFaceSkinName) {
                 this.isDead
                   ? _0x1b9630(0, 0, 20, 7)
                   : (_0x4d6d74.beginPath(),
@@ -1156,12 +1156,12 @@
                     (_0x4d6d74.fillStyle = '#fff'),
                     _0x4d6d74.fill())
               } else {
-                if ('Bot' === _0x197a07) {
+                if ('Bot' === myFaceSkinName) {
                   const _0x30118a = -9
                   _0x288745 *= 1.5
-                  for (let _0x415cfe = 0; _0x415cfe < 2; _0x415cfe++) {
-                    const _0x845822 = (2 * _0x415cfe - 1) * _0x288745,
-                      _0x315fca = 0 === _0x415cfe ? 1 : 0,
+                  for (let i = 0; i < 2; i++) {
+                    const _0x845822 = (2 * i - 1) * _0x288745,
+                      _0x315fca = 0 === i ? 1 : 0,
                       _0x18e72a = 1 ^ _0x315fca
                     this.isDead
                       ? _0x1b9630(_0x845822, _0x30118a, 6, 5)
@@ -1192,11 +1192,11 @@
                         _0x4d6d74.restore())
                   }
                 } else {
-                  if ('Creepy' === _0x197a07) {
+                  if ('Creepy' === myFaceSkinName) {
                     const _0xde1f87 = -7
-                    for (let _0x511287 = 0; _0x511287 < 2; _0x511287++) {
-                      const _0x2484bb = (2 * _0x511287 - 1) * _0x288745,
-                        _0x19baf7 = 0 === _0x511287 ? 1 : 0,
+                    for (let i = 0; i < 2; i++) {
+                      const _0x2484bb = (2 * i - 1) * _0x288745,
+                        _0x19baf7 = 0 === i ? 1 : 0,
                         _0xe0735c = 1 ^ _0x19baf7
                       this.isDead
                         ? _0x1b9630(_0x2484bb, _0xde1f87, 4, 2)
@@ -1233,13 +1233,13 @@
                           _0x4d6d74.restore())
                     }
                   } else {
-                    for (let _0x5c1570 = 0; _0x5c1570 < 2; _0x5c1570++) {
-                      const _0x559bb0 = (2 * _0x5c1570 - 1) * _0x288745
+                    for (let i = 0; i < 2; i++) {
+                      const _0x559bb0 = (2 * i - 1) * _0x288745
                       if (this.isDead) {
                         _0x1b9630(_0x559bb0, -6, 5, 2.5)
                         continue
                       }
-                      const _0x4181f4 = 0 === _0x5c1570 ? 1 : 0,
+                      const _0x4181f4 = 0 === i ? 1 : 0,
                         _0x24a68f = 1 ^ _0x4181f4
                       _0x4d6d74.save()
                       _0x4d6d74.beginPath()
@@ -1272,7 +1272,7 @@
                       )
                       _0x4d6d74.restore()
                     }
-                    'Pirate' === _0x197a07
+                    'Pirate' === myFaceSkinName
                       ? (_0x4d6d74.save(),
                         _0x4d6d74.beginPath(),
                         _0x4d6d74.arc(0, 0, 30, 0, 2 * Math.PI),
@@ -1289,7 +1289,7 @@
                         (_0x4d6d74.lineWidth = 4),
                         _0x4d6d74.stroke(),
                         _0x4d6d74.restore())
-                      : 'Intellectual' === _0x197a07 &&
+                      : 'Intellectual' === myFaceSkinName &&
                         (_0x4d6d74.save(),
                         _0x4d6d74.translate(7.5, -5.7),
                         _0x4d6d74.beginPath(),
@@ -1327,18 +1327,18 @@
         _0x4d6d74.stroke()
         _0x4d6d74.restore()
       }
-      'Gear' === _0x197a07 && _0x4d6d74.restore()
+      'Gear' === myFaceSkinName && _0x4d6d74.restore()
       _0x4d6d74.restore()
     }
   }
   function _0x406b9c(_0x4e26bf) {
     return (function (_0x3def1b) {
       const _0x2f7f38 = Math.floor(5 * Math.random())
-      for (let _0x5fbd7e = 0; _0x5fbd7e < _0x3def1b.length; _0x5fbd7e++) {
-        _0x3def1b[_0x5fbd7e] = Math.max(0, _0x3def1b[_0x5fbd7e] - _0x2f7f38)
+      for (let i = 0; i < _0x3def1b.length; i++) {
+        _0x3def1b[i] = Math.max(0, _0x3def1b[i] - _0x2f7f38)
       }
       return _0x3def1b
-    })(_0x1ed3cb(_0x4e26bf))
+    })(oreToColor(_0x4e26bf))
   }
   crypto.randomUUID =
     crypto.randomUUID ||
@@ -1354,87 +1354,82 @@
       )
     }
   window.onload = function () {
-    _0x3729b6.style.display = 'none'
-    _0x10ea98(window.location.origin.replace('http', 'ws'))
+    loaderEl.style.display = 'none'
+    joinGame(window.location.origin.replace('http', 'ws'))
     _0x40d72d()
   }
   document.body.oncontextmenu = function () {
     return false
   }
-  const _0xb4f9cb = (function (_0x419e03) {
-      const _0xa52675 = {}
-      for (let _0x4a6209 in _0x419e03)
-        _0xa52675[_0x419e03[_0x4a6209]] = _0x4a6209
-      return _0xa52675
-    })({
-      invalidProtocol: 0,
-      outdatedVersion: 1,
-      tooManyConnections: 2,
-      AFK: 3,
-    }),
-    _0x3729b6 = document.querySelector('.loader'),
-    _0x4f623f = document.querySelector('.connecting'),
-    _0x186185 = document.querySelector('.grid'),
-    _0x3226d4 = document.querySelector('.lb'),
-    _0xaec281 = document.querySelector('.lb-content'),
-    _0x26814d = document.querySelector('.lb-header span')
+  const wsCloseReasons = {
+    0: 'invalidProtocol', 
+    1: 'outdatedVersion', 
+    2: 'tooManyConnections', 
+    3: 'AFK'
+  },
+    loaderEl = document.querySelector('.loader'),
+    connectingEl = document.querySelector('.connecting'),
+    gridEl = document.querySelector('.grid'),
+    lbEl = document.querySelector('.lb'),
+    lbContentEl = document.querySelector('.lb-content'),
+    lbHeaderSpanEl = document.querySelector('.lb-header span')
   if (_0x39ef23) {
-    _0x3226d4.classList.add('slide-up')
-    _0x3226d4.style.pointerEvents = 'all'
-    const _0x5a8867 = document.querySelector('.lb-btn')
-    _0x5a8867.classList.remove('slide-up')
-    _0x5a8867.ontouchstart = _0x3226d4.ontouchstart = function () {
-      _0x5a8867.classList.toggle('slide-up')
-      _0x3226d4.classList.toggle('slide-up')
+    lbEl.classList.add('slide-up')
+    lbEl.style.pointerEvents = 'all'
+    const lbBtnEl = document.querySelector('.lb-btn')
+    lbBtnEl.classList.remove('slide-up')
+    lbBtnEl.ontouchstart = lbEl.ontouchstart = function () {
+      lbBtnEl.classList.toggle('slide-up')
+      lbEl.classList.toggle('slide-up')
     }
   }
-  const _0x2da152 = document.querySelector('.menu'),
-    _0x5f3b0d = document.querySelector('.settings'),
-    _0xb914f5 = document.querySelector('.changelog'),
-    _0x131dac = document.querySelector('.settings-btn'),
-    _0x5d61a7 = document.querySelector('.changelog-btn')
+  const menuEl = document.querySelector('.menu'),
+    settingsEl = document.querySelector('.settings'),
+    changelogEl = document.querySelector('.changelog'),
+    settingsbtnEl = document.querySelector('.settings-btn'),
+    changelogbtnEl = document.querySelector('.changelog-btn')
   _0x243035('#ppBtn', '/docs/pp.html')
   _0x243035('#tosBtn', '/docs/tos.html')
-  const _0x18e771 = document.querySelector('.login-btn')
-  _0x18e771.onclick = function () {
-    _0x2a5982 ||
+  const loginBtnEl = document.querySelector('.login-btn')
+  loginBtnEl.onclick = function () {
+    discordData ||
       (window.location.href =
         'https://discord.com/api/oauth2/authorize?client_id=995547764983341057&redirect_uri=' +
         encodeURIComponent(window.location.origin + '/discord') +
         '&response_type=code&scope=identify&state=' +
-        encodeURIComponent(btoa(_0x292439)))
+        encodeURIComponent(btoa(accountId)))
   }
-  const _0x35cb64 = document.querySelector('.logout-btn')
+  const logoutBtnEl = document.querySelector('.logout-btn')
   function _0x243035(_0x48c796, _0x52a14f) {
     document.querySelector(_0x48c796).onclick = function () {
       window.open(_0x52a14f, '_blank')
     }
   }
-  _0x35cb64.onclick = function () {
-    _0x292439 == localStorage.account_id && delete localStorage.account_id
+  logoutBtnEl.onclick = function () {
+    accountId == localStorage.account_id && delete localStorage.account_id
     delete localStorage.discord_data
     ws && ws.close()
   }
   _0x243035('.discord-btn', 'https://discord.gg/WkYHsUQF5a')
   _0x243035('.reddit-btn', 'https://www.reddit.com/r/digworm/')
-  const _0x3d165b = document.querySelector('.overlay'),
+  const overlayEl = document.querySelector('.overlay'),
     _0x1bb119 =
       (document.querySelector('.game .overlay'),
       document.querySelector('.shop'))
   _0x39ef23 && _0x1bb119.classList.add('fullsize-shop')
-  const _0x5a875d = document.querySelector('.game'),
-    _0x5784b8 = document.querySelector('.gameover'),
-    _0x56f3e3 = document.querySelector('.continue-btn'),
-    _0x413b9c = document.querySelector('.face-skins'),
-    _0x6917f9 = document.querySelector('.body-skins'),
-    _0x1dea93 = document.createElement('div'),
-    _0x14cb2c = document.querySelector('.new-skins'),
+  const gameEl = document.querySelector('.game'),
+    gameoverEl = document.querySelector('.gameover'),
+    continueBtnEl = document.querySelector('.continue-btn'),
+    faceSkinsEl = document.querySelector('.face-skins'),
+    bodySkinsEl = document.querySelector('.body-skins'),
+    div = document.createElement('div'),
+    newSkinsEl = document.querySelector('.new-skins'),
     _0x421e37 = [],
-    _0xe591fc = document.querySelector('.unequip-btn')
-  _0xe591fc.onclick = function () {
-    for (let _0x12a858 = 0; _0x12a858 < 2; _0x12a858++) {
+    unequipBtnEl = document.querySelector('.unequip-btn')
+  unequipBtnEl.onclick = function () {
+    for (let i = 0; i < 2; i++) {
       const _0x5397a4 = document.querySelector(
-        '.' + (0 === _0x12a858 ? 'face' : 'body') + '-skin [stroke=Unequip]'
+        '.' + (0 === i ? 'face' : 'body') + '-skin [stroke=Unequip]'
       )
       _0x5397a4 && _0x5397a4.setAttribute('stroke', 'Equip')
     }
@@ -1443,48 +1438,48 @@
     this.classList.add('btn-disabled')
   }
   const _0x553cf3 = []
-  function _0x287195(_0x5e8135, _0xcd14c9, _0x700db1) {
-    let _0x304f7c
-    _0x5e8135 = _0x5e8135
+  function _0x287195(skinGroup, el, skinType) {
+    let div
+    skinGroup = skinGroup
       .map((_0x4fe172, _0x255006) => ((_0x4fe172.id = _0x255006), _0x4fe172))
       .sort(function (_0x4710bd, _0x4a45e9) {
         return _0x4710bd.price - _0x4a45e9.price
       })
-    _0xcd14c9.innerHTML = ''
-    for (let _0x53c3be = 0; _0x53c3be < _0x5e8135.length; _0x53c3be++) {
-      _0x53c3be % 4 == 0 &&
-        ((_0x304f7c = document.createElement('div')),
-        _0x304f7c.classList.add('shop-row'),
-        _0xcd14c9.appendChild(_0x304f7c))
-      const _0x4d7c86 = _0x5e8135[_0x53c3be]
-      _0x1dea93.innerHTML =
+    el.innerHTML = ''
+    for (let i = 0; i < skinGroup.length; i++) {
+      i % 4 == 0 &&
+        ((div = document.createElement('div')),
+        div.classList.add('shop-row'),
+        el.appendChild(div))
+      const skin = skinGroup[i]
+      div.innerHTML =
         '\n\t\t<div class="shop-item ' +
-        _0x700db1 +
+        skinType +
         '-skin ' +
-        _0x700db1 +
+        skinType +
         'Skin' +
-        _0x53c3be +
+        i +
         '">\n\t\t\t<div class="shop-item-preview"></div>\n\t\t\t<span stroke="' +
-        _0x4d7c86.name +
+        skin.name +
         '" class="shop-item-name"></span>\n\t\t\t<div class="btn gold-btn btn-disabled">\n\t\t\t\t<i class="fa fa-circle"></i>\n\t\t\t\t<span stroke="' +
-        _0x4d7c86.price.toLocaleString() +
+        skin.price.toLocaleString() +
         '"></span>\n\t\t\t</div>\n\t\t</div>'
-      const _0x524f8f = _0x1dea93.children[0]
-      _0x4d7c86.shopItemEl = _0x524f8f
-      _0x1b6494(_0x524f8f)[_0x700db1 + 'Skin'] = _0x4d7c86.id
-      _0x304f7c.appendChild(_0x524f8f)
-      _0x524f8f.initialParent = _0x304f7c
-      _0x524f8f.tempDiv = document.createElement('div')
+      const divChild = div.children[0]
+      skin.shopItemEl = divChild
+      _0x1b6494(divChild)[skinType + 'Skin'] = skin.id
+      div.appendChild(divChild)
+      divChild.initialParent = div
+      divChild.tempDiv = document.createElement('div')
     }
   }
-  document.onmousemove = function (_0x22ed60) {
-    for (let _0x49f954 = 0; _0x49f954 < _0x553cf3.length; _0x49f954++) {
-      const _0x3c0143 = _0x553cf3[_0x49f954],
+  document.onmousemove = function (pos) {
+    for (let i = 0; i < _0x553cf3.length; i++) {
+      const _0x3c0143 = _0x553cf3[i],
         _0x5d55ed = _0x3c0143.previewPlayer,
         _0x5a0205 = _0x3c0143.previewEl.getBoundingClientRect(),
         _0x4eb1a7 = Math.atan2(
-          _0x22ed60.clientY - (_0x5a0205.top + _0x5a0205.height / 2),
-          _0x22ed60.clientX - (_0x5a0205.left + _0x5a0205.width / 2)
+          pos.clientY - (_0x5a0205.top + _0x5a0205.height / 2),
+          pos.clientX - (_0x5a0205.left + _0x5a0205.width / 2)
         )
       _0x5d55ed.oldDirX = _0x5d55ed.dirX
       _0x5d55ed.oldDirY = _0x5d55ed.dirY
@@ -1494,138 +1489,138 @@
   }
   let _0x2710ba = 0
   const _0x54c5be = _0x1b6494(document.querySelector('.my-skin-preview'))
-  function _0x1b6494(_0x10c607) {
-    const _0x585a79 = document.createElement('canvas')
-    _0x585a79.style.position = 'absolute'
-    _0x585a79.style.top = '0'
-    _0x585a79.style.left = '0'
-    _0x585a79.style.width = '100%'
-    _0x10c607.style.position = 'relative'
-    _0x10c607.insertBefore(_0x585a79, _0x10c607.children[0])
-    const _0x22d723 = _0x585a79.getContext('2d'),
-      _0xa658a9 = _0x10c607.querySelector('.shop-item-preview'),
-      _0x5667f0 = new _0x2561ae(0, 0, 30)
-    for (let _0x3ca9ca = 0; _0x3ca9ca < 2; _0x3ca9ca++) {
-      _0x5667f0.segments.push({
-        interpX: -100 * _0x3ca9ca,
+  function _0x1b6494(el) {
+    const canvas = document.createElement('canvas')
+    canvas.style.position = 'absolute'
+    canvas.style.top = '0'
+    canvas.style.left = '0'
+    canvas.style.width = '100%'
+    el.style.position = 'relative'
+    el.insertBefore(canvas, el.children[0])
+    const ctx = canvas.getContext('2d'),
+      previewEl = el.querySelector('.shop-item-preview'),
+      previewPlayer = new Worm(0, 0, 30)
+    for (let i = 0; i < 2; i++) {
+      previewPlayer.segments.push({
+        interpX: -100 * i,
         interpY: 0,
       })
     }
     const _0x127d71 = {
-      previewPlayer: _0x5667f0,
-      el: _0x10c607,
-      previewEl: _0xa658a9,
+      previewPlayer: previewPlayer,
+      el: el,
+      previewEl: previewEl,
       faceSkin: -1,
       bodySkin: -1,
       render() {
         if (0 === _0x1bb119.getBoundingClientRect().width) {
           return
         }
-        const _0x1db898 = _0x10c607.getBoundingClientRect()
+        const _0x1db898 = el.getBoundingClientRect()
         if (0 === _0x1db898.height || 0 === _0x1db898.width) {
           return
         }
         const _0x8ae748 = _0x1db898.width * window.devicePixelRatio,
           _0x378eb1 = _0x1db898.height * window.devicePixelRatio
-        ;(_0x585a79.width === _0x8ae748 && _0x585a79.height === _0x378eb1) ||
-          ((_0x585a79.width = _0x8ae748), (_0x585a79.height = _0x378eb1))
-        const _0x42f183 = _0xa658a9.getBoundingClientRect()
-        _0x22d723.clearRect(0, 0, _0x585a79.width, _0x585a79.height)
-        _0x22d723.save()
-        _0x22d723.scale(window.devicePixelRatio, window.devicePixelRatio)
-        const _0x3fe9ac = _0x5667f0.segments[0],
+        ;(canvas.width === _0x8ae748 && canvas.height === _0x378eb1) ||
+          ((canvas.width = _0x8ae748), (canvas.height = _0x378eb1))
+        const _0x42f183 = previewEl.getBoundingClientRect()
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.save()
+        ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
+        const _0x3fe9ac = previewPlayer.segments[0],
           _0x312c67 = _0x42f183.width / 2
-        _0x22d723.translate(
+        ctx.translate(
           _0x42f183.left - _0x1db898.left + _0x312c67,
           _0x42f183.top - _0x1db898.top + _0x312c67
         )
-        const _0x4ee50f = _0x312c67 / _0x5667f0.interpR
-        _0x22d723.scale(_0x4ee50f, _0x4ee50f)
-        _0x22d723.translate(-_0x3fe9ac.x, -_0x3fe9ac.y)
-        _0x5667f0.faceSkin = this.faceSkin
-        _0x5667f0.bodySkin = this.bodySkin
-        _0x5667f0.mood = _0x2710ba
-        _0x5667f0.dirX += 0.2 * (_0x5667f0.newDirX - _0x5667f0.dirX)
-        _0x5667f0.dirY += 0.2 * (_0x5667f0.newDirY - _0x5667f0.dirY)
-        _0x5667f0.interpFace()
-        _0x5667f0.draw(0, _0x22d723, false)
-        _0x22d723.restore()
+        const _0x4ee50f = _0x312c67 / previewPlayer.interpR
+        ctx.scale(_0x4ee50f, _0x4ee50f)
+        ctx.translate(-_0x3fe9ac.x, -_0x3fe9ac.y)
+        previewPlayer.faceSkin = this.faceSkin
+        previewPlayer.bodySkin = this.bodySkin
+        previewPlayer.mood = _0x2710ba
+        previewPlayer.dirX += 0.2 * (previewPlayer.newDirX - previewPlayer.dirX)
+        previewPlayer.dirY += 0.2 * (previewPlayer.newDirY - previewPlayer.dirY)
+        previewPlayer.interpFace()
+        previewPlayer.draw(0, ctx, false)
+        ctx.restore()
       },
     }
     return _0x553cf3.push(_0x127d71), _0x127d71
   }
-  _0x56f3e3.onclick = function () {
-    _0x13afc3.classList.remove('minimize-show')
-    _0x5a875d.classList.remove('game-show')
+  continueBtnEl.onclick = function () {
+    minimizeEl.classList.remove('minimize-show')
+    gameEl.classList.remove('game-show')
     ws &&
       ws.readyState === ws.OPEN &&
       setTimeout(function () {
-        _0x186185.classList.add('grid-show')
+        gridEl.classList.add('grid-show')
       }, 500)
   }
-  _0x3d165b.onclick = function () {
+  overlayEl.onclick = function () {
     _0x1bb119.classList.remove('dialog-show')
-    _0x3d165b.classList.remove('overlay-show')
+    overlayEl.classList.remove('overlay-show')
   }
-  _0x131dac.onclick = _0x5d61a7.onclick = function () {
-    const _0x2fd8e4 = this == _0x131dac ? _0xb914f5 : _0x5f3b0d
-    ;(this == _0x131dac ? _0x5f3b0d : _0xb914f5).classList.toggle('dialog-show')
+  settingsbtnEl.onclick = changelogbtnEl.onclick = function () {
+    const _0x2fd8e4 = this == settingsbtnEl ? changelogEl : settingsEl
+    ;(this == settingsbtnEl ? settingsEl : changelogEl).classList.toggle('dialog-show')
     _0x2fd8e4.classList.remove('dialog-show')
-    this === _0x5d61a7 && (_0x48a579 = false)
+    this === changelogbtnEl && (_0x48a579 = false)
   }
-  _0x2da152.onclick = function (_0x40bb21) {
+  menuEl.onclick = function (_0x40bb21) {
     _0x40bb21.target == this &&
-      (_0xb914f5.classList.remove('dialog-show'),
-      _0x5f3b0d.classList.remove('dialog-show'))
+      (changelogEl.classList.remove('dialog-show'),
+      settingsEl.classList.remove('dialog-show'))
   }
-  const _0x470e24 = document.querySelectorAll('.dialog-close')
-  for (let _0x28c185 = 0; _0x28c185 < _0x470e24.length; _0x28c185++) {
-    _0x470e24[_0x28c185].onclick = function () {
+  const dlgCloseEls = document.querySelectorAll('.dialog-close')
+  for (let i = 0; i < dlgCloseEls.length; i++) {
+    dlgCloseEls[i].onclick = function () {
       const _0x32d8c6 = this.parentNode.parentNode
       _0x32d8c6.classList.remove('dialog-show')
       _0x32d8c6 == _0x1bb119
-        ? _0x3d165b.classList.remove('overlay-show')
-        : _0x32d8c6 == _0x440387 && _0x186185.classList.remove('grid-pushup')
+        ? overlayEl.classList.remove('overlay-show')
+        : _0x32d8c6 == squadEl && gridEl.classList.remove('grid-pushup')
     }
   }
-  const _0x3eb8c6 = document.querySelector('.shop-btn'),
-    _0x4a20d7 = document.querySelector('.squad-btn'),
-    _0x440387 = document.querySelector('.squad'),
-    _0xd543af = document.querySelectorAll('.shop .dialog-content'),
-    _0x130a40 = document.querySelector('.play-btn')
+  const shopBtnEl = document.querySelector('.shop-btn'),
+    squadBtnEl = document.querySelector('.squad-btn'),
+    squadEl = document.querySelector('.squad'),
+    shopDlgCntEl = document.querySelectorAll('.shop .dialog-content'),
+    playBtnEl = document.querySelector('.play-btn')
   let _0x48a579 = true,
-    _0x15b23c = {}
+    pressedKey = {}
   function _0xbbd36() {
-    if (!_0x7d7288.checked) {
+    if (!kbMovementCbEl.checked) {
       return
     }
     let _0xe6e3da = 0,
       _0x36a400 = 0
-    _0x15b23c.KeyW || _0x15b23c.ArrowUp
+    pressedKey.KeyW || pressedKey.ArrowUp
       ? (_0x36a400 = -1)
-      : (_0x15b23c.KeyS || _0x15b23c.ArrowDown) && (_0x36a400 = 1)
-    _0x15b23c.KeyA || _0x15b23c.ArrowLeft
+      : (pressedKey.KeyS || pressedKey.ArrowDown) && (_0x36a400 = 1)
+    pressedKey.KeyA || pressedKey.ArrowLeft
       ? (_0xe6e3da = -1)
-      : (_0x15b23c.KeyD || _0x15b23c.ArrowRight) && (_0xe6e3da = 1)
+      : (pressedKey.KeyD || pressedKey.ArrowRight) && (_0xe6e3da = 1)
     ;(0 !== _0xe6e3da || 0 !== _0x36a400) &&
       _0x2ebfb5(Math.atan2(_0x36a400, _0xe6e3da))
   }
-  function _0x178fb4() {
-    const _0x1c1c35 = parseInt(localStorage.equipped_face_skin),
-      _0x3dba9d = parseInt(localStorage.equipped_body_skin)
-    return [_0xce4e1e(_0x1c1c35), _0xce4e1e(_0x3dba9d)]
-    function _0xce4e1e(_0x54f97a) {
-      return isNaN(_0x54f97a) ? -1 : _0x54f97a
+  function getMySkins() {
+    const myFaceSkin = parseInt(localStorage.equipped_face_skin),
+      myBodySkin = parseInt(localStorage.equipped_body_skin)
+    return [isNanCheck(myFaceSkin), isNanCheck(myBodySkin)]
+    function isNanCheck(num) {
+      return isNaN(num) ? -1 : num
     }
   }
-  function _0xe694f5() {
-    _0xb914f5.classList.remove('dialog-show')
-    _0x5f3b0d.classList.remove('dialog-show')
+  function rmDlgs() {
+    changelogEl.classList.remove('dialog-show')
+    settingsEl.classList.remove('dialog-show')
   }
   function _0x371f8c(_0x11e818) {
     const _0x19f513 = document.querySelectorAll(_0x11e818 + ' .btn')
-    for (let _0x4de871 = 0; _0x4de871 < _0x19f513.length; _0x4de871++) {
-      _0x19f513[_0x4de871].onclick = function () {
+    for (let i = 0; i < _0x19f513.length; i++) {
+      _0x19f513[i].onclick = function () {
         const _0x4317f3 = document.querySelector(_0x11e818 + ' .btn-active')
         if (
           (_0x4317f3 && _0x4317f3.classList.remove('btn-active'),
@@ -1635,25 +1630,25 @@
           localStorage.gamemode = this.getAttribute('data-gamemode')
         } else {
           if ('.tabs' === _0x11e818) {
-            for (let _0x364733 = 0; _0x364733 < _0x421e37.length; _0x364733++) {
-              const _0x36ff03 = _0x421e37[_0x364733]
-              0 !== _0x4de871
+            for (let j = 0; j < _0x421e37.length; j++) {
+              const _0x36ff03 = _0x421e37[j]
+              0 !== i
                 ? _0x36ff03.parentNode !== _0x36ff03.initialParent &&
                   (_0x36ff03.initialParent.insertBefore(
                     _0x36ff03,
                     _0x36ff03.tempDiv
                   ),
                   _0x36ff03.tempDiv.remove())
-                : _0x36ff03.parentNode !== _0x14cb2c &&
+                : _0x36ff03.parentNode !== newSkinsEl &&
                   (_0x36ff03.initialParent.insertBefore(
                     _0x36ff03.tempDiv,
                     _0x36ff03
                   ),
-                  _0x14cb2c.appendChild(_0x36ff03))
+                  newSkinsEl.appendChild(_0x36ff03))
             }
-            for (let _0x49ee22 = 0; _0x49ee22 < _0xd543af.length; _0x49ee22++) {
-              _0xd543af[_0x49ee22].style.display =
-                _0x49ee22 === _0x4de871 ? '' : 'none'
+            for (let k = 0; k < shopDlgCntEl.length; k++) {
+              shopDlgCntEl[k].style.display =
+                k === i ? '' : 'none'
             }
           }
         }
@@ -1671,120 +1666,120 @@
       return false
     }
     _0x353950.repeat ||
-      ((_0x15b23c[_0x353950.code] = true), _0xbbd36(), _0x382b09())
+      ((pressedKey[_0x353950.code] = true), _0xbbd36(), _0x382b09())
   }
-  document.onkeyup = function (_0x273302) {
-    delete _0x15b23c[_0x273302.code]
+  document.onkeyup = function (key) {
+    delete pressedKey[key.code]
     _0xbbd36()
     _0x382b09()
-    'KeyC' === _0x273302.code
-      ? _0x4f5add.toBlob(function (_0x434d81) {
+    'KeyC' === key.code
+      ? canvasEl.toBlob(function (img) {
           navigator.clipboard.write([
-            new ClipboardItem({ 'image/png': _0x434d81 }),
+            new ClipboardItem({ 'image/png': img }),
           ])
         })
-      : 'Escape' === _0x273302.code
-      ? _0x5a875d.classList.contains('game-show')
-        ? _0x20dc75.click()
-        : _0x13afc3.classList.contains('minimize-show') && _0x41e27f.click()
-      : 'Enter' === _0x273302.code &&
-        (_0x186185.classList.contains('grid-show')
-          ? _0x130a40.click()
-          : '' === _0x5784b8.style.display &&
-            _0x5a875d.classList.contains('game-show') &&
-            _0x56f3e3.click())
+      : 'Escape' === key.code
+      ? gameEl.classList.contains('game-show')
+        ? minimizeBtnEl.click()
+        : minimizeEl.classList.contains('minimize-show') && resumeEl.click()
+      : 'Enter' === key.code &&
+        (gridEl.classList.contains('grid-show')
+          ? playBtnEl.click()
+          : '' === gameoverEl.style.display &&
+            gameEl.classList.contains('game-show') &&
+            continueBtnEl.click())
   }
-  _0x130a40.onclick = function () {
-    _0xe694f5()
-    _0x186185.classList.remove('grid-show')
+  playBtnEl.onclick = function () {
+    rmDlgs()
+    gridEl.classList.remove('grid-show')
     setTimeout(function () {
-      const [_0x3c38d6, _0x57af3f] = _0x178fb4(),
-        _0x10b8d4 = new TextEncoder().encode(_0x44d1d2.value.slice(0, 14)),
+      const [faceSkin, bodySkin] = getMySkins(),
+        nickname = new TextEncoder().encode(nicknameEl.value.slice(0, 14)),
         dv = new DataView(
           new ArrayBuffer(
             1 +
-              (-1 !== _0x3c38d6 ? 1 : 0) +
-              (-1 !== _0x57af3f ? 1 : 0) +
-              _0x10b8d4.length
+              (-1 !== faceSkin ? 1 : 0) +
+              (-1 !== bodySkin ? 1 : 0) +
+              nickname.length
           )
         )
-      let _0x459e21 = 0,
-        _0x3fb482 = parseInt(localStorage.gamemode)
-      ;(isNaN(_0x3fb482) || _0x3fb482 > 1) && (_0x3fb482 = 0)
+      let cnt = 0,
+        gamemode = parseInt(localStorage.gamemode)
+      ;(isNaN(gamemode) || gamemode > 1) && (gamemode = 0)
       dv.setUint8(
-        _0x459e21++,
-        _0x4822ce(
+        cnt++,
+        leftShiftOr(
           0,
-          (_0x3fb482 << 2) |
-            (-1 !== _0x3c38d6 ? 1 : 0) |
-            (-1 !== _0x57af3f ? 2 : 0)
+          (gamemode << 2) |
+            (-1 !== faceSkin ? 1 : 0) |
+            (-1 !== bodySkin ? 2 : 0)
         )
       )
-      ;-1 !== _0x3c38d6 && dv.setUint8(_0x459e21++, _0x3c38d6)
-      ;-1 !== _0x57af3f && dv.setUint8(_0x459e21++, _0x57af3f)
-      for (let _0x14c3bb = 0; _0x14c3bb < _0x10b8d4.length; _0x14c3bb++) {
-        dv.setUint8(_0x459e21++, _0x10b8d4[_0x14c3bb])
+      ;-1 !== faceSkin && dv.setUint8(cnt++, faceSkin)
+      ;-1 !== bodySkin && dv.setUint8(cnt++, bodySkin)
+      for (let i = 0; i < nickname.length; i++) {
+        dv.setUint8(cnt++, nickname[i])
       }
-      _0x3fe969(dv)
+      wsSend(dv)
     }, 200)
   }
-  _0x3eb8c6.onclick = function () {
+  shopBtnEl.onclick = function () {
     _0x1bb119.querySelector('.tabs .btn').click()
     _0x1bb119.classList.add('dialog-show')
-    _0x3d165b.classList.add('overlay-show')
+    overlayEl.classList.add('overlay-show')
     _0x889b55 = _0x4f0b52 = null
     _0x2710ba = 0
   }
-  _0x4a20d7.onclick = function () {
-    _0x440387.classList.add('dialog-show')
-    _0x186185.classList.add('grid-pushup')
+  squadBtnEl.onclick = function () {
+    squadEl.classList.add('dialog-show')
+    gridEl.classList.add('grid-pushup')
   }
   _0x371f8c('.gamemodes')
   _0x371f8c('.tabs')
   _0x493cc2()
   ;(function () {
-    const _0x2c6808 = document.createElement('canvas')
-    _0x2c6808.width = _0x2c6808.height = 20
-    const _0x1c5265 = _0x2c6808.getContext('2d'),
-      _0x1fc07a = _0x1c5265.createImageData(20, 20),
-      _0xf8c570 = _0x1fc07a.data
-    for (let _0x5f48b0 = 0; _0x5f48b0 < _0xf8c570.length; _0x5f48b0 += 4) {
+    const canvas = document.createElement('canvas')
+    canvas.width = canvas.height = 20
+    const ctx = canvas.getContext('2d'),
+      img = ctx.createImageData(20, 20),
+      imgData = img.data
+    for (let i = 0; i < imgData.length; i += 4) {
       _0x406b9c(_0x21ff22.dirt)
-      _0xf8c570[_0x5f48b0] = 0
-      _0xf8c570[_0x5f48b0 + 1] = 0
-      _0xf8c570[_0x5f48b0 + 2] = 0
-      _0xf8c570[_0x5f48b0 + 3] = 10 * Math.random()
+      imgData[i] = 0
+      imgData[i + 1] = 0
+      imgData[i + 2] = 0
+      imgData[i + 3] = 10 * Math.random()
     }
-    _0x1c5265.putImageData(_0x1fc07a, 0, 0)
-    const _0x2e2f6f = document.createElement('style')
-    _0x2e2f6f.innerText =
+    ctx.putImageData(img, 0, 0)
+    const styleEl = document.createElement('style')
+    styleEl.innerText =
       '\n\t.bg {\n\t\tbackground-image: url(' +
-      _0x2c6808.toDataURL() +
+      canvas.toDataURL() +
       ');\n\t\tbackground-size: 200px;\n\t\tanimation: bg 15s linear infinite;\n\t\timage-rendering: pixelated;\n\t}\n\n\t@keyframes bg {\n\t\tfrom {\n\t\t\tbackground-position: 0 0;\n\t\t}\n\t\tto {\n\t\t\tbackground-position: -200px -200px;\n\t\t}\n\t}\n\t'
-    document.body.appendChild(_0x2e2f6f)
-    _0x2da152.classList.add('bg')
+    document.body.appendChild(styleEl)
+    menuEl.classList.add('bg')
   })()
   const _0x52bebe = []
-  let _0x481193 = 0
+  let highScore = 0
   function _0x442358(_0xd687bf) {
     _0x360982.score = _0xd687bf
-    _0x481193 = Math.max(_0xd687bf, _0x481193)
+    highScore = Math.max(_0xd687bf, highScore)
     _0x52bebe.push(_0xd687bf)
   }
-  const _0x28e4e1 = document.querySelector('.score-graph'),
-    _0x2a27ee = _0x28e4e1.getContext('2d'),
-    _0x5667bb = document.querySelectorAll('.gold-preview span'),
-    _0x1ca043 = document.getElementById('goldCanvas'),
-    _0xf6f1ed = _0x1ca043.getContext('2d'),
-    _0x4f5add = document.getElementById('canvas')
+  const scoreGraphEl = document.querySelector('.score-graph'),
+    scoreGraphElCtx = scoreGraphEl.getContext('2d'),
+    goldPreviewSpanEl = document.querySelectorAll('.gold-preview span'),
+    goldCanvasEl = document.getElementById('goldCanvas'),
+    goldCanvasElCtx = goldCanvasEl.getContext('2d'),
+    canvasEl = document.getElementById('canvas')
   _0x3c1fa3()
-  const _0x342747 = _0x4f5add.getContext('2d')
+  const canvasElCtx = canvasEl.getContext('2d')
   function _0x3c1fa3() {
-    const _0x16188d = _0x269cb0.checked ? window.devicePixelRatio : 1
-    _0x4f5add.width = _0x1ca043.width = window.innerWidth * _0x16188d
-    _0x4f5add.height = _0x1ca043.height = window.innerHeight * _0x16188d
-    _0x4f5add.style.width = _0x1ca043.style.width = window.innerWidth + 'px'
-    _0x4f5add.style.height = _0x1ca043.style.height = window.innerHeight + 'px'
+    const pixelRatio = highResEl.checked ? window.devicePixelRatio : 1
+    canvasEl.width = goldCanvasEl.width = window.innerWidth * pixelRatio
+    canvasEl.height = goldCanvasEl.height = window.innerHeight * pixelRatio
+    canvasEl.style.width = goldCanvasEl.style.width = window.innerWidth + 'px'
+    canvasEl.style.height = goldCanvasEl.style.height = window.innerHeight + 'px'
   }
   window.onresize = function () {
     _0x3c1fa3()
@@ -1792,17 +1787,17 @@
     _0x8d0f50()
     _0x30dcaf()
   }
-  const _0x252781 = document.querySelector('.alert'),
-    _0x24d1ed = _0x252781.querySelector('.alert-desc'),
-    _0x13e6f0 = document.querySelector('.hud'),
-    _0x32c425 = [_0x2da152, _0x13e6f0, _0x5784b8, _0x194e5e, _0x252781]
+  const alertEl = document.querySelector('.alert'),
+    alertDescEl = alertEl.querySelector('.alert-desc'),
+    hudEl = document.querySelector('.hud'),
+    _0x32c425 = [menuEl, hudEl, gameoverEl, hudCommonEl, alertEl]
   let _0x19da0e = 1
   function _0x13d5e7() {
     _0x19da0e =
       Math.max(window.innerWidth / 1366, window.innerHeight / 657) *
       (_0x39ef23 && !_0x5e06ec ? 1.6 : 1)
-    for (let _0x50ddb0 = 0; _0x50ddb0 < _0x32c425.length; _0x50ddb0++) {
-      const _0x17ade8 = _0x32c425[_0x50ddb0]
+    for (let i = 0; i < _0x32c425.length; i++) {
+      const _0x17ade8 = _0x32c425[i]
       let _0x315d99 = _0x19da0e
       _0x17ade8.style.transform = 'scale(' + _0x315d99 + ')'
       _0x17ade8.style.transformOrigin = '0 0'
@@ -1811,79 +1806,79 @@
     }
   }
   _0x13d5e7()
-  let _0x314ee2 = 0,
-    _0xb7f535 = 0
-  function _0x52bbe6(_0x265e02) {
-    return _0x265e02 < 0.01
+  let playersDestroyed = 0,
+    goldDigged = 0
+  function scoreToStr(score) {
+    return score < 0.01
       ? '0'
-      : (_0x265e02 = Math.floor(_0x265e02)) >= 1000000
-      ? parseFloat((_0x265e02 / 1000000).toFixed(2)) + 'm'
-      : _0x265e02 >= 1000
-      ? parseFloat((_0x265e02 / 1000).toFixed(1)) + 'k'
-      : _0x265e02
+      : (score = Math.floor(score)) >= 1000000
+      ? parseFloat((score / 1000000).toFixed(2)) + 'm'
+      : score >= 1000
+      ? parseFloat((score / 1000).toFixed(1)) + 'k'
+      : score
   }
-  const _0x5e494 = document.querySelector('.stats')
-  function _0x3b7f62(_0x2cf615) {
-    const _0x2c8a71 = [
-        Math.floor(_0x2cf615 / 3600000),
-        Math.floor((_0x2cf615 % 3600000) / 60000),
-        Math.floor((_0x2cf615 % 60000) / 1000),
+  const statsEl = document.querySelector('.stats')
+  function msToStr(millisec) {
+    const temp = [
+        Math.floor(millisec / 3600000),
+        Math.floor((millisec % 3600000) / 60000),
+        Math.floor((millisec % 60000) / 1000),
       ],
-      _0x29582c = ['h', 'm', 's']
-    let _0x51fb22 = ''
-    for (let _0x145f59 = 0; _0x145f59 < _0x2c8a71.length; _0x145f59++) {
-      const _0x29288d = _0x2c8a71[_0x145f59]
-      ;(_0x29288d > 0 || 2 == _0x145f59) &&
-        (_0x51fb22 += _0x29288d + _0x29582c[_0x145f59] + ' ')
+      units = ['h', 'm', 's']
+    let str = ''
+    for (let i = 0; i < temp.length; i++) {
+      const _0x29288d = temp[i]
+      ;(_0x29288d > 0 || 2 == i) &&
+        (str += _0x29288d + units[i] + ' ')
     }
-    return _0x51fb22
+    return str
   }
   function _0x30dcaf() {
-    if ('none' === _0x5784b8.style.display) {
+    if ('none' === gameoverEl.style.display) {
       return
     }
     for (; _0x52bebe.length < 2; ) {
       _0x52bebe.push(0)
     }
     const _0x4b9b64 = (window.innerWidth * window.devicePixelRatio) / _0x19da0e
-    _0x28e4e1.width !== _0x4b9b64 &&
-      ((_0x28e4e1.width = _0x4b9b64),
-      (_0x28e4e1.height = 100 * window.devicePixelRatio))
-    const _0x3b9bde = Math.max(_0x481193, 1000)
-    _0x2a27ee.clearRect(0, 0, _0x28e4e1.width, _0x28e4e1.height)
-    _0x2a27ee.save()
-    _0x2a27ee.scale(_0x28e4e1.width, _0x28e4e1.height)
-    _0x2a27ee.beginPath()
-    _0x2a27ee.moveTo(-2, 2)
+    scoreGraphEl.width !== _0x4b9b64 &&
+      ((scoreGraphEl.width = _0x4b9b64),
+      (scoreGraphEl.height = 100 * window.devicePixelRatio))
+    const _0x3b9bde = Math.max(highScore, 1000)
+    scoreGraphElCtx.clearRect(0, 0, scoreGraphEl.width, scoreGraphEl.height)
+    scoreGraphElCtx.save()
+    scoreGraphElCtx.scale(scoreGraphEl.width, scoreGraphEl.height)
+    scoreGraphElCtx.beginPath()
+    scoreGraphElCtx.moveTo(-2, 2)
     let _0x549259 = 0,
       _0x4ac362 = 0
     const _0x4da99b = _0x52bebe.length - 1
-    for (let _0x272b0e = 0; _0x272b0e <= _0x4da99b; _0x272b0e++) {
-      const _0x2f3ad8 = _0x52bebe[_0x272b0e],
-        _0x15a2d7 = _0x272b0e / _0x4da99b,
+    for (let i = 0; i <= _0x4da99b; i++) {
+      const _0x2f3ad8 = _0x52bebe[i],
+        _0x15a2d7 = i / _0x4da99b,
         _0x3a7d80 = 0.975 - (_0x2f3ad8 / _0x3b9bde) * 0.95
-      _0x28e4e1.width
-      _0x2f3ad8 === _0x481193 &&
+      scoreGraphEl.width
+      _0x2f3ad8 === highScore &&
         ((_0x549259 = _0x15a2d7), (_0x4ac362 = _0x3a7d80))
-      _0x2a27ee.lineTo(_0x15a2d7, _0x3a7d80)
-      _0x272b0e === _0x4da99b && _0x2a27ee.lineTo(2, _0x3a7d80)
+      scoreGraphElCtx.lineTo(_0x15a2d7, _0x3a7d80)
+      i === _0x4da99b && scoreGraphElCtx.lineTo(2, _0x3a7d80)
     }
-    _0x2a27ee.lineTo(2, 2)
-    _0x2a27ee.closePath()
-    _0x2a27ee.restore()
-    _0x2a27ee.strokeStyle = _0x2a27ee.fillStyle = 'hsla(0,0%,100%,0.2)'
-    _0x2a27ee.save()
-    _0x2a27ee.clip()
-    _0x2a27ee.fill()
-    _0x2a27ee.lineWidth = 6 * window.devicePixelRatio
-    _0x2a27ee.stroke()
-    _0x2a27ee.restore()
+    scoreGraphElCtx.lineTo(2, 2)
+    scoreGraphElCtx.closePath()
+    scoreGraphElCtx.restore()
+    scoreGraphElCtx.strokeStyle = scoreGraphElCtx.fillStyle = 'hsla(0,0%,100%,0.2)'
+    scoreGraphElCtx.save()
+    scoreGraphElCtx.clip()
+    scoreGraphElCtx.fill()
+    scoreGraphElCtx.lineWidth = 6 * window.devicePixelRatio
+    scoreGraphElCtx.stroke()
+    scoreGraphElCtx.restore()
   }
   const _0x31c3e2 = []
   let _0x1cd091, _0x194da0, ws, _0x36e905, _0x34e918
   function _0x530c53() {
     _0x224d6b = false
-    _0xaec281.innerHTML = ''
+    lbContentEl.innerHTML = ''
     _0x552882.length = 0
     _0x194da0 = null
     _0x1cd091 = null
@@ -1891,33 +1886,33 @@
     _0x52a128.length = 0
     _0x31c3e2.length = 0
     _0x551ff8.length = 0
-    _0x314ee2 = 0
-    _0xb7f535 = 0
+    playersDestroyed = 0
+    goldDigged = 0
   }
-  function _0x10ea98(WS_URL) {
+  function joinGame(WS_URL) {
     if (
       (console.log('Connecting to ' + WS_URL + '...'),
-      _0x4f623f.classList.add('connecting-show'),
-      _0x13afc3.classList.remove('minimize-show'),
-      _0x56f3e3.click(),
-      _0x186185.classList.remove('grid-show'),
-      _0x3d165b.onclick(),
+      connectingEl.classList.add('connecting-show'),
+      minimizeEl.classList.remove('minimize-show'),
+      continueBtnEl.click(),
+      gridEl.classList.remove('grid-show'),
+      overlayEl.onclick(),
       (_0x127399.length = 0),
       _0x530c53(),
       (_0x36e905 = null),
       (_0x34e918 = 0),
-      (_0x1175ff = null),
+      (buf2 = null),
       (_0x57d1e4 = 0),
-      (_0x2a5982 = null),
-      (_0x35cb64.style.display =
-        _0x18e771.style.display =
+      (discordData = null),
+      (logoutBtnEl.style.display =
+        loginBtnEl.style.display =
         userEl.style.display =
           'none'),
       ws)
     ) {
       try {
         ws.close()
-      } catch (_0x19f232) {}
+      } catch (err) {}
       ws.onopen = ws.onmessage = ws.onclose = null
       ws = null
     }
@@ -1930,39 +1925,39 @@
   const avatarEl = document.querySelector('.avatar'),
     usernameEl = document.querySelector('.username'),
     userEl = document.querySelector('.user')
-  let _0x292439, _0x2a5982
+  let accountId, discordData
   function onOpen() {
     var _0x1e5734
     if (
       (console.log('Connected!'),
       (function () {
         _0x553cf3.length = 1
-        for (let _0x1cfc0f in skins) {
-          const _0x35ca70 = skins[_0x1cfc0f]
-          for (let _0x2a345c = 0; _0x2a345c < _0x35ca70.length; _0x2a345c++) {
-            delete _0x35ca70[_0x2a345c].owned
-            delete _0x35ca70[_0x2a345c].purchaseSent
+        for (let skinType in skins) {
+          const skin = skins[skinType]
+          for (let i = 0; i < skin.length; i++) {
+            delete skin[i].owned
+            delete skin[i].purchaseSent
           }
         }
-        _0x287195(skins.faceSkins, _0x413b9c, 'face')
-        _0x287195(skins.bodySkins, _0x6917f9, 'body')
+        _0x287195(skins.faceSkins, faceSkinsEl, 'face')
+        _0x287195(skins.bodySkins, bodySkinsEl, 'body')
         _0x421e37.length = 0
-        _0x14cb2c.innerHTML = ''
+        newSkinsEl.innerHTML = ''
         const _0x4775f5 = skins.faceSkins
             .concat(skins.bodySkins)
             .sort(function (_0x24234f, _0x400b22) {
               return _0x400b22.createdAt - _0x24234f.createdAt
             }),
           _0x487452 = Math.min(4, _0x4775f5.length)
-        for (let _0x21e479 = 0; _0x21e479 < _0x487452; _0x21e479++) {
-          _0x421e37.push(_0x4775f5[_0x21e479].shopItemEl)
+        for (let i = 0; i < _0x487452; i++) {
+          _0x421e37.push(_0x4775f5[i].shopItemEl)
         }
       })(),
-      _0x10e6ea(localStorage.account_id) ||
+      isValidUuid(localStorage.account_id) ||
         (localStorage.account_id = crypto.randomUUID()),
-      (_0x292439 = localStorage.account_id),
-      (_0x2a5982 = localStorage.discord_data),
-      _0x2a5982 ||
+      (accountId = localStorage.account_id),
+      (discordData = localStorage.discord_data),
+      discordData ||
         ('discord_data',
         (_0x1e5734 = document.cookie.match(
           RegExp(
@@ -1971,40 +1966,40 @@
               '=([^;]*)'
           )
         )),
-        (_0x2a5982 = _0x1e5734 ? _0x1e5734[1] : null),
-        _0x2a5982 && (_0x2a5982 = decodeURIComponent(_0x2a5982)),
+        (discordData = _0x1e5734 ? _0x1e5734[1] : null),
+        discordData && (discordData = decodeURIComponent(discordData)),
         (document.cookie =
           'discord_data=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;')),
-      _0x2a5982)
+      discordData)
     ) {
       try {
-        const _0x441886 = _0x2a5982
+        const dData = discordData
         if (
-          ((_0x2a5982 = JSON.parse(
-            decodeURIComponent(escape(atob(_0x441886)))
+          ((discordData = JSON.parse(
+            decodeURIComponent(escape(atob(dData)))
           )),
-          !_0x10e6ea(_0x2a5982.accountId))
+          !isValidUuid(discordData.accountId))
         ) {
           throw new Error('invalid uuid')
         }
-        _0x292439 = _0x2a5982.accountId
-        usernameEl.setAttribute('stroke', _0x2a5982.name)
-        _0x2a5982.avatar &&
-          (avatarEl.style.backgroundImage = 'url(' + _0x2a5982.avatar + ')')
-        localStorage.discord_data = _0x441886
-      } catch (_0x4cdce7) {
-        _0x2a5982 = null
+        accountId = discordData.accountId
+        usernameEl.setAttribute('stroke', discordData.name)
+        discordData.avatar &&
+          (avatarEl.style.backgroundImage = 'url(' + discordData.avatar + ')')
+        localStorage.discord_data = dData
+      } catch (err) {
+        discordData = null
         delete localStorage.discord_data
-        console.error(_0x4cdce7)
+        console.error(err)
       }
     }
-    const dv = new DataView(new ArrayBuffer(5 + _0x292439.length))
-    dv.setUint8(0, _0x4822ce(3, 0))
+    const dv = new DataView(new ArrayBuffer(5 + accountId.length))
+    dv.setUint8(0, leftShiftOr(3, 0))
     dv.setUint32(1, 4)
-    for (let _0x376f6d = 0; _0x376f6d < _0x292439.length; _0x376f6d++) {
-      dv.setUint8(5 + _0x376f6d, _0x292439.charCodeAt(_0x376f6d))
+    for (let i = 0; i < accountId.length; i++) {
+      dv.setUint8(5 + i, accountId.charCodeAt(i))
     }
-    _0x3fe969(dv)
+    wsSend(dv)
   }
   let _0x36e069 = 0
   const _0x52a128 = []
@@ -2018,7 +2013,7 @@
     lbItemEl.appendChild(lbBarEl)
     const lbTextEl = document.createElement('span')
     lbItemEl.appendChild(lbTextEl)
-    _0xaec281.appendChild(lbItemEl)
+    lbContentEl.appendChild(lbItemEl)
     const _0x4587b5 = {
       name: name,
       score: score,
@@ -2033,7 +2028,7 @@
         this.iPercent += 0.1 * (this.percent - this.iPercent)
         this.lbTextEl.setAttribute(
           'stroke',
-          (this.name ? this.name + ' - ' : '') + _0x52bbe6(this.iScore)
+          (this.name ? this.name + ' - ' : '') + scoreToStr(this.iScore)
         )
         this.lbBarEl.style.width = this.iPercent + '%'
       },
@@ -2048,8 +2043,8 @@
     const _0x4dea7c = _0x552882[0]
     _0x4dea7c.percent = _0x4dea7c.iPercent = 100
     let _0x411c8a = _0x4dea7c.isMe
-    for (let _0x29be3a = 1; _0x29be3a < _0x552882.length; _0x29be3a++) {
-      const _0x146efc = _0x552882[_0x29be3a]
+    for (let i = 1; i < _0x552882.length; i++) {
+      const _0x146efc = _0x552882[i]
       _0x562ac8(_0x146efc, _0x4dea7c)
       const _0x501908 = _0x146efc.lbItemEl
       _0x501908.parentNode.appendChild(_0x501908)
@@ -2057,7 +2052,7 @@
     }
     _0x411c8a ||
       (_0x562ac8(_0x360982, _0x4dea7c),
-      _0xaec281.appendChild(_0x360982.lbItemEl))
+      lbContentEl.appendChild(_0x360982.lbItemEl))
   }
   function _0x562ac8(_0x34f764, _0x181d0f) {
     _0x34f764.percent =
@@ -2066,79 +2061,79 @@
   _0x360982.lbItemEl.classList.add('my-lb-item')
   _0x360982.isMe = true
   const _0x551ff8 = []
-  let _0x16dd13 = 0
+  let numWorms = 0
   Math.sqrt(2)
-  let _0x27c993 = 0
+  let myGold = 0
   const _0x127399 = []
-  function _0x37c0af(_0x151ef4, _0x5e8647) {
-    const _0x534305 = skins[_0x151ef4 + 'Skins'][_0x5e8647]
+  function _0x37c0af(faceOrBody, _0x5e8647) {
+    const _0x534305 = skins[faceOrBody + 'Skins'][_0x5e8647]
     _0x534305.owned = true
     const _0x54e3cd = _0x534305.shopItemEl.querySelector('.btn')
     _0x54e3cd.classList.remove('gold-btn')
     _0x54e3cd.classList.add('blue-btn')
     _0x54e3cd.classList.remove('btn-disabled')
     _0x54e3cd.innerHTML = '<span stroke="Equip"></span>'
-    const _0x3e855e = 'equipped_' + _0x151ef4 + '_skin'
+    const _0x3e855e = 'equipped_' + faceOrBody + '_skin'
     _0x54e3cd.onclick = function () {
       const _0x317ef6 = document.querySelector(
-        '.' + _0x151ef4 + '-skin [stroke=Unequip]'
+        '.' + faceOrBody + '-skin [stroke=Unequip]'
       )
       _0x317ef6 && _0x317ef6.setAttribute('stroke', 'Equip')
       const _0x57db4d = _0x317ef6 && _0x317ef6.parentNode === this
       _0x57db4d || _0x54e3cd.children[0].setAttribute('stroke', 'Unequip')
       localStorage[_0x3e855e] = _0x57db4d ? -1 : _0x5e8647
-      const _0x23d1f3 = _0x178fb4()
-      _0xe591fc.classList[
+      const _0x23d1f3 = getMySkins()
+      unequipBtnEl.classList[
         -1 === _0x23d1f3[0] && -1 === _0x23d1f3[1] ? 'add' : 'remove'
       ]('btn-disabled')
       console.log(localStorage[_0x3e855e])
     }
     parseInt(localStorage[_0x3e855e]) === _0x5e8647 && _0x54e3cd.onclick()
   }
-  function _0x4c0ef4() {
-    _0xc7f21b('face')
-    _0xc7f21b('body')
+  function skinShopsInit() {
+    singleSkinShopInit('face')
+    singleSkinShopInit('body')
   }
-  function _0xc7f21b(_0x78d58) {
-    const _0x54b5db = skins[_0x78d58 + 'Skins']
-    for (let _0x363b3a = 0; _0x363b3a < _0x54b5db.length; _0x363b3a++) {
-      const _0x190004 = _0x54b5db[_0x363b3a]
-      if (_0x190004.owned) {
+  function singleSkinShopInit(prefix) {
+    const skinGroup = skins[prefix + 'Skins']
+    for (let i = 0; i < skinGroup.length; i++) {
+      const skin = skinGroup[i]
+      if (skin.owned) {
         continue
       }
-      const _0x231bf1 = _0x190004.shopItemEl.querySelector('.btn')
-      _0x27c993 >= _0x190004.price
-        ? (_0x231bf1.classList.remove('btn-disabled'),
-          (_0x231bf1.onclick = function () {
-            if (_0x190004.purchaseSent || _0x127399.length > 0) {
+      const skinShopBtnEl = skin.shopItemEl.querySelector('.btn')
+      myGold >= skin.price
+        ? (skinShopBtnEl.classList.remove('btn-disabled'),
+          (skinShopBtnEl.onclick = function () {
+            if (skin.purchaseSent || _0x127399.length > 0) {
               return
             }
-            _0x190004.purchaseSent = true
+            skin.purchaseSent = true
             const dv = new DataView(new ArrayBuffer(2))
-            dv.setUint8(0, _0x4822ce(4, 'face' === _0x78d58 ? 0 : 1))
-            dv.setUint8(1, _0x363b3a)
-            _0x3fe969(dv)
-            _0x231bf1.classList.add('btn-disabled')
-            _0x231bf1.blur()
+            dv.setUint8(0, leftShiftOr(4, 'face' === prefix ? 0 : 1))
+            dv.setUint8(1, i)
+            wsSend(dv)
+            skinShopBtnEl.classList.add('btn-disabled')
+            skinShopBtnEl.blur()
             _0x127399.push({
-              skin: _0x190004,
-              i: _0x363b3a,
-              prefix: _0x78d58,
+              skin: skin,
+              i: i,
+              prefix: prefix,
             })
           }))
-        : (_0x231bf1.classList.add('btn-disabled'), (_0x231bf1.onclick = null))
+        : (skinShopBtnEl.classList.add('btn-disabled'), (skinShopBtnEl.onclick = null))
     }
   }
-  function _0x1e2762() {
-    const _0x4d8beb = _0x27c993
+  function displayGold() {
+    const goldStr = myGold
       .toLocaleString('en', { notation: 'compact' })
       .toLowerCase()
-    for (let _0x1716ef = 0; _0x1716ef < _0x5667bb.length; _0x1716ef++) {
-      _0x5667bb[_0x1716ef].innerText = _0x4d8beb
+    for (let i = 0; i < goldPreviewSpanEl.length; i++) {
+      goldPreviewSpanEl[i].innerText = goldStr
     }
   }
-  function _0x5ddf1a(_0x237ed2) {
-    for (_0x237ed2 = Math.ceil(_0x237ed2 / 2); _0x237ed2--; ) {
+  function _0x5ddf1a(i) {
+    for (i = Math.ceil(i / 2); i--; ) {
       _0x38936e.push({
         spawnTime:
           (_0x38936e[_0x38936e.length - 1] || { spawnTime: 0 }).spawnTime +
@@ -2153,9 +2148,9 @@
     }
   }
   let _0x367af4, _0x5656c8
-  const _0x4148a8 = document.querySelector('.reward-btns'),
-    _0x1826a4 = _0x4148a8.querySelector('.arrow'),
-    _0x5e35aa = document.getElementById('rewardStatus')
+  const rewardBtwnsEl = document.querySelector('.reward-btns'),
+    rewardArrowEl = rewardBtwnsEl.querySelector('.arrow'),
+    rewardStatusEl = document.getElementById('rewardStatus')
   function _0x179918(_0x20c8d9) {
     let _0x55e9b4 = Math.ceil(_0x20c8d9 / 1000 / 60)
     const _0x272646 = Math.floor(_0x55e9b4 / 60)
@@ -2172,22 +2167,22 @@
       _0x5bd8b3
     )
   }
-  _0x4148a8.innerHTML = ''
+  rewardBtwnsEl.innerHTML = ''
   for (let _0x6f59a1 = 0; _0x6f59a1 < _0x36e559.length; _0x6f59a1++) {
-    _0x4148a8.innerHTML +=
+    rewardBtwnsEl.innerHTML +=
       '<div class="btn btn-disabled"><span stroke="' +
       _0x36e559[_0x6f59a1] +
       '"></span></div>'
   }
   let _0x193b62
   function _0x38da97() {
-    const _0x155e6e = _0x4148a8.querySelector('.gold-btn')
-    _0x155e6e &&
-      (_0x155e6e.classList.remove('gold-btn'),
-      _0x155e6e.classList.add('btn-disabled'),
-      (_0x155e6e.onclick = null))
+    const goldBtnEl = rewardBtwnsEl.querySelector('.gold-btn')
+    goldBtnEl &&
+      (goldBtnEl.classList.remove('gold-btn'),
+      goldBtnEl.classList.add('btn-disabled'),
+      (goldBtnEl.onclick = null))
     const _0x18e464 =
-      _0x4148a8.children[Math.min(_0x36e559.length - 1, _0x367af4)]
+      rewardBtwnsEl.children[Math.min(_0x36e559.length - 1, _0x367af4)]
     _0x367af4 < _0x36e559.length &&
       ((_0x193b62 = _0x18e464),
       _0x18e464.classList.add('gold-btn'),
@@ -2195,46 +2190,46 @@
       (_0x18e464.onclick = function () {
         this.rewardSent = true
         this.classList.add('btn-disabled')
-        _0x3fe969(new Uint8Array([_0x4822ce(5, 0)]))
+        wsSend(new Uint8Array([leftShiftOr(5, 0)]))
       }))
-    _0x18e464.appendChild(_0x1826a4)
+    _0x18e464.appendChild(rewardArrowEl)
   }
-  const _0x202a66 = document.querySelector('.lb-footer')
-  let _0x1f18f0,
+  const lbFooterEl = document.querySelector('.lb-footer')
+  let time,
     _0x3ef6bf,
     _0x244c5d = {}
   function _0x47463e(_0x3840ab) {
-    _0x49fae4.style.display = _0x3869cb.style.display = _0x3840ab ? '' : 'none'
+    angryBtnEl.style.display = sadBtnEl.style.display = _0x3840ab ? '' : 'none'
     _0x3840ab ||
-      ((_0x30b4cf.style.display = 'none'),
+      ((joystickEl.style.display = 'none'),
       (_0x5c950a = _0x2d3f53 = _0x25c66d = null))
   }
-  let _0x1175ff,
-    _0x4c2f95 = 0
-  function onMessage(_0x330919) {
-    if ('string' == typeof _0x330919.data) {
+  let buf2,
+    gamemode = 0
+  function onMessage(msg) {
+    if ('string' == typeof msg.data) {
       return
     }
     !(function () {
-      const _0xbed958 = _0x330919.data
+      const msgData = msg.data
       if (_0x36e905) {
-        const _0x187e0b = new Uint8Array(_0xbed958),
-          _0xa56f1b = new Uint8Array(_0x187e0b.length)
-        for (let _0x309d43 = 0; _0x309d43 < _0x187e0b.length; _0x309d43++) {
-          _0xa56f1b[_0x309d43] = _0x187e0b[_0x309d43]
-          _0x187e0b[_0x309d43] ^=
-            _0x36e905[(_0x34e918 + _0x309d43) % _0x36e905.length]
+        const msgArr = new Uint8Array(msgData),
+          lenArr = new Uint8Array(msgArr.length)
+        for (let i = 0; i < msgArr.length; i++) {
+          lenArr[i] = msgArr[i]
+          msgArr[i] ^=
+            _0x36e905[(_0x34e918 + i) % _0x36e905.length]
         }
-        _0x36e905 = _0xa56f1b
+        _0x36e905 = lenArr
       } else {
-        _0x36e905 = new Uint8Array(_0xbed958)
+        _0x36e905 = new Uint8Array(msgData)
       }
       _0x34e918 = (_0x34e918 + 1) % 1000
     })()
-    const dv = new DataView(_0x330919.data)
+    const dv = new DataView(msg.data)
     _0x36e069 += dv.byteLength
     let _0x475187 = 0
-    function _0x3c57f0() {
+    function getNickname() {
       const _0x567271 = dv.getUint8(_0x475187++)
       if (_0x567271 > 0) {
         const _0x306008 = new Uint8Array(_0x567271)
@@ -2253,39 +2248,39 @@
     switch (_0xd02532) {
       case 4:
         const {
-          skin: _0x2e2f6b,
-          i: _0xb3dbfe,
-          prefix: _0x1b8af9,
+          skin: skin,
+          i: ii,
+          prefix: prefix,
         } = _0x127399.shift()
-        _0x37c0af(_0x1b8af9, _0xb3dbfe),
-          (_0x27c993 -= _0x2e2f6b.price),
-          _0x4c0ef4(),
-          _0x1e2762()
+        _0x37c0af(prefix, ii),
+          (myGold -= skin.price),
+          skinShopsInit(),
+          displayGold()
         break
       case 5:
         const _0x43b27c = _0x36e559[_0x367af4++]
-        ;(_0x27c993 += _0x43b27c),
-          _0x4c0ef4(),
-          _0x1e2762(),
+        ;(myGold += _0x43b27c),
+          skinShopsInit(),
+          displayGold(),
           _0x38da97(),
           (_0x5656c8 = Date.now() + 86400000),
           _0x5ddf1a(_0x43b27c / 2)
         break
       case 3:
         if (
-          (_0x2a5982
-            ? ((_0x35cb64.style.display = ''), (userEl.style.display = ''))
-            : (_0x18e771.style.display = ''),
-          (_0x27c993 = 0),
+          (discordData
+            ? ((logoutBtnEl.style.display = ''), (userEl.style.display = ''))
+            : (loginBtnEl.style.display = ''),
+          (myGold = 0),
           0 === _0x3dce21)
         ) {
-          _0x27c993 = 0
+          myGold = 0
           localStorage.equipped_body_skin = -1
           localStorage.equipped_face_skin = -1
           _0x367af4 = 0
           _0x5656c8 = 0
         } else {
-          _0x27c993 = dv.getUint32(_0x475187)
+          myGold = dv.getUint32(_0x475187)
           _0x475187 += 4
           const _0x5e91b3 = dv.getUint16(_0x475187)
           _0x475187 += 2
@@ -2295,7 +2290,7 @@
           let _0x4108dd = false
           if (_0x475187 < dv.byteLength) {
             let _0x1cf61d = false
-            const [_0x432e90, _0x352fbd] = _0x178fb4(),
+            const [_0x432e90, _0x352fbd] = getMySkins(),
               _0x59621a = dv.getUint8(_0x475187++)
             for (let _0xb6d7c3 = 0; _0xb6d7c3 < _0x59621a; _0xb6d7c3++) {
               const _0x8df9c1 = dv.getUint8(_0x475187++)
@@ -2312,41 +2307,41 @@
           _0x4108dd || (localStorage.equipped_face_skin = -1)
         }
         _0x38da97(),
-          _0xe591fc.classList.add('btn-disabled'),
+          unequipBtnEl.classList.add('btn-disabled'),
           ('-1' == localStorage.equipped_face_skin &&
             '-1' == localStorage.equipped_body_skin) ||
-            _0xe591fc.classList.remove('btn-disabled'),
-          _0x4c0ef4(),
-          _0x1e2762(),
-          _0x4f623f.classList.remove('connecting-show'),
-          _0x186185.classList.add('grid-show')
+            unequipBtnEl.classList.remove('btn-disabled'),
+          skinShopsInit(),
+          displayGold(),
+          connectingEl.classList.remove('connecting-show'),
+          gridEl.classList.add('grid-show')
         break
       case 0:
-        const _0x3a1f67 = _0xb4f9cb[_0x3dce21] || 'unknown'
-        console.log('Kicked! (reason: ' + _0x3a1f67 + ')'),
-          _0x24d1ed.setAttribute('stroke', 'reason: ' + _0x3a1f67),
-          (_0x252781.style.display = ''),
-          (_0x10ea98 = function () {})
+        const reason = wsCloseReasons[_0x3dce21] || 'unknown'
+        console.log('Kicked! (reason: ' + reason + ')'),
+          alertDescEl.setAttribute('stroke', 'reason: ' + reason),
+          (alertEl.style.display = ''),
+          (joinGame = function () {})
         break
       case 1:
-        _0x4c2f95 !== _0x3dce21 && _0x530c53(),
+        gamemode !== _0x3dce21 && _0x530c53(),
           5 == dv.byteLength &&
             (_0x1cd091 = dv.getUint32(_0x475187)),
-          (_0x4c2f95 = localStorage.gamemode = _0x3dce21),
+          (gamemode = localStorage.gamemode = _0x3dce21),
           _0x493cc2(),
           (_0x4355ad = _0x4c70cf = 1),
           (_0x5b52da = null),
           (_0x21109a = null),
-          (_0x1f18f0 = Date.now()),
-          (_0x314ee2 = 0),
+          (time = Date.now()),
+          (playersDestroyed = 0),
           (_0x3ef6bf = null),
-          _0x4f3f05.classList.remove('btn-disabled'),
-          _0x186185.classList.remove('grid-show'),
-          _0x5a875d.classList.add('game-show'),
-          (_0x5784b8.style.display = 'none'),
+          giveupEl.classList.remove('btn-disabled'),
+          gridEl.classList.remove('grid-show'),
+          gameEl.classList.add('game-show'),
+          (gameoverEl.style.display = 'none'),
           (_0x52bebe.length = 0),
           (_0x5cb559 = {}),
-          (_0x481193 = 0),
+          (highScore = 0),
           _0x47463e(_0x39ef23)
         break
       case 2:
@@ -2354,21 +2349,21 @@
           _0x434c10 = 8 & _0x3dce21,
           _0x4647f4 = ((3 & _0x3dce21) << 2) | dv.getUint8(_0x475187++),
           _0x5e0ab9 = { _0x5bfc76: true },
-          _0x300def = Date.now()
+          time = Date.now()
         for (let _0x5df386 = 0; _0x5df386 < _0x4647f4; _0x5df386++) {
           const _0x5bfc76 = dv.getUint32(_0x475187)
           _0x475187 += 4
-          let _0x2643eb = _0x31c3e2.find(
+          let worm = _0x31c3e2.find(
             (_0x35de9f) => _0x35de9f.id === _0x5bfc76
           )
           const _0xe60ee6 =
               (dv.getUint8(_0x475187++) / 255) * Math.PI * 2,
             _0x366774 = dv.getUint8(_0x475187++),
-            _0x3409c6 = _0x366774 >> 6,
-            _0x29d2f8 = (63 & _0x366774) / 63
-          if (_0x2643eb) {
-            _0x2643eb.oldR = _0x2643eb.r
-            const _0x39aa92 = _0x2643eb.segments[0]
+            mood = _0x366774 >> 6,
+            energy = (63 & _0x366774) / 63
+          if (worm) {
+            worm.oldR = worm.r
+            const _0x39aa92 = worm.segments[0]
             _0x39aa92.oldX = _0x39aa92.x
             _0x39aa92.oldY = _0x39aa92.y
             _0x39aa92.x += dv.getInt8(_0x475187++)
@@ -2377,47 +2372,47 @@
             _0x39aa92.interpOldY = _0x39aa92.interpY
             let _0x530890 = dv.getInt8(_0x475187++)
             for (; _0x530890 < 0; ) {
-              _0x2643eb.segments.pop()
+              worm.segments.pop()
               _0x530890++
             }
-            _0x3f9782(_0x2643eb)
-            const _0x3887e0 = _0x2643eb.segments[_0x2643eb.segments.length - 1]
+            _0x3f9782(worm)
+            const _0x3887e0 = worm.segments[worm.segments.length - 1]
             for (; _0x530890 > 0; ) {
-              _0x2643eb.segments.push(Object.assign({}, _0x3887e0))
+              worm.segments.push(Object.assign({}, _0x3887e0))
               _0x530890--
             }
-            _0x2643eb.interpOldR = _0x2643eb.interpR
-            _0x2643eb.r = _0xcd5ec6(_0x2643eb)
-            _0x2643eb.oldDirX = _0x2643eb.dirX
-            _0x2643eb.oldDirY = _0x2643eb.dirY
-            _0x2643eb.newDirX = Math.cos(_0xe60ee6)
-            _0x2643eb.newDirY = Math.sin(_0xe60ee6)
-            _0x2643eb.updateTime = _0x300def
+            worm.interpOldR = worm.interpR
+            worm.r = _0xcd5ec6(worm)
+            worm.oldDirX = worm.dirX
+            worm.oldDirY = worm.dirY
+            worm.newDirX = Math.cos(_0xe60ee6)
+            worm.newDirY = Math.sin(_0xe60ee6)
+            worm.updateTime = time
           } else {
-            _0x2643eb = new _0x2561ae(_0x5bfc76, _0xe60ee6)
-            _0x2643eb.faceSkin = dv.getUint8(_0x475187++) - 1
-            _0x2643eb.bodySkin = dv.getUint8(_0x475187++) - 1
-            _0x2643eb.energy = _0x29d2f8
-            _0x5bfc76 == _0x1cd091 && (_0x194da0 = _0x2643eb)
-            _0x31c3e2.push(_0x2643eb)
-            const _0x5be4a5 = dv.getUint16(_0x475187)
+            worm = new Worm(_0x5bfc76, _0xe60ee6)
+            worm.faceSkin = dv.getUint8(_0x475187++) - 1
+            worm.bodySkin = dv.getUint8(_0x475187++) - 1
+            worm.energy = energy
+            _0x5bfc76 == _0x1cd091 && (_0x194da0 = worm)
+            _0x31c3e2.push(worm)
+            const x = dv.getUint16(_0x475187)
             _0x475187 += 2
-            const _0x1609b4 = dv.getUint16(_0x475187)
+            const y = dv.getUint16(_0x475187)
             _0x475187 += 2
-            _0x2643eb.segments[0] = {
-              x: _0x5be4a5,
-              y: _0x1609b4,
-              oldX: _0x5be4a5,
-              oldY: _0x1609b4,
-              interpOldX: _0x5be4a5,
-              interpOldY: _0x1609b4,
-              interpX: _0x5be4a5,
-              interpY: _0x1609b4,
+            worm.segments[0] = {
+              x: x,
+              y: y,
+              oldX: x,
+              oldY: y,
+              interpOldX: x,
+              interpOldY: y,
+              interpX: x,
+              interpY: y,
             }
             const _0x1b3eaf = dv.getUint16(_0x475187)
             _0x475187 += 2
             for (let _0x5dd295 = 0; _0x5dd295 < _0x1b3eaf; _0x5dd295++) {
-              let _0x520367 = _0x2643eb.segments[_0x5dd295]
+              let _0x520367 = worm.segments[_0x5dd295]
               const _0x39871d = {
                 x: _0x520367.x + dv.getInt8(_0x475187++),
                 y: _0x520367.y + dv.getInt8(_0x475187++),
@@ -2430,23 +2425,23 @@
                 _0x39871d.interpOldY =
                 _0x39871d.interpY =
                   _0x39871d.y
-              _0x2643eb.segments.push(_0x39871d)
+              worm.segments.push(_0x39871d)
             }
-            _0x2643eb.nickname = _0x3c57f0()
-            _0x244c5d[_0x2643eb.id] = _0x2643eb.nickname
-            _0x194da0 === _0x2643eb &&
-              ((_0x2ce067 = _0x5be4a5),
-              (_0x273f21 = _0x1609b4),
-              (_0x360982.name = _0x2643eb.nickname))
-            _0x2643eb.r =
-              _0x2643eb.interpOldR =
-              _0x2643eb.interpR =
-                _0xcd5ec6(_0x2643eb)
+            worm.nickname = getNickname()
+            _0x244c5d[worm.id] = worm.nickname
+            _0x194da0 === worm &&
+              ((_0x2ce067 = x),
+              (_0x273f21 = y),
+              (_0x360982.name = worm.nickname))
+            worm.r =
+              worm.interpOldR =
+              worm.interpR =
+                _0xcd5ec6(worm)
           }
-          _0x2643eb.mood = _0x3409c6
-          _0x2643eb.oldEnergy = _0x2643eb.iEnergy
-          _0x29d2f8 < _0x2643eb.energy && (_0x2643eb.energyChangeCounter = 1)
-          _0x2643eb.energy = _0x29d2f8
+          worm.mood = mood
+          worm.oldEnergy = worm.iEnergy
+          energy < worm.energy && (worm.energyChangeCounter = 1)
+          worm.energy = energy
         }
         const _0x424cfa = _0x1ce1f3(_0x3ef6bf || _0x194da0)
         let _0x5460b3 = dv.getUint8(_0x475187++)
@@ -2517,7 +2512,7 @@
                   const _0x5c4c95 = _0x31c3e2[_0x1fecb7],
                     _0x2d515a = _0x5c4c95.segments[0]
                   _0x52761c(_0x5bbd94, _0x3f791e, _0x5c4c95.oldR, _0x2d515a) &&
-                    ((_0x5c4c95.diggedLavaAt = _0x300def),
+                    ((_0x5c4c95.diggedLavaAt = time),
                     (_0x5c4c95 != _0x194da0 && _0x5c4c95 != _0x3ef6bf) ||
                       (_0x57cea4 = 1))
                 }
@@ -2531,20 +2526,20 @@
           _0x475187 += _0x2b26c8
           _0x475187 += Math.ceil(0.5 * _0x2b26c8)
         }
-        const _0x21c0f4 = dv.getUint16(_0x475187)
+        const numPlayersOnline = dv.getUint16(_0x475187)
         ;(_0x475187 += 2),
-          _0x202a66.setAttribute(
+          lbFooterEl.setAttribute(
             'stroke',
-            _0x21c0f4 + ' player' + (1 !== _0x21c0f4 ? 's' : '') + ' online'
+            numPlayersOnline + ' player' + (1 !== numPlayersOnline ? 's' : '') + ' online'
           )
         const _0x27f1c2 = _0x52bebe.length,
           _0x49cd46 = dv.getUint16(_0x475187)
-        ;(_0x475187 += 2), (_0x16dd13 = 1023 & _0x49cd46)
+        ;(_0x475187 += 2), (numWorms = 1023 & _0x49cd46)
         const _0x40458c = _0x49cd46 >> 11,
           _0x24cc2e = 1024 & _0x49cd46
-        _0x26814d.setAttribute(
+        lbHeaderSpanEl.setAttribute(
           'stroke',
-          _0x16dd13 + ' worm' + (1 != _0x16dd13 ? 's' : '')
+          numWorms + ' worm' + (1 != numWorms ? 's' : '')
         )
         let _0x57a782 = -1
         if (
@@ -2592,7 +2587,7 @@
           for (let _0x1cee5c = 0; _0x1cee5c < _0x20a913; _0x1cee5c++) {
             const _0x5925b4 = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
-            _0x29e019(_0x3c57f0(), _0x5925b4)
+            _0x29e019(getNickname(), _0x5925b4)
           }
           _0x552882 = _0x552882.sort(function (_0x3aee0f, _0x3bc81b) {
             return _0x3bc81b.score - _0x3aee0f.score
@@ -2600,11 +2595,11 @@
           _0x245d1c()
         } else {
           _0x552882.length = 0
-          const _0x27494c = Math.min(10, _0x16dd13)
+          const _0x27494c = Math.min(10, numWorms)
           for (let _0x7b83d9 = 0; _0x7b83d9 < _0x27494c; _0x7b83d9++) {
             const _0x44a8a0 = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
-            _0x29e019(_0x3c57f0(), _0x44a8a0)
+            _0x29e019(getNickname(), _0x44a8a0)
           }
           _0x245d1c()
           _0x224d6b = true
@@ -2613,7 +2608,7 @@
           const _0x8c931e = _0x552882[_0x57a782],
             _0x1f6f01 = _0x8c931e.lbItemEl
           _0x360982.score = _0x8c931e.score
-          _0xaec281.insertBefore(_0x360982.lbItemEl, _0x1f6f01)
+          lbContentEl.insertBefore(_0x360982.lbItemEl, _0x1f6f01)
           _0x1f6f01.remove()
           _0x552882[_0x57a782] = _0x360982
         }
@@ -2628,7 +2623,7 @@
             ),
             _0x12d663 = _0x31c3e2[_0x1b4e9e]
           _0x12d663.isDead = true
-          _0x12d663.diedAt = _0x300def
+          _0x12d663.diedAt = time
           _0x12d663.id = -1
           _0x12d663 === _0x194da0 &&
             ((_0x32e4ab = true),
@@ -2647,7 +2642,7 @@
               (_0x4cf041) => _0x4cf041.id === _0x590228
             )
             console.log('killer!!!!', _0x3ef6bf)
-            _0x2b477b.setAttribute(
+            killerEl.setAttribute(
               'stroke',
               _0x244c5d[_0x590228] || 'An unnamed worm'
             )
@@ -2656,40 +2651,40 @@
             _0x56c22b = dv.getUint8(_0x475187++)
             0 === _0x56c22b
               ? (console.log('walls'),
-                _0x2b477b.setAttribute('stroke', 'Walls'))
+                killerEl.setAttribute('stroke', 'Walls'))
               : console.log('giveup')
             _0x1d4840--
           }
-          _0x2b477b.style.visibility =
-            _0x47102f.style.visibility =
-            _0x2b477b.previousElementSibling.style.visibility =
+          killerEl.style.visibility =
+            deadWormEl.style.visibility =
+            killerEl.previousElementSibling.style.visibility =
               1 === _0x56c22b ? 'hidden' : ''
           1 === _0x1d4840
-            ? (_0x314ee2 = dv.getUint8(_0x475187++))
+            ? (playersDestroyed = dv.getUint8(_0x475187++))
             : console.log('no kills')
-          _0x5784b8.style.display = ''
-          _0x4f3f05.classList.add('btn-disabled')
+          gameoverEl.style.display = ''
+          giveupEl.classList.add('btn-disabled')
           _0x30dcaf()
-          _0x4c0ef4()
-          _0x1e2762()
+          skinShopsInit()
+          displayGold()
           ;(function () {
-            for (; _0x5e494.children.length > 1; ) {
-              _0x5e494.children[1].remove()
+            for (; statsEl.children.length > 1; ) {
+              statsEl.children[1].remove()
             }
-            const _0x4fc6a2 = [['Max points', _0x52bbe6(_0x481193)]]
-            _0xb7f535 > 0 &&
-              _0x4fc6a2.push(['Gold digged', _0xb7f535.toLocaleString('en-US')])
-            _0x314ee2 > 0 &&
-              _0x4fc6a2.push([
+            const endGameStats = [['Max points', scoreToStr(highScore)]]
+            goldDigged > 0 &&
+              endGameStats.push(['Gold digged', goldDigged.toLocaleString('en-US')])
+            playersDestroyed > 0 &&
+              endGameStats.push([
                 'Players destroyed',
-                255 === _0x314ee2 ? _0x314ee2 - 1 + '+' : _0x314ee2,
+                255 === playersDestroyed ? playersDestroyed - 1 + '+' : playersDestroyed,
               ])
-            _0x4fc6a2.push(['Time alive', _0x3b7f62(Date.now() - _0x1f18f0)])
-            for (let _0x4b790d = 0; _0x4b790d < _0x4fc6a2.length; _0x4b790d++) {
-              const [_0x2ec999, _0xe8c1e3] = _0x4fc6a2[_0x4b790d],
-                _0x9c859c = document.createElement('span')
-              _0x9c859c.setAttribute('stroke', _0x2ec999 + ': ' + _0xe8c1e3)
-              _0x5e494.appendChild(_0x9c859c)
+            endGameStats.push(['Time alive', msToStr(Date.now() - time)])
+            for (let i = 0; i < endGameStats.length; i++) {
+              const [statType, statVal] = endGameStats[i],
+                span = document.createElement('span')
+              span.setAttribute('stroke', statType + ': ' + statVal)
+              statsEl.appendChild(span)
             }
           })()
         } else {
@@ -2697,8 +2692,8 @@
             if (_0x1d4840 % 2 != 0) {
               const _0x2d2228 = dv.getUint8(_0x475187++)
               _0x5ddf1a(_0x2d2228)
-              _0x27c993 += _0x2d2228
-              _0xb7f535 += _0x2d2228
+              myGold += _0x2d2228
+              goldDigged += _0x2d2228
               _0x1d4840--
             }
             if (2 === _0x1d4840) {
@@ -2725,35 +2720,35 @@
   }
   function onError() {
     console.log('Disconnected.')
-    _0x10ea98(ws.url)
+    joinGame(ws.url)
   }
   let _0x57d1e4 = 0
-  function _0x3fe969(_0x239abe) {
+  function wsSend(dv) {
     if (ws && ws.readyState === ws.OPEN) {
-      if (((_0x36e069 += _0x239abe.byteLength), _0x1175ff)) {
-        const _0x5c493d = new Uint8Array(_0x239abe.buffer)
-        for (let _0x481e64 = 0; _0x481e64 < _0x5c493d.length; _0x481e64++) {
-          _0x5c493d[_0x481e64] ^=
-            _0x1175ff[(_0x57d1e4 + _0x481e64) % _0x1175ff.length]
+      if (((_0x36e069 += dv.byteLength), buf2)) {
+        const buf = new Uint8Array(dv.buffer)
+        for (let _0x481e64 = 0; _0x481e64 < buf.length; _0x481e64++) {
+          buf[_0x481e64] ^=
+            buf2[(_0x57d1e4 + _0x481e64) % buf2.length]
         }
       }
       _0x57d1e4 = (_0x57d1e4 + 1) % 1000
-      _0x1175ff = new Uint8Array(_0x239abe.buffer)
-      ws.send(_0x239abe)
+      buf2 = new Uint8Array(dv.buffer)
+      ws.send(dv)
     }
   }
   const twoPi = 2 * Math.PI
-  function _0x2ebfb5(_0x5215ee) {
+  function _0x2ebfb5(radians) {
     if (!_0x194da0 || _0x194da0.isDead) {
       return
     }
-    ;(_0x5215ee %= twoPi) < 0 && (_0x5215ee += twoPi)
-    _0x5215ee /= twoPi
-    _0x5215ee = Math[0.75 === _0x5215ee ? 'ceil' : 'floor'](4095 * _0x5215ee)
+    ;(radians %= twoPi) < 0 && (radians += twoPi)
+    radians /= twoPi
+    radians = Math[0.75 === radians ? 'ceil' : 'floor'](4095 * radians)
     const dv = new DataView(new ArrayBuffer(2))
-    dv.setUint8(0, _0x4822ce(1, _0x5215ee >> 8))
-    dv.setUint8(1, _0x5215ee)
-    _0x3fe969(dv)
+    dv.setUint8(0, leftShiftOr(1, radians >> 8))
+    dv.setUint8(1, radians)
+    wsSend(dv)
   }
   let _0x5cb559 = {}
   document.onmousedown = function (_0x5a3b45) {
@@ -2764,54 +2759,54 @@
     delete _0x5cb559[_0xa736e7.button]
     _0x382b09()
   }
-  _0x4f5add.onmousemove = function (_0x3593ee) {
-    _0x7d7288.checked ||
+  canvasEl.onmousemove = function (pos) {
+    kbMovementCbEl.checked ||
       _0x2ebfb5(
         Math.atan2(
-          _0x3593ee.clientY - window.innerHeight / 2,
-          _0x3593ee.clientX - window.innerWidth / 2
+          pos.clientY - window.innerHeight / 2,
+          pos.clientX - window.innerWidth / 2
         )
       )
   }
-  const _0x49fae4 = document.querySelector('.angry-btn'),
-    _0x3869cb = document.querySelector('.sad-btn'),
-    _0x30b4cf = document.querySelector('.joystick'),
-    _0x53aa90 = document.querySelector('.joystick-knob')
+  const angryBtnEl = document.querySelector('.angry-btn'),
+    sadBtnEl = document.querySelector('.sad-btn'),
+    joystickEl = document.querySelector('.joystick'),
+    joystickKnobEl = document.querySelector('.joystick-knob')
   let _0x889b55,
     _0x4f0b52,
     _0x2d3f53 = null,
     _0x5c950a = null,
     _0x25c66d = null
   if (_0x39ef23) {
-    let _0x579018, _0x1b77d0
+    let left, top
     function _0x543788() {
-      _0x30b4cf.style.left = _0x579018 + 'px'
-      _0x30b4cf.style.top = _0x1b77d0 + 'px'
+      joystickEl.style.left = left + 'px'
+      joystickEl.style.top = top + 'px'
     }
     function _0x30fd0b(_0x1f2f66) {
       return [_0x1f2f66.clientX / _0x19da0e, _0x1f2f66.clientY / _0x19da0e]
     }
-    _0x4f5add.onmousemove = null
-    document.ontouchstart = function (_0x588a88) {
-      const _0x35be70 = _0x588a88.changedTouches[0]
+    canvasEl.onmousemove = null
+    document.ontouchstart = function (touch) {
+      const _0x35be70 = touch.changedTouches[0]
       let _0x2f1c42 = _0x35be70.identifier
       function _0x545ee7(_0x522cb8) {
         return (
-          _0x588a88.target === _0x522cb8 ||
-          _0x588a88.target.parentNode === _0x522cb8
+          touch.target === _0x522cb8 ||
+          touch.target.parentNode === _0x522cb8
         )
       }
-      _0x588a88.target === _0x4f5add
+      touch.target === canvasEl
         ? null === _0x25c66d &&
-          ((_0x53aa90.style.width = _0x53aa90.style.transform = '0'),
-          (_0x30b4cf.style.display = ''),
-          ([_0x579018, _0x1b77d0] = _0x30fd0b(_0x35be70)),
+          ((joystickKnobEl.style.width = joystickKnobEl.style.transform = '0'),
+          (joystickEl.style.display = ''),
+          ([left, top] = _0x30fd0b(_0x35be70)),
           _0x543788(),
           (_0x25c66d = _0x2f1c42))
-        : _0x545ee7(_0x49fae4)
+        : _0x545ee7(angryBtnEl)
         ? null === _0x5c950a &&
           (document.onmousedown({ button: 0 }), (_0x5c950a = _0x2f1c42))
-        : _0x545ee7(_0x3869cb) &&
+        : _0x545ee7(sadBtnEl) &&
           null === _0x2d3f53 &&
           (document.onmousedown({ button: 2 }), (_0x2d3f53 = _0x2f1c42))
     }
@@ -2819,24 +2814,24 @@
       const _0x5dc1cf = _0xaf826d.changedTouches[0]
       if (_0x5dc1cf.identifier === _0x25c66d) {
         const [_0x487c8c, _0x4436e6] = _0x30fd0b(_0x5dc1cf),
-          _0x35b1fa = _0x487c8c - _0x579018,
-          _0x323f29 = _0x4436e6 - _0x1b77d0,
-          _0x35fef2 = _0x30b4cf.getBoundingClientRect()
-        let _0x59f28d = Math.hypot(_0x35b1fa, _0x323f29)
+          _0x35b1fa = _0x487c8c - left,
+          _0x323f29 = _0x4436e6 - top,
+          _0x35fef2 = joystickEl.getBoundingClientRect()
+        let width = Math.hypot(_0x35b1fa, _0x323f29)
         const _0x1a37a1 = _0x35fef2.width / 2 / _0x19da0e
-        if (_0x59f28d > _0x1a37a1) {
-          if (!_0xce3c49.checked) {
-            const _0x567afb = _0x59f28d - _0x1a37a1
-            _0x579018 += (_0x567afb * _0x35b1fa) / _0x59f28d
-            _0x1b77d0 += (_0x567afb * _0x323f29) / _0x59f28d
+        if (width > _0x1a37a1) {
+          if (!fixedJoystickCbEl.checked) {
+            const _0x567afb = width - _0x1a37a1
+            left += (_0x567afb * _0x35b1fa) / width
+            top += (_0x567afb * _0x323f29) / width
             _0x543788()
           }
-          _0x59f28d = _0x1a37a1
+          width = _0x1a37a1
         }
-        const _0x46bd28 = Math.atan2(_0x323f29, _0x35b1fa)
-        _0x2ebfb5(_0x46bd28)
-        _0x53aa90.style.transform = 'rotate(' + _0x46bd28 + 'rad)'
-        _0x53aa90.style.width = _0x59f28d + 'px'
+        const radians = Math.atan2(_0x323f29, _0x35b1fa)
+        _0x2ebfb5(radians)
+        joystickKnobEl.style.transform = 'rotate(' + radians + 'rad)'
+        joystickKnobEl.style.width = width + 'px'
       }
     }
     _0x1bb119.ontouchstart = function (_0x387c68) {
@@ -2847,54 +2842,54 @@
         : ((_0x4f0b52 = _0x1dd6c0.identifier), (_0x2710ba = 1))
     }
     window.ontouchend = function (_0x35cd95) {
-      const _0x26048a = _0x35cd95.changedTouches[0].identifier
-      _0x26048a === _0x889b55
+      const id = _0x35cd95.changedTouches[0].identifier
+      id === _0x889b55
         ? ((_0x889b55 = null), (_0x2710ba = null !== _0x4f0b52 ? 1 : 0))
-        : _0x26048a === _0x4f0b52 &&
+        : id === _0x4f0b52 &&
           ((_0x4f0b52 = null), (_0x2710ba = null !== _0x889b55 ? 2 : 0))
-      _0x26048a === _0x5c950a
+      id === _0x5c950a
         ? ((_0x5c950a = null), document.onmouseup({ button: 0 }))
-        : _0x26048a === _0x2d3f53
+        : id === _0x2d3f53
         ? ((_0x2d3f53 = null), document.onmouseup({ button: 2 }))
-        : _0x26048a === _0x25c66d &&
-          ((_0x30b4cf.style.display = 'none'), (_0x25c66d = null))
+        : id === _0x25c66d &&
+          ((joystickEl.style.display = 'none'), (_0x25c66d = null))
     }
   }
   function _0x382b09() {
     let _0x2ac787
     _0x2ac787 =
-      _0x5cb559[0] || _0x15b23c.Space
+      _0x5cb559[0] || pressedKey.Space
         ? 1
-        : _0x5cb559[2] || _0x15b23c.ShiftLeft || _0x15b23c.ShiftRight
+        : _0x5cb559[2] || pressedKey.ShiftLeft || pressedKey.ShiftRight
         ? 2
         : 0
     _0x2710ba = _0x2ac787
     _0x194da0 &&
       (function (_0x21b545) {
         const _0x35a11e = new Uint8Array(1)
-        _0x35a11e[0] = _0x4822ce(2, _0x21b545)
-        _0x3fe969(_0x35a11e)
+        _0x35a11e[0] = leftShiftOr(2, _0x21b545)
+        wsSend(_0x35a11e)
       })(_0x2ac787)
   }
   function _0x3b0a3d(_0x54664b) {
-    const _0x174f56 = document.createElement('canvas')
-    _0x174f56.width = _0x174f56.height = 16
-    const _0x59242e = _0x174f56.getContext('2d'),
-      _0x337979 = _0x59242e.createImageData(16, 16)
-    for (let _0x945b3d = 0; _0x945b3d < _0x54664b.length; _0x945b3d++) {
-      if (_0x54664b[_0x945b3d] === _0x21ff22.empty) {
+    const canvas = document.createElement('canvas')
+    canvas.width = canvas.height = 16
+    const ctx = canvas.getContext('2d'),
+      img = ctx.createImageData(16, 16)
+    for (let i = 0; i < _0x54664b.length; i++) {
+      if (_0x54664b[i] === _0x21ff22.empty) {
         continue
       }
-      const _0x2880f6 = _0x406b9c(_0x54664b[_0x945b3d]),
-        _0xc59b21 = 4 * _0x945b3d
-      _0x337979.data[_0xc59b21] = _0x2880f6[0]
-      _0x337979.data[_0xc59b21 + 1] = _0x2880f6[1]
-      _0x337979.data[_0xc59b21 + 2] = _0x2880f6[2]
-      _0x337979.data[_0xc59b21 + 3] = 255
+      const _0x2880f6 = _0x406b9c(_0x54664b[i]),
+        _0xc59b21 = 4 * i
+      img.data[_0xc59b21] = _0x2880f6[0]
+      img.data[_0xc59b21 + 1] = _0x2880f6[1]
+      img.data[_0xc59b21 + 2] = _0x2880f6[2]
+      img.data[_0xc59b21 + 3] = 255
     }
-    _0x59242e.putImageData(_0x337979, 0, 0)
-    _0x54664b.canvas = _0x174f56
-    _0x54664b.ctx = _0x59242e
+    ctx.putImageData(img, 0, 0)
+    _0x54664b.canvas = canvas
+    _0x54664b.ctx = ctx
     _0x54664b.fogCanvas = document.createElement('canvas')
     _0x54664b.fogCanvas.width = _0x54664b.fogCanvas.height = 16
     _0x54664b.fogCtx = _0x54664b.fogCanvas.getContext('2d')
@@ -2910,90 +2905,90 @@
     _0x21109a = null,
     _0x2ce067 = 0,
     _0x273f21 = 0
-  document.onmousewheel = function (_0x171f9f) {
-    _0x171f9f.deltaY < 0 ? (_0x4355ad *= 1.1) : (_0x4355ad *= 0.9)
+  document.onmousewheel = function (s) {
+    s.deltaY < 0 ? (_0x4355ad *= 1.1) : (_0x4355ad *= 0.9)
     _0x4355ad = Math.max(1, Math.min(5, _0x4355ad))
   }
-  let _0x2e200c = Date.now()
+  let tempTime = Date.now()
   const _0x38936e = [],
     _0x314f92 = (function (_0x596778 = 80) {
       const _0x3278eb = _0x596778 / 2,
-        _0x38cd0c = document.createElement('canvas')
-      _0x38cd0c.width = _0x38cd0c.height = _0x596778
-      const _0x1c1583 = _0x38cd0c.getContext('2d')
+        canvas = document.createElement('canvas')
+      canvas.width = canvas.height = _0x596778
+      const ctx = canvas.getContext('2d')
       return (
-        (_0x1c1583.strokeStyle = 'rgba(0,0,0,0.07)'),
-        _0x1c1583.beginPath(),
-        _0x1c1583.moveTo(_0x3278eb, 0),
-        _0x1c1583.lineTo(_0x3278eb, _0x596778),
-        _0x1c1583.moveTo(0, _0x3278eb),
-        _0x1c1583.lineTo(_0x596778, _0x3278eb),
-        (_0x1c1583.lineWidth = 2),
-        _0x1c1583.stroke(),
-        _0x1c1583.createPattern(_0x38cd0c, 'repeat')
+        (ctx.strokeStyle = 'rgba(0,0,0,0.07)'),
+        ctx.beginPath(),
+        ctx.moveTo(_0x3278eb, 0),
+        ctx.lineTo(_0x3278eb, _0x596778),
+        ctx.moveTo(0, _0x3278eb),
+        ctx.lineTo(_0x596778, _0x3278eb),
+        (ctx.lineWidth = 2),
+        ctx.stroke(),
+        ctx.createPattern(canvas, 'repeat')
       )
     })()
   function _0x40d72d() {
-    let _0x54619c = false
-    for (let _0x42100c = 0; _0x42100c < _0x552882.length; _0x42100c++) {
-      const _0x23483a = _0x552882[_0x42100c]
+    let bool = false
+    for (let i = 0; i < _0x552882.length; i++) {
+      const _0x23483a = _0x552882[i]
       _0x23483a.update()
-      _0x23483a.isMe && (_0x54619c = true)
+      _0x23483a.isMe && (bool = true)
     }
-    if ((_0x54619c || _0x360982.update(), _0x48a579)) {
+    if ((bool || _0x360982.update(), _0x48a579)) {
       const _0x3c91bd = Date.now() / 80,
-        _0x298c51 = 7 * Math.sin(_0x3c91bd),
+        degrees = 7 * Math.sin(_0x3c91bd),
         _0x2282ef = 0.15 * Math.abs(Math.sin(_0x3c91bd / 4)) + 0.85
-      _0x5d61a7.style.transform =
-        'rotate(' + _0x298c51 + 'deg) scale(' + _0x2282ef + ')'
+      changelogbtnEl.style.transform =
+        'rotate(' + degrees + 'deg) scale(' + _0x2282ef + ')'
     } else {
-      _0x5d61a7.style.transform = 'none'
+      changelogbtnEl.style.transform = 'none'
     }
     !(function () {
-      let _0x4a097f
+      let msg
       if (_0x367af4 >= _0x36e559.length) {
-        _0x4a097f = 'You have claimed all your rewards.'
+        msg = 'You have claimed all your rewards.'
       } else {
         const _0x4edb18 = _0x5656c8 - Date.now()
         _0x4edb18 < 0
-          ? ((_0x4a097f = 'Available every ' + _0x179918(86400000)),
+          ? ((msg = 'Available every ' + _0x179918(86400000)),
             _0x193b62.rewardSent || _0x193b62.classList.remove('btn-disabled'))
-          : (_0x4a097f = 'Available again in ' + _0x179918(_0x4edb18))
+          : (msg = 'Available again in ' + _0x179918(_0x4edb18))
       }
-      _0x5e35aa.getAttribute('stroke') !== _0x4a097f &&
-        _0x5e35aa.setAttribute('stroke', _0x4a097f)
+      rewardStatusEl.getAttribute('stroke') !== msg &&
+        rewardStatusEl.setAttribute('stroke', msg)
     })()
-    const [_0x10b6cb, _0x536363] = _0x178fb4()
+    const [_0x10b6cb, _0x536363] = getMySkins()
     _0x54c5be.faceSkin = _0x10b6cb
     _0x54c5be.bodySkin = _0x536363
-    const _0x1c1e85 = Date.now()
-    _0xd4436e = (_0x1c1e85 - _0x2e200c) / 1000
-    _0x2e200c = _0x1c1e85
+    const time = Date.now()
+    _0xd4436e = (time - tempTime) / 1000
+    tempTime = time
     _0x57cea4 -= _0xd4436e / 0.3
     _0x57cea4 = Math.max(0, _0x57cea4)
-    _0x342747.fillStyle = '#522e00'
-    _0x342747.fillRect(0, 0, _0x4f5add.width, _0x4f5add.height)
+    canvasElCtx.fillStyle = '#522e00'
+    canvasElCtx.fillRect(0, 0, canvasEl.width, canvasEl.height)
     for (let _0x1bdee5 = 0; _0x1bdee5 < _0x31c3e2.length; _0x1bdee5++) {
       _0x31c3e2[_0x1bdee5].interpolate()
     }
     if (((_0x4c70cf += 0.3 * (_0x4355ad - _0x4c70cf)), _0x194da0)) {
       const _0x27d19f = _0x3ef6bf || _0x194da0,
         {
-          sx: _0x1a82c7,
-          sy: _0x1cbab1,
-          ex: _0xaa7be2,
-          ey: _0x4ba43f,
-          minX: _0x1acd3c,
-          minY: _0x1886b6,
-          maxX: _0x174975,
-          maxY: _0x4037c4,
-          viewWidth: _0x34ddd7,
-          viewHeight: _0x45e468,
+          sx: sx,
+          sy: sy,
+          ex: ex,
+          ey: ey,
+          minX: minX,
+          minY: minY,
+          maxX: maxX,
+          maxY: maxY,
+          viewWidth: viewWidth,
+          viewHeight: viewHeight,
         } = _0x1ce1f3(_0x27d19f, true)
       null === _0x5b52da
-        ? ((_0x5b52da = _0x34ddd7), (_0x21109a = _0x45e468))
-        : ((_0x5b52da += 0.1 * (_0x34ddd7 - _0x5b52da)),
-          (_0x21109a += 0.1 * (_0x45e468 - _0x21109a)))
+        ? ((_0x5b52da = viewWidth), (_0x21109a = viewHeight))
+        : ((_0x5b52da += 0.1 * (viewWidth - _0x5b52da)),
+          (_0x21109a += 0.1 * (viewHeight - _0x21109a)))
       const _0x37a147 = _0x27d19f.segments[0],
         _0x271443 = 2 * Math.random() * Math.PI,
         _0x10315f = 6 * _0x57cea4
@@ -3013,39 +3008,39 @@
         }
       }
       function _0x458a77() {
-        _0x342747.translate(
-          _0x4f5add.width / 2 + _0x10315f * Math.cos(_0x271443),
-          _0x4f5add.height / 2 + _0x10315f * Math.sin(_0x271443)
+        canvasElCtx.translate(
+          canvasEl.width / 2 + _0x10315f * Math.cos(_0x271443),
+          canvasEl.height / 2 + _0x10315f * Math.sin(_0x271443)
         )
         const _0x33107f = Math.max(
-          _0x4f5add.width / _0x5b52da,
-          _0x4f5add.height / _0x21109a
+          canvasEl.width / _0x5b52da,
+          canvasEl.height / _0x21109a
         )
-        _0x342747.scale(_0x33107f, _0x33107f)
-        _0x342747.translate(-_0x15ab1a, -_0x2118b6)
+        canvasElCtx.scale(_0x33107f, _0x33107f)
+        canvasElCtx.translate(-_0x15ab1a, -_0x2118b6)
       }
-      _0x342747.save()
-      _0x342747.beginPath()
-      _0x342747.rect(0, 0, _0x4f5add.width, _0x4f5add.height)
+      canvasElCtx.save()
+      canvasElCtx.beginPath()
+      canvasElCtx.rect(0, 0, canvasEl.width, canvasEl.height)
       _0x458a77()
-      _0x342747.fillStyle = _0x314f92
-      _0x342747.fill()
-      _0x342747.imageSmoothingEnabled = false
+      canvasElCtx.fillStyle = _0x314f92
+      canvasElCtx.fill()
+      canvasElCtx.imageSmoothingEnabled = false
       for (
-        let _0x58ede8 = _0x1cbab1 - 1;
-        _0x58ede8 <= _0x4ba43f + 1;
+        let _0x58ede8 = sy - 1;
+        _0x58ede8 <= ey + 1;
         _0x58ede8++
       ) {
         for (
-          let _0x686203 = _0x1a82c7 - 1;
-          _0x686203 <= _0xaa7be2 + 1;
+          let _0x686203 = sx - 1;
+          _0x686203 <= ex + 1;
           _0x686203++
         ) {
           const _0x5ca2d0 = 480 * _0x686203,
             _0x898c36 = 480 * _0x58ede8,
             _0x179d9b = _0x52a128[64 * _0x58ede8 + _0x686203]
           _0x179d9b &&
-            _0x342747.drawImage(
+            canvasElCtx.drawImage(
               _0x179d9b.canvas,
               _0x5ca2d0,
               _0x898c36,
@@ -3055,53 +3050,53 @@
         }
       }
       _0x27d19f && _0x1ce1f3(_0x27d19f)
-      for (let _0x2ea2bf = _0x31c3e2.length - 1; _0x2ea2bf >= 0; _0x2ea2bf--) {
-        _0x31c3e2[_0x2ea2bf].draw(_0x2ea2bf, _0x342747)
+      for (let i = _0x31c3e2.length - 1; i >= 0; i--) {
+        _0x31c3e2[i].draw(i, canvasElCtx)
       }
-      _0x342747.lineWidth = 1
-      _0x342747.beginPath()
-      _0x342747.rect(0, 0, 30720, 30720)
-      _0x342747.restore()
-      _0x342747.rect(0, 0, _0x4f5add.width, _0x4f5add.height)
-      _0x342747.fillStyle = '#222222'
-      _0x342747.fill('evenodd')
+      canvasElCtx.lineWidth = 1
+      canvasElCtx.beginPath()
+      canvasElCtx.rect(0, 0, 30720, 30720)
+      canvasElCtx.restore()
+      canvasElCtx.rect(0, 0, canvasEl.width, canvasEl.height)
+      canvasElCtx.fillStyle = '#222222'
+      canvasElCtx.fill('evenodd')
       _0x312405 && _0x312405()
-      _0x342747.save()
+      canvasElCtx.save()
       _0x458a77()
-      for (let _0x25988d = _0x551ff8.length - 1; _0x25988d >= 0; _0x25988d--) {
-        const _0x5a3754 = _0x551ff8[_0x25988d],
-          _0x48e5c5 = (_0x1c1e85 - _0x5a3754.time) / 600
+      for (let i = _0x551ff8.length - 1; i >= 0; i--) {
+        const _0x5a3754 = _0x551ff8[i],
+          _0x48e5c5 = (time - _0x5a3754.time) / 600
         if (_0x48e5c5 >= 1) {
-          _0x551ff8.splice(_0x25988d, 1)
+          _0x551ff8.splice(i, 1)
         } else {
-          _0x342747.save()
-          _0x342747.translate(_0x5a3754.x, _0x5a3754.y)
-          _0x342747.rotate(_0x5a3754.dir * _0x48e5c5 * Math.PI)
+          canvasElCtx.save()
+          canvasElCtx.translate(_0x5a3754.x, _0x5a3754.y)
+          canvasElCtx.rotate(_0x5a3754.dir * _0x48e5c5 * Math.PI)
           const _0x417678 = 30 * (1 + 2 * _0x48e5c5)
-          _0x342747.fillStyle = _0x5a3754.color
-          _0x342747.globalAlpha = 0.75 * (1 - _0x48e5c5)
-          _0x342747.fillRect(0, 0, _0x417678, _0x417678)
-          _0x342747.restore()
+          canvasElCtx.fillStyle = _0x5a3754.color
+          canvasElCtx.globalAlpha = 0.75 * (1 - _0x48e5c5)
+          canvasElCtx.fillRect(0, 0, _0x417678, _0x417678)
+          canvasElCtx.restore()
         }
       }
-      for (let _0x5e5f5a = 0; _0x5e5f5a < _0x31c3e2.length; _0x5e5f5a++) {
-        _0x31c3e2[_0x5e5f5a].drawEnergyAndNickname(_0x342747)
+      for (let i = 0; i < _0x31c3e2.length; i++) {
+        _0x31c3e2[i].drawEnergyAndNickname(canvasElCtx)
       }
-      _0x342747.restore()
+      canvasElCtx.restore()
     }
-    for (let _0x3ce783 = 0; _0x3ce783 < _0x553cf3.length; _0x3ce783++) {
-      _0x553cf3[_0x3ce783].render()
+    for (let i = 0; i < _0x553cf3.length; i++) {
+      _0x553cf3[i].render()
     }
     if (_0x38936e.length > 0) {
-      _0x1ca043.style.display = ''
-      _0xf6f1ed.clearRect(0, 0, _0x1ca043.width, _0x1ca043.height)
-      const _0x142bbc = _0x1ca043.height / 657
-      _0xf6f1ed.save()
-      _0xf6f1ed.translate(_0x1ca043.width / 2, 0)
-      _0xf6f1ed.scale(_0x142bbc, _0x142bbc)
-      _0xf6f1ed.beginPath()
-      for (let _0x499db0 = _0x38936e.length - 1; _0x499db0 >= 0; _0x499db0--) {
-        const _0x28fd8c = _0x38936e[_0x499db0]
+      goldCanvasEl.style.display = ''
+      goldCanvasElCtx.clearRect(0, 0, goldCanvasEl.width, goldCanvasEl.height)
+      const _0x142bbc = goldCanvasEl.height / 657
+      goldCanvasElCtx.save()
+      goldCanvasElCtx.translate(goldCanvasEl.width / 2, 0)
+      goldCanvasElCtx.scale(_0x142bbc, _0x142bbc)
+      goldCanvasElCtx.beginPath()
+      for (let i = _0x38936e.length - 1; i >= 0; i--) {
+        const _0x28fd8c = _0x38936e[i]
         _0x28fd8c.spawnTime > 0
           ? (_0x28fd8c.spawnTime -= _0xd4436e)
           : ((_0x28fd8c.vy += 8 * _0xd4436e),
@@ -3110,55 +3105,55 @@
             (_0x28fd8c.angle += _0x28fd8c.angleSpeed),
             _0x28fd8c.y > 657 &&
               (_0x28fd8c.bounced
-                ? _0x28fd8c.vy > 0 && _0x38936e.splice(_0x499db0, 1)
+                ? _0x28fd8c.vy > 0 && _0x38936e.splice(i, 1)
                 : ((_0x28fd8c.vy *= -(0.2 * Math.random() + 0.55)),
                   (_0x28fd8c.bounced = true))),
-            _0xf6f1ed.save(),
-            _0xf6f1ed.translate(_0x28fd8c.x, _0x28fd8c.y),
-            _0xf6f1ed.rotate(_0x28fd8c.angle),
-            _0xf6f1ed.moveTo(10, 0),
-            _0xf6f1ed.ellipse(0, 0, 10, 6, 0, 0, 2 * Math.PI),
-            _0xf6f1ed.restore())
+            goldCanvasElCtx.save(),
+            goldCanvasElCtx.translate(_0x28fd8c.x, _0x28fd8c.y),
+            goldCanvasElCtx.rotate(_0x28fd8c.angle),
+            goldCanvasElCtx.moveTo(10, 0),
+            goldCanvasElCtx.ellipse(0, 0, 10, 6, 0, 0, 2 * Math.PI),
+            goldCanvasElCtx.restore())
       }
-      _0xf6f1ed.lineWidth = 6
-      _0xf6f1ed.strokeStyle = '#a7a217'
-      _0xf6f1ed.stroke()
-      _0xf6f1ed.fillStyle = '#e9e21c'
-      _0xf6f1ed.fill()
-      _0xf6f1ed.restore()
+      goldCanvasElCtx.lineWidth = 6
+      goldCanvasElCtx.strokeStyle = '#a7a217'
+      goldCanvasElCtx.stroke()
+      goldCanvasElCtx.fillStyle = '#e9e21c'
+      goldCanvasElCtx.fill()
+      goldCanvasElCtx.restore()
     } else {
-      _0x1ca043.style.display = 'none'
+      goldCanvasEl.style.display = 'none'
     }
     window.requestAnimationFrame(_0x40d72d)
   }
-  const _0x13f0fd = document.querySelectorAll('.coming-soon')
-  for (let _0x12b792 = 0; _0x12b792 < _0x13f0fd.length; _0x12b792++) {
-    const _0x853b1f = _0x13f0fd[_0x12b792]
-    _0x853b1f.onclick = function () {}
-    _0x853b1f.classList.add('btn-disabled')
-    _0x853b1f.style.pointerEvents = 'all'
-    _0x853b1f.style.cursor = 'default'
-    _0x853b1f.setAttribute('tooltip', 'Coming soon')
+  const comingSoonEls = document.querySelectorAll('.coming-soon')
+  for (let i = 0; i < comingSoonEls.length; i++) {
+    const comingSoon = comingSoonEls[i]
+    comingSoon.onclick = function () {}
+    comingSoon.classList.add('btn-disabled')
+    comingSoon.style.pointerEvents = 'all'
+    comingSoon.style.cursor = 'default'
+    comingSoon.setAttribute('tooltip', 'Coming soon')
   }
-  const _0x43203c = _0xb914f5.querySelector('.dialog-content')
-  _0x43203c.innerHTML = ''
+  const changelogDlgContentEl = changelogEl.querySelector('.dialog-content')
+  changelogDlgContentEl.innerHTML = ''
   ;(function () {
-    let _0x78364d = ''
-    for (let _0x1aa2bb = 0; _0x1aa2bb < _0x33b220.length; _0x1aa2bb++) {
-      const { title: _0x45edd2, content: _0x459fb8 } = _0x33b220[_0x1aa2bb]
-      _0x78364d +=
+    let html = ''
+    for (let i = 0; i < changelog.length; i++) {
+      const { title: title, content: content } = changelog[i]
+      html +=
         '<span class="log-title" stroke="' +
-        _0x45edd2 +
+        title +
         '"></span><div class="log-content">'
-      _0x459fb8.forEach((_0x5e4131) => {
-        _0x78364d += '<div stroke="- ' + _0x5e4131 + '"></div>'
+      content.forEach((_0x5e4131) => {
+        html += '<div stroke="- ' + _0x5e4131 + '"></div>'
       })
-      _0x78364d += '</div><div class="log-line"></div>'
+      html += '</div><div class="log-line"></div>'
     }
-    const _0x1a51f4 = localStorage.changelog
-    _0x48a579 = void 0 !== _0x1a51f4 && parseInt(_0x1a51f4) < 28
+    const savedChangelogVer = localStorage.changelog
+    _0x48a579 = undefined !== savedChangelogVer && parseInt(savedChangelogVer) < 28
     localStorage.changelog = 28
-    _0x43203c.innerHTML = _0x78364d
+    changelogDlgContentEl.innerHTML = html
   })()
   document.querySelector('.tabs').children[2].style.display = 'none'
 })()
