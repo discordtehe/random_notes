@@ -105,7 +105,7 @@
       skin[i].id = i
     }
   }
-  function _0x1ce1f3(_0xe490a2, bool) {
+  function _0x1ce1f3(worm6, bool) {
     const { viewWidth: viewWidth, viewHeight: viewHeight } = (function (
         _0x1f21d8
       ) {
@@ -116,8 +116,8 @@
           viewWidth: _0x29d507,
           viewHeight: 0.5 * _0x29d507,
         }
-      })(bool ? _0xe490a2.interpR : _0xe490a2.r),
-      _0x37078e = _0xe490a2.segments[0],
+      })(bool ? worm6.interpR : worm6.r),
+      _0x37078e = worm6.segments[0],
       minX = _0x37078e.x - viewWidth / 2,
       minY = _0x37078e.y - viewHeight / 2,
       maxX = _0x37078e.x + viewWidth / 2,
@@ -176,9 +176,9 @@
       })
     )
   }
-  function _0xcd5ec6(_0x4e76e9) {
+  function _0xcd5ec6(worm7) {
     return parseInt(
-      50 * Math.sqrt(Math.min(1, (_0x4e76e9.segments.length - 5) / 1000)) + 30
+      50 * Math.sqrt(Math.min(1, (worm7.segments.length - 5) / 1000)) + 30
     )
   }
   function _0x40a543(_0x9092a1) {
@@ -326,7 +326,7 @@
     deadWormCtx = deadWormEl.getContext('2d')
   let _0x4868a9, _0x312405
   function _0x8d0f50() {
-    if (!_0x194da0 || !_0x194da0.isDead) {
+    if (!worm2 || !worm2.isDead) {
       return
     }
     deadWormEl.getBoundingClientRect()
@@ -342,7 +342,7 @@
       }
     }
     worm.isDead = true
-    worm.faceSkin = _0x194da0.faceSkin
+    worm.faceSkin = worm2.faceSkin
     deadWormCtx.clearRect(0, 0, deadWormEl.width, deadWormEl.height)
     const _0x58da47 = (deadWormEl.height / worm.interpR / 2) * 0.8
     deadWormCtx.save()
@@ -555,8 +555,8 @@
     gameEl.classList.add('game-show')
   }
   giveupEl.onclick = function () {
-    _0x194da0 &&
-      !_0x194da0.isDead &&
+    worm2 &&
+      !worm2.isDead &&
       (wsSend(new Uint8Array([leftShiftOr(6, 0)])),
       this.classList.add('btn-disabled'),
       resumeEl.click())
@@ -578,19 +578,19 @@
       el === highResEl && _0x3c1fa3()
     }
   }
-  function _0x3f9782(_0x25f713) {
+  function _0x3f9782(worm) {
     for (
       let i = 1;
-      i < _0x25f713.segments.length;
+      i < worm.segments.length;
       i++
     ) {
-      const _0x2e95d2 = _0x25f713.segments[i],
-        _0x3ed8ba = _0x25f713.segments[i - 1],
+      const _0x2e95d2 = worm.segments[i],
+        _0x3ed8ba = worm.segments[i - 1],
         _0x288c8e = _0x2e95d2.x,
         _0x256bea = _0x2e95d2.y
       let _0x4b7acb = _0x2e95d2.x - _0x3ed8ba.x,
         _0x28a780 = _0x2e95d2.y - _0x3ed8ba.y
-      Math.hypot(_0x4b7acb, _0x28a780) > _0x25f713.r &&
+      Math.hypot(_0x4b7acb, _0x28a780) > worm.r &&
         ((_0x2e95d2.x = _0x3ed8ba.oldX),
         (_0x2e95d2.y = _0x3ed8ba.oldY),
         (_0x2e95d2.oldX = _0x288c8e),
@@ -599,30 +599,30 @@
       _0x2e95d2.interpOldY = _0x2e95d2.interpY
     }
   }
-  function _0x3c2605(_0x324150, _0x55965f, _0x15dae2, _0x17dcf3 = 1) {
-    const _0x1afd16 = (2 * Math.PI) / _0x15dae2,
-      _0x4c45d0 = 0.1 * _0x1afd16 * _0x17dcf3,
+  function drawGears(outerRadius, innerRadius, controlsNumTeeth, controlsTeethWidth = 1) {
+    const _0x1afd16 = (2 * Math.PI) / controlsNumTeeth,
+      _0x4c45d0 = 0.1 * _0x1afd16 * controlsTeethWidth,
       path = new Path2D()
-    for (let i = 0; i <= _0x15dae2; i++) {
+    for (let i = 0; i <= controlsNumTeeth; i++) {
       const _0x20dac3 = _0x1afd16 * i,
         _0x5f39f5 = _0x20dac3 - _0x4c45d0,
         _0x2bac11 = _0x20dac3 + _0x4c45d0
       i % 2 == 0
         ? (path.lineTo(
-            Math.cos(_0x5f39f5) * _0x324150,
-            Math.sin(_0x5f39f5) * _0x324150
+            Math.cos(_0x5f39f5) * outerRadius,
+            Math.sin(_0x5f39f5) * outerRadius
           ),
           path.lineTo(
-            Math.cos(_0x2bac11) * _0x55965f,
-            Math.sin(_0x2bac11) * _0x55965f
+            Math.cos(_0x2bac11) * innerRadius,
+            Math.sin(_0x2bac11) * innerRadius
           ))
         : (path.lineTo(
-            Math.cos(_0x5f39f5) * _0x55965f,
-            Math.sin(_0x5f39f5) * _0x55965f
+            Math.cos(_0x5f39f5) * innerRadius,
+            Math.sin(_0x5f39f5) * innerRadius
           ),
           path.lineTo(
-            Math.cos(_0x2bac11) * _0x324150,
-            Math.sin(_0x2bac11) * _0x324150
+            Math.cos(_0x2bac11) * outerRadius,
+            Math.sin(_0x2bac11) * outerRadius
           ))
     }
     return path
@@ -637,8 +637,8 @@
   _0x91abc2(kbMovementCbEl, !_0x39ef23)
   _0x39ef23 &&
     (document.getElementById('pressEnterInfo').style.display = 'none')
-  const _0x1290f5 = _0x3c2605(20, 22.5, 32, 1),
-    _0x18a205 = _0x3c2605(10, 12.5, 16, 1.25),
+  const bigGearsPath = drawGears(20, 22.5, 32, 1),
+    smallGearsPath = drawGears(10, 12.5, 16, 1.25),
     _0x210ee9 = [
       [
         [28, 28],
@@ -756,7 +756,7 @@
         _0x260258.restore()
       }
       this.isDead ||
-        this === _0x194da0 ||
+        this === worm2 ||
         '' === this.nickname.trim() ||
         (_0x260258.save(),
         _0x260258.translate(0, -50),
@@ -945,14 +945,14 @@
       if ('Gear' === myFaceSkinName) {
         ctx.scale(_0x2e2f56, _0x2e2f56)
         ctx.fillStyle = '#111'
-        ctx.fill(_0x1290f5)
+        ctx.fill(bigGearsPath)
         ctx.fillStyle = _0x65247a
         ctx.save()
         const _0x1b0348 = ((Date.now() / 500) % Math.PI) * 2
         ctx.rotate(_0x1b0348)
         ctx.translate(10, 0)
         ctx.rotate(2 * -_0x1b0348)
-        ctx.fill(_0x18a205)
+        ctx.fill(smallGearsPath)
         ctx.rotate(_0x1b0348)
         ctx.scale(0.35, 0.35)
         ctx.scale(1 / _0x2e2f56, 1 / _0x2e2f56)
@@ -1050,22 +1050,22 @@
             ctx.fill())
           : 'Moyai' === myFaceSkinName
           ? ((ctx.fillStyle = '#333'),
-            (function (_0x1a3648, _0x2c0d71) {
-              _0x1a3648.save()
-              _0x1a3648.translate(-31, 35)
-              _0x1a3648.scale(1.7249999999999999, -1.7249999999999999)
+            (function (ctx, unused) {
+              ctx.save()
+              ctx.translate(-31, 35)
+              ctx.scale(1.7249999999999999, -1.7249999999999999)
               for (
-                let _0x2a47ba = 0;
-                _0x2a47ba < _0x210ee9.length;
-                _0x2a47ba++
+                let i = 0;
+                i < _0x210ee9.length;
+                i++
               ) {
-                _0x1a3648.save()
-                const _0x399d02 = _0x210ee9[_0x2a47ba]
-                _0x1a3648.translate(..._0x399d02[0])
-                _0x1a3648.fill(_0x399d02[1])
-                _0x1a3648.restore()
+                ctx.save()
+                const _0x399d02 = _0x210ee9[i]
+                ctx.translate(..._0x399d02[0])
+                ctx.fill(_0x399d02[1])
+                ctx.restore()
               }
-              _0x1a3648.restore()
+              ctx.restore()
             })(ctx))
           : 'Ascii' === myFaceSkinName
           ? (ctx.save(),
@@ -1875,14 +1875,14 @@
     scoreGraphElCtx.restore()
   }
   const _0x31c3e2 = []
-  let _0x1cd091, _0x194da0, ws, _0x36e905, _0x34e918
+  let _0x1cd091, worm2, ws, _0x36e905, _0x34e918
   function _0x530c53() {
     _0x224d6b = false
     lbContentEl.innerHTML = ''
     _0x552882.length = 0
-    _0x194da0 = null
+    worm2 = null
     _0x1cd091 = null
-    _0x3ef6bf = null
+    worm5 = null
     _0x52a128.length = 0
     _0x31c3e2.length = 0
     _0x551ff8.length = 0
@@ -2196,7 +2196,7 @@
   }
   const lbFooterEl = document.querySelector('.lb-footer')
   let time,
-    _0x3ef6bf,
+    worm5,
     _0x244c5d = {}
   function _0x47463e(_0x3840ab) {
     angryBtnEl.style.display = sadBtnEl.style.display = _0x3840ab ? '' : 'none'
@@ -2334,7 +2334,7 @@
           (_0x21109a = null),
           (time = Date.now()),
           (playersDestroyed = 0),
-          (_0x3ef6bf = null),
+          (worm5 = null),
           giveupEl.classList.remove('btn-disabled'),
           gridEl.classList.remove('grid-show'),
           gameEl.classList.add('game-show'),
@@ -2393,7 +2393,7 @@
             worm.faceSkin = dv.getUint8(_0x475187++) - 1
             worm.bodySkin = dv.getUint8(_0x475187++) - 1
             worm.energy = energy
-            _0x5bfc76 == _0x1cd091 && (_0x194da0 = worm)
+            _0x5bfc76 == _0x1cd091 && (worm2 = worm)
             _0x31c3e2.push(worm)
             const x = dv.getUint16(_0x475187)
             _0x475187 += 2
@@ -2429,7 +2429,7 @@
             }
             worm.nickname = getNickname()
             _0x244c5d[worm.id] = worm.nickname
-            _0x194da0 === worm &&
+            worm2 === worm &&
               ((_0x2ce067 = x),
               (_0x273f21 = y),
               (_0x360982.name = worm.nickname))
@@ -2443,7 +2443,7 @@
           energy < worm.energy && (worm.energyChangeCounter = 1)
           worm.energy = energy
         }
-        const _0x424cfa = _0x1ce1f3(_0x3ef6bf || _0x194da0)
+        const _0x424cfa = _0x1ce1f3(worm5 || worm2)
         let _0x5460b3 = dv.getUint8(_0x475187++)
         for (; _0x5460b3--; ) {
           const _0x583d10 = dv.getUint8(_0x475187++),
@@ -2459,7 +2459,7 @@
           _0x52a128[64 * _0x19abad + _0x187fbe] = _0x501844
           _0x3b0a3d(_0x501844)
         }
-        _0x194da0.segments[0]
+        worm2.segments[0]
         let _0x125ee1 = dv.getUint8(_0x475187++)
         for (let _0x434216 = 0; _0x434216 < _0x125ee1; _0x434216++) {
           const _0x50f941 = dv.getUint8(_0x475187++),
@@ -2509,11 +2509,11 @@
                   _0x1fecb7 < _0x31c3e2.length;
                   _0x1fecb7++
                 ) {
-                  const _0x5c4c95 = _0x31c3e2[_0x1fecb7],
-                    _0x2d515a = _0x5c4c95.segments[0]
-                  _0x52761c(_0x5bbd94, _0x3f791e, _0x5c4c95.oldR, _0x2d515a) &&
-                    ((_0x5c4c95.diggedLavaAt = time),
-                    (_0x5c4c95 != _0x194da0 && _0x5c4c95 != _0x3ef6bf) ||
+                  const worm3 = _0x31c3e2[_0x1fecb7],
+                    _0x2d515a = worm3.segments[0]
+                  _0x52761c(_0x5bbd94, _0x3f791e, worm3.oldR, _0x2d515a) &&
+                    ((worm3.diggedLavaAt = time),
+                    (worm3 != worm2 && worm3 != worm5) ||
                       (_0x57cea4 = 1))
                 }
               }
@@ -2625,7 +2625,7 @@
           _0x12d663.isDead = true
           _0x12d663.diedAt = time
           _0x12d663.id = -1
-          _0x12d663 === _0x194da0 &&
+          _0x12d663 === worm2 &&
             ((_0x32e4ab = true),
             (_0x360982.score = 0),
             (_0x360982.percent = 0),
@@ -2638,10 +2638,10 @@
           if (_0x434c10) {
             const _0x590228 = dv.getUint32(_0x475187)
             _0x475187 += 4
-            _0x3ef6bf = _0x31c3e2.find(
+            worm5 = _0x31c3e2.find(
               (_0x4cf041) => _0x4cf041.id === _0x590228
             )
-            console.log('killer!!!!', _0x3ef6bf)
+            console.log('killer!!!!', worm5)
             killerEl.setAttribute(
               'stroke',
               _0x244c5d[_0x590228] || 'An unnamed worm'
@@ -2688,7 +2688,7 @@
             }
           })()
         } else {
-          if (!_0x194da0.isDead) {
+          if (!worm2.isDead) {
             if (_0x1d4840 % 2 != 0) {
               const _0x2d2228 = dv.getUint8(_0x475187++)
               _0x5ddf1a(_0x2d2228)
@@ -2739,7 +2739,7 @@
   }
   const twoPi = 2 * Math.PI
   function _0x2ebfb5(radians) {
-    if (!_0x194da0 || _0x194da0.isDead) {
+    if (!worm2 || worm2.isDead) {
       return
     }
     ;(radians %= twoPi) < 0 && (radians += twoPi)
@@ -2864,7 +2864,7 @@
         ? 2
         : 0
     _0x2710ba = _0x2ac787
-    _0x194da0 &&
+    worm2 &&
       (function (_0x21b545) {
         const _0x35a11e = new Uint8Array(1)
         _0x35a11e[0] = leftShiftOr(2, _0x21b545)
@@ -2971,8 +2971,8 @@
     for (let _0x1bdee5 = 0; _0x1bdee5 < _0x31c3e2.length; _0x1bdee5++) {
       _0x31c3e2[_0x1bdee5].interpolate()
     }
-    if (((_0x4c70cf += 0.3 * (_0x4355ad - _0x4c70cf)), _0x194da0)) {
-      const _0x27d19f = _0x3ef6bf || _0x194da0,
+    if (((_0x4c70cf += 0.3 * (_0x4355ad - _0x4c70cf)), worm2)) {
+      const worm4 = worm5 || worm2,
         {
           sx: sx,
           sy: sy,
@@ -2984,21 +2984,21 @@
           maxY: maxY,
           viewWidth: viewWidth,
           viewHeight: viewHeight,
-        } = _0x1ce1f3(_0x27d19f, true)
+        } = _0x1ce1f3(worm4, true)
       null === _0x5b52da
         ? ((_0x5b52da = viewWidth), (_0x21109a = viewHeight))
         : ((_0x5b52da += 0.1 * (viewWidth - _0x5b52da)),
           (_0x21109a += 0.1 * (viewHeight - _0x21109a)))
-      const _0x37a147 = _0x27d19f.segments[0],
+      const _0x37a147 = worm4.segments[0],
         _0x271443 = 2 * Math.random() * Math.PI,
         _0x10315f = 6 * _0x57cea4
       let _0x15ab1a = _0x37a147.interpX,
         _0x2118b6 = _0x37a147.interpY
-      if (_0x3ef6bf) {
-        const _0x25abe2 = (Date.now() - _0x194da0.diedAt) / 500
+      if (worm5) {
+        const _0x25abe2 = (Date.now() - worm2.diedAt) / 500
         if (_0x25abe2 < 1) {
-          const _0x68053 = _0x194da0.segments[0],
-            _0xacf942 = _0x3ef6bf.segments[0]
+          const _0x68053 = worm2.segments[0],
+            _0xacf942 = worm5.segments[0]
           _0x15ab1a =
             _0x68053.interpX +
             (_0xacf942.interpX - _0x68053.interpX) * _0x25abe2
@@ -3049,7 +3049,7 @@
             )
         }
       }
-      _0x27d19f && _0x1ce1f3(_0x27d19f)
+      worm4 && _0x1ce1f3(worm4)
       for (let i = _0x31c3e2.length - 1; i >= 0; i--) {
         _0x31c3e2[i].draw(i, canvasElCtx)
       }
