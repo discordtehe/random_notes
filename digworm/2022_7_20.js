@@ -552,7 +552,7 @@
     resumeEl = document.querySelector('.resume'),
     giveupEl = document.querySelector('.giveup')
   resumeEl.onclick = function () {
-    rmDlgs()
+    rmDialogs()
     gameEl.classList.add('game-show')
   }
   giveupEl.onclick = function () {
@@ -1602,23 +1602,23 @@
       return isNaN(num) ? -1 : num
     }
   }
-  function rmDlgs() {
+  function rmDialogs() {
     changelogEl.classList.remove('dialog-show')
     settingsEl.classList.remove('dialog-show')
   }
-  function _0x371f8c(_0x11e818) {
-    const _0x19f513 = document.querySelectorAll(_0x11e818 + ' .btn')
-    for (let i = 0; i < _0x19f513.length; i++) {
-      _0x19f513[i].onclick = function () {
-        const _0x4317f3 = document.querySelector(_0x11e818 + ' .btn-active')
+  function _0x371f8c(btnType) {
+    const btns = document.querySelectorAll(btnType + ' .btn')
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].onclick = function () {
+        const _0x4317f3 = document.querySelector(btnType + ' .btn-active')
         if (
           (_0x4317f3 && _0x4317f3.classList.remove('btn-active'),
           this.classList.add('btn-active'),
-          '.gamemodes' === _0x11e818)
+          '.gamemodes' === btnType)
         ) {
           localStorage.gamemode = this.getAttribute('data-gamemode')
         } else {
-          if ('.tabs' === _0x11e818) {
+          if ('.tabs' === btnType) {
             for (let j = 0; j < _0x421e37.length; j++) {
               const _0x36ff03 = _0x421e37[j]
               0 !== i
@@ -1650,12 +1650,12 @@
     )
     _0x198359 && _0x198359.click()
   }
-  document.onkeydown = function (_0x353950) {
-    if (9 === _0x353950.which) {
+  document.onkeydown = function (event) {
+    if (9 === event.which) {
       return false
     }
-    _0x353950.repeat ||
-      ((pressedKey[_0x353950.code] = true), _0xbbd36(), _0x382b09())
+    event.repeat ||
+      ((pressedKey[event.code] = true), _0xbbd36(), _0x382b09())
   }
   document.onkeyup = function (key) {
     delete pressedKey[key.code]
@@ -1679,7 +1679,7 @@
             continueBtnEl.click())
   }
   playBtnEl.onclick = function () {
-    rmDlgs()
+    rmDialogs()
     gridEl.classList.remove('grid-show')
     setTimeout(function () {
       const [faceSkin, bodySkin] = getMySkins(),
@@ -2279,16 +2279,16 @@
           let _0x4108dd = false
           if (_0x475187 < dv.byteLength) {
             let _0x1cf61d = false
-            const [_0x432e90, _0x352fbd] = getMySkins(),
+            const [faceSkin, bodySkin] = getMySkins(),
               _0x59621a = dv.getUint8(_0x475187++)
             for (let _0xb6d7c3 = 0; _0xb6d7c3 < _0x59621a; _0xb6d7c3++) {
               const _0x8df9c1 = dv.getUint8(_0x475187++)
-              _0x8df9c1 === _0x432e90 && (_0x4108dd = true)
+              _0x8df9c1 === faceSkin && (_0x4108dd = true)
               _0x37c0af('face', _0x8df9c1)
             }
             for (; _0x475187 < dv.byteLength; ) {
               const _0x3e6af3 = dv.getUint8(_0x475187++)
-              _0x3e6af3 === _0x352fbd && (_0x1cf61d = true)
+              _0x3e6af3 === bodySkin && (_0x1cf61d = true)
               _0x37c0af('body', _0x3e6af3)
             }
           }
@@ -2947,9 +2947,9 @@
       rewardStatusEl.getAttribute('stroke') !== msg &&
         rewardStatusEl.setAttribute('stroke', msg)
     })()
-    const [_0x10b6cb, _0x536363] = getMySkins()
-    _0x54c5be.faceSkin = _0x10b6cb
-    _0x54c5be.bodySkin = _0x536363
+    const [faceSkin, bodySkin] = getMySkins()
+    _0x54c5be.faceSkin = faceSkin
+    _0x54c5be.bodySkin = bodySkin
     const time = Date.now()
     _0xd4436e = (time - tempTime) / 1000
     tempTime = time
@@ -3025,14 +3025,14 @@
           _0x686203 <= ex + 1;
           _0x686203++
         ) {
-          const _0x5ca2d0 = 480 * _0x686203,
-            _0x898c36 = 480 * _0x58ede8,
+          const dx = 480 * _0x686203,
+            dy = 480 * _0x58ede8,
             _0x179d9b = _0x52a128[64 * _0x58ede8 + _0x686203]
           _0x179d9b &&
             canvasElCtx.drawImage(
               _0x179d9b.canvas,
-              _0x5ca2d0,
-              _0x898c36,
+              dx,
+              dy,
               480,
               480
             )
