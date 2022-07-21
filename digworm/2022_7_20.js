@@ -694,11 +694,11 @@
     ['interpolate']() {
       const _0x58ed56 = Math.min(1, (Date.now() - this.updateTime) / 100)
       for (let i = 0; i < this.segments.length; i++) {
-        const _0xe05cb = this.segments[i]
-        _0xe05cb.interpX =
-          _0xe05cb.interpOldX + (_0xe05cb.x - _0xe05cb.interpOldX) * _0x58ed56
-        _0xe05cb.interpY =
-          _0xe05cb.interpOldY + (_0xe05cb.y - _0xe05cb.interpOldY) * _0x58ed56
+        const segment = this.segments[i]
+        segment.interpX =
+          segment.interpOldX + (segment.x - segment.interpOldX) * _0x58ed56
+        segment.interpY =
+          segment.interpOldY + (segment.y - segment.interpOldY) * _0x58ed56
       }
       this.interpR = this.interpOldR + (this.r - this.interpOldR) * _0x58ed56
       this.dirX = this.oldDirX + (this.newDirX - this.oldDirX) * _0x58ed56
@@ -724,54 +724,54 @@
       this.angry = Math.min(1, Math.max(0, this.angry))
       this.sad = Math.min(1, Math.max(0, this.sad))
     }
-    ['drawEnergyAndNickname'](_0x260258) {
+    ['drawEnergyAndNickname'](ctx) {
       const _0x23e3bd = this.segments[0]
-      _0x260258.save()
-      _0x260258.lineCap = 'round'
-      _0x260258.lineJoin = 'round'
-      _0x260258.globalAlpha = this.energyAlpha
-      _0x260258.translate(_0x23e3bd.interpX, _0x23e3bd.interpY)
+      ctx.save()
+      ctx.lineCap = 'round'
+      ctx.lineJoin = 'round'
+      ctx.globalAlpha = this.energyAlpha
+      ctx.translate(_0x23e3bd.interpX, _0x23e3bd.interpY)
       const _0x35fda3 = this.interpR / 25
-      if ((_0x260258.scale(_0x35fda3, _0x35fda3), this.energyAlpha > 0)) {
-        _0x260258.save()
-        _0x260258.translate(0, 60)
-        _0x260258.beginPath()
-        _0x260258.moveTo(-35, 0)
-        _0x260258.lineTo(35, 0)
-        _0x260258.lineWidth = 13
-        _0x260258.strokeStyle = '#222'
-        _0x260258.stroke()
-        _0x260258.beginPath()
-        _0x260258.moveTo(-35, 0)
-        _0x260258.lineTo(-35 + this.iEnergyChange * 35 * 2, 0)
-        _0x260258.lineWidth = 6.5
-        _0x260258.strokeStyle = '#dd3434'
-        _0x260258.stroke()
-        _0x260258.beginPath()
-        _0x260258.globalAlpha *= Math.min(1, Math.max(0.5, this.iEnergy / 0.05))
-        _0x260258.moveTo(-35, 0)
-        _0x260258.lineTo(-35 + this.iEnergy * 35 * 2, 0)
-        _0x260258.lineWidth = 8
-        _0x260258.strokeStyle = '#75dd34'
-        _0x260258.stroke()
-        _0x260258.restore()
+      if ((ctx.scale(_0x35fda3, _0x35fda3), this.energyAlpha > 0)) {
+        ctx.save()
+        ctx.translate(0, 60)
+        ctx.beginPath()
+        ctx.moveTo(-35, 0)
+        ctx.lineTo(35, 0)
+        ctx.lineWidth = 13
+        ctx.strokeStyle = '#222'
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.moveTo(-35, 0)
+        ctx.lineTo(-35 + this.iEnergyChange * 35 * 2, 0)
+        ctx.lineWidth = 6.5
+        ctx.strokeStyle = '#dd3434'
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.globalAlpha *= Math.min(1, Math.max(0.5, this.iEnergy / 0.05))
+        ctx.moveTo(-35, 0)
+        ctx.lineTo(-35 + this.iEnergy * 35 * 2, 0)
+        ctx.lineWidth = 8
+        ctx.strokeStyle = '#75dd34'
+        ctx.stroke()
+        ctx.restore()
       }
       this.isDead ||
         this === worm2 ||
         '' === this.nickname.trim() ||
-        (_0x260258.save(),
-        _0x260258.translate(0, -50),
-        (_0x260258.globalAlpha = 1),
-        (_0x260258.font = 'bolder 24px Ubuntu'),
-        (_0x260258.strokeStyle = '#000'),
-        (_0x260258.lineWidth = 3),
-        (_0x260258.textAlign = 'center'),
-        (_0x260258.textBaseline = 'bottom'),
-        _0x260258.strokeText(this.nickname, 0, 0),
-        (_0x260258.fillStyle = '#fff'),
-        _0x260258.fillText(this.nickname, 0, 0),
-        _0x260258.restore())
-      _0x260258.restore()
+        (ctx.save(),
+        ctx.translate(0, -50),
+        (ctx.globalAlpha = 1),
+        (ctx.font = 'bolder 24px Ubuntu'),
+        (ctx.strokeStyle = '#000'),
+        (ctx.lineWidth = 3),
+        (ctx.textAlign = 'center'),
+        (ctx.textBaseline = 'bottom'),
+        ctx.strokeText(this.nickname, 0, 0),
+        (ctx.fillStyle = '#fff'),
+        ctx.fillText(this.nickname, 0, 0),
+        ctx.restore())
+      ctx.restore()
     }
     ['draw'](_0xb0bd9f, ctx, _0x40e682 = true) {
       const time = Date.now()
@@ -2339,7 +2339,7 @@
           _0x4647f4 = ((3 & _0x3dce21) << 2) | dv.getUint8(_0x475187++),
           _0x5e0ab9 = { _0x5bfc76: true },
           time = Date.now()
-        for (let _0x5df386 = 0; _0x5df386 < _0x4647f4; _0x5df386++) {
+        for (let m = 0; m < _0x4647f4; m++) {
           const _0x5bfc76 = dv.getUint32(_0x475187)
           _0x475187 += 4
           let worm = _0x31c3e2.find(
@@ -2400,8 +2400,8 @@
             }
             const _0x1b3eaf = dv.getUint16(_0x475187)
             _0x475187 += 2
-            for (let _0x5dd295 = 0; _0x5dd295 < _0x1b3eaf; _0x5dd295++) {
-              let _0x520367 = worm.segments[_0x5dd295]
+            for (let n = 0; n < _0x1b3eaf; n++) {
+              let _0x520367 = worm.segments[n]
               const _0x39871d = {
                 x: _0x520367.x + dv.getInt8(_0x475187++),
                 y: _0x520367.y + dv.getInt8(_0x475187++),
@@ -2459,8 +2459,8 @@
           let _0x55213a = 0,
             _0x40b1aa = 0,
             _0x462cab = 0
-          for (let _0x4e4e00 = 0; _0x4e4e00 < _0x2b26c8; _0x4e4e00++) {
-            const _0x97c92 = dv.getUint8(_0x475187 + _0x4e4e00),
+          for (let o = 0; o < _0x2b26c8; o++) {
+            const _0x97c92 = dv.getUint8(_0x475187 + o),
               _0xa5cd1a = _0x5098f5[_0x97c92]
             0 == _0x40b1aa
               ? ((_0x55213a = dv.getUint8(
@@ -2546,34 +2546,34 @@
             _0x47d080 = []
           let _0x4c8d5d = 0,
             _0x545516 = 0
-          for (let _0x2b75ce = 0; _0x2b75ce < _0x1758fb; _0x2b75ce++) {
+          for (let p = 0; p < _0x1758fb; p++) {
             0 == _0x545516
               ? ((_0x4c8d5d = dv.getUint8(_0x475187++)),
                 (_0x545516 = 1),
                 _0x47d080.push(15 & _0x4c8d5d))
               : (_0x47d080.push(_0x4c8d5d >> 4), (_0x545516 = 0))
           }
-          for (let _0x4f1cfd = 0; _0x4f1cfd < _0x40458c; _0x4f1cfd++) {
-            const _0x85c987 = _0x47d080[_0x4f1cfd],
+          for (let p = 0; p < _0x40458c; p++) {
+            const _0x85c987 = _0x47d080[p],
               _0x273cea = _0x552882[_0x85c987]
             _0x273cea.score = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
             _0x273cea.isMe && _0x442358(_0x273cea.score)
           }
           const _0x14b112 = []
-          for (let _0x232d94 = 0; _0x232d94 < _0x184f07; _0x232d94++) {
-            const _0x2a9e70 = _0x47d080[_0x40458c + _0x232d94]
+          for (let p = 0; p < _0x184f07; p++) {
+            const _0x2a9e70 = _0x47d080[_0x40458c + p]
             _0x14b112.push(_0x2a9e70)
           }
           _0x14b112.sort(function (_0x35b473, _0x697ad4) {
             return _0x697ad4 - _0x35b473
           })
-          for (let _0x100059 = 0; _0x100059 < _0x14b112.length; _0x100059++) {
-            const _0x9415af = _0x14b112[_0x100059]
+          for (let p = 0; p < _0x14b112.length; p++) {
+            const _0x9415af = _0x14b112[p]
             _0x552882[_0x9415af].lbItemEl.remove()
             _0x552882.splice(_0x9415af, 1)
           }
-          for (let _0x1cee5c = 0; _0x1cee5c < _0x20a913; _0x1cee5c++) {
+          for (let p = 0; p < _0x20a913; p++) {
             const _0x5925b4 = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
             _0x29e019(getNickname(), _0x5925b4)
@@ -2585,7 +2585,7 @@
         } else {
           _0x552882.length = 0
           const _0x27494c = Math.min(10, numWorms)
-          for (let _0x7b83d9 = 0; _0x7b83d9 < _0x27494c; _0x7b83d9++) {
+          for (let p = 0; p < _0x27494c; p++) {
             const _0x44a8a0 = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
             _0x29e019(getNickname(), _0x44a8a0)
@@ -2604,7 +2604,7 @@
         let _0x32e4ab = false,
           _0xfd618e = Math.floor((dv.byteLength - _0x475187) / 4)
         _0x434c10 && _0xfd618e--
-        for (let _0x54ea08 = 0; _0x54ea08 < _0xfd618e; _0x54ea08++) {
+        for (let p = 0; p < _0xfd618e; p++) {
           const _0x347b0b = dv.getUint32(_0x475187)
           _0x475187 += 4
           const _0x1b4e9e = _0x31c3e2.findIndex(
@@ -2740,12 +2740,12 @@
     wsSend(dv)
   }
   let _0x5cb559 = {}
-  document.onmousedown = function (_0x5a3b45) {
-    _0x5cb559[_0x5a3b45.button] = true
+  document.onmousedown = function (event) {
+    _0x5cb559[event.button] = true
     _0x382b09()
   }
-  document.onmouseup = function (_0xa736e7) {
-    delete _0x5cb559[_0xa736e7.button]
+  document.onmouseup = function (event) {
+    delete _0x5cb559[event.button]
     _0x382b09()
   }
   canvasEl.onmousemove = function (event) {
@@ -2799,8 +2799,8 @@
           null === _0x2d3f53 &&
           (document.onmousedown({ button: 2 }), (_0x2d3f53 = _0x2f1c42))
     }
-    document.ontouchmove = function (_0xaf826d) {
-      const _0x5dc1cf = _0xaf826d.changedTouches[0]
+    document.ontouchmove = function (event) {
+      const _0x5dc1cf = event.changedTouches[0]
       if (_0x5dc1cf.identifier === _0x25c66d) {
         const [_0x487c8c, _0x4436e6] = _0x30fd0b(_0x5dc1cf),
           _0x35b1fa = _0x487c8c - left,
@@ -2823,15 +2823,15 @@
         joystickKnobEl.style.width = width + 'px'
       }
     }
-    _0x1bb119.ontouchstart = function (_0x387c68) {
-      const _0x1dd6c0 = _0x387c68.changedTouches[0]
+    _0x1bb119.ontouchstart = function (event) {
+      const _0x1dd6c0 = event.changedTouches[0]
       _0x1dd6c0.clientX < window.innerWidth / 2
         ? ((_0x889b55 = _0x1dd6c0.identifier),
           null === _0x4f0b52 && (_0x2710ba = 2))
         : ((_0x4f0b52 = _0x1dd6c0.identifier), (_0x2710ba = 1))
     }
-    window.ontouchend = function (_0x35cd95) {
-      const id = _0x35cd95.changedTouches[0].identifier
+    window.ontouchend = function (event) {
+      const id = event.changedTouches[0].identifier
       id === _0x889b55
         ? ((_0x889b55 = null), (_0x2710ba = null !== _0x4f0b52 ? 1 : 0))
         : id === _0x4f0b52 &&
