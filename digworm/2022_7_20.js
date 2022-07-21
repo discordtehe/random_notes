@@ -772,17 +772,17 @@
         _0x260258.restore())
       _0x260258.restore()
     }
-    ['draw'](_0xb0bd9f, _0x4d6d74, _0x40e682 = true) {
+    ['draw'](_0xb0bd9f, ctx, _0x40e682 = true) {
       const time = Date.now()
-      if (((_0x4d6d74.lineWidth = 5), _0x4d6d74.lineWidth, this.isDead)) {
+      if (((ctx.lineWidth = 5), ctx.lineWidth, this.isDead)) {
         const _0x21aaa2 = (time - this.diedAt) / 500
         if (_0x21aaa2 > 1) {
           return void _0x31c3e2.splice(_0xb0bd9f, 1)
         }
-        _0x4d6d74.globalAlpha =
+        ctx.globalAlpha =
           Math.abs(Math.sin(_0x21aaa2 * Math.PI * 2)) * (1 - _0x21aaa2) * 0.7
       } else {
-        _0x4d6d74.globalAlpha = 1
+        ctx.globalAlpha = 1
       }
       const _0x4c206d = (time - this.diggedLavaAt) / 200,
         _0x34189b = [153, 153, 153],
@@ -798,29 +798,29 @@
             _0x2215c2[i] * _0x2e9fb3 + _0x1724f0[i] * _0x508e62
         }
       }
-      let _0x65247a = (_0x4d6d74.fillStyle =
+      let _0x65247a = (ctx.fillStyle =
           'rgb(' + _0x34189b.join(',') + ')'),
-        _0x14bbf2 = (_0x4d6d74.strokeStyle = 'rgb(' + _0x2215c2.join(',') + ')')
+        _0x14bbf2 = (ctx.strokeStyle = 'rgb(' + _0x2215c2.join(',') + ')')
       const _0x52b6e2 = 1 * this.interpR,
         _0x46ceb7 = this.segments[0]
       if (this.isDead || optimizedRenderingEl.checked) {
-        _0x4d6d74.beginPath()
+        ctx.beginPath()
         for (let i = 0; i < this.segments.length; i++) {
           const { interpX: interpX, interpY: interpY } =
             this.segments[i]
           0 === i
-            ? _0x4d6d74.moveTo(interpX, interpY)
-            : _0x4d6d74.lineTo(interpX, interpY)
+            ? ctx.moveTo(interpX, interpY)
+            : ctx.lineTo(interpX, interpY)
         }
-        _0x4d6d74.lineWidth = 2 * _0x52b6e2 + 10
-        _0x4d6d74.lineCap = 'round'
-        _0x4d6d74.lineJoin = 'round'
-        _0x4d6d74.stroke()
-        _0x4d6d74.strokeStyle = _0x4d6d74.fillStyle
-        _0x4d6d74.lineWidth -= 10
-        _0x4d6d74.stroke()
+        ctx.lineWidth = 2 * _0x52b6e2 + 10
+        ctx.lineCap = 'round'
+        ctx.lineJoin = 'round'
+        ctx.stroke()
+        ctx.strokeStyle = ctx.fillStyle
+        ctx.lineWidth -= 10
+        ctx.stroke()
       } else {
-        _0x4d6d74.lineCap = 'round'
+        ctx.lineCap = 'round'
         let _0x3622fe = 0
         const _0x455568 = this.segments.length - 1
         for (let i = 1; i <= _0x455568; i++) {
@@ -854,120 +854,120 @@
           }
           _0x4e87bd.distance = _0x3622fe
         }
-        _0x4d6d74.lineWidth = 5
+        ctx.lineWidth = 5
         const _0x1055c2 = this.segments[_0x455568]
-        _0x4d6d74.beginPath()
-        _0x4d6d74.arc(
+        ctx.beginPath()
+        ctx.arc(
           _0x1055c2.interpX,
           _0x1055c2.interpY,
           _0x52b6e2,
           0,
           2 * Math.PI
         )
-        _0x4d6d74.fill()
-        _0x4d6d74.stroke()
+        ctx.fill()
+        ctx.stroke()
         for (let i = _0x455568; i >= 1; i--) {
           const _0x3d0fa0 = this.segments[i],
             _0x5ab5f8 = this.segments[i - 1]
           ;(_0x3d0fa0.interpX === _0x5ab5f8.interpX &&
             _0x3d0fa0.interpY === _0x5ab5f8.interpY) ||
-            (_0x4d6d74.beginPath(),
-            _0x4d6d74.moveTo(
+            (ctx.beginPath(),
+            ctx.moveTo(
               _0x3d0fa0.interpX + _0x3d0fa0.norX * _0x52b6e2,
               _0x3d0fa0.interpY + _0x3d0fa0.norY * _0x52b6e2
             ),
-            _0x4d6d74.lineTo(
+            ctx.lineTo(
               _0x3d0fa0.interpX - _0x3d0fa0.norX * _0x52b6e2,
               _0x3d0fa0.interpY - _0x3d0fa0.norY * _0x52b6e2
             ),
-            _0x4d6d74.lineTo(
+            ctx.lineTo(
               _0x5ab5f8.interpX - _0x5ab5f8.norX * _0x52b6e2,
               _0x5ab5f8.interpY - _0x5ab5f8.norY * _0x52b6e2
             ),
-            _0x4d6d74.lineTo(
+            ctx.lineTo(
               _0x5ab5f8.interpX + _0x5ab5f8.norX * _0x52b6e2,
               _0x5ab5f8.interpY + _0x5ab5f8.norY * _0x52b6e2
             ),
-            _0x4d6d74.fill(),
-            _0x4d6d74.beginPath(),
-            _0x4d6d74.moveTo(
+            ctx.fill(),
+            ctx.beginPath(),
+            ctx.moveTo(
               _0x5ab5f8.interpX - _0x5ab5f8.norX * _0x52b6e2,
               _0x5ab5f8.interpY - _0x5ab5f8.norY * _0x52b6e2
             ),
-            _0x4d6d74.lineTo(
+            ctx.lineTo(
               _0x5ab5f8.interpX + _0x5ab5f8.norX * _0x52b6e2,
               _0x5ab5f8.interpY + _0x5ab5f8.norY * _0x52b6e2
             ),
-            (_0x4d6d74.strokeStyle = _0x65247a),
-            _0x4d6d74.stroke(),
-            _0x4d6d74.beginPath(),
-            _0x4d6d74.moveTo(
+            (ctx.strokeStyle = _0x65247a),
+            ctx.stroke(),
+            ctx.beginPath(),
+            ctx.moveTo(
               _0x3d0fa0.interpX + _0x3d0fa0.norX * _0x52b6e2,
               _0x3d0fa0.interpY + _0x3d0fa0.norY * _0x52b6e2
             ),
-            _0x4d6d74.lineTo(
+            ctx.lineTo(
               _0x5ab5f8.interpX + _0x5ab5f8.norX * _0x52b6e2,
               _0x5ab5f8.interpY + _0x5ab5f8.norY * _0x52b6e2
             ),
-            _0x4d6d74.moveTo(
+            ctx.moveTo(
               _0x5ab5f8.interpX - _0x5ab5f8.norX * _0x52b6e2,
               _0x5ab5f8.interpY - _0x5ab5f8.norY * _0x52b6e2
             ),
-            _0x4d6d74.lineTo(
+            ctx.lineTo(
               _0x3d0fa0.interpX - _0x3d0fa0.norX * _0x52b6e2,
               _0x3d0fa0.interpY - _0x3d0fa0.norY * _0x52b6e2
             ),
-            (_0x4d6d74.strokeStyle = _0x14bbf2),
-            _0x4d6d74.stroke())
+            (ctx.strokeStyle = _0x14bbf2),
+            ctx.stroke())
         }
-        _0x4d6d74.beginPath()
+        ctx.beginPath()
         const _0x310fb4 = _0x46ceb7.angle + Math.PI / 2
-        _0x4d6d74.arc(
+        ctx.arc(
           _0x46ceb7.interpX,
           _0x46ceb7.interpY,
           _0x52b6e2,
           _0x310fb4,
           _0x310fb4 + Math.PI
         )
-        _0x4d6d74.fill()
-        _0x4d6d74.stroke()
+        ctx.fill()
+        ctx.stroke()
       }
       const myFaceSkinName = (skins.faceSkins[this.faceSkin] || { name: 'idk' })
         .name
       if ('Faceless' === myFaceSkinName) {
         return
       }
-      _0x4d6d74.save()
-      _0x4d6d74.translate(_0x46ceb7.interpX, _0x46ceb7.interpY)
+      ctx.save()
+      ctx.translate(_0x46ceb7.interpX, _0x46ceb7.interpY)
       const _0x2e2f56 =
         (_0x52b6e2 / 30) * (myFaceSkinName.startsWith('Kirk') ? 0.7 : 1)
       let _0x205471 = 0
       if ('Gear' === myFaceSkinName) {
-        _0x4d6d74.scale(_0x2e2f56, _0x2e2f56)
-        _0x4d6d74.fillStyle = '#111'
-        _0x4d6d74.fill(_0x1290f5)
-        _0x4d6d74.fillStyle = _0x65247a
-        _0x4d6d74.save()
+        ctx.scale(_0x2e2f56, _0x2e2f56)
+        ctx.fillStyle = '#111'
+        ctx.fill(_0x1290f5)
+        ctx.fillStyle = _0x65247a
+        ctx.save()
         const _0x1b0348 = ((Date.now() / 500) % Math.PI) * 2
-        _0x4d6d74.rotate(_0x1b0348)
-        _0x4d6d74.translate(10, 0)
-        _0x4d6d74.rotate(2 * -_0x1b0348)
-        _0x4d6d74.fill(_0x18a205)
-        _0x4d6d74.rotate(_0x1b0348)
-        _0x4d6d74.scale(0.35, 0.35)
-        _0x4d6d74.scale(1 / _0x2e2f56, 1 / _0x2e2f56)
+        ctx.rotate(_0x1b0348)
+        ctx.translate(10, 0)
+        ctx.rotate(2 * -_0x1b0348)
+        ctx.fill(_0x18a205)
+        ctx.rotate(_0x1b0348)
+        ctx.scale(0.35, 0.35)
+        ctx.scale(1 / _0x2e2f56, 1 / _0x2e2f56)
       }
       if ('Cute' === myFaceSkinName) {
-        _0x4d6d74.scale(_0x2e2f56, _0x2e2f56)
+        ctx.scale(_0x2e2f56, _0x2e2f56)
         const _0x1905f4 = this.isDead ? 1 : this.sad + this.angry,
           _0x27316a = 1 - _0x1905f4
-        _0x4d6d74.strokeStyle = '#222'
-        _0x4d6d74.scale(1.15, 1.15)
-        _0x4d6d74.save()
-        _0x4d6d74.translate(0, 9.25 + 1.5 * (this.isDead ? -1 : this.dirY))
+        ctx.strokeStyle = '#222'
+        ctx.scale(1.15, 1.15)
+        ctx.save()
+        ctx.translate(0, 9.25 + 1.5 * (this.isDead ? -1 : this.dirY))
         _0x27316a > 0 &&
-          (_0x4d6d74.beginPath(),
-          _0x4d6d74.ellipse(
+          (ctx.beginPath(),
+          ctx.ellipse(
             0,
             0,
             1.6 * _0x27316a,
@@ -976,80 +976,80 @@
             0,
             2 * Math.PI
           ),
-          (_0x4d6d74.fillStyle = '#222'),
-          _0x4d6d74.fill())
+          (ctx.fillStyle = '#222'),
+          ctx.fill())
         _0x1905f4 > 0 &&
-          (_0x4d6d74.beginPath(),
-          _0x4d6d74.moveTo(-3 * _0x1905f4, 0.7),
-          _0x4d6d74.quadraticCurveTo(0, -2, 3 * _0x1905f4, 0.7),
-          (_0x4d6d74.lineWidth = 1.5 * _0x1905f4),
-          _0x4d6d74.stroke())
-        _0x4d6d74.restore()
+          (ctx.beginPath(),
+          ctx.moveTo(-3 * _0x1905f4, 0.7),
+          ctx.quadraticCurveTo(0, -2, 3 * _0x1905f4, 0.7),
+          (ctx.lineWidth = 1.5 * _0x1905f4),
+          ctx.stroke())
+        ctx.restore()
         for (let i = 0; i < 2; i++) {
           const _0x1c48bd = 9 * (2 * i - 1),
             _0x4f7b70 = 0 === i ? 1 : 0,
             _0x445c62 = 1 ^ _0x4f7b70
           this.isDead
             ? _0x1b9630(0.8 * _0x1c48bd, -6, 6, 2)
-            : (_0x4d6d74.save(),
-              _0x4d6d74.beginPath(),
-              _0x4d6d74.moveTo(
+            : (ctx.save(),
+              ctx.beginPath(),
+              ctx.moveTo(
                 _0x1c48bd - 6,
                 4 * _0x4f7b70 * this.sad - 15 + 5 * _0x445c62 * this.angry
               ),
-              _0x4d6d74.lineTo(
+              ctx.lineTo(
                 _0x1c48bd + 6,
                 4 * _0x445c62 * this.sad - 15 + 5 * _0x4f7b70 * this.angry
               ),
-              _0x4d6d74.lineTo(_0x1c48bd + 6, 5),
-              _0x4d6d74.lineTo(_0x1c48bd - 6, 5),
-              _0x4d6d74.clip(),
-              _0x4d6d74.beginPath(),
-              _0x4d6d74.ellipse(_0x1c48bd, -6, 5.5, 8, 0, 0, 2 * Math.PI),
-              (_0x4d6d74.fillStyle = '#222'),
-              (_0x4d6d74.lineWidth = 1.25),
-              _0x4d6d74.fill(),
-              _0x4d6d74.stroke(),
-              _0x4d6d74.clip(),
-              (_0x4d6d74.fillStyle = '#fff'),
-              _0x4d6d74.beginPath(),
-              _0x4d6d74.arc(
+              ctx.lineTo(_0x1c48bd + 6, 5),
+              ctx.lineTo(_0x1c48bd - 6, 5),
+              ctx.clip(),
+              ctx.beginPath(),
+              ctx.ellipse(_0x1c48bd, -6, 5.5, 8, 0, 0, 2 * Math.PI),
+              (ctx.fillStyle = '#222'),
+              (ctx.lineWidth = 1.25),
+              ctx.fill(),
+              ctx.stroke(),
+              ctx.clip(),
+              (ctx.fillStyle = '#fff'),
+              ctx.beginPath(),
+              ctx.arc(
                 _0x1c48bd + 3 * this.dirX,
                 6 * this.dirY - 6,
                 4.5,
                 0,
                 2 * Math.PI
               ),
-              _0x4d6d74.fill(),
-              _0x4d6d74.restore())
+              ctx.fill(),
+              ctx.restore())
         }
       } else {
         'Kirkier' === myFaceSkinName &&
-          _0x4d6d74.translate(13 * this.dirX, 13 * this.dirY)
+          ctx.translate(13 * this.dirX, 13 * this.dirY)
         'Sarcastic' === myFaceSkinName
           ? (_0x205471 = Math.PI)
           : 'Dizzy' === myFaceSkinName &&
             (_0x205471 = (Date.now() / 200) % (2 * Math.PI))
-        _0x4d6d74.rotate(_0x205471)
-        _0x4d6d74.scale(_0x2e2f56, _0x2e2f56)
+        ctx.rotate(_0x205471)
+        ctx.scale(_0x2e2f56, _0x2e2f56)
         'Bot' === myFaceSkinName
-          ? (_0x4d6d74.beginPath(),
-            _0x4d6d74.moveTo(-13, 14),
-            _0x4d6d74.lineTo(13, 14),
-            (_0x4d6d74.strokeStyle = _0x4d6d74.fillStyle = '#333'),
-            (_0x4d6d74.lineWidth = 8),
-            _0x4d6d74.stroke(),
-            _0x4d6d74.beginPath(),
-            _0x4d6d74.moveTo(-3, 4),
-            _0x4d6d74.lineTo(3, 4),
-            _0x4d6d74.lineTo(0, -2),
-            _0x4d6d74.closePath(),
-            (_0x4d6d74.lineWidth = 4),
-            (_0x4d6d74.lineJoin = _0x4d6d74.lineCap = 'round'),
-            _0x4d6d74.stroke(),
-            _0x4d6d74.fill())
+          ? (ctx.beginPath(),
+            ctx.moveTo(-13, 14),
+            ctx.lineTo(13, 14),
+            (ctx.strokeStyle = ctx.fillStyle = '#333'),
+            (ctx.lineWidth = 8),
+            ctx.stroke(),
+            ctx.beginPath(),
+            ctx.moveTo(-3, 4),
+            ctx.lineTo(3, 4),
+            ctx.lineTo(0, -2),
+            ctx.closePath(),
+            (ctx.lineWidth = 4),
+            (ctx.lineJoin = ctx.lineCap = 'round'),
+            ctx.stroke(),
+            ctx.fill())
           : 'Moyai' === myFaceSkinName
-          ? ((_0x4d6d74.fillStyle = '#333'),
+          ? ((ctx.fillStyle = '#333'),
             (function (_0x1a3648, _0x2c0d71) {
               _0x1a3648.save()
               _0x1a3648.translate(-31, 35)
@@ -1066,47 +1066,47 @@
                 _0x1a3648.restore()
               }
               _0x1a3648.restore()
-            })(_0x4d6d74))
+            })(ctx))
           : 'Ascii' === myFaceSkinName
-          ? (_0x4d6d74.save(),
-            _0x4d6d74.rotate(Math.PI / 2),
-            (_0x4d6d74.fillStyle = '#222'),
-            (_0x4d6d74.font = 'bolder 22px monospace'),
-            (_0x4d6d74.textAlign = 'center'),
-            (_0x4d6d74.textBaseline = 'middle'),
+          ? (ctx.save(),
+            ctx.rotate(Math.PI / 2),
+            (ctx.fillStyle = '#222'),
+            (ctx.font = 'bolder 22px monospace'),
+            (ctx.textAlign = 'center'),
+            (ctx.textBaseline = 'middle'),
             this.isDead
-              ? _0x4d6d74.fillText('x(', 0, 0)
+              ? ctx.fillText('x(', 0, 0)
               : 1 === this.mood
-              ? (_0x4d6d74.fillText(':(', 0, 0),
-                _0x4d6d74.fillText('>', -18, 0))
+              ? (ctx.fillText(':(', 0, 0),
+                ctx.fillText('>', -18, 0))
               : 2 === this.mood
-              ? _0x4d6d74.fillText(':(', 0, 0)
-              : _0x4d6d74.fillText(':)', 0, 0),
-            _0x4d6d74.restore())
+              ? ctx.fillText(':(', 0, 0)
+              : ctx.fillText(':)', 0, 0),
+            ctx.restore())
           : 'All Seeing' !== myFaceSkinName &&
-            (_0x4d6d74.beginPath(),
-            _0x4d6d74.moveTo(-7, 9.25),
-            _0x4d6d74.quadraticCurveTo(
+            (ctx.beginPath(),
+            ctx.moveTo(-7, 9.25),
+            ctx.quadraticCurveTo(
               0,
               6 + (this.isDead ? -10 : -10 * this.sad - 12 * this.angry) + 9.25,
               7,
               9.25
             ),
-            (_0x4d6d74.strokeStyle = '#222'),
-            (_0x4d6d74.lineWidth = 1.75),
-            _0x4d6d74.stroke())
+            (ctx.strokeStyle = '#222'),
+            (ctx.lineWidth = 1.75),
+            ctx.stroke())
         let _0x288745 = 7.5
         const _0x2916d9 = Math.sin(-_0x205471),
           _0x52eba1 = Math.cos(-_0x205471),
           _0x3ec2bb = this.dirX * _0x52eba1 - _0x2916d9 * this.dirY,
           _0x4d3fad = this.dirX * _0x2916d9 + _0x52eba1 * this.dirY
         if ('Too cool' === myFaceSkinName) {
-          _0x4d6d74.save()
-          _0x4d6d74.translate(-27.5, 7)
-          _0x4d6d74.scale(0.004200000000000001, -0.004200000000000001)
-          _0x4d6d74.fillStyle = '#222'
-          _0x4d6d74.fill(_0x55f515)
-          _0x4d6d74.restore()
+          ctx.save()
+          ctx.translate(-27.5, 7)
+          ctx.scale(0.004200000000000001, -0.004200000000000001)
+          ctx.fillStyle = '#222'
+          ctx.fill(_0x55f515)
+          ctx.restore()
         } else {
           if ('Ascii' === myFaceSkinName || 'Moyai' === myFaceSkinName) {
           } else {
@@ -1114,47 +1114,47 @@
               if (this.isDead) {
                 _0x1b9630(0, -6, 6, 3)
               } else {
-                _0x4d6d74.save()
-                _0x4d6d74.beginPath()
+                ctx.save()
+                ctx.beginPath()
                 const _0x2339d6 = 2 * this.sad
-                _0x4d6d74.moveTo(-4, -11 + _0x2339d6)
-                _0x4d6d74.lineTo(0, 2 * this.angry - 11)
-                _0x4d6d74.lineTo(4, -11 + _0x2339d6)
-                _0x4d6d74.lineTo(4, 0)
-                _0x4d6d74.lineTo(-4, 0)
-                _0x4d6d74.closePath()
-                _0x4d6d74.fillStyle = '#222'
-                _0x4d6d74.lineWidth = 1
-                _0x4d6d74.fill()
-                _0x4d6d74.stroke()
-                _0x4d6d74.clip()
-                _0x4d6d74.fillStyle = '#fff'
-                _0x4d6d74.fillRect(
+                ctx.moveTo(-4, -11 + _0x2339d6)
+                ctx.lineTo(0, 2 * this.angry - 11)
+                ctx.lineTo(4, -11 + _0x2339d6)
+                ctx.lineTo(4, 0)
+                ctx.lineTo(-4, 0)
+                ctx.closePath()
+                ctx.fillStyle = '#222'
+                ctx.lineWidth = 1
+                ctx.fill()
+                ctx.stroke()
+                ctx.clip()
+                ctx.fillStyle = '#fff'
+                ctx.fillRect(
                   1.75 * _0x3ec2bb - 2.5,
                   4.25 * _0x4d3fad - 8,
                   5,
                   5
                 )
-                _0x4d6d74.restore()
+                ctx.restore()
               }
             } else {
               if ('All Seeing' === myFaceSkinName) {
                 this.isDead
                   ? _0x1b9630(0, 0, 20, 7)
-                  : (_0x4d6d74.beginPath(),
-                    _0x4d6d74.arc(0, 0, 18, 0, 2 * Math.PI),
-                    (_0x4d6d74.fillStyle = '#222'),
-                    _0x4d6d74.fill(),
-                    _0x4d6d74.beginPath(),
-                    _0x4d6d74.arc(
+                  : (ctx.beginPath(),
+                    ctx.arc(0, 0, 18, 0, 2 * Math.PI),
+                    (ctx.fillStyle = '#222'),
+                    ctx.fill(),
+                    ctx.beginPath(),
+                    ctx.arc(
                       7 * _0x3ec2bb,
                       7 * _0x4d3fad,
                       8,
                       0,
                       2 * Math.PI
                     ),
-                    (_0x4d6d74.fillStyle = '#fff'),
-                    _0x4d6d74.fill())
+                    (ctx.fillStyle = '#fff'),
+                    ctx.fill())
               } else {
                 if ('Bot' === myFaceSkinName) {
                   const _0x30118a = -9
@@ -1165,31 +1165,31 @@
                       _0x18e72a = 1 ^ _0x315fca
                     this.isDead
                       ? _0x1b9630(_0x845822, _0x30118a, 6, 5)
-                      : (_0x4d6d74.save(),
-                        _0x4d6d74.beginPath(),
-                        _0x4d6d74.moveTo(
+                      : (ctx.save(),
+                        ctx.beginPath(),
+                        ctx.moveTo(
                           _0x845822 - 7,
                           _0x30118a -
                             7 +
                             (this.sad * _0x315fca * 4 +
                               this.angry * _0x18e72a * 6)
                         ),
-                        _0x4d6d74.lineTo(_0x845822 - 7, _0x30118a + 7),
-                        _0x4d6d74.lineTo(_0x845822 + 7, _0x30118a + 7),
-                        _0x4d6d74.lineTo(
+                        ctx.lineTo(_0x845822 - 7, _0x30118a + 7),
+                        ctx.lineTo(_0x845822 + 7, _0x30118a + 7),
+                        ctx.lineTo(
                           _0x845822 + 7,
                           _0x30118a -
                             7 +
                             (this.angry * _0x315fca * 6 +
                               this.sad * _0x18e72a * 4)
                         ),
-                        _0x4d6d74.closePath(),
-                        _0x4d6d74.clip(),
-                        (_0x4d6d74.fillStyle = '#333'),
-                        _0x4d6d74.beginPath(),
-                        _0x4d6d74.arc(_0x845822, _0x30118a, 7, 0, 2 * Math.PI),
-                        _0x4d6d74.fill(),
-                        _0x4d6d74.restore())
+                        ctx.closePath(),
+                        ctx.clip(),
+                        (ctx.fillStyle = '#333'),
+                        ctx.beginPath(),
+                        ctx.arc(_0x845822, _0x30118a, 7, 0, 2 * Math.PI),
+                        ctx.fill(),
+                        ctx.restore())
                   }
                 } else {
                   if ('Creepy' === myFaceSkinName) {
@@ -1200,37 +1200,37 @@
                         _0xe0735c = 1 ^ _0x19baf7
                       this.isDead
                         ? _0x1b9630(_0x2484bb, _0xde1f87, 4, 2)
-                        : (_0x4d6d74.save(),
-                          _0x4d6d74.beginPath(),
-                          _0x4d6d74.moveTo(
+                        : (ctx.save(),
+                          ctx.beginPath(),
+                          ctx.moveTo(
                             _0x2484bb - 3.5,
                             _0xde1f87 -
                               3.5 +
                               (this.sad * _0x19baf7 * 2 +
                                 this.angry * _0xe0735c * 3)
                           ),
-                          _0x4d6d74.lineTo(_0x2484bb - 3.5, _0xde1f87 + 3.5),
-                          _0x4d6d74.lineTo(_0x2484bb + 3.5, _0xde1f87 + 3.5),
-                          _0x4d6d74.lineTo(
+                          ctx.lineTo(_0x2484bb - 3.5, _0xde1f87 + 3.5),
+                          ctx.lineTo(_0x2484bb + 3.5, _0xde1f87 + 3.5),
+                          ctx.lineTo(
                             _0x2484bb + 3.5,
                             _0xde1f87 -
                               3.5 +
                               (this.angry * _0x19baf7 * 3 +
                                 this.sad * _0xe0735c * 2)
                           ),
-                          _0x4d6d74.closePath(),
-                          _0x4d6d74.clip(),
-                          (_0x4d6d74.fillStyle = '#222'),
-                          _0x4d6d74.beginPath(),
-                          _0x4d6d74.arc(
+                          ctx.closePath(),
+                          ctx.clip(),
+                          (ctx.fillStyle = '#222'),
+                          ctx.beginPath(),
+                          ctx.arc(
                             _0x2484bb,
                             _0xde1f87,
                             3.5,
                             0,
                             2 * Math.PI
                           ),
-                          _0x4d6d74.fill(),
-                          _0x4d6d74.restore())
+                          ctx.fill(),
+                          ctx.restore())
                     }
                   } else {
                     for (let i = 0; i < 2; i++) {
@@ -1241,70 +1241,70 @@
                       }
                       const _0x4181f4 = 0 === i ? 1 : 0,
                         _0x24a68f = 1 ^ _0x4181f4
-                      _0x4d6d74.save()
-                      _0x4d6d74.beginPath()
-                      _0x4d6d74.moveTo(
+                      ctx.save()
+                      ctx.beginPath()
+                      ctx.moveTo(
                         _0x559bb0 + -2.75,
                         2 * _0x4181f4 * this.sad -
                           11 +
                           2.5 * _0x24a68f * this.angry
                       )
-                      _0x4d6d74.lineTo(
+                      ctx.lineTo(
                         _0x559bb0 + 2.75,
                         2 * _0x24a68f * this.sad -
                           11 +
                           2.5 * _0x4181f4 * this.angry
                       )
-                      _0x4d6d74.lineTo(_0x559bb0 + 2.75, 0)
-                      _0x4d6d74.lineTo(_0x559bb0 + -2.75, 0)
-                      _0x4d6d74.closePath()
-                      _0x4d6d74.fillStyle = '#222'
-                      _0x4d6d74.lineWidth = 1
-                      _0x4d6d74.fill()
-                      _0x4d6d74.stroke()
-                      _0x4d6d74.clip()
-                      _0x4d6d74.fillStyle = '#fff'
-                      _0x4d6d74.fillRect(
+                      ctx.lineTo(_0x559bb0 + 2.75, 0)
+                      ctx.lineTo(_0x559bb0 + -2.75, 0)
+                      ctx.closePath()
+                      ctx.fillStyle = '#222'
+                      ctx.lineWidth = 1
+                      ctx.fill()
+                      ctx.stroke()
+                      ctx.clip()
+                      ctx.fillStyle = '#fff'
+                      ctx.fillRect(
                         _0x559bb0 - 2.5 + 1.75 * _0x3ec2bb,
                         4.25 * _0x4d3fad - 8,
                         5,
                         5
                       )
-                      _0x4d6d74.restore()
+                      ctx.restore()
                     }
                     'Pirate' === myFaceSkinName
-                      ? (_0x4d6d74.save(),
-                        _0x4d6d74.beginPath(),
-                        _0x4d6d74.arc(0, 0, 30, 0, 2 * Math.PI),
-                        _0x4d6d74.clip(),
-                        _0x4d6d74.translate(7.5, -5.7),
-                        _0x4d6d74.beginPath(),
-                        _0x4d6d74.arc(0, 0, 8.5, 0, 2 * Math.PI),
-                        (_0x4d6d74.fillStyle = '#222'),
-                        _0x4d6d74.fill(),
-                        (_0x4d6d74.strokeStyle = '#222'),
-                        _0x4d6d74.beginPath(),
-                        _0x4d6d74.moveTo(-20, -30),
-                        _0x4d6d74.quadraticCurveTo(-3, 0, 30, 0),
-                        (_0x4d6d74.lineWidth = 4),
-                        _0x4d6d74.stroke(),
-                        _0x4d6d74.restore())
+                      ? (ctx.save(),
+                        ctx.beginPath(),
+                        ctx.arc(0, 0, 30, 0, 2 * Math.PI),
+                        ctx.clip(),
+                        ctx.translate(7.5, -5.7),
+                        ctx.beginPath(),
+                        ctx.arc(0, 0, 8.5, 0, 2 * Math.PI),
+                        (ctx.fillStyle = '#222'),
+                        ctx.fill(),
+                        (ctx.strokeStyle = '#222'),
+                        ctx.beginPath(),
+                        ctx.moveTo(-20, -30),
+                        ctx.quadraticCurveTo(-3, 0, 30, 0),
+                        (ctx.lineWidth = 4),
+                        ctx.stroke(),
+                        ctx.restore())
                       : 'Intellectual' === myFaceSkinName &&
-                        (_0x4d6d74.save(),
-                        _0x4d6d74.translate(7.5, -5.7),
-                        _0x4d6d74.beginPath(),
-                        _0x4d6d74.arc(0, 0, 8.5, 0, 2 * Math.PI),
-                        (_0x4d6d74.fillStyle = 'hsla(0,0%,100%,0.5)'),
-                        _0x4d6d74.fill(),
-                        (_0x4d6d74.lineWidth = 1),
-                        (_0x4d6d74.strokeStyle = '#333'),
-                        _0x4d6d74.stroke(),
-                        _0x4d6d74.translate(8.5, 0),
-                        _0x4d6d74.beginPath(),
-                        _0x4d6d74.moveTo(0, 0),
-                        _0x4d6d74.lineTo(0, 18),
-                        _0x4d6d74.stroke(),
-                        _0x4d6d74.restore())
+                        (ctx.save(),
+                        ctx.translate(7.5, -5.7),
+                        ctx.beginPath(),
+                        ctx.arc(0, 0, 8.5, 0, 2 * Math.PI),
+                        (ctx.fillStyle = 'hsla(0,0%,100%,0.5)'),
+                        ctx.fill(),
+                        (ctx.lineWidth = 1),
+                        (ctx.strokeStyle = '#333'),
+                        ctx.stroke(),
+                        ctx.translate(8.5, 0),
+                        ctx.beginPath(),
+                        ctx.moveTo(0, 0),
+                        ctx.lineTo(0, 18),
+                        ctx.stroke(),
+                        ctx.restore())
                   }
                 }
               }
@@ -1313,22 +1313,22 @@
         }
       }
       function _0x1b9630(_0x227c74, _0x272850, _0x29efb6 = 10, _0x23c73d = 5) {
-        _0x4d6d74.save()
-        _0x4d6d74.translate(_0x227c74, _0x272850)
-        _0x4d6d74.rotate(Math.PI / 4)
-        _0x4d6d74.scale(_0x29efb6, _0x29efb6)
-        _0x4d6d74.beginPath()
-        _0x4d6d74.moveTo(0, -1)
-        _0x4d6d74.lineTo(0, 1)
-        _0x4d6d74.moveTo(-1, 0)
-        _0x4d6d74.lineTo(1, 0)
-        _0x4d6d74.lineWidth = _0x23c73d / _0x29efb6
-        _0x4d6d74.strokeStyle = '#333'
-        _0x4d6d74.stroke()
-        _0x4d6d74.restore()
+        ctx.save()
+        ctx.translate(_0x227c74, _0x272850)
+        ctx.rotate(Math.PI / 4)
+        ctx.scale(_0x29efb6, _0x29efb6)
+        ctx.beginPath()
+        ctx.moveTo(0, -1)
+        ctx.lineTo(0, 1)
+        ctx.moveTo(-1, 0)
+        ctx.lineTo(1, 0)
+        ctx.lineWidth = _0x23c73d / _0x29efb6
+        ctx.strokeStyle = '#333'
+        ctx.stroke()
+        ctx.restore()
       }
-      'Gear' === myFaceSkinName && _0x4d6d74.restore()
-      _0x4d6d74.restore()
+      'Gear' === myFaceSkinName && ctx.restore()
+      ctx.restore()
     }
   }
   function _0x406b9c(_0x4e26bf) {
