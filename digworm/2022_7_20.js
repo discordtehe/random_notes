@@ -135,23 +135,23 @@
       viewHeight: viewHeight,
     }
   }
-  function oreToColor(ore) {
-    switch (ore) {
-      case oreType.dirt:
+  function oreToColor(oreStr) {
+    switch (oreStr) {
+      case 'dirt':
         return [116, 66, 0]
-      case oreType.lava:
+      case 'lava':
         return [166, 25, 6]
-      case 3:
+      case 'diamond':
         return [49, 165, 158]
-      case oreType.gold:
+      case 'gold':
         return [165, 158, 21]
-      case oreType.uranium:
+      case 'uranium':
         return [50, 164, 48]
-      case 6:
+      case 'quartz':
         return [255, 255, 255]
-      case oreType.bedrock:
+      case 'bedrock':
         return [10, 10, 10]
-      case 8:
+      case 'gravestone':
         return [90, 90, 90]
     }
   }
@@ -361,15 +361,15 @@
           canvas.getContext('webgl', contextAttributes) ||
           canvas.getContext('experimental-webgl', contextAttributes),
         ores = ['gold', 'uranium', 'diamond', 'lava']
-      let _0x4846ca = ''
+      let oreProgramStr = ''
       for (let i = 0; i < ores.length; i++) {
-        _0x4846ca +=
+        oreProgramStr +=
           'distance(vec3(' +
-          oreToColor(_0x21ff22[ores[i]])
-            .map((_0x27afdc) => _0x27afdc / 255)
+          oreToColor(ores[i])
+            .map((num) => num / 255)
             .join(',') +
           '),t.rgb)<0.1'
-        i !== ores.length - 1 && (_0x4846ca += '||')
+        i !== ores.length - 1 && (oreProgramStr += '||')
       }
       const _0x5900b9 = (function (_0xcbe078, _0x35f8d8) {
         const vertexShader = _0x86d0ee('vertex', _0xcbe078),
@@ -388,7 +388,7 @@
       })(
         '\n\tattribute vec2 pos;\n\tvarying vec2 vPos;\n\tvoid main() {\n\t\tvPos=pos;\n\t\tgl_Position=vec4(pos,0.0,1.0);\n\t}\n\t',
         '\n\tprecision mediump float;\n\tuniform sampler2D tex;\n\tuniform bool u3d;\n\tuniform bool uGlow;\n\tuniform float uTime;\n\tuniform vec2 blurSize;\n\n\tvarying vec2 vPos;\n\n\tconst vec3 groundColor = vec3(0.32,0.18,0.0);\n\tconst int STEPS=10;\n\n\tvec4 getColor(vec2 p){\n\t\tvec4 t=texture2D(tex,p);\n\t\tif(' +
-          _0x4846ca +
+          oreProgramStr +
           '){\n\t\t\treturn t;\n\t\t}\n\t\treturn vec4(0.0);\n\t}\n\n\tvoid main(){\n\t\tvec4 a;\n\t\tvec4 sum;\n\t\tvec2 uv=vPos*0.5+0.5;\n\t\tif(uGlow){\n\t\t\tsum += getColor(vec2(uv.x - 4.0*blurSize.x, uv.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x - 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x - 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x - blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x + blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x + 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x + 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x + 4.0*blurSize.x, uv.y)) * 0.05;\n\n\t\t\t//y\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 4.0*blurSize.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 4.0*blurSize.y)) * 0.05;\n\t\t}\n\t\tif(u3d){\n\t\t\tfor (int i=0;i<=STEPS;i++) {\n\t\t\t\tfloat s=(float(i)/float(STEPS));\n\t\t\t\tvec2 p = vPos*(1.0+0.15*s);\n\t\t\t\tvec4 b = texture2D(tex, p*0.5+0.5);\n\t\t\t\tif (length(b.rgb-groundColor)<0.1) {\n\t\t\t\t\tif(i!=STEPS) {\n\t\t\t\t\t\tb.a = 0.0;\n\t\t\t\t\t}\n\t\t\t\t} else if(i!=0) {\n\t\t\t\t\tb.rgb=groundColor*0.8;\n\t\t\t\t}\n\t\t\t\ta.rgb = a.rgb*a.a + b.rgb*b.a*(1.0-a.a);\n\t\t\t\ta.a = a.a+b.a * (1.0-a.a);\n\t\t\t}\n\t\t}\n\t\tgl_FragColor = (u3d?a:texture2D(tex,uv)) + sum*(sin(uTime)*0.5+1.5);\n\t}\n\t'
       )
       gl.useProgram(_0x5900b9)
@@ -536,7 +536,7 @@
       )
     })(),
     ua = navigator.userAgent.toLowerCase(),
-    _0x5e06ec =
+    isMobile =
       /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
         ua
       ),
@@ -801,7 +801,7 @@
       let _0x65247a = (ctx.fillStyle =
           'rgb(' + _0x34189b.join(',') + ')'),
         _0x14bbf2 = (ctx.strokeStyle = 'rgb(' + _0x2215c2.join(',') + ')')
-      const _0x52b6e2 = 1 * this.interpR,
+      const radius = 1 * this.interpR,
         _0x46ceb7 = this.segments[0]
       if (this.isDead || optimizedRenderingEl.checked) {
         ctx.beginPath()
@@ -812,7 +812,7 @@
             ? ctx.moveTo(interpX, interpY)
             : ctx.lineTo(interpX, interpY)
         }
-        ctx.lineWidth = 2 * _0x52b6e2 + 10
+        ctx.lineWidth = 2 * radius + 10
         ctx.lineCap = 'round'
         ctx.lineJoin = 'round'
         ctx.stroke()
@@ -860,7 +860,7 @@
         ctx.arc(
           _0x1055c2.interpX,
           _0x1055c2.interpY,
-          _0x52b6e2,
+          radius,
           0,
           2 * Math.PI
         )
@@ -873,49 +873,49 @@
             _0x3d0fa0.interpY === _0x5ab5f8.interpY) ||
             (ctx.beginPath(),
             ctx.moveTo(
-              _0x3d0fa0.interpX + _0x3d0fa0.norX * _0x52b6e2,
-              _0x3d0fa0.interpY + _0x3d0fa0.norY * _0x52b6e2
+              _0x3d0fa0.interpX + _0x3d0fa0.norX * radius,
+              _0x3d0fa0.interpY + _0x3d0fa0.norY * radius
             ),
             ctx.lineTo(
-              _0x3d0fa0.interpX - _0x3d0fa0.norX * _0x52b6e2,
-              _0x3d0fa0.interpY - _0x3d0fa0.norY * _0x52b6e2
+              _0x3d0fa0.interpX - _0x3d0fa0.norX * radius,
+              _0x3d0fa0.interpY - _0x3d0fa0.norY * radius
             ),
             ctx.lineTo(
-              _0x5ab5f8.interpX - _0x5ab5f8.norX * _0x52b6e2,
-              _0x5ab5f8.interpY - _0x5ab5f8.norY * _0x52b6e2
+              _0x5ab5f8.interpX - _0x5ab5f8.norX * radius,
+              _0x5ab5f8.interpY - _0x5ab5f8.norY * radius
             ),
             ctx.lineTo(
-              _0x5ab5f8.interpX + _0x5ab5f8.norX * _0x52b6e2,
-              _0x5ab5f8.interpY + _0x5ab5f8.norY * _0x52b6e2
+              _0x5ab5f8.interpX + _0x5ab5f8.norX * radius,
+              _0x5ab5f8.interpY + _0x5ab5f8.norY * radius
             ),
             ctx.fill(),
             ctx.beginPath(),
             ctx.moveTo(
-              _0x5ab5f8.interpX - _0x5ab5f8.norX * _0x52b6e2,
-              _0x5ab5f8.interpY - _0x5ab5f8.norY * _0x52b6e2
+              _0x5ab5f8.interpX - _0x5ab5f8.norX * radius,
+              _0x5ab5f8.interpY - _0x5ab5f8.norY * radius
             ),
             ctx.lineTo(
-              _0x5ab5f8.interpX + _0x5ab5f8.norX * _0x52b6e2,
-              _0x5ab5f8.interpY + _0x5ab5f8.norY * _0x52b6e2
+              _0x5ab5f8.interpX + _0x5ab5f8.norX * radius,
+              _0x5ab5f8.interpY + _0x5ab5f8.norY * radius
             ),
             (ctx.strokeStyle = _0x65247a),
             ctx.stroke(),
             ctx.beginPath(),
             ctx.moveTo(
-              _0x3d0fa0.interpX + _0x3d0fa0.norX * _0x52b6e2,
-              _0x3d0fa0.interpY + _0x3d0fa0.norY * _0x52b6e2
+              _0x3d0fa0.interpX + _0x3d0fa0.norX * radius,
+              _0x3d0fa0.interpY + _0x3d0fa0.norY * radius
             ),
             ctx.lineTo(
-              _0x5ab5f8.interpX + _0x5ab5f8.norX * _0x52b6e2,
-              _0x5ab5f8.interpY + _0x5ab5f8.norY * _0x52b6e2
+              _0x5ab5f8.interpX + _0x5ab5f8.norX * radius,
+              _0x5ab5f8.interpY + _0x5ab5f8.norY * radius
             ),
             ctx.moveTo(
-              _0x5ab5f8.interpX - _0x5ab5f8.norX * _0x52b6e2,
-              _0x5ab5f8.interpY - _0x5ab5f8.norY * _0x52b6e2
+              _0x5ab5f8.interpX - _0x5ab5f8.norX * radius,
+              _0x5ab5f8.interpY - _0x5ab5f8.norY * radius
             ),
             ctx.lineTo(
-              _0x3d0fa0.interpX - _0x3d0fa0.norX * _0x52b6e2,
-              _0x3d0fa0.interpY - _0x3d0fa0.norY * _0x52b6e2
+              _0x3d0fa0.interpX - _0x3d0fa0.norX * radius,
+              _0x3d0fa0.interpY - _0x3d0fa0.norY * radius
             ),
             (ctx.strokeStyle = _0x14bbf2),
             ctx.stroke())
@@ -925,7 +925,7 @@
         ctx.arc(
           _0x46ceb7.interpX,
           _0x46ceb7.interpY,
-          _0x52b6e2,
+          radius,
           _0x310fb4,
           _0x310fb4 + Math.PI
         )
@@ -940,7 +940,7 @@
       ctx.save()
       ctx.translate(_0x46ceb7.interpX, _0x46ceb7.interpY)
       const _0x2e2f56 =
-        (_0x52b6e2 / 30) * (myFaceSkinName.startsWith('Kirk') ? 0.7 : 1)
+        (radius / 30) * (myFaceSkinName.startsWith('Kirk') ? 0.7 : 1)
       let _0x205471 = 0
       if ('Gear' === myFaceSkinName) {
         ctx.scale(_0x2e2f56, _0x2e2f56)
@@ -1157,28 +1157,28 @@
                     ctx.fill())
               } else {
                 if ('Bot' === myFaceSkinName) {
-                  const _0x30118a = -9
+                  const y = -9
                   _0x288745 *= 1.5
                   for (let i = 0; i < 2; i++) {
-                    const _0x845822 = (2 * i - 1) * _0x288745,
+                    const x = (2 * i - 1) * _0x288745,
                       _0x315fca = 0 === i ? 1 : 0,
                       _0x18e72a = 1 ^ _0x315fca
                     this.isDead
-                      ? _0x1b9630(_0x845822, _0x30118a, 6, 5)
+                      ? _0x1b9630(x, y, 6, 5)
                       : (ctx.save(),
                         ctx.beginPath(),
                         ctx.moveTo(
-                          _0x845822 - 7,
-                          _0x30118a -
+                          x - 7,
+                          y -
                             7 +
                             (this.sad * _0x315fca * 4 +
                               this.angry * _0x18e72a * 6)
                         ),
-                        ctx.lineTo(_0x845822 - 7, _0x30118a + 7),
-                        ctx.lineTo(_0x845822 + 7, _0x30118a + 7),
+                        ctx.lineTo(x - 7, y + 7),
+                        ctx.lineTo(x + 7, y + 7),
                         ctx.lineTo(
-                          _0x845822 + 7,
-                          _0x30118a -
+                          x + 7,
+                          y -
                             7 +
                             (this.angry * _0x315fca * 6 +
                               this.sad * _0x18e72a * 4)
@@ -1187,7 +1187,7 @@
                         ctx.clip(),
                         (ctx.fillStyle = '#333'),
                         ctx.beginPath(),
-                        ctx.arc(_0x845822, _0x30118a, 7, 0, 2 * Math.PI),
+                        ctx.arc(x, y, 7, 0, 2 * Math.PI),
                         ctx.fill(),
                         ctx.restore())
                   }
@@ -1356,7 +1356,7 @@
   window.onload = function () {
     loaderEl.style.display = 'none'
     joinGame(window.location.origin.replace('http', 'ws'))
-    _0x40d72d()
+    gameLoop()
   }
   document.body.oncontextmenu = function () {
     return false
@@ -1795,7 +1795,7 @@
   function _0x13d5e7() {
     _0x19da0e =
       Math.max(window.innerWidth / 1366, window.innerHeight / 657) *
-      (_0x39ef23 && !_0x5e06ec ? 1.6 : 1)
+      (_0x39ef23 && !isMobile ? 1.6 : 1)
     for (let i = 0; i < _0x32c425.length; i++) {
       const _0x17ade8 = _0x32c425[i]
       let _0x315d99 = _0x19da0e
@@ -2928,7 +2928,7 @@
         ctx.createPattern(canvas, 'repeat')
       )
     })()
-  function _0x40d72d() {
+  function gameLoop() {
     let bool = false
     for (let i = 0; i < _0x552882.length; i++) {
       const _0x23483a = _0x552882[i]
@@ -3124,7 +3124,7 @@
     } else {
       goldCanvasEl.style.display = 'none'
     }
-    window.requestAnimationFrame(_0x40d72d)
+    window.requestAnimationFrame(gameLoop)
   }
   const comingSoonEls = document.querySelectorAll('.coming-soon')
   for (let i = 0; i < comingSoonEls.length; i++) {
