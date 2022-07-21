@@ -105,23 +105,23 @@
       skin[i].id = i
     }
   }
-  function _0x1ce1f3(worm6, bool) {
+  function getWormDimensions(worm, bool) {
     const { viewWidth: viewWidth, viewHeight: viewHeight } = (function (
-        _0x1f21d8
+        r
       ) {
-        _0x1f21d8 -= 30
-        _0x1f21d8 *= 50
-        const _0x29d507 = 3000 + parseInt(_0x1f21d8)
+        r -= 30
+        r *= 50
+        const viewWidth = 3000 + parseInt(r)
         return {
-          viewWidth: _0x29d507,
-          viewHeight: 0.5 * _0x29d507,
+          viewWidth: viewWidth,
+          viewHeight: 0.5 * viewWidth,
         }
-      })(bool ? worm6.interpR : worm6.r),
-      _0x37078e = worm6.segments[0],
-      minX = _0x37078e.x - viewWidth / 2,
-      minY = _0x37078e.y - viewHeight / 2,
-      maxX = _0x37078e.x + viewWidth / 2,
-      maxY = _0x37078e.y + viewHeight / 2
+      })(bool ? worm.interpR : worm.r),
+      firstSegment = worm.segments[0],
+      minX = firstSegment.x - viewWidth / 2,
+      minY = firstSegment.y - viewHeight / 2,
+      maxX = firstSegment.x + viewWidth / 2,
+      maxY = firstSegment.y + viewHeight / 2
     return {
       minX: minX,
       minY: minY,
@@ -176,9 +176,10 @@
       })
     )
   }
-  function _0xcd5ec6(worm7) {
+  function getWormR(worm) {
+    //if worm.segments.length < 5, returns NaN
     return parseInt(
-      50 * Math.sqrt(Math.min(1, (worm7.segments.length - 5) / 1000)) + 30
+      50 * Math.sqrt(Math.min(1, (worm.segments.length - 5) / 1000)) + 30
     )
   }
   function _0x40a543(_0x9092a1) {
@@ -317,11 +318,11 @@
       },
     ],
     enable3DEl = document.getElementById('enable3D')
-  _0x5f77ca(enable3DEl, 'enable_3d')
+  localStorageFunc(enable3DEl, 'enable_3d')
   const enableGlowEl = document.getElementById('enableGlow')
-  _0x5f77ca(enableGlowEl, 'enable_glow')
+  localStorageFunc(enableGlowEl, 'enable_glow')
   const highResEl = document.getElementById('highRes')
-  _0x5f77ca(highResEl, 'high_res')
+  localStorageFunc(highResEl, 'high_res')
   const deadWormEl = document.getElementById('deadWorm'),
     deadWormCtx = deadWormEl.getContext('2d')
   let _0x4868a9, _0x312405
@@ -484,11 +485,11 @@
     })()
   } catch (err) {
     console.error('Error creating post processor. ' + err)
-    _0x91abc2(enable3DEl, false)
-    _0x91abc2(enableGlowEl, false)
-    _0x91abc2(highResEl, false)
+    updateDisplay(enable3DEl, false)
+    updateDisplay(enableGlowEl, false)
+    updateDisplay(highResEl, false)
   }
-  1 === window.devicePixelRatio && _0x91abc2(highResEl, false)
+  1 === window.devicePixelRatio && updateDisplay(highResEl, false)
   ;(function () {
     for (
       var lastTime = 0,
@@ -519,7 +520,7 @@
   })()
   const killerEl = document.querySelector('.killer'),
     fixedJoystickCbEl = document.getElementById('fixedJoystickCb')
-  _0x5f77ca(fixedJoystickCbEl, 'fixed_joystick')
+  localStorageFunc(fixedJoystickCbEl, 'fixed_joystick')
   const _0x39ef23 = (window.mobileAndTabletCheck = function () {
       let _0x4b933b = false
       var _0x56be4a
@@ -562,14 +563,14 @@
       resumeEl.click())
   }
   const optimizedRenderingEl = document.getElementById('optimizedRendering')
-  _0x5f77ca(optimizedRenderingEl, 'optimized_rendering')
+  localStorageFunc(optimizedRenderingEl, 'optimized_rendering')
   const kbMovementCbEl = document.querySelector('#kbMovementCb')
-  _0x5f77ca(kbMovementCbEl, 'kb_movement')
+  localStorageFunc(kbMovementCbEl, 'kb_movement')
   const nicknameEl = document.querySelector('.nickname')
-  function _0x91abc2(el, shouldDisplay) {
+  function updateDisplay(el, shouldDisplay) {
     el.parentNode.style.display = shouldDisplay ? '' : 'none'
   }
-  function _0x5f77ca(el, key) {
+  function localStorageFunc(el, key) { //todo: rename better
     const val = localStorage[key]
     el.checked =
       undefined !== val ? 'true' === val : el.checked
@@ -633,39 +634,39 @@
   nicknameEl.maxLength = 14
   nicknameEl.value =
     undefined !== localStorage.nickname ? localStorage.nickname : ''
-  _0x91abc2(fixedJoystickCbEl, _0x39ef23)
-  _0x91abc2(kbMovementCbEl, !_0x39ef23)
+  updateDisplay(fixedJoystickCbEl, _0x39ef23)
+  updateDisplay(kbMovementCbEl, !_0x39ef23)
   _0x39ef23 &&
     (document.getElementById('pressEnterInfo').style.display = 'none')
   const bigGearsPath = drawGears(20, 22.5, 32, 1),
     smallGearsPath = drawGears(10, 12.5, 16, 1.25),
-    _0x210ee9 = [
+    moyaiFacePaths = [
       [
         [28, 28],
-        new Path2D(
+        new Path2D( //moyai eyes nose upsidedown
           'm 0,0 c 0,1 -3,4 -10,4 -7,0 -10,-3 -10,-4 0,-0.807 4.548,-1.612 6.311,-1.894 C -13.001,-4.548 -13,-10 -13,-10 c 0.805,3.218 0.315,7.079 0.093,8.467 C -12.705,-0.942 -12.059,0 -10,0 c 3,0 3,-2 3,-2 l 0.002,0 c -0.234,-1.657 -0.565,-5.089 0.162,-8 0,0 0.002,5.491 0.697,8.134 C -4.273,-1.562 0,-0.782 0,0'
         ),
       ],
       [
         [14, 16],
-        new Path2D(
+        new Path2D( //moyai nose front upsidedown
           'M 0,0 C 0,1 2,3 4,3 6,3 8,1 8,0 8,-1 7,-1 4,-1 1,-1 0,-1 0,0'
         ),
       ],
       [
         [12, 12],
-        new Path2D(
+        new Path2D( //moyai mustache upsidedown
           'M 0,0 C 0,0 2,2 6,2 10,2 12,0 12,0 12,0 10,1 6,1 2,1 0,0 0,0'
         ),
       ],
       [
         [12, 10],
-        new Path2D(
+        new Path2D( //moyai mouth upsidedown
           'M 0,0 C 0,1 2,2 6,2 10,2 12,1 12,0 12,-1 11,-1 6,-1 1,-1 0,-1 0,0'
         ),
       ],
     ],
-    _0x55f515 = new Path2D(
+    tooCoolFacePartPath = new Path2D(
       'M2358 5639 c-387 -26 -778 -95 -1438 -255 -257 -62 -569 -134 -738 -169 -91 -19 -166 -36 -168 -38 -1 -1 -6 -108 -10 -237 -7 -255 3 -395 36 -504 22 -70 73 -148 215 -326 110 -137 175 -236 212 -318 13 -30 48 -161 78 -291 135 -580 303 -1120 515 -1651 58 -146 124 -270 190 -359 261 -351 801 -618 1428 -706 454 -64 1044 -24 1403 95 592 198 1041 653 1452 1475 168 338 205 438 301 826 79 319 121 452 186 585 58 119 104 166 190 191 46 13 84 15 235 9 99 -4 199 -11 223 -15 60 -12 117 -55 178 -136 99 -132 158 -272 234 -555 190 -706 443 -1252 758 -1636 102 -125 243 -264 352 -346 422 -319 1015 -508 1596 -508 823 0 1516 333 1926 925 209 301 322 616 488 1355 62 279 148 612 187 730 43 128 117 276 178 352 25 31 80 82 121 114 46 34 81 69 89 88 22 52 26 134 16 276 -7 93 -7 175 1 265 12 150 5 195 -43 249 -33 39 -78 56 -209 81 -143 28 -304 71 -545 145 -326 101 -465 133 -842 195 -550 91 -674 105 -954 105 -485 0 -881 -57 -1844 -266 -1088 -237 -1424 -287 -1940 -288 -484 0 -719 35 -1515 231 -377 92 -569 132 -865 177 -813 126 -1272 163 -1677 135z'
     )
   class Worm {
@@ -1056,11 +1057,11 @@
               ctx.scale(1.7249999999999999, -1.7249999999999999)
               for (
                 let i = 0;
-                i < _0x210ee9.length;
+                i < moyaiFacePaths.length;
                 i++
               ) {
                 ctx.save()
-                const _0x399d02 = _0x210ee9[i]
+                const _0x399d02 = moyaiFacePaths[i]
                 ctx.translate(..._0x399d02[0])
                 ctx.fill(_0x399d02[1])
                 ctx.restore()
@@ -1105,7 +1106,7 @@
           ctx.translate(-27.5, 7)
           ctx.scale(0.004200000000000001, -0.004200000000000001)
           ctx.fillStyle = '#222'
-          ctx.fill(_0x55f515)
+          ctx.fill(tooCoolFacePartPath)
           ctx.restore()
         } else {
           if ('Ascii' === myFaceSkinName || 'Moyai' === myFaceSkinName) {
@@ -1312,17 +1313,17 @@
           }
         }
       }
-      function _0x1b9630(_0x227c74, _0x272850, _0x29efb6 = 10, _0x23c73d = 5) {
+      function _0x1b9630(xTranslate, yTranslate, xScale = 10, yScale = 5) {
         ctx.save()
-        ctx.translate(_0x227c74, _0x272850)
+        ctx.translate(xTranslate, yTranslate)
         ctx.rotate(Math.PI / 4)
-        ctx.scale(_0x29efb6, _0x29efb6)
+        ctx.scale(xScale, xScale)
         ctx.beginPath()
         ctx.moveTo(0, -1)
         ctx.lineTo(0, 1)
         ctx.moveTo(-1, 0)
         ctx.lineTo(1, 0)
-        ctx.lineWidth = _0x23c73d / _0x29efb6
+        ctx.lineWidth = yScale / xScale
         ctx.strokeStyle = '#333'
         ctx.stroke()
         ctx.restore()
@@ -1331,28 +1332,16 @@
       ctx.restore()
     }
   }
-  function _0x406b9c(_0x4e26bf) {
-    return (function (_0x3def1b) {
+  function _0x406b9c(oreStr) {
+    return (function (colorArr) {
       const _0x2f7f38 = Math.floor(5 * Math.random())
-      for (let i = 0; i < _0x3def1b.length; i++) {
-        _0x3def1b[i] = Math.max(0, _0x3def1b[i] - _0x2f7f38)
+      for (let i = 0; i < colorArr.length; i++) {
+        colorArr[i] = Math.max(0, colorArr[i] - _0x2f7f38)
       }
-      return _0x3def1b
-    })(oreToColor(_0x4e26bf))
+      return colorArr
+    })(oreToColor(oreStr))
   }
-  crypto.randomUUID =
-    crypto.randomUUID ||
-    function () {
-      return ([10000000] + -1000 + -4000 + -8000 + -100000000000).replace(
-        /[018]/g,
-        (_0x813e9e) =>
-          (
-            _0x813e9e ^
-            (crypto.getRandomValues(new Uint8Array(1))[0] &
-              (15 >> (_0x813e9e / 4)))
-          ).toString(16)
-      )
-    }
+
   window.onload = function () {
     loaderEl.style.display = 'none'
     joinGame(window.location.origin.replace('http', 'ws'))
@@ -1388,8 +1377,8 @@
     changelogEl = document.querySelector('.changelog'),
     settingsbtnEl = document.querySelector('.settings-btn'),
     changelogbtnEl = document.querySelector('.changelog-btn')
-  _0x243035('#ppBtn', '/docs/pp.html')
-  _0x243035('#tosBtn', '/docs/tos.html')
+  linkSelectorToUrl('#ppBtn', '/docs/pp.html')
+  linkSelectorToUrl('#tosBtn', '/docs/tos.html')
   const loginBtnEl = document.querySelector('.login-btn')
   loginBtnEl.onclick = function () {
     discordData ||
@@ -1400,9 +1389,9 @@
         encodeURIComponent(btoa(accountId)))
   }
   const logoutBtnEl = document.querySelector('.logout-btn')
-  function _0x243035(_0x48c796, _0x52a14f) {
-    document.querySelector(_0x48c796).onclick = function () {
-      window.open(_0x52a14f, '_blank')
+  function linkSelectorToUrl(selector, url) {
+    document.querySelector(selector).onclick = function () {
+      window.open(url, '_blank')
     }
   }
   logoutBtnEl.onclick = function () {
@@ -1410,8 +1399,8 @@
     delete localStorage.discord_data
     ws && ws.close()
   }
-  _0x243035('.discord-btn', 'https://discord.gg/WkYHsUQF5a')
-  _0x243035('.reddit-btn', 'https://www.reddit.com/r/digworm/')
+  linkSelectorToUrl('.discord-btn', 'https://discord.gg/WkYHsUQF5a')
+  linkSelectorToUrl('.reddit-btn', 'https://www.reddit.com/r/digworm/')
   const overlayEl = document.querySelector('.overlay'),
     _0x1bb119 =
       (document.querySelector('.game .overlay'),
@@ -1882,7 +1871,7 @@
     _0x552882.length = 0
     worm2 = null
     _0x1cd091 = null
-    worm5 = null
+    killerWorm = null
     _0x52a128.length = 0
     _0x31c3e2.length = 0
     _0x551ff8.length = 0
@@ -2196,7 +2185,7 @@
   }
   const lbFooterEl = document.querySelector('.lb-footer')
   let time,
-    worm5,
+    killerWorm,
     _0x244c5d = {}
   function _0x47463e(_0x3840ab) {
     angryBtnEl.style.display = sadBtnEl.style.display = _0x3840ab ? '' : 'none'
@@ -2334,7 +2323,7 @@
           (_0x21109a = null),
           (time = Date.now()),
           (playersDestroyed = 0),
-          (worm5 = null),
+          (killerWorm = null),
           giveupEl.classList.remove('btn-disabled'),
           gridEl.classList.remove('grid-show'),
           gameEl.classList.add('game-show'),
@@ -2382,7 +2371,7 @@
               _0x530890--
             }
             worm.interpOldR = worm.interpR
-            worm.r = _0xcd5ec6(worm)
+            worm.r = getWormR(worm)
             worm.oldDirX = worm.dirX
             worm.oldDirY = worm.dirY
             worm.newDirX = Math.cos(_0xe60ee6)
@@ -2436,14 +2425,14 @@
             worm.r =
               worm.interpOldR =
               worm.interpR =
-                _0xcd5ec6(worm)
+                getWormR(worm)
           }
           worm.mood = mood
           worm.oldEnergy = worm.iEnergy
           energy < worm.energy && (worm.energyChangeCounter = 1)
           worm.energy = energy
         }
-        const _0x424cfa = _0x1ce1f3(worm5 || worm2)
+        const _0x424cfa = getWormDimensions(killerWorm || worm2)
         let _0x5460b3 = dv.getUint8(_0x475187++)
         for (; _0x5460b3--; ) {
           const _0x583d10 = dv.getUint8(_0x475187++),
@@ -2513,7 +2502,7 @@
                     _0x2d515a = worm3.segments[0]
                   _0x52761c(_0x5bbd94, _0x3f791e, worm3.oldR, _0x2d515a) &&
                     ((worm3.diggedLavaAt = time),
-                    (worm3 != worm2 && worm3 != worm5) ||
+                    (worm3 != worm2 && worm3 != killerWorm) ||
                       (_0x57cea4 = 1))
                 }
               }
@@ -2638,10 +2627,10 @@
           if (_0x434c10) {
             const _0x590228 = dv.getUint32(_0x475187)
             _0x475187 += 4
-            worm5 = _0x31c3e2.find(
+            killerWorm = _0x31c3e2.find(
               (_0x4cf041) => _0x4cf041.id === _0x590228
             )
-            console.log('killer!!!!', worm5)
+            console.log('killer!!!!', killerWorm)
             killerEl.setAttribute(
               'stroke',
               _0x244c5d[_0x590228] || 'An unnamed worm'
@@ -2972,7 +2961,7 @@
       _0x31c3e2[_0x1bdee5].interpolate()
     }
     if (((_0x4c70cf += 0.3 * (_0x4355ad - _0x4c70cf)), worm2)) {
-      const worm4 = worm5 || worm2,
+      const worm4 = killerWorm || worm2,
         {
           sx: sx,
           sy: sy,
@@ -2984,7 +2973,7 @@
           maxY: maxY,
           viewWidth: viewWidth,
           viewHeight: viewHeight,
-        } = _0x1ce1f3(worm4, true)
+        } = getWormDimensions(worm4, true)
       null === _0x5b52da
         ? ((_0x5b52da = viewWidth), (_0x21109a = viewHeight))
         : ((_0x5b52da += 0.1 * (viewWidth - _0x5b52da)),
@@ -2994,11 +2983,11 @@
         _0x10315f = 6 * _0x57cea4
       let _0x15ab1a = _0x37a147.interpX,
         _0x2118b6 = _0x37a147.interpY
-      if (worm5) {
+      if (killerWorm) {
         const _0x25abe2 = (Date.now() - worm2.diedAt) / 500
         if (_0x25abe2 < 1) {
           const _0x68053 = worm2.segments[0],
-            _0xacf942 = worm5.segments[0]
+            _0xacf942 = killerWorm.segments[0]
           _0x15ab1a =
             _0x68053.interpX +
             (_0xacf942.interpX - _0x68053.interpX) * _0x25abe2
@@ -3049,7 +3038,7 @@
             )
         }
       }
-      worm4 && _0x1ce1f3(worm4)
+      worm4 && getWormDimensions(worm4)
       for (let i = _0x31c3e2.length - 1; i >= 0; i--) {
         _0x31c3e2[i].draw(i, canvasElCtx)
       }
