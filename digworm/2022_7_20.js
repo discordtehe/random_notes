@@ -1700,7 +1700,7 @@
     setTimeout(function () {
       const [_0x3c38d6, _0x57af3f] = _0x178fb4(),
         _0x10b8d4 = new TextEncoder().encode(_0x44d1d2.value.slice(0, 14)),
-        _0x506d8f = new DataView(
+        dv = new DataView(
           new ArrayBuffer(
             1 +
               (-1 !== _0x3c38d6 ? 1 : 0) +
@@ -1711,7 +1711,7 @@
       let _0x459e21 = 0,
         _0x3fb482 = parseInt(localStorage.gamemode)
       ;(isNaN(_0x3fb482) || _0x3fb482 > 1) && (_0x3fb482 = 0)
-      _0x506d8f.setUint8(
+      dv.setUint8(
         _0x459e21++,
         _0x4822ce(
           0,
@@ -1720,12 +1720,12 @@
             (-1 !== _0x57af3f ? 2 : 0)
         )
       )
-      ;-1 !== _0x3c38d6 && _0x506d8f.setUint8(_0x459e21++, _0x3c38d6)
-      ;-1 !== _0x57af3f && _0x506d8f.setUint8(_0x459e21++, _0x57af3f)
+      ;-1 !== _0x3c38d6 && dv.setUint8(_0x459e21++, _0x3c38d6)
+      ;-1 !== _0x57af3f && dv.setUint8(_0x459e21++, _0x57af3f)
       for (let _0x14c3bb = 0; _0x14c3bb < _0x10b8d4.length; _0x14c3bb++) {
-        _0x506d8f.setUint8(_0x459e21++, _0x10b8d4[_0x14c3bb])
+        dv.setUint8(_0x459e21++, _0x10b8d4[_0x14c3bb])
       }
-      _0x3fe969(_0x506d8f)
+      _0x3fe969(dv)
     }, 200)
   }
   _0x3eb8c6.onclick = function () {
@@ -1998,13 +1998,13 @@
         console.error(_0x4cdce7)
       }
     }
-    const _0x2c9555 = new DataView(new ArrayBuffer(5 + _0x292439.length))
-    _0x2c9555.setUint8(0, _0x4822ce(3, 0))
-    _0x2c9555.setUint32(1, 4)
+    const dv = new DataView(new ArrayBuffer(5 + _0x292439.length))
+    dv.setUint8(0, _0x4822ce(3, 0))
+    dv.setUint32(1, 4)
     for (let _0x376f6d = 0; _0x376f6d < _0x292439.length; _0x376f6d++) {
-      _0x2c9555.setUint8(5 + _0x376f6d, _0x292439.charCodeAt(_0x376f6d))
+      dv.setUint8(5 + _0x376f6d, _0x292439.charCodeAt(_0x376f6d))
     }
-    _0x3fe969(_0x2c9555)
+    _0x3fe969(dv)
   }
   let _0x36e069 = 0
   const _0x52a128 = []
@@ -2114,10 +2114,10 @@
               return
             }
             _0x190004.purchaseSent = true
-            const _0xcfb6b8 = new DataView(new ArrayBuffer(2))
-            _0xcfb6b8.setUint8(0, _0x4822ce(4, 'face' === _0x78d58 ? 0 : 1))
-            _0xcfb6b8.setUint8(1, _0x363b3a)
-            _0x3fe969(_0xcfb6b8)
+            const dv = new DataView(new ArrayBuffer(2))
+            dv.setUint8(0, _0x4822ce(4, 'face' === _0x78d58 ? 0 : 1))
+            dv.setUint8(1, _0x363b3a)
+            _0x3fe969(dv)
             _0x231bf1.classList.add('btn-disabled')
             _0x231bf1.blur()
             _0x127399.push({
@@ -2231,22 +2231,22 @@
       }
       _0x34e918 = (_0x34e918 + 1) % 1000
     })()
-    const _0x258fb0 = new DataView(_0x330919.data)
-    _0x36e069 += _0x258fb0.byteLength
+    const dv = new DataView(_0x330919.data)
+    _0x36e069 += dv.byteLength
     let _0x475187 = 0
     function _0x3c57f0() {
-      const _0x567271 = _0x258fb0.getUint8(_0x475187++)
+      const _0x567271 = dv.getUint8(_0x475187++)
       if (_0x567271 > 0) {
         const _0x306008 = new Uint8Array(_0x567271)
         for (let _0x88870e = 0; _0x88870e < _0x567271; _0x88870e++) {
-          _0x306008[_0x88870e] = _0x258fb0.getUint8(_0x475187++)
+          _0x306008[_0x88870e] = dv.getUint8(_0x475187++)
         }
         return new TextDecoder().decode(_0x306008)
       }
       return ''
     }
     const [_0xd02532, _0x3dce21] = [
-      (_0x370a3c = _0x258fb0.getUint8(_0x475187++)) >> 4,
+      (_0x370a3c = dv.getUint8(_0x475187++)) >> 4,
       15 & _0x370a3c,
     ]
     var _0x370a3c
@@ -2285,25 +2285,25 @@
           _0x367af4 = 0
           _0x5656c8 = 0
         } else {
-          _0x27c993 = _0x258fb0.getUint32(_0x475187)
+          _0x27c993 = dv.getUint32(_0x475187)
           _0x475187 += 4
-          const _0x5e91b3 = _0x258fb0.getUint16(_0x475187)
+          const _0x5e91b3 = dv.getUint16(_0x475187)
           _0x475187 += 2
           _0x367af4 = _0x5e91b3 >> 11
           const _0xe017c0 = 2047 & _0x5e91b3
           _0x5656c8 = Date.now() + 60 * _0xe017c0 * 1000
           let _0x4108dd = false
-          if (_0x475187 < _0x258fb0.byteLength) {
+          if (_0x475187 < dv.byteLength) {
             let _0x1cf61d = false
             const [_0x432e90, _0x352fbd] = _0x178fb4(),
-              _0x59621a = _0x258fb0.getUint8(_0x475187++)
+              _0x59621a = dv.getUint8(_0x475187++)
             for (let _0xb6d7c3 = 0; _0xb6d7c3 < _0x59621a; _0xb6d7c3++) {
-              const _0x8df9c1 = _0x258fb0.getUint8(_0x475187++)
+              const _0x8df9c1 = dv.getUint8(_0x475187++)
               _0x8df9c1 === _0x432e90 && (_0x4108dd = true)
               _0x37c0af('face', _0x8df9c1)
             }
-            for (; _0x475187 < _0x258fb0.byteLength; ) {
-              const _0x3e6af3 = _0x258fb0.getUint8(_0x475187++)
+            for (; _0x475187 < dv.byteLength; ) {
+              const _0x3e6af3 = dv.getUint8(_0x475187++)
               _0x3e6af3 === _0x352fbd && (_0x1cf61d = true)
               _0x37c0af('body', _0x3e6af3)
             }
@@ -2330,8 +2330,8 @@
         break
       case 1:
         _0x4c2f95 !== _0x3dce21 && _0x530c53(),
-          5 == _0x258fb0.byteLength &&
-            (_0x1cd091 = _0x258fb0.getUint32(_0x475187)),
+          5 == dv.byteLength &&
+            (_0x1cd091 = dv.getUint32(_0x475187)),
           (_0x4c2f95 = localStorage.gamemode = _0x3dce21),
           _0x493cc2(),
           (_0x4355ad = _0x4c70cf = 1),
@@ -2352,18 +2352,18 @@
       case 2:
         const _0x3b277c = 4 & _0x3dce21,
           _0x434c10 = 8 & _0x3dce21,
-          _0x4647f4 = ((3 & _0x3dce21) << 2) | _0x258fb0.getUint8(_0x475187++),
+          _0x4647f4 = ((3 & _0x3dce21) << 2) | dv.getUint8(_0x475187++),
           _0x5e0ab9 = { _0x5bfc76: true },
           _0x300def = Date.now()
         for (let _0x5df386 = 0; _0x5df386 < _0x4647f4; _0x5df386++) {
-          const _0x5bfc76 = _0x258fb0.getUint32(_0x475187)
+          const _0x5bfc76 = dv.getUint32(_0x475187)
           _0x475187 += 4
           let _0x2643eb = _0x31c3e2.find(
             (_0x35de9f) => _0x35de9f.id === _0x5bfc76
           )
           const _0xe60ee6 =
-              (_0x258fb0.getUint8(_0x475187++) / 255) * Math.PI * 2,
-            _0x366774 = _0x258fb0.getUint8(_0x475187++),
+              (dv.getUint8(_0x475187++) / 255) * Math.PI * 2,
+            _0x366774 = dv.getUint8(_0x475187++),
             _0x3409c6 = _0x366774 >> 6,
             _0x29d2f8 = (63 & _0x366774) / 63
           if (_0x2643eb) {
@@ -2371,11 +2371,11 @@
             const _0x39aa92 = _0x2643eb.segments[0]
             _0x39aa92.oldX = _0x39aa92.x
             _0x39aa92.oldY = _0x39aa92.y
-            _0x39aa92.x += _0x258fb0.getInt8(_0x475187++)
-            _0x39aa92.y += _0x258fb0.getInt8(_0x475187++)
+            _0x39aa92.x += dv.getInt8(_0x475187++)
+            _0x39aa92.y += dv.getInt8(_0x475187++)
             _0x39aa92.interpOldX = _0x39aa92.interpX
             _0x39aa92.interpOldY = _0x39aa92.interpY
-            let _0x530890 = _0x258fb0.getInt8(_0x475187++)
+            let _0x530890 = dv.getInt8(_0x475187++)
             for (; _0x530890 < 0; ) {
               _0x2643eb.segments.pop()
               _0x530890++
@@ -2395,14 +2395,14 @@
             _0x2643eb.updateTime = _0x300def
           } else {
             _0x2643eb = new _0x2561ae(_0x5bfc76, _0xe60ee6)
-            _0x2643eb.faceSkin = _0x258fb0.getUint8(_0x475187++) - 1
-            _0x2643eb.bodySkin = _0x258fb0.getUint8(_0x475187++) - 1
+            _0x2643eb.faceSkin = dv.getUint8(_0x475187++) - 1
+            _0x2643eb.bodySkin = dv.getUint8(_0x475187++) - 1
             _0x2643eb.energy = _0x29d2f8
             _0x5bfc76 == _0x1cd091 && (_0x194da0 = _0x2643eb)
             _0x31c3e2.push(_0x2643eb)
-            const _0x5be4a5 = _0x258fb0.getUint16(_0x475187)
+            const _0x5be4a5 = dv.getUint16(_0x475187)
             _0x475187 += 2
-            const _0x1609b4 = _0x258fb0.getUint16(_0x475187)
+            const _0x1609b4 = dv.getUint16(_0x475187)
             _0x475187 += 2
             _0x2643eb.segments[0] = {
               x: _0x5be4a5,
@@ -2414,13 +2414,13 @@
               interpX: _0x5be4a5,
               interpY: _0x1609b4,
             }
-            const _0x1b3eaf = _0x258fb0.getUint16(_0x475187)
+            const _0x1b3eaf = dv.getUint16(_0x475187)
             _0x475187 += 2
             for (let _0x5dd295 = 0; _0x5dd295 < _0x1b3eaf; _0x5dd295++) {
               let _0x520367 = _0x2643eb.segments[_0x5dd295]
               const _0x39871d = {
-                x: _0x520367.x + _0x258fb0.getInt8(_0x475187++),
-                y: _0x520367.y + _0x258fb0.getInt8(_0x475187++),
+                x: _0x520367.x + dv.getInt8(_0x475187++),
+                y: _0x520367.y + dv.getInt8(_0x475187++),
               }
               _0x39871d.oldX =
                 _0x39871d.interpOldX =
@@ -2449,14 +2449,14 @@
           _0x2643eb.energy = _0x29d2f8
         }
         const _0x424cfa = _0x1ce1f3(_0x3ef6bf || _0x194da0)
-        let _0x5460b3 = _0x258fb0.getUint8(_0x475187++)
+        let _0x5460b3 = dv.getUint8(_0x475187++)
         for (; _0x5460b3--; ) {
-          const _0x583d10 = _0x258fb0.getUint8(_0x475187++),
+          const _0x583d10 = dv.getUint8(_0x475187++),
             _0x187fbe = _0x424cfa.sx + (15 & _0x583d10),
             _0x19abad = _0x424cfa.sy + (_0x583d10 >> 4),
             _0x501844 = []
           for (let _0x375108 = 0; _0x375108 < 128; _0x375108++) {
-            const _0x3f9e3f = _0x258fb0.getUint8(_0x475187++),
+            const _0x3f9e3f = dv.getUint8(_0x475187++),
               _0x1fc2a7 = 15 & _0x3f9e3f,
               _0x42b99e = _0x3f9e3f >> 4
             _0x501844.push(_0x1fc2a7, _0x42b99e)
@@ -2465,21 +2465,21 @@
           _0x3b0a3d(_0x501844)
         }
         _0x194da0.segments[0]
-        let _0x125ee1 = _0x258fb0.getUint8(_0x475187++)
+        let _0x125ee1 = dv.getUint8(_0x475187++)
         for (let _0x434216 = 0; _0x434216 < _0x125ee1; _0x434216++) {
-          const _0x50f941 = _0x258fb0.getUint8(_0x475187++),
+          const _0x50f941 = dv.getUint8(_0x475187++),
             _0x57af42 = _0x424cfa.sx + (15 & _0x50f941),
             _0x50afac = _0x424cfa.sy + (_0x50f941 >> 4),
             _0x5098f5 = _0x52a128[64 * _0x50afac + _0x57af42],
-            _0x2b26c8 = _0x258fb0.getUint8(_0x475187++) + 1
+            _0x2b26c8 = dv.getUint8(_0x475187++) + 1
           let _0x55213a = 0,
             _0x40b1aa = 0,
             _0x462cab = 0
           for (let _0x4e4e00 = 0; _0x4e4e00 < _0x2b26c8; _0x4e4e00++) {
-            const _0x97c92 = _0x258fb0.getUint8(_0x475187 + _0x4e4e00),
+            const _0x97c92 = dv.getUint8(_0x475187 + _0x4e4e00),
               _0xa5cd1a = _0x5098f5[_0x97c92]
             0 == _0x40b1aa
-              ? ((_0x55213a = _0x258fb0.getUint8(
+              ? ((_0x55213a = dv.getUint8(
                   _0x475187 + _0x2b26c8 + _0x462cab++
                 )),
                 (_0x40b1aa = 1),
@@ -2531,14 +2531,14 @@
           _0x475187 += _0x2b26c8
           _0x475187 += Math.ceil(0.5 * _0x2b26c8)
         }
-        const _0x21c0f4 = _0x258fb0.getUint16(_0x475187)
+        const _0x21c0f4 = dv.getUint16(_0x475187)
         ;(_0x475187 += 2),
           _0x202a66.setAttribute(
             'stroke',
             _0x21c0f4 + ' player' + (1 !== _0x21c0f4 ? 's' : '') + ' online'
           )
         const _0x27f1c2 = _0x52bebe.length,
-          _0x49cd46 = _0x258fb0.getUint16(_0x475187)
+          _0x49cd46 = dv.getUint16(_0x475187)
         ;(_0x475187 += 2), (_0x16dd13 = 1023 & _0x49cd46)
         const _0x40458c = _0x49cd46 >> 11,
           _0x24cc2e = 1024 & _0x49cd46
@@ -2548,13 +2548,13 @@
         )
         let _0x57a782 = -1
         if (
-          (_0x3b277c && (_0x57a782 = _0x258fb0.getUint8(_0x475187++)),
+          (_0x3b277c && (_0x57a782 = dv.getUint8(_0x475187++)),
           _0x224d6b)
         ) {
           let _0x20a913 = 0,
             _0x184f07 = 0
           if (_0x24cc2e) {
-            const _0x173fa2 = _0x258fb0.getUint8(_0x475187++)
+            const _0x173fa2 = dv.getUint8(_0x475187++)
             _0x20a913 = _0x173fa2 >> 4
             _0x184f07 = 15 & _0x173fa2
           }
@@ -2564,7 +2564,7 @@
             _0x545516 = 0
           for (let _0x2b75ce = 0; _0x2b75ce < _0x1758fb; _0x2b75ce++) {
             0 == _0x545516
-              ? ((_0x4c8d5d = _0x258fb0.getUint8(_0x475187++)),
+              ? ((_0x4c8d5d = dv.getUint8(_0x475187++)),
                 (_0x545516 = 1),
                 _0x47d080.push(15 & _0x4c8d5d))
               : (_0x47d080.push(_0x4c8d5d >> 4), (_0x545516 = 0))
@@ -2572,7 +2572,7 @@
           for (let _0x4f1cfd = 0; _0x4f1cfd < _0x40458c; _0x4f1cfd++) {
             const _0x85c987 = _0x47d080[_0x4f1cfd],
               _0x273cea = _0x552882[_0x85c987]
-            _0x273cea.score = _0x40a543(_0x258fb0.getUint16(_0x475187))
+            _0x273cea.score = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
             _0x273cea.isMe && _0x442358(_0x273cea.score)
           }
@@ -2590,7 +2590,7 @@
             _0x552882.splice(_0x9415af, 1)
           }
           for (let _0x1cee5c = 0; _0x1cee5c < _0x20a913; _0x1cee5c++) {
-            const _0x5925b4 = _0x40a543(_0x258fb0.getUint16(_0x475187))
+            const _0x5925b4 = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
             _0x29e019(_0x3c57f0(), _0x5925b4)
           }
@@ -2602,7 +2602,7 @@
           _0x552882.length = 0
           const _0x27494c = Math.min(10, _0x16dd13)
           for (let _0x7b83d9 = 0; _0x7b83d9 < _0x27494c; _0x7b83d9++) {
-            const _0x44a8a0 = _0x40a543(_0x258fb0.getUint16(_0x475187))
+            const _0x44a8a0 = _0x40a543(dv.getUint16(_0x475187))
             _0x475187 += 2
             _0x29e019(_0x3c57f0(), _0x44a8a0)
           }
@@ -2618,10 +2618,10 @@
           _0x552882[_0x57a782] = _0x360982
         }
         let _0x32e4ab = false,
-          _0xfd618e = Math.floor((_0x258fb0.byteLength - _0x475187) / 4)
+          _0xfd618e = Math.floor((dv.byteLength - _0x475187) / 4)
         _0x434c10 && _0xfd618e--
         for (let _0x54ea08 = 0; _0x54ea08 < _0xfd618e; _0x54ea08++) {
-          const _0x347b0b = _0x258fb0.getUint32(_0x475187)
+          const _0x347b0b = dv.getUint32(_0x475187)
           _0x475187 += 4
           const _0x1b4e9e = _0x31c3e2.findIndex(
               (_0x2052fc) => _0x2052fc.id === _0x347b0b
@@ -2637,11 +2637,11 @@
             _0x8d0f50(),
             _0x47463e(false))
         }
-        let _0x1d4840 = _0x258fb0.byteLength - _0x475187
+        let _0x1d4840 = dv.byteLength - _0x475187
         if (_0x32e4ab) {
           let _0x56c22b = -1
           if (_0x434c10) {
-            const _0x590228 = _0x258fb0.getUint32(_0x475187)
+            const _0x590228 = dv.getUint32(_0x475187)
             _0x475187 += 4
             _0x3ef6bf = _0x31c3e2.find(
               (_0x4cf041) => _0x4cf041.id === _0x590228
@@ -2653,7 +2653,7 @@
             )
             _0x1d4840 -= 4
           } else {
-            _0x56c22b = _0x258fb0.getUint8(_0x475187++)
+            _0x56c22b = dv.getUint8(_0x475187++)
             0 === _0x56c22b
               ? (console.log('walls'),
                 _0x2b477b.setAttribute('stroke', 'Walls'))
@@ -2665,7 +2665,7 @@
             _0x2b477b.previousElementSibling.style.visibility =
               1 === _0x56c22b ? 'hidden' : ''
           1 === _0x1d4840
-            ? (_0x314ee2 = _0x258fb0.getUint8(_0x475187++))
+            ? (_0x314ee2 = dv.getUint8(_0x475187++))
             : console.log('no kills')
           _0x5784b8.style.display = ''
           _0x4f3f05.classList.add('btn-disabled')
@@ -2695,14 +2695,14 @@
         } else {
           if (!_0x194da0.isDead) {
             if (_0x1d4840 % 2 != 0) {
-              const _0x2d2228 = _0x258fb0.getUint8(_0x475187++)
+              const _0x2d2228 = dv.getUint8(_0x475187++)
               _0x5ddf1a(_0x2d2228)
               _0x27c993 += _0x2d2228
               _0xb7f535 += _0x2d2228
               _0x1d4840--
             }
             if (2 === _0x1d4840) {
-              const _0x11ea0e = _0x40a543(_0x258fb0.getUint16(_0x475187))
+              const _0x11ea0e = _0x40a543(dv.getUint16(_0x475187))
               _0x475187 += 2
               _0x442358(_0x11ea0e)
             }
@@ -2742,18 +2742,18 @@
       ws.send(_0x239abe)
     }
   }
-  const _0x4fd5e0 = 2 * Math.PI
+  const twoPi = 2 * Math.PI
   function _0x2ebfb5(_0x5215ee) {
     if (!_0x194da0 || _0x194da0.isDead) {
       return
     }
-    ;(_0x5215ee %= _0x4fd5e0) < 0 && (_0x5215ee += _0x4fd5e0)
-    _0x5215ee /= _0x4fd5e0
+    ;(_0x5215ee %= twoPi) < 0 && (_0x5215ee += twoPi)
+    _0x5215ee /= twoPi
     _0x5215ee = Math[0.75 === _0x5215ee ? 'ceil' : 'floor'](4095 * _0x5215ee)
-    const _0x294add = new DataView(new ArrayBuffer(2))
-    _0x294add.setUint8(0, _0x4822ce(1, _0x5215ee >> 8))
-    _0x294add.setUint8(1, _0x5215ee)
-    _0x3fe969(_0x294add)
+    const dv = new DataView(new ArrayBuffer(2))
+    dv.setUint8(0, _0x4822ce(1, _0x5215ee >> 8))
+    dv.setUint8(1, _0x5215ee)
+    _0x3fe969(dv)
   }
   let _0x5cb559 = {}
   document.onmousedown = function (_0x5a3b45) {
