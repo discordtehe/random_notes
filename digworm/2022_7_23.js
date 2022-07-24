@@ -1,1791 +1,1646 @@
-function a0_0x446b() {
-  const j = ["153556mjyZdA", ".lb-header span", "Made map smaller.", "\" class=\"shop-item-name\"></span>\n\t\t\t<div class=\"btn gold-btn btn-disabled\">\n\t\t\t\t<i class=\"fa fa-circle\"></i>\n\t\t\t\t<span stroke=\"", "fullsize-shop", "https://www.reddit.com/r/digworm/", "COLOR_BUFFER_BIT", ".grid", "sort", "Death screen overlay now shows your dead worm.", "Fixed gear skin not showing damage.", "Skins", "previewEl", ".game", "\n\t.bg {\n\t\tbackground-image: url(", "onclick", "lbTextEl", "Ascii", "hypot", "createProgram", "getShaderInfoLog", "encode", "interpY", "activeTexture", "#ppBtn", "repeat", "RequestAnimationFrame", ".tabs .btn", "ArrowRight", "updateTime", "/docs/tos.html", ".minimize-btn", "KeyA", "discord_data", "Kicked! (reason: ", "#kbMovementCb", "data", "New skins: Pirate & Ascii", "font", "lineWidth", "getInt8", "76246HqmdhS", " worm", "energyChangeCounter", "diamond", "update", "TEXTURE_WRAP_T", ".settings-btn", "putImageData", "blue-btn", "button", "discord_data=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;", "Game being blank on IOS fixed.", "spawnTime", "100%", "test", "uranium", "fillRect", "en-US", "\n\t\t<div class=\"shop-item ", "hidden", "top", "onmessage", "distance", "lbBarEl", ".changelog", "1718665wHTdfy", "cos", "equipped_face_skin", "getUint16", "Increased map regeneration time.", "display", "texImage2D", "oldY", "LINK_STATUS", "Triangle", "Added amogus in the map (top left corner).", "-skin [stroke=Unequip]", "idk", ".reddit-btn", "<span class=\"log-title\" stroke=\"", "Your scores get logged in the Discord server now. You also get roles based on your scores. Your account has to be linked with discord and you have to be in the Discord server to get the roles.", "_skin", "[data-gamemode=\"", "July 12th 2022", "dirX", "compact", "push", "grid-pushup", ".sad-btn", "You spectate your killer worm after dying now.", "avatar", "kb_movement", "KeyC", "Fixed skin previews appearing pixelated.", "querySelectorAll", ".connecting", "0 0", "previousElementSibling", "getTime", "value", "min", "diggedLavaAt", "decode", "uniform2fv", "Cyclops", "clientY", "log", "TRIANGLES", "getBoundingClientRect", "\n\t<svg class=\"score-graph\" width=\"100%\" height=\"100\" viewBox=\"0 0 1 1\" preserveAspectRatio=\"none\">\n\t\t<polygon points=\"", "enable_glow", "An unnamed worm", "length", "enable3D", "div", "max", "Disconnected.", ".login-btn", "onmousedown", "norY", "experimental-webgl", "bounced", "pressEnterInfo", "forEach", ".tabs", "_blank", "render", "Pirate", "TEXTURE_2D", "close", "Minor bug fixes.", "location", "...", "CLAMP_TO_EDGE", "New skin: Moyai", ".lb-btn", " player", "round", "m 0,0 c 0,1 -3,4 -10,4 -7,0 -10,-3 -10,-4 0,-0.807 4.548,-1.612 6.311,-1.894 C -13.001,-4.548 -13,-10 -13,-10 c 0.805,3.218 0.315,7.079 0.093,8.467 C -12.705,-0.942 -12.059,0 -10,0 c 3,0 3,-2 3,-2 l 0.002,0 c -0.234,-1.657 -0.565,-5.089 0.162,-8 0,0 0.002,5.491 0.697,8.134 C -4.273,-1.562 0,-0.782 0,0", "which", "82048TBEbPO", "middle", "getAttribute", "optimizedRendering", ".avatar", "face", "angleSpeed", "bodySkins", "ontouchstart", "save", "equipped_body_skin", "fogBgCanvas", "onmouseup", "appendChild", "gamemode", " .btn", "startsWith", "blurSize", "July 7th 2022", "Gear", "click", "createElement", "gold-btn", "-2,2 ", ".minimize", "ArrowUp", "lb-bar", "\"></span>\n\t\t\t</div>\n\t\t</div>", "opera", "drawEnergyAndNickname", ".alert", "style", "unknown", "3803514jLLKDF", ".gold-btn", ".game .overlay", "clipboard", "#75dd34", "btn-active", "quartz", "#a7a217", "CancelRequestAnimationFrame", "evenodd", "</div><div class=\"log-line\"></div>", "height", "textAlign", "July 17th 2022", "arc", "blur", "toLowerCase", "vertex", "59157VhWjdC", "Kirkier", "innerWidth", "now", ".username", "M 0,0 C 0,1 2,2 6,2 10,2 12,1 12,0 12,-1 11,-1 6,-1 1,-1 0,-1 0,0", "getUniformLocation", "closePath", "createdAt", "#333", "charCodeAt", "drawImage", "oninput", "game-show", "Added high resolution setting for some devices.", "canvas", "July 14th 2022", "account_id", "interpFace", "M2358 5639 c-387 -26 -778 -95 -1438 -255 -257 -62 -569 -134 -738 -169 -91 -19 -166 -36 -168 -38 -1 -1 -6 -108 -10 -237 -7 -255 3 -395 36 -504 22 -70 73 -148 215 -326 110 -137 175 -236 212 -318 13 -30 48 -161 78 -291 135 -580 303 -1120 515 -1651 58 -146 124 -270 190 -359 261 -351 801 -618 1428 -706 454 -64 1044 -24 1403 95 592 198 1041 653 1452 1475 168 338 205 438 301 826 79 319 121 452 186 585 58 119 104 166 190 191 46 13 84 15 235 9 99 -4 199 -11 223 -15 60 -12 117 -55 178 -136 99 -132 158 -272 234 -555 190 -706 443 -1252 758 -1636 102 -125 243 -264 352 -346 422 -319 1015 -508 1596 -508 823 0 1516 333 1926 925 209 301 322 616 488 1355 62 279 148 612 187 730 43 128 117 276 178 352 25 31 80 82 121 114 46 34 81 69 89 88 22 52 26 134 16 276 -7 93 -7 175 1 265 12 150 5 195 -43 249 -33 39 -78 56 -209 81 -143 28 -304 71 -545 145 -326 101 -465 133 -842 195 -550 91 -674 105 -954 105 -485 0 -881 -57 -1844 -266 -1088 -237 -1424 -287 -1940 -288 -484 0 -719 35 -1515 231 -377 92 -569 132 -865 177 -813 126 -1272 163 -1677 135z", "fogBgCtx", "clip", "Faceless", "rgba(0,0,0,0.07)", "uGlow", "map", ".face-skins", "getProgramInfoLog", "random", "&response_type=code&scope=identify&state=", "#222", "true", "rgba(", "dirY", "concat", "invalid uuid", "lineCap", "clientX", "getUint32", "July 21st 2022", "segments", "Fixed sussy shop bug.", "setTimeout", "bindTexture", "classList", "You have claimed all your rewards.", "quadraticCurveTo", "Too cool", "uniform1i", ".hud-common", "\\$1", "\n\tattribute vec2 pos;\n\tvarying vec2 vPos;\n\tvoid main() {\n\t\tvPos=pos;\n\t\tgl_Position=vec4(pos,0.0,1.0);\n\t}\n\t", "createShader", "innerHTML", "btn-disabled", "join", "-skin ", "webkit", "energy", "July 4th 2022", "all", "createImageData", "KeyW", "rotate", "createPattern", "\" fill=\"", "Intellectual", "fixedJoystickCb", "sqrt", "toString", "onopen", "mood", "/discord", "\n\tprecision mediump float;\n\tuniform sampler2D tex;\n\tuniform bool u3d;\n\tuniform bool uGlow;\n\tuniform float uTime;\n\tuniform vec2 blurSize;\n\n\tvarying vec2 vPos;\n\n\tconst vec3 groundColor = vec3(0.32,0.18,0.0);\n\tconst int STEPS=10;\n\n\tvec4 getColor(vec2 p){\n\t\tvec4 t=texture2D(tex,p);\n\t\tif(", "webgl", "connecting-show", "imageSmoothingEnabled", "parentNode", "All Seeing", "buffer", "interpOldY", "bedrock", "target", "identifier", ".continue-btn", "Cute", "newDirX", "toLocaleString", "isDead", "stroke", "Error creating post processor. ", "M 0,0 C 0,1 2,3 4,3 6,3 8,1 8,0 8,-1 7,-1 4,-1 1,-1 0,-1 0,0", "iPercent", "Added 3D and glow effects. Enable them from settings.", "KeyD", "oldEnergy", "(?:^|;\\s*)", "July 19th 2022", "July 18th 2022", "Enter", "interpR", "isMe", "OPEN", "setTeam", "translate", ".logout-btn", "Released.", ".squad-btn", "color", "UNPACK_FLIP_Y_WEBGL", "globalAlpha", "fragment", "changedTouches", ".arrow", "rotate(", "viewport", "fillStyle", "https://discord.gg/WkYHsUQF5a", "Lava now deducts 0.25% of your score if you are too big.", "bodySkin", "remove", ".nickname", "Max points", "span", "ellipse", "attachShader", "Enhanced mobile UI.", "innerText", "absolute", "interpolate", "gold", "goldCanvas", "string", "2,2", "empty", "fill", "draw", "Now you get kicked for being AFK too long.", "grid-show", " .btn-active", "Increased max nickname length to 15.", "innerHeight", "Kirk", "scale", "pop", "<div class=\"btn btn-disabled\"><span stroke=\"", "bindBuffer", "devicePixelRatio", "texParameteri", "setUint32", "code", "angle", "contains", ".body-skins", "checked", "lineTo", "percent", "moveTo", "rgb(", "onload", "hsla(0,0%,100%,0.5)", "splice", ".stats", "parse", "Added packet encryption.", "\" stroke=\"", "lava", "uniform1f", "ARRAY_BUFFER", "Fixed killer name not being shown sometimes.", "dirt", "Only 1 connection can use an account now.", "enable_3d", "add", "getUint8", "center", ".discord-btn", "Connected!", "rect", "oldDirY", "fillText", "deadWorm", "toggle", "relative", "body", "interpX", "interpOldR", "You will be reconnected to your old alive worm if you accidentally got disconnected now.", ".btn", "Now you have to score at least 30k to get your score logged in the Discord server.", "setUint8", "Fixed map glitching sometimes on death screen.", "\"></span><div class=\"log-content\">", "July 6th 2022", "lbItemEl", "Increased AFK kick time to 5 minutes.", "default", "getShaderParameter", "NEAREST", "sin", ".coming-soon", "TEXTURE_MAG_FILTER", "Gold digged", "iEnergy", "faceSkin", ".resume", "randomUUID", "assign", "byteLength", "ShiftRight", "vertexAttribPointer", "createBuffer", "Bot", ".gamemodes", "getElementById", "fogCtx", "New Discord link.", "atan2", "35jGTvHP", "Sarcastic", "Fixed skin getting removed on game mode change.", "toFixed", "none", "price", "Moved server from NA to EU.", "beginPath", "vendor", "team", "iEnergyChange", "uTime", "iScore", "Your worm dies instantly if you get disconnected with low score now.", "restore", "width", "write", "equipped_", "overlay-show", "abs", "name", "previewPlayer", "dir", "origin", "July 5th 2022", "children", ");\n\t\tbackground-size: 200px;\n\t\tanimation: bg 15s linear infinite;\n\t\timage-rendering: pixelated;\n\t}\n\n\t@keyframes bg {\n\t\tfrom {\n\t\t\tbackground-position: 0 0;\n\t\t}\n\t\tto {\n\t\t\tbackground-position: -200px -200px;\n\t\t}\n\t}\n\t", "minimize-show", "#222222", ".new-skins", "ceil", "July 9th 2022", "bolder 22px monospace", ".gameover", "textBaseline", "FRAGMENT_SHADER", "score", "You can pause and join game using escape and enter keys now.", "Minor touch controls bug fix.", "createTexture", "July 15th 2022", "Added some bots.", "url(", "=([^;]*)", "sad", ".killer", "Space", ".lb-footer", "faceSkins", "#fff", "linkProgram", ".unequip-btn", "onresize", "onclose", "enableVertexAttribArray", "Dizzy", ".joystick-knob", "lb-item", "oldX", "ctx", "position", "nickname", "cursor", "cancelAnimationFrame", "owned", "open", "12XppHMc", "Limited bot score to 10k in maze.", "clearRect", "insertBefore", ".giveup", "url", "replace", "Fixed Gear skin.", " shader. ", "find", "newDirY", "drawArrays", "interpOldX", "#000", "norX", "onkeydown", ".my-skin-preview", "rewardSent", "Available every ", "Escape", "left", "href", "time", "diedAt", "M 0,0 C 0,0 2,2 6,2 10,2 12,0 12,0 12,0 10,1 6,1 2,1 0,0 0,0", "tempDiv", "oldDirX", "Made map bigger.", "Added maze mode.", "shopItemEl", "oldR", "dialog-show", "UNSIGNED_BYTE", "changelog", "pointerEvents", "Limited connections from an IP to 3.", "strokeStyle", ".angry-btn", "Coming soon", "http", "substr", "STATIC_DRAW", "shop-row", "transformOrigin", "angry", ".overlay", ".changelog-btn", "Error linking program. ", "fixed_joystick", "Removed zoom.", "Moyai", "You can now change worm mood in shop on touch devices by tapping the left and right side of the screen.", "setAttribute", "trim", "#111", "high_res", "Patched a server crash bug.", "purchaseSent", "transform", "\" stroke-width=\"4\" vector-effect=\"non-scaling-stroke\" opacity=\"0.35\"/>\n\t</svg>", "Equip", "New skin: Too cool", "COMPILE_STATUS", "toDataURL", "fogCanvas", ".gold-preview span", "initialParent", ".score-graph", "RGBA", "Error compiling ", "clear", "getContext", "ArrowDown", ".lb-content", "bufferData", "Connection limit bug fix.", "energyAlpha", "requestAnimationFrame", "Creepy", "error", "userAgent", "querySelector", "onmousewheel", ".shop .dialog-content", "visibility", "#522e00", "strokeText", "1nWdiQt", ".alert-desc", "distance(vec3(", "floor", "),t.rgb)<0.1", "slide-up", "7324820NbnDJL", "#dd3434"];
-  a0_0x446b = function() {
-    return j;
-  };
-  return a0_0x446b();
+const _0x48549a = 16,
+  _0x26c6d0 = 30,
+  _0x37b83b = 480;
+
+function _0x168cd0(_0x2cb797, _0x2718be) {
+  return _0x2cb797 << 4 | _0x2718be;
+}
+const _0x13b2af = {
+  "faceSkins": [{
+    "createdAt": 0,
+    "name": "Kirk",
+    "price": 500
+  }, {
+    "createdAt": 1,
+    "name": "Creepy",
+    "price": 1000
+  }, {
+    "createdAt": 2,
+    "name": "Intellectual",
+    "price": 1500
+  }, {
+    "createdAt": 3,
+    "name": "Kirkier",
+    "price": 2000
+  }, {
+    "createdAt": 4,
+    "name": "Cyclops",
+    "price": 2500
+  }, {
+    "createdAt": 5,
+    "name": "Sarcastic",
+    "price": 5000
+  }, {
+    "createdAt": 6,
+    "name": "Dizzy",
+    "price": 10000
+  }, {
+    "createdAt": 7,
+    "name": "Faceless",
+    "price": 10000
+  }, {
+    "createdAt": 8,
+    "name": "All Seeing",
+    "price": 10000
+  }, {
+    "createdAt": 9,
+    "name": "Cute",
+    "price": 10000
+  }, {
+    "createdAt": 10,
+    "name": "Gear",
+    "price": 10000
+  }, {
+    "createdAt": 11,
+    "name": "Pirate",
+    "price": 5000
+  }, {
+    "createdAt": 12,
+    "name": "Ascii",
+    "price": 2000
+  }, {
+    "createdAt": 13,
+    "name": "Moyai",
+    "price": 5000
+  }, {
+    "createdAt": 14,
+    "name": "Bot",
+    "price": 7000
+  }, {
+    "createdAt": 15,
+    "name": "Too cool",
+    "price": 2500
+  }],
+  "bodySkins": [{
+    "createdAt": -1,
+    "name": "Triangle",
+    "price": 500
+  }, {
+    "createdAt": -1,
+    "name": "Heart",
+    "price": 1000
+  }]
+};
+for (let _0x33c5d3 in _0x13b2af) {
+  const _0x350801 = _0x13b2af[_0x33c5d3];
+  for (let _0x14fe28 = 0; _0x14fe28 < _0x350801.length; _0x14fe28++) _0x350801[_0x14fe28].id = _0x14fe28;
 }
 
-function a0_0x36aa(q, z) {
-  const aa = a0_0x446b();
-  return a0_0x36aa = function(ab, ae) {
-    ab = ab - 344;
-    let af = aa[ab];
-    return af;
-  }, a0_0x36aa(q, z);
-}(function(ag, ah) {
-  const aj = a0_0x36aa,
-    ak = ag();
-  while (!![]) {
-    try {
-      const am = -parseInt(aj(650)) / 1 * (-parseInt(aj(699)) / 2) + parseInt(aj(563)) / 3 * (parseInt(aj(658)) / 4) + parseInt(aj(724)) / 5 + parseInt(aj(832)) / 6 + parseInt(aj(497)) / 7 * (-parseInt(aj(799)) / 8) + -parseInt(aj(850)) / 9 + -parseInt(aj(656)) / 10;
-      if (am === ah) break;
-      else ak["push"](ak["shift"]());
-    } catch (ao) {
-      ak["push"](ak["shift"]());
-    }
-  }
-}(a0_0x446b, 378996), ((() => {
-  "use strict";
-  const aq = a0_0x36aa;
-  const at = 16,
-    ax = 30,
-    ba = 480;
-
-  function bc(bd, bf) {
-    return bd << 4 | bf;
-  }
-  const bh = {
-    "faceSkins": [{
-      "createdAt": 0,
-      "name": "Kirk",
-      "price": 500
-    }, {
-      "createdAt": 1,
-      "name": aq(641),
-      "price": 1000
-    }, {
-      "createdAt": 2,
-      "name": "Intellectual",
-      "price": 1500
-    }, {
-      "createdAt": 3,
-      "name": aq(851),
-      "price": 2000
-    }, {
-      "createdAt": 4,
-      "name": aq(763),
-      "price": 2500
-    }, {
-      "createdAt": 5,
-      "name": aq(498),
-      "price": 5000
-    }, {
-      "createdAt": 6,
-      "name": "Dizzy",
-      "price": 10000
-    }, {
-      "createdAt": 7,
-      "name": aq(872),
-      "price": 10000
-    }, {
-      "createdAt": 8,
-      "name": aq(357),
-      "price": 10000
-    }, {
-      "createdAt": 9,
-      "name": aq(364),
-      "price": 10000
-    }, {
-      "createdAt": 10,
-      "name": "Gear",
-      "price": 10000
-    }, {
-      "createdAt": 11,
-      "name": "Pirate",
-      "price": 5000
-    }, {
-      "createdAt": 12,
-      "name": aq(675),
-      "price": 2000
-    }, {
-      "createdAt": 13,
-      "name": "Moyai",
-      "price": 5000
-    }, {
-      "createdAt": 14,
-      "name": aq(491),
-      "price": 7000
-    }, {
-      "createdAt": 15,
-      "name": aq(897),
-      "price": 2500
-    }],
-    "bodySkins": [{
-      "createdAt": -1,
-      "name": aq(733),
-      "price": 500
-    }, {
-      "createdAt": -1,
-      "name": "Heart",
-      "price": 1000
-    }]
-  };
-  for (let bj in bh) {
-    const bk = bh[bj];
-    for (let bm = 0; bm < bk["length"]; bm++) bk[bm]["id"] = bm;
-  }
-
-  function bn(bo, bp) {
-    const bq = aq,
-      {
-        viewWidth: bs,
-        viewHeight: bt
-      } = function(bu) {
-        bu -= 30, bu *= 50;
-        const bv = 3000 + parseInt(bu);
-        return {
-          "viewWidth": bv,
-          "viewHeight": 0.5 * bv
-        };
-      }(bp ? bo[bq(379)] : bo["r"]),
-      bx = bo[bq(890)][0],
-      by = bx["x"] - bs / 2,
-      bz = bx["y"] - bt / 2,
-      cb = bx["x"] + bs / 2,
-      cc = bx["y"] + bt / 2;
-    return {
-      "minX": by,
-      "minY": bz,
-      "maxX": cb,
-      "maxY": cc,
-      "sx": Math[bq(774)](0, Math[bq(653)](by / ba)),
-      "sy": Math["max"](0, Math[bq(653)](bz / ba)),
-      "ex": Math[bq(759)](63, Math[bq(653)](cb / ba)),
-      "ey": Math[bq(759)](63, Math["floor"](cc / ba)),
-      "viewWidth": bs,
-      "viewHeight": bt
-    };
-  }
-  const cd = {
-    "empty": 0,
-    "dirt": 1,
-    "lava": 2,
-    "diamond": 3,
-    "gold": 4,
-    "uranium": 5,
-    "quartz": 6,
-    "bedrock": 7,
-    "gravestone": 8
-  };
-
-  function cf(cg) {
-    const ci = aq;
-    switch (cg) {
-      case cd[ci(449)]:
-        return [116, 66, 0];
-      case cd[ci(445)]:
-        return [166, 25, 6];
-      case cd[ci(702)]:
-        return [49, 165, 158];
-      case cd[ci(409)]:
-        return [165, 158, 21];
-      case cd[ci(714)]:
-        return [50, 164, 48];
-      case cd[ci(838)]:
-        return [255, 255, 255];
-      case cd[ci(360)]:
-        return [10, 10, 10];
-      case cd["gravestone"]:
-        return [90, 90, 90];
-    }
-  }
-
-  function cj(cl, cm, cn, cp) {
-    const cq = aq,
-      cs = Math["max"](Math["min"]((cl + 1) * ax, cp["x"]), cl * ax),
-      ct = Math[cq(774)](Math["min"]((cm + 1) * ax, cp["y"]), cm * ax),
-      cu = cs - cp["x"],
-      cv = ct - cp["y"];
-    let cw = Math["hypot"](cu, cv);
-    return cw <= cn && (0 == cw && (cw = 1), {
-      "x": cu / cw,
-      "y": cv / cw
-    });
-  }
-
-  function cx(cy) {
-    const cz = aq;
-    return parseInt(50 * Math[cz(347)](Math[cz(759)](1, (cy[cz(890)][cz(771)] - 5) / 1000)) + 30);
-  }
-
-  function db(dd) {
-    const df = dd >> 2;
-    switch (3 & dd) {
-      case 0:
-        return df / 10;
-      case 1:
-        return 100 * df;
-      case 2:
-        return 10000 * df;
-    }
-  }
-
-  function dg(dh) {
-    const dj = aq;
-    return !(!dh || 36 !== dh[dj(771)]) && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i ["test"](dh);
-  }
-  const dk = 86400000,
-    dl = [40, 45, 50, 55, 60, 65, 70],
-    dm = [{
-      "title": "July 22nd 2022",
-      "content": [aq(499), "Graph is now colored accordingly.", aq(419), aq(564)]
-    }, {
-      "title": aq(889),
-      "content": ["Added Teams mode."]
-    }, {
-      "title": "July 20th 2022",
-      "content": [aq(591), aq(638)]
-    }, {
-      "title": aq(376),
-      "content": [aq(624), "Fixed mouse movement issue on high res displays.", aq(468), aq(510), aq(668), aq(619)]
-    }, {
-      "title": aq(377),
-      "content": [aq(789)]
-    }, {
-      "title": aq(845),
-      "content": [aq(748), aq(590), aq(538), aq(470)]
-    }, {
-      "title": aq(537),
-      "content": [aq(667), "New skins: Bot", aq(474), aq(614)]
-    }, {
-      "title": aq(866),
-      "content": [aq(793), aq(739)]
-    }, {
-      "title": "July 13th 2022",
-      "content": ["Added discord login.", "Minor bug fixes.", aq(728), "Worm's grave stays a little longer now.", aq(734)]
-    }, {
-      "title": aq(742),
-      "content": [aq(503), aq(612)]
-    }, {
-      "title": "July 10th 2022",
-      "content": [aq(416), aq(443)]
-    }, {
-      "title": aq(528),
-      "content": [aq(695), aq(891)]
-    }, {
-      "title": "July 8th 2022",
-      "content": [aq(397), aq(372), "Nickname and energy bar don't get hidden under the world border now.", aq(864)]
-    }, {
-      "title": aq(817),
-      "content": [aq(466), aq(450), aq(598), aq(448), aq(535), aq(660), aq(534)]
-    }, {
-      "title": aq(472),
-      "content": [aq(405), "Added touch controls.", aq(570), aq(752), aq(710)]
-    }, {
-      "title": aq(521),
-      "content": ["Made map bigger", "Minor UI changes.", "Performance mode is enabled by default now.", aq(495)]
-    }, {
-      "title": aq(909),
-      "content": [aq(385)]
-    }],
-    dn = document[aq(493)](aq(772));
-  dp(dn, aq(451));
-  const dq = document["getElementById"]("enableGlow");
-  dp(dq, aq(769));
-  const dr = document[aq(493)]("highRes");
-  dp(dr, aq(618));
-  const dt = document[aq(493)](aq(460)),
-    du = dt["getContext"]("2d");
-  let dv, dw;
-
-  function dx() {
-    const dy = aq;
-    if (!dz || !dz[dy(367)]) return;
-    dt[dy(767)]();
-    const ea = 200 * eb * window["devicePixelRatio"];
-    dt[dy(512)] !== ea && (dt[dy(512)] = ea, dt[dy(843)] = ea / 4);
-    const ec = dv || new ed(0, 0, 30);
-    dv = ec;
-    for (let ee = 0; ee < 2; ee++) ec[dy(890)][ee] = {
-      "interpX": -100 * (2 * ee - 1),
-      "interpY": 0
-    };
-    ec[dy(367)] = !0, ec[dy(483)] = dz[dy(483)], ec["team"] = dz[dy(506)], du[dy(565)](0, 0, dt[dy(512)], dt[dy(843)]);
-    const ef = dt[dy(843)] / ec[dy(379)] / 2 * 0.8;
-    du[dy(808)](), du[dy(383)](dt["width"] / 2, dt["height"] / 2), du["scale"](ef, ef), ec[dy(415)](0, du), du[dy(511)]();
-  }
-  window["s"] = 0.1, window["x"] = 0, window["y"] = 0;
-  try {
-    dw = (function() {
-      const eg = aq,
-        eh = document[eg(820)](eg(865)),
-        ei = {
-          "alpha": !0,
-          "antialias": !0
-        },
-        ej = eh["getContext"](eg(353), ei) || eh["getContext"](eg(779), ei),
-        ek = [eg(409), eg(714), eg(702), eg(445)];
-      let eo = "";
-      for (let ep = 0; ep < ek[eg(771)]; ep++) eo += eg(652) + cf(cd[ek[ep]])[eg(875)](eq => eq / 255)[eg(905)](",") + eg(654), ep !== ek[eg(771)] - 1 && (eo += "||");
-      const es = function(et, eu) {
-        const ev = eg,
-          ew = fa("vertex", et),
-          fb = fa(ev(390), eu),
-          fc = ej[ev(677)]();
-        return ej[ev(404)](fc, ew), ej[ev(404)](fc, fb), ej[ev(547)](fc), ej["getProgramParameter"](fc, ej[ev(732)]) || console[ev(765)](ev(610) + ej[ev(877)](fc)), fc;
-      }(eg(901), eg(352) + eo + "){\n\t\t\treturn t;\n\t\t}\n\t\treturn vec4(0.0);\n\t}\n\n\tvoid main(){\n\t\tvec4 a;\n\t\tvec4 sum;\n\t\tvec2 uv=vPos*0.5+0.5;\n\t\tif(uGlow){\n\t\t\tsum += getColor(vec2(uv.x - 4.0*blurSize.x, uv.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x - 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x - 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x - blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x + blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x + 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x + 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x + 4.0*blurSize.x, uv.y)) * 0.05;\n\n\t\t\t//y\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 4.0*blurSize.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 4.0*blurSize.y)) * 0.05;\n\t\t}\n\t\tif(u3d){\n\t\t\tfor (int i=0;i<=STEPS;i++) {\n\t\t\t\tfloat s=(float(i)/float(STEPS));\n\t\t\t\tvec2 p = vPos*(1.0+0.15*s);\n\t\t\t\tvec4 b = texture2D(tex, p*0.5+0.5);\n\t\t\t\tif (length(b.rgb-groundColor)<0.1) {\n\t\t\t\t\tif(i!=STEPS) {\n\t\t\t\t\t\tb.a = 0.0;\n\t\t\t\t\t}\n\t\t\t\t} else if(i!=0) {\n\t\t\t\t\tb.rgb=groundColor*0.8;\n\t\t\t\t}\n\t\t\t\ta.rgb = a.rgb*a.a + b.rgb*b.a*(1.0-a.a);\n\t\t\t\ta.a = a.a+b.a * (1.0-a.a);\n\t\t\t}\n\t\t}\n\t\tgl_FragColor = (u3d?a:texture2D(tex,uv)) + sum*(sin(uTime)*0.5+1.5);\n\t}\n\t");
-      ej["useProgram"](es), ej[eg(425)](ej[eg(447)], ej[eg(490)]()), ej[eg(637)](ej["ARRAY_BUFFER"], new Float32Array([-1, 1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1]), ej[eg(604)]), ej[eg(551)](0), ej[eg(489)](0, 2, ej["FLOAT"], !1, 0, 0), ej[eg(681)](ej["TEXTURE0"]), ej[eg(893)](ej["TEXTURE_2D"], ej[eg(536)]()), ej[eg(427)](ej["TEXTURE_2D"], ej["TEXTURE_WRAP_S"], ej["CLAMP_TO_EDGE"]), ej["texParameteri"](ej[eg(787)], ej[eg(704)], ej[eg(792)]), ej[eg(427)](ej[eg(787)], ej["TEXTURE_MIN_FILTER"], ej[eg(477)]), ej[eg(427)](ej[eg(787)], ej[eg(480)], ej[eg(477)]), ej["uniform1i"](ej["getUniformLocation"](es, "tex"), 0);
-      const fd = ej[eg(856)](es, "u3d"),
-        fe = ej[eg(856)](es, eg(874)),
-        ff = ej[eg(856)](es, eg(508)),
-        fg = ej[eg(856)](es, eg(816));
-
-      function fa(fh, fi) {
-        const fj = eg,
-          fk = ej[fj(902)](fj(849) == fh ? ej["VERTEX_SHADER"] : ej[fj(532)]);
-        return ej["shaderSource"](fk, fi), ej["compileShader"](fk), ej[fj(476)](fk, ej[fj(625)]) || console[fj(765)](fj(632) + fh + fj(571) + ej[fj(678)](fk)), fk;
-      }
-      return function() {
-        const fl = eg;
-        (dn[fl(433)] || dq[fl(433)]) && (eh[fl(512)] === fm[fl(512)] && eh[fl(843)] === fm[fl(843)] || (eh[fl(512)] = fm[fl(512)], eh[fl(843)] = fm[fl(843)], ej[fl(394)](0, 0, fm[fl(512)], fm[fl(843)])), ej[fl(446)](ff, 0.005 * performance[fl(853)]()), ej[fl(762)](fg, [1 / fm[fl(512)], 1 / fm[fl(843)]]), ej[fl(898)](fd, dn[fl(433)]), ej[fl(898)](fe, dq["checked"]), ej["pixelStorei"](ej[fl(388)], !0), ej[fl(730)](ej[fl(787)], 0, ej[fl(631)], ej["RGBA"], ej[fl(595)], fm), ej[fl(633)](ej[fl(664)] | ej["DEPTH_BUFFER_BIT"]), ej[fl(574)](ej[fl(766)], 0, 6), fn["drawImage"](eh, 0, 0, fm[fl(512)], fm[fl(843)]));
+function _0x4001aa(_0x166bd5, _0x405d2d) {
+  const {
+      viewWidth: _0x165c30,
+      viewHeight: _0x3de502
+    } = function(_0x3463a9) {
+      _0x3463a9 -= 30, _0x3463a9 *= 50;
+      const _0x3b5ae7 = 3000 + parseInt(_0x3463a9);
+      return {
+        "viewWidth": _0x3b5ae7,
+        "viewHeight": 0.5 * _0x3b5ae7
       };
-    }());
-  } catch (fo) {
-    console[aq(642)](aq(369) + fo), fp(dn, !1), fp(dq, !1), fp(dr, !1);
-  }
-  1 === window[aq(426)] && fp(dr, !1), (function() {
-    const fq = aq;
-    for (var fr = 0, fs = ["ms", "moz", fq(907), "o"], fu = 0; fu < fs[fq(771)] && !window[fq(640)]; ++fu) window[fq(640)] = window[fs[fu] + fq(684)], window[fq(560)] = window[fs[fu] + "CancelAnimationFrame"] || window[fs[fu] + fq(840)];
-    window[fq(640)] || (window["requestAnimationFrame"] = function(fv, fw) {
-      const fx = fq;
-      var fy = new Date()[fx(757)](),
-        fz = Math[fx(774)](0, 16 - (fy - fr)),
-        ga = window[fx(892)](function() {
-          fv(fy + fz);
-        }, fz);
-      return fr = fy + fz, ga;
-    }), window[fq(560)] || (window[fq(560)] = function(gb) {
-      clearTimeout(gb);
-    });
-  }());
-  const gc = document[aq(644)](aq(542)),
-    gd = document[aq(493)](aq(346));
-  dp(gd, aq(611));
-  const gh = (window["mobileAndTabletCheck"] = function() {
-      const gi = aq;
-      let gj = !1;
-      var gk;
-      return gk = navigator[gi(643)] || navigator[gi(505)] || window[gi(827)], (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i [gi(713)](gk) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i ["test"](gk[gi(603)](0, 4))) && (gj = !0), gj;
-    })(),
-    gl = navigator[aq(643)][aq(848)](),
-    gm = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/ [aq(713)](gl),
-    gn = document[aq(644)](aq(823)),
-    gp = document["querySelector"](aq(689));
-  gp[aq(673)] = function() {
-    const gq = aq;
-    gn["classList"][gq(452)](gq(524)), gs[gq(894)][gq(399)]("game-show"), gu["classList"]["remove"](gq(417));
+    }(_0x405d2d ? _0x166bd5.interpR : _0x166bd5.r),
+    _0x1654a2 = _0x166bd5.segments[0],
+    _0x26c498 = _0x1654a2.x - _0x165c30 / 2,
+    _0x29666e = _0x1654a2.y - _0x3de502 / 2,
+    _0x5b3508 = _0x1654a2.x + _0x165c30 / 2,
+    _0x5b0802 = _0x1654a2.y + _0x3de502 / 2;
+  return {
+    "minX": _0x26c498,
+    "minY": _0x29666e,
+    "maxX": _0x5b3508,
+    "maxY": _0x5b0802,
+    "sx": Math.max(0, Math.floor(_0x26c498 / _0x37b83b)),
+    "sy": Math.max(0, Math.floor(_0x29666e / _0x37b83b)),
+    "ex": Math.min(63, Math.floor(_0x5b3508 / _0x37b83b)),
+    "ey": Math.min(63, Math.floor(_0x5b0802 / _0x37b83b)),
+    "viewWidth": _0x165c30,
+    "viewHeight": _0x3de502
   };
-  const gv = document[aq(644)](aq(899)),
-    gw = document["querySelector"](aq(484)),
-    gx = document["querySelector"](aq(567));
-  gw[aq(673)] = function() {
-    const gy = aq;
-    gz(), gs[gy(894)]["add"](gy(863));
-  }, gx[aq(673)] = function() {
-    const ha = aq;
-    dz && !dz[ha(367)] && (hb(new Uint8Array([bc(6, 0)])), this[ha(894)][ha(452)](ha(904)), gw["click"]());
-  };
-  const hc = document[aq(493)](aq(802));
-  dp(hc, "optimized_rendering");
-  const he = document[aq(644)](aq(693));
-  dp(he, aq(750));
-  const hf = document["querySelector"](aq(400));
+}
+const _0x5df57f = {
+  "empty": 0,
+  "dirt": 1,
+  "lava": 2,
+  "diamond": 3,
+  "gold": 4,
+  "uranium": 5,
+  "quartz": 6,
+  "bedrock": 7,
+  "gravestone": 8
+};
 
-  function fp(hg, hh) {
-    const hj = aq;
-    hg[hj(356)][hj(830)]["display"] = hh ? "" : "none";
+function _0xa8836b(_0x3f4cda) {
+  switch (_0x3f4cda) {
+    case _0x5df57f.dirt:
+      return [116, 66, 0];
+    case _0x5df57f.lava:
+      return [166, 25, 6];
+    case _0x5df57f.diamond:
+      return [49, 165, 158];
+    case _0x5df57f.gold:
+      return [165, 158, 21];
+    case _0x5df57f.uranium:
+      return [50, 164, 48];
+    case _0x5df57f.quartz:
+      return [255, 255, 255];
+    case _0x5df57f.bedrock:
+      return [10, 10, 10];
+    case _0x5df57f.gravestone:
+      return [90, 90, 90];
   }
+}
 
-  function dp(hk, hl) {
-    const hm = aq,
-      hn = localStorage[hl];
-    hk[hm(433)] = void 0 !== hn ? hm(881) === hn : hk[hm(433)], hk[hm(862)] = function() {
-      localStorage[hl] = this["checked"], hk === dr && ho();
+function _0x4abc58(_0x2a336e, _0x1d4e2d, _0xe913c5, _0x111f99) {
+  const _0x5178f3 = Math.max(Math.min((_0x2a336e + 1) * _0x26c6d0, _0x111f99.x), _0x2a336e * _0x26c6d0),
+    _0x4753fa = Math.max(Math.min((_0x1d4e2d + 1) * _0x26c6d0, _0x111f99.y), _0x1d4e2d * _0x26c6d0),
+    _0x2d5e10 = _0x5178f3 - _0x111f99.x,
+    _0x5c496d = _0x4753fa - _0x111f99.y;
+  let _0x44d3a6 = Math.hypot(_0x2d5e10, _0x5c496d);
+  return _0x44d3a6 <= _0xe913c5 && (0 == _0x44d3a6 && (_0x44d3a6 = 1), {
+    "x": _0x2d5e10 / _0x44d3a6,
+    "y": _0x5c496d / _0x44d3a6
+  });
+}
+
+function _0x2ed340(_0x57ea5d) {
+  return parseInt(50 * Math.sqrt(Math.min(1, (_0x57ea5d.segments.length - 5) / 1000)) + 30);
+}
+
+function _0x3848f4(_0x38de1e) {
+  const _0x4917fa = _0x38de1e >> 2;
+  switch (3 & _0x38de1e) {
+    case 0:
+      return _0x4917fa / 10;
+    case 1:
+      return 100 * _0x4917fa;
+    case 2:
+      return 10000 * _0x4917fa;
+  }
+}
+
+function _0xca1554(_0x2ec272) {
+  return !(!_0x2ec272 || 36 !== _0x2ec272.length) && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(_0x2ec272);
+}
+const _0x3152df = 86400000,
+  _0x2c79c4 = [40, 45, 50, 55, 60, 65, 70],
+  _0x59489b = [{
+    "title": "July 22nd 2022",
+    "content": ["Fixed skin getting removed on game mode change.", "Graph is now colored accordingly.", "Increased max nickname length to 15.", "Limited bot score to 10k in maze."]
+  }, {
+    "title": "July 21st 2022",
+    "content": ["Added Teams mode."]
+  }, {
+    "title": "July 20th 2022",
+    "content": ["Added maze mode.", "Connection limit bug fix."]
+  }, {
+    "title": "July 19th 2022",
+    "content": ["New skin: Too cool", "Fixed mouse movement issue on high res displays.", "Now you have to score at least 30k to get your score logged in the Discord server.", "Your worm dies instantly if you get disconnected with low score now.", "Fixed gear skin not showing damage.", "Patched a server crash bug."]
+  }, {
+    "title": "July 18th 2022",
+    "content": ["Minor bug fixes."]
+  }, {
+    "title": "July 17th 2022",
+    "content": ["You spectate your killer worm after dying now.", "Made map bigger.", "Added some bots.", "Fixed map glitching sometimes on death screen."]
+  }, {
+    "title": "July 15th 2022",
+    "content": ["Death screen overlay now shows your dead worm.", "New skins: Bot", "Increased AFK kick time to 5 minutes.", "You can now change worm mood in shop on touch devices by tapping the left and right side of the screen."]
+  }, {
+    "title": "July 14th 2022",
+    "content": ["New skin: Moyai", "Your scores get logged in the Discord server now. You also get roles based on your scores. Your account has to be linked with discord and you have to be in the Discord server to get the roles."]
+  }, {
+    "title": "July 13th 2022",
+    "content": ["Added discord login.", "Minor bug fixes.", "Increased map regeneration time.", "Worm's grave stays a little longer now.", "Added amogus in the map (top left corner)."]
+  }, {
+    "title": "July 12th 2022",
+    "content": ["Moved server from NA to EU.", "Removed zoom."]
+  }, {
+    "title": "July 10th 2022",
+    "content": ["Now you get kicked for being AFK too long.", "Added packet encryption."]
+  }, {
+    "title": "July 9th 2022",
+    "content": ["New skins: Pirate & Ascii", "Fixed sussy shop bug."]
+  }, {
+    "title": "July 8th 2022",
+    "content": ["Lava now deducts 0.25% of your score if you are too big.", "Added 3D and glow effects. Enable them from settings.", "Nickname and energy bar don't get hidden under the world border now.", "Added high resolution setting for some devices."]
+  }, {
+    "title": "July 7th 2022",
+    "content": ["You will be reconnected to your old alive worm if you accidentally got disconnected now.", "Only 1 connection can use an account now.", "Limited connections from an IP to 3.", "Fixed killer name not being shown sometimes.", "Minor touch controls bug fix.", "Made map smaller.", "You can pause and join game using escape and enter keys now."]
+  }, {
+    "title": "July 6th 2022",
+    "content": ["Enhanced mobile UI.", "Added touch controls.", "Fixed Gear skin.", "Fixed skin previews appearing pixelated.", "Game being blank on IOS fixed."]
+  }, {
+    "title": "July 5th 2022",
+    "content": ["Made map bigger", "Minor UI changes.", "Performance mode is enabled by default now.", "New Discord link."]
+  }, {
+    "title": "July 4th 2022",
+    "content": ["Released."]
+  }],
+  _0x4ab6db = document.getElementById("enable3D");
+_0x5a12dd(_0x4ab6db, "enable_3d");
+const _0x106baf = document.getElementById("enableGlow");
+_0x5a12dd(_0x106baf, "enable_glow");
+const _0x421c4c = document.getElementById("highRes");
+_0x5a12dd(_0x421c4c, "high_res");
+const _0x450727 = document.getElementById("deadWorm"),
+  _0x2f6e5d = _0x450727.getContext("2d");
+let _0x67fc60, _0x1ed826;
+
+function _0x1acd51() {
+  if (!_0x30f1bc || !_0x30f1bc.isDead) return;
+  _0x450727.getBoundingClientRect();
+  const _0x5a30b8 = 200 * _0x3e54c8 * window.devicePixelRatio;
+  _0x450727.width !== _0x5a30b8 && (_0x450727.width = _0x5a30b8, _0x450727.height = _0x5a30b8 / 4);
+  const _0x39ef48 = _0x67fc60 || new _0x1d5e9a(0, 0, 30);
+  _0x67fc60 = _0x39ef48;
+  for (let _0x13d2e6 = 0; _0x13d2e6 < 2; _0x13d2e6++) _0x39ef48.segments[_0x13d2e6] = {
+    "interpX": -100 * (2 * _0x13d2e6 - 1),
+    "interpY": 0
+  };
+  _0x39ef48.isDead = true, _0x39ef48.faceSkin = _0x30f1bc.faceSkin, _0x39ef48.team = _0x30f1bc.team, _0x2f6e5d.clearRect(0, 0, _0x450727.width, _0x450727.height);
+  const _0x455bfa = _0x450727.height / _0x39ef48.interpR / 2 * 0.8;
+  _0x2f6e5d.save(), _0x2f6e5d.translate(_0x450727.width / 2, _0x450727.height / 2), _0x2f6e5d.scale(_0x455bfa, _0x455bfa), _0x39ef48.draw(0, _0x2f6e5d), _0x2f6e5d.restore();
+}
+window.s = 0.1, window.x = 0, window.y = 0;
+try {
+  _0x1ed826 = (function() {
+    const _0x5df872 = document.createElement("canvas"),
+      _0x4b5295 = {
+        "alpha": true,
+        "antialias": true
+      },
+      _0x501a1e = _0x5df872.getContext("webgl", _0x4b5295) || _0x5df872.getContext("experimental-webgl", _0x4b5295),
+      _0x46518d = ["gold", "uranium", "diamond", "lava"];
+    let _0xeb9d3d = "";
+    for (let _0x211687 = 0; _0x211687 < _0x46518d.length; _0x211687++) _0xeb9d3d += "distance(vec3(" + _0xa8836b(_0x5df57f[_0x46518d[_0x211687]]).map(_0x49535d => _0x49535d / 255).join(",") + "),t.rgb)<0.1", _0x211687 !== _0x46518d.length - 1 && (_0xeb9d3d += "||");
+    const _0x1a5788 = function(_0x411680, _0x14bc1a) {
+      const  _0x1fbc66 = _0x48c74c("vertex", _0x411680),
+        _0x13faeb = _0x48c74c("fragment", _0x14bc1a),
+        _0x22a5ce = _0x501a1e.createProgram();
+      return _0x501a1e.attachShader(_0x22a5ce, _0x1fbc66), _0x501a1e.attachShader(_0x22a5ce, _0x13faeb), _0x501a1e.linkProgram(_0x22a5ce), _0x501a1e.getProgramParameter(_0x22a5ce, _0x501a1e.LINK_STATUS) || console.log("Error linking program. " + _0x501a1e.getProgramInfoLog(_0x22a5ce)), _0x22a5ce;
+    }("\n\tattribute vec2 pos;\n\tvarying vec2 vPos;\n\tvoid main() {\n\t\tvPos=pos;\n\t\tgl_Position=vec4(pos,0.0,1.0);\n\t}\n\t", "\n\tprecision mediump float;\n\tuniform sampler2D tex;\n\tuniform bool u3d;\n\tuniform bool uGlow;\n\tuniform float uTime;\n\tuniform vec2 blurSize;\n\n\tvarying vec2 vPos;\n\n\tconst vec3 groundColor = vec3(0.32,0.18,0.0);\n\tconst int STEPS=10;\n\n\tvec4 getColor(vec2 p){\n\t\tvec4 t=texture2D(tex,p);\n\t\tif(" + _0xeb9d3d + "){\n\t\t\treturn t;\n\t\t}\n\t\treturn vec4(0.0);\n\t}\n\n\tvoid main(){\n\t\tvec4 a;\n\t\tvec4 sum;\n\t\tvec2 uv=vPos*0.5+0.5;\n\t\tif(uGlow){\n\t\t\tsum += getColor(vec2(uv.x - 4.0*blurSize.x, uv.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x - 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x - 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x - blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x + blurSize.x, uv.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x + 2.0*blurSize.x, uv.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x + 3.0*blurSize.x, uv.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x + 4.0*blurSize.x, uv.y)) * 0.05;\n\n\t\t\t//y\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 4.0*blurSize.y)) * 0.05;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y - blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y)) * 0.16;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + blurSize.y)) * 0.15;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 2.0*blurSize.y)) * 0.12;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 3.0*blurSize.y)) * 0.09;\n\t\t\tsum += getColor(vec2(uv.x, uv.y + 4.0*blurSize.y)) * 0.05;\n\t\t}\n\t\tif(u3d){\n\t\t\tfor (int i=0;i<=STEPS;i++) {\n\t\t\t\tfloat s=(float(i)/float(STEPS));\n\t\t\t\tvec2 p = vPos*(1.0+0.15*s);\n\t\t\t\tvec4 b = texture2D(tex, p*0.5+0.5);\n\t\t\t\tif (length(b.rgb-groundColor)<0.1) {\n\t\t\t\t\tif(i!=STEPS) {\n\t\t\t\t\t\tb.a = 0.0;\n\t\t\t\t\t}\n\t\t\t\t} else if(i!=0) {\n\t\t\t\t\tb.rgb=groundColor*0.8;\n\t\t\t\t}\n\t\t\t\ta.rgb = a.rgb*a.a + b.rgb*b.a*(1.0-a.a);\n\t\t\t\ta.a = a.a+b.a * (1.0-a.a);\n\t\t\t}\n\t\t}\n\t\tgl_FragColor = (u3d?a:texture2D(tex,uv)) + sum*(sin(uTime)*0.5+1.5);\n\t}\n\t");
+    _0x501a1e.useProgram(_0x1a5788), _0x501a1e.bindBuffer(_0x501a1e.ARRAY_BUFFER, _0x501a1e.createBuffer()), _0x501a1e.bufferData(_0x501a1e.ARRAY_BUFFER, new Float32Array([-1, 1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1]), _0x501a1e.STATIC_DRAW), _0x501a1e.enableVertexAttribArray(0), _0x501a1e.vertexAttribPointer(0, 2, _0x501a1e.FLOAT, false, 0, 0), _0x501a1e.activeTexture(_0x501a1e.TEXTURE0), _0x501a1e.bindTexture(_0x501a1e.TEXTURE_2D, _0x501a1e.createTexture()), _0x501a1e.texParameteri(_0x501a1e.TEXTURE_2D, _0x501a1e.TEXTURE_WRAP_S, _0x501a1e.CLAMP_TO_EDGE), _0x501a1e.texParameteri(_0x501a1e.TEXTURE_2D, _0x501a1e.TEXTURE_WRAP_T, _0x501a1e.CLAMP_TO_EDGE), _0x501a1e.texParameteri(_0x501a1e.TEXTURE_2D, _0x501a1e.TEXTURE_MIN_FILTER, _0x501a1e.NEAREST), _0x501a1e.texParameteri(_0x501a1e.TEXTURE_2D, _0x501a1e.TEXTURE_MAG_FILTER, _0x501a1e.NEAREST), _0x501a1e.uniform1i(_0x501a1e.getUniformLocation(_0x1a5788, "tex"), 0);
+    const _0x4db8c4 = _0x501a1e.getUniformLocation(_0x1a5788, "u3d"),
+      _0x84611c = _0x501a1e.getUniformLocation(_0x1a5788, "uGlow"),
+      _0x3d7f46 = _0x501a1e.getUniformLocation(_0x1a5788, "uTime"),
+      _0x400eef = _0x501a1e.getUniformLocation(_0x1a5788, "blurSize");
+
+    function _0x48c74c(_0x5b6409, _0x332557) {
+      const _0x31db2c = _0x501a1e.createShader("vertex" == _0x5b6409 ? _0x501a1e.VERTEX_SHADER : _0x501a1e.FRAGMENT_SHADER);
+      return _0x501a1e.shaderSource(_0x31db2c, _0x332557), _0x501a1e.compileShader(_0x31db2c), _0x501a1e.getShaderParameter(_0x31db2c, _0x501a1e.COMPILE_STATUS) || console.log("Error compiling " + _0x5b6409 + " shader. " + _0x501a1e.getShaderInfoLog(_0x31db2c)), _0x31db2c;
+    }
+    return function() {
+      (_0x4ab6db.checked || _0x106baf.checked) && (_0x5df872.width === _0x39e650.width && _0x5df872.height === _0x39e650.height || (_0x5df872.width = _0x39e650.width, _0x5df872.height = _0x39e650.height, _0x501a1e.viewport(0, 0, _0x39e650.width, _0x39e650.height)), _0x501a1e.uniform1f(_0x3d7f46, 0.005 * performance.now()), _0x501a1e.uniform2fv(_0x400eef, [1 / _0x39e650.width, 1 / _0x39e650.height]), _0x501a1e.uniform1i(_0x4db8c4, _0x4ab6db.checked), _0x501a1e.uniform1i(_0x84611c, _0x106baf.checked), _0x501a1e.pixelStorei(_0x501a1e.UNPACK_FLIP_Y_WEBGL, true), _0x501a1e.texImage2D(_0x501a1e.TEXTURE_2D, 0, _0x501a1e.RGBA, _0x501a1e.RGBA, _0x501a1e.UNSIGNED_BYTE, _0x39e650), _0x501a1e.clear(_0x501a1e.COLOR_BUFFER_BIT | _0x501a1e.DEPTH_BUFFER_BIT), _0x501a1e.drawArrays(_0x501a1e.TRIANGLES, 0, 6), _0x540ea8.drawImage(_0x5df872, 0, 0, _0x39e650.width, _0x39e650.height));
     };
-  }
+  }());
+} catch (_0x29991c) {
+  console.error("Error creating post processor. " + _0x29991c), _0x440660(_0x4ab6db, false), _0x440660(_0x106baf, false), _0x440660(_0x421c4c, false);
+}
+1 === window.devicePixelRatio && _0x440660(_0x421c4c, false), (function() {
+  for (var _0x255b79 = 0, _0x1ede8e = ["ms", "moz", "webkit", "o"], _0x2283d3 = 0; _0x2283d3 < _0x1ede8e.length && !window.requestAnimationFrame; ++_0x2283d3) window.requestAnimationFrame = window[_0x1ede8e[_0x2283d3] + "RequestAnimationFrame"], window.cancelAnimationFrame = window[_0x1ede8e[_0x2283d3] + "CancelAnimationFrame"] || window[_0x1ede8e[_0x2283d3] + "CancelRequestAnimationFrame"];
+  window.requestAnimationFrame || (window.requestAnimationFrame = function(_0x51ae6d, _0x26d1de) {
+    var _0x474c43 = new Date().getTime(),
+      _0x2502c1 = Math.max(0, 16 - (_0x474c43 - _0x255b79)),
+      _0x17cca6 = window.setTimeout(function() {
+        _0x51ae6d(_0x474c43 + _0x2502c1);
+      }, _0x2502c1);
+    return _0x255b79 = _0x474c43 + _0x2502c1, _0x17cca6;
+  }), window.cancelAnimationFrame || (window.cancelAnimationFrame = function(_0x34b7da) {
+    clearTimeout(_0x34b7da);
+  });
+}());
+const _0x22a69a = document.querySelector(".killer"),
+  _0x45a0c5 = document.getElementById("fixedJoystickCb");
+_0x5a12dd(_0x45a0c5, "fixed_joystick");
+const _0x300310 = (window.mobileAndTabletCheck = function() {
+    let _0x52a217 = false;
+    var _0x137d7c;
+    return _0x137d7c = navigator.userAgent || navigator.vendor || window.opera, (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(_0x137d7c) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(_0x137d7c.substr(0, 4))) && (_0x52a217 = true), _0x52a217;
+  })(),
+  _0x13d9f5 = navigator.userAgent.toLowerCase(),
+  _0x5c1a36 = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(_0x13d9f5),
+  _0x58a27d = document.querySelector(".minimize"),
+  _0x4ddb7f = document.querySelector(".minimize-btn");
+_0x4ddb7f.onclick = function() {
+  _0x58a27d.classList.add("minimize-show"), _0x3af8d3.classList.remove("game-show"), _0x3bef3e.classList.remove("grid-show");
+};
+const _0x4b31bc = document.querySelector(".hud-common"),
+  _0x176966 = document.querySelector(".resume"),
+  _0x2aaf3d = document.querySelector(".giveup");
+_0x176966.onclick = function() {
+  _0x51ba04(), _0x3af8d3.classList.add("game-show");
+}, _0x2aaf3d.onclick = function() {
+  _0x30f1bc && !_0x30f1bc.isDead && (_0x5f0f6b(new Uint8Array([_0x168cd0(6, 0)])), this.classList.add("btn-disabled"), _0x176966.click());
+};
+const _0x36d217 = document.getElementById("optimizedRendering");
+_0x5a12dd(_0x36d217, "optimized_rendering");
+const _0x270468 = document.querySelector("#kbMovementCb");
+_0x5a12dd(_0x270468, "kb_movement");
+const _0x4e19d2 = document.querySelector(".nickname");
 
-  function hq(hr) {
-    const hv = aq;
-    for (let hw = 1; hw < hr["segments"][hv(771)]; hw++) {
-      const hx = hr[hv(890)][hw],
-        hy = hr["segments"][hw - 1],
-        hz = hx["x"],
-        ia = hx["y"];
-      let ib = hx["x"] - hy["x"],
-        ie = hx["y"] - hy["y"];
-      Math["hypot"](ib, ie) > hr["r"] && (hx["x"] = hy[hv(555)], hx["y"] = hy[hv(731)], hx[hv(555)] = hz, hx[hv(731)] = ia), hx[hv(575)] = hx[hv(464)], hx[hv(359)] = hx["interpY"];
-    }
-  }
+function _0x440660(_0x1a00da, _0x196919) {
+  _0x1a00da.parentNode.style.display = _0x196919 ? "" : "none";
+}
 
-  function ig(ih, ii, ij, ik = 1) {
-    const il = aq,
-      im = 2 * Math["PI"] / ij,
-      io = 0.1 * im * ik,
-      iq = new Path2D();
-    for (let ir = 0; ir <= ij; ir++) {
-      const is = im * ir,
-        iu = is - io,
-        iv = is + io;
-      ir % 2 == 0 ? (iq[il(434)](Math["cos"](iu) * ih, Math[il(478)](iu) * ih), iq[il(434)](Math[il(725)](iv) * ii, Math[il(478)](iv) * ii)) : (iq[il(434)](Math[il(725)](iu) * ii, Math["sin"](iu) * ii), iq["lineTo"](Math[il(725)](iv) * ih, Math[il(478)](iv) * ih));
-    }
-    return iq;
+function _0x5a12dd(_0x61031e, _0x3c5472) {
+  const _0x3baae7 = localStorage[_0x3c5472];
+  _0x61031e.checked = undefined !== _0x3baae7 ? "true" === _0x3baae7 : _0x61031e.checked, _0x61031e.oninput = function() {
+    localStorage[_0x3c5472] = this.checked, _0x61031e === _0x421c4c && _0x1f31f7();
+  };
+}
+
+function _0x2b50af(_0x424db9) {
+  for (let _0x4c6129 = 1; _0x4c6129 < _0x424db9.segments.length; _0x4c6129++) {
+    const _0x1061ed = _0x424db9.segments[_0x4c6129],
+      _0x34c39b = _0x424db9.segments[_0x4c6129 - 1],
+      _0x518d08 = _0x1061ed.x,
+      _0x2682e5 = _0x1061ed.y;
+    let _0x1c752a = _0x1061ed.x - _0x34c39b.x,
+      _0x33a92d = _0x1061ed.y - _0x34c39b.y;
+    Math.hypot(_0x1c752a, _0x33a92d) > _0x424db9.r && (_0x1061ed.x = _0x34c39b.oldX, _0x1061ed.y = _0x34c39b.oldY, _0x1061ed.oldX = _0x518d08, _0x1061ed.oldY = _0x2682e5), _0x1061ed.interpOldX = _0x1061ed.interpX, _0x1061ed.interpOldY = _0x1061ed.interpY;
   }
-  hf[aq(862)] = function() {
-    const iw = aq;
-    localStorage[iw(558)] = this[iw(758)];
-  }, hf["maxLength"] = 15, hf[aq(758)] = void 0 !== localStorage[aq(558)] ? localStorage[aq(558)] : "", fp(gd, gh), fp(he, !gh), gh && (document["getElementById"](aq(781))[aq(830)]["display"] = aq(501));
-  const ix = ig(20, 22.5, 32, 1),
-    iy = ig(10, 12.5, 16, 1.25),
-    iz = [
-      [
-        [28, 28], new Path2D(aq(797))
-      ],
-      [
-        [14, 16], new Path2D(aq(370))
-      ],
-      [
-        [12, 12], new Path2D(aq(587))
-      ],
-      [
-        [12, 10], new Path2D(aq(855))
-      ]
+}
+
+function _0x5015bd(_0x20cb31, _0x49157b, _0x5e9514, _0x45a2fa = 1) {
+  const _0x616f20 = 2 * Math.PI / _0x5e9514,
+    _0x40fba0 = 0.1 * _0x616f20 * _0x45a2fa,
+    _0x557b2a = new Path2D();
+  for (let _0x3d50e8 = 0; _0x3d50e8 <= _0x5e9514; _0x3d50e8++) {
+    const _0x31dcba = _0x616f20 * _0x3d50e8,
+      _0x2591bd = _0x31dcba - _0x40fba0,
+      _0x1fbcaf = _0x31dcba + _0x40fba0;
+    _0x3d50e8 % 2 == 0 ? (_0x557b2a.lineTo(Math.cos(_0x2591bd) * _0x20cb31, Math.sin(_0x2591bd) * _0x20cb31), _0x557b2a.lineTo(Math.cos(_0x1fbcaf) * _0x49157b, Math.sin(_0x1fbcaf) * _0x49157b)) : (_0x557b2a.lineTo(Math.cos(_0x2591bd) * _0x49157b, Math.sin(_0x2591bd) * _0x49157b), _0x557b2a.lineTo(Math.cos(_0x1fbcaf) * _0x20cb31, Math.sin(_0x1fbcaf) * _0x20cb31));
+  }
+  return _0x557b2a;
+}
+_0x4e19d2.oninput = function() {
+  localStorage.nickname = this.value;
+}, _0x4e19d2.maxLength = 15, _0x4e19d2.value = undefined !== localStorage.nickname ? localStorage.nickname : "", _0x440660(_0x45a0c5, _0x300310), _0x440660(_0x270468, !_0x300310), _0x300310 && (document.getElementById("pressEnterInfo").style.display = "none");
+const _0x351eee = _0x5015bd(20, 22.5, 32, 1),
+  _0x231a1a = _0x5015bd(10, 12.5, 16, 1.25),
+  _0x28ea71 = [
+    [
+      [28, 28], new Path2D("m 0,0 c 0,1 -3,4 -10,4 -7,0 -10,-3 -10,-4 0,-0.807 4.548,-1.612 6.311,-1.894 C -13.001,-4.548 -13,-10 -13,-10 c 0.805,3.218 0.315,7.079 0.093,8.467 C -12.705,-0.942 -12.059,0 -10,0 c 3,0 3,-2 3,-2 l 0.002,0 c -0.234,-1.657 -0.565,-5.089 0.162,-8 0,0 0.002,5.491 0.697,8.134 C -4.273,-1.562 0,-0.782 0,0")
     ],
-    jb = new Path2D(aq(869));
-  class ed {
-    constructor(jc, jd, je = 0) {
-      const jf = aq;
-      this["id"] = jc, this[jf(890)] = [], this[jf(687)] = 0, this["dirX"] = Math[jf(725)](jd), this[jf(883)] = Math[jf(478)](jd), this[jf(365)] = this[jf(589)] = this[jf(743)], this[jf(573)] = this[jf(458)] = this[jf(883)], this[jf(541)] = 0, this[jf(607)] = 0, this[jf(483)] = -1, this[jf(398)] = -1, this[jf(908)] = 0, this[jf(482)] = 0, this["r"] = this[jf(379)] = this[jf(465)] = je, this[jf(430)] = jd, this["iEnergyChange"] = 0, this[jf(701)] = 1, this["energyAlpha"] = 0, this[jf(558)] = "", this[jf(506)] = -1;
-    } [aq(408)]() {
-      const jg = aq,
-        jh = Math[jg(759)](1, (Date[jg(853)]() - this[jg(687)]) / 100);
-      for (let ji = 0; ji < this["segments"][jg(771)]; ji++) {
-        const jj = this["segments"][ji];
-        jj[jg(464)] = jj[jg(575)] + (jj["x"] - jj["interpOldX"]) * jh, jj[jg(680)] = jj[jg(359)] + (jj["y"] - jj["interpOldY"]) * jh;
+    [
+      [14, 16], new Path2D("M 0,0 C 0,1 2,3 4,3 6,3 8,1 8,0 8,-1 7,-1 4,-1 1,-1 0,-1 0,0")
+    ],
+    [
+      [12, 12], new Path2D("M 0,0 C 0,0 2,2 6,2 10,2 12,0 12,0 12,0 10,1 6,1 2,1 0,0 0,0")
+    ],
+    [
+      [12, 10], new Path2D("M 0,0 C 0,1 2,2 6,2 10,2 12,1 12,0 12,-1 11,-1 6,-1 1,-1 0,-1 0,0")
+    ]
+  ],
+  _0x12659b = new Path2D("M2358 5639 c-387 -26 -778 -95 -1438 -255 -257 -62 -569 -134 -738 -169 -91 -19 -166 -36 -168 -38 -1 -1 -6 -108 -10 -237 -7 -255 3 -395 36 -504 22 -70 73 -148 215 -326 110 -137 175 -236 212 -318 13 -30 48 -161 78 -291 135 -580 303 -1120 515 -1651 58 -146 124 -270 190 -359 261 -351 801 -618 1428 -706 454 -64 1044 -24 1403 95 592 198 1041 653 1452 1475 168 338 205 438 301 826 79 319 121 452 186 585 58 119 104 166 190 191 46 13 84 15 235 9 99 -4 199 -11 223 -15 60 -12 117 -55 178 -136 99 -132 158 -272 234 -555 190 -706 443 -1252 758 -1636 102 -125 243 -264 352 -346 422 -319 1015 -508 1596 -508 823 0 1516 333 1926 925 209 301 322 616 488 1355 62 279 148 612 187 730 43 128 117 276 178 352 25 31 80 82 121 114 46 34 81 69 89 88 22 52 26 134 16 276 -7 93 -7 175 1 265 12 150 5 195 -43 249 -33 39 -78 56 -209 81 -143 28 -304 71 -545 145 -326 101 -465 133 -842 195 -550 91 -674 105 -954 105 -485 0 -881 -57 -1844 -266 -1088 -237 -1424 -287 -1940 -288 -484 0 -719 35 -1515 231 -377 92 -569 132 -865 177 -813 126 -1272 163 -1677 135z");
+class _0x1d5e9a {
+  constructor(_0x58e01e, _0x56c500, _0xab1c56 = 0) {
+    this.id = _0x58e01e, this.segments = [], this.updateTime = 0, this.dirX = Math.cos(_0x56c500), this.dirY = Math.sin(_0x56c500), this.newDirX = this.oldDirX = this.dirX, this.newDirY = this.oldDirY = this.dirY, this.sad = 0, this.angry = 0, this.faceSkin = -1, this.bodySkin = -1, this.energy = 0, this.iEnergy = 0, this.r = this.interpR = this.interpOldR = _0xab1c56, this.angle = _0x56c500, this.iEnergyChange = 0, this.energyChangeCounter = 1, this.energyAlpha = 0, this.nickname = "", this.team = -1;
+  } ["interpolate"]() {
+    const _0x4d57e5 = Math.min(1, (Date.now() - this.updateTime) / 100);
+    for (let _0x3d3a93 = 0; _0x3d3a93 < this.segments.length; _0x3d3a93++) {
+      const _0x17cb80 = this.segments[_0x3d3a93];
+      _0x17cb80.interpX = _0x17cb80.interpOldX + (_0x17cb80.x - _0x17cb80.interpOldX) * _0x4d57e5, _0x17cb80.interpY = _0x17cb80.interpOldY + (_0x17cb80.y - _0x17cb80.interpOldY) * _0x4d57e5;
+    }
+    this.interpR = this.interpOldR + (this.r - this.interpOldR) * _0x4d57e5, this.dirX = this.oldDirX + (this.newDirX - this.oldDirX) * _0x4d57e5, this.dirY = this.oldDirY + (this.newDirY - this.oldDirY) * _0x4d57e5, this.interpFace(), this.iEnergy = this.oldEnergy + _0x4d57e5 * (this.energy - this.oldEnergy), this.energyChangeCounter -= _0x6b0948 / 0.5, this.energyChangeCounter < 0 && (this.iEnergyChange += 0.1 * (this.iEnergy - this.iEnergyChange)), this.iEnergyChange = Math.max(this.iEnergy, this.iEnergyChange), this.energyAlpha += (!this.isDead && this.energy < 1 ? 1 : -1) * _0x6b0948 / 0.15, this.energyAlpha = Math.max(Math.min(1, this.energyAlpha), 0);
+  } ["interpFace"]() {
+    const _0x2d7fdf = _0x6b0948 / 0.07;
+    1 === this.mood ? (this.angry += _0x2d7fdf, this.sad -= _0x2d7fdf) : 2 === this.mood ? (this.sad += _0x2d7fdf, this.angry -= _0x2d7fdf) : 0 === this.mood && (this.angry -= _0x2d7fdf, this.sad -= _0x2d7fdf), this.angry = Math.min(1, Math.max(0, this.angry)), this.sad = Math.min(1, Math.max(0, this.sad));
+  } ["drawEnergyAndNickname"](_0x4f39ce) {
+    const _0x2cfca1 = this.segments[0];
+    _0x4f39ce.save(), _0x4f39ce.lineCap = "round", _0x4f39ce.lineJoin = "round", _0x4f39ce.globalAlpha = this.energyAlpha, _0x4f39ce.translate(_0x2cfca1.interpX, _0x2cfca1.interpY);
+    const _0xf11aed = this.interpR / 25;
+    if (_0x4f39ce.scale(_0xf11aed, _0xf11aed), this.energyAlpha > 0) {
+      _0x4f39ce.save(), _0x4f39ce.translate(0, 60);
+      const _0x58f677 = 35;
+      _0x4f39ce.beginPath(), _0x4f39ce.moveTo(-_0x58f677, 0), _0x4f39ce.lineTo(_0x58f677, 0), _0x4f39ce.lineWidth = 13, _0x4f39ce.strokeStyle = "#222", _0x4f39ce.stroke(), _0x4f39ce.beginPath(), _0x4f39ce.moveTo(-_0x58f677, 0), _0x4f39ce.lineTo(-_0x58f677 + this.iEnergyChange * _0x58f677 * 2, 0), _0x4f39ce.lineWidth = 6.5, _0x4f39ce.strokeStyle = "#dd3434", _0x4f39ce.stroke(), _0x4f39ce.beginPath(), _0x4f39ce.globalAlpha *= Math.min(1, Math.max(0.5, this.iEnergy / 0.05)), _0x4f39ce.moveTo(-_0x58f677, 0), _0x4f39ce.lineTo(-_0x58f677 + this.iEnergy * _0x58f677 * 2, 0), _0x4f39ce.lineWidth = 8, _0x4f39ce.strokeStyle = "#75dd34", _0x4f39ce.stroke(), _0x4f39ce.restore();
+    }
+    this.isDead || this === _0x30f1bc || "" === this.nickname.trim() || (_0x4f39ce.save(), _0x4f39ce.translate(0, -50), _0x4f39ce.globalAlpha = 1, _0x4f39ce.font = "bolder 24px Ubuntu", _0x4f39ce.strokeStyle = "#000", _0x4f39ce.lineWidth = 3, _0x4f39ce.textAlign = "center", _0x4f39ce.textBaseline = "bottom", _0x4f39ce.strokeText(this.nickname, 0, 0), _0x4f39ce.fillStyle = "#fff", _0x4f39ce.fillText(this.nickname, 0, 0), _0x4f39ce.restore()), _0x4f39ce.restore();
+  } ["draw"](_0x5196f7, _0x36028c, _0x37a092 = true) {
+    const _0x37b4af = Date.now();
+    if (_0x36028c.lineWidth = 5, _0x36028c.lineWidth, this.isDead) {
+      const _0x4a3237 = (_0x37b4af - this.diedAt) / 500;
+      if (_0x4a3237 > 1) return void _0x600e07.splice(_0x5196f7, 1);
+      _0x36028c.globalAlpha = Math.abs(Math.sin(_0x4a3237 * Math.PI * 2)) * (1 - _0x4a3237) * 0.7;
+    } else _0x36028c.globalAlpha = 1;
+    const _0x4363ec = (_0x37b4af - this.diggedLavaAt) / 200,
+      _0x511c20 = _0x7318e0(this.team),
+      _0xd95143 = _0x511c20.map(_0x595459 => 0.81 * _0x595459);
+    if (_0x4363ec < 1) {
+      const _0x7d82bd = [255, 0, 0],
+        _0x549fca = 0.5 * (1 - _0x4363ec),
+        _0x2f7905 = 1 - _0x549fca;
+      for (let _0x2d7c7b = 0; _0x2d7c7b < 3; _0x2d7c7b++) _0x511c20[_0x2d7c7b] = _0x511c20[_0x2d7c7b] * _0x2f7905 + _0x7d82bd[_0x2d7c7b] * _0x549fca, _0xd95143[_0x2d7c7b] = _0xd95143[_0x2d7c7b] * _0x2f7905 + _0x7d82bd[_0x2d7c7b] * _0x549fca;
+    }
+    let _0x1d0222 = _0x36028c.fillStyle = "rgb(" + _0x511c20.join(",") + ")",
+      _0x47a7bd = _0x36028c.strokeStyle = "rgb(" + _0xd95143.join(",") + ")";
+    const _0x17f074 = 1 * this.interpR,
+      _0x487612 = this.segments[0];
+    if (this.isDead || _0x36d217.checked) {
+      _0x36028c.beginPath();
+      for (let _0x5615bb = 0; _0x5615bb < this.segments.length; _0x5615bb++) {
+        const {
+          interpX: _0x53f26e,
+          interpY: _0x3fd1b1
+        } = this.segments[_0x5615bb];
+        0 === _0x5615bb ? _0x36028c.moveTo(_0x53f26e, _0x3fd1b1) : _0x36028c.lineTo(_0x53f26e, _0x3fd1b1);
       }
-      this[jg(379)] = this["interpOldR"] + (this["r"] - this[jg(465)]) * jh, this["dirX"] = this["oldDirX"] + (this[jg(365)] - this[jg(589)]) * jh, this[jg(883)] = this[jg(458)] + (this[jg(573)] - this[jg(458)]) * jh, this[jg(868)](), this["iEnergy"] = this[jg(374)] + jh * (this[jg(908)] - this[jg(374)]), this[jg(701)] -= jk / 0.5, this["energyChangeCounter"] < 0 && (this[jg(507)] += 0.1 * (this[jg(482)] - this[jg(507)])), this[jg(507)] = Math["max"](this[jg(482)], this[jg(507)]), this[jg(639)] += (!this["isDead"] && this["energy"] < 1 ? 1 : -1) * jk / 0.15, this[jg(639)] = Math[jg(774)](Math[jg(759)](1, this[jg(639)]), 0);
-    } ["interpFace"]() {
-      const jl = aq,
-        jm = jk / 0.07;
-      1 === this[jl(350)] ? (this[jl(607)] += jm, this["sad"] -= jm) : 2 === this[jl(350)] ? (this[jl(541)] += jm, this[jl(607)] -= jm) : 0 === this[jl(350)] && (this[jl(607)] -= jm, this[jl(541)] -= jm), this["angry"] = Math["min"](1, Math[jl(774)](0, this[jl(607)])), this[jl(541)] = Math[jl(759)](1, Math[jl(774)](0, this[jl(541)]));
-    } [aq(828)](jn) {
-      const jo = aq,
-        jp = this["segments"][0];
-      jn[jo(808)](), jn[jo(886)] = jo(796), jn["lineJoin"] = jo(796), jn[jo(389)] = this[jo(639)], jn[jo(383)](jp["interpX"], jp[jo(680)]);
-      const jq = this[jo(379)] / 25;
-      if (jn[jo(422)](jq, jq), this[jo(639)] > 0) {
-        jn[jo(808)](), jn[jo(383)](0, 60);
-        const jr = 35;
-        jn["beginPath"](), jn[jo(436)](-jr, 0), jn[jo(434)](jr, 0), jn["lineWidth"] = 13, jn["strokeStyle"] = "#222", jn[jo(368)](), jn["beginPath"](), jn[jo(436)](-jr, 0), jn[jo(434)](-jr + this[jo(507)] * jr * 2, 0), jn[jo(697)] = 6.5, jn[jo(599)] = jo(657), jn[jo(368)](), jn[jo(504)](), jn[jo(389)] *= Math[jo(759)](1, Math["max"](0.5, this[jo(482)] / 0.05)), jn[jo(436)](-jr, 0), jn[jo(434)](-jr + this[jo(482)] * jr * 2, 0), jn["lineWidth"] = 8, jn[jo(599)] = jo(836), jn[jo(368)](), jn[jo(511)]();
+      _0x36028c.lineWidth = 2 * _0x17f074 + 10, _0x36028c.lineCap = "round", _0x36028c.lineJoin = "round", _0x36028c.stroke(), _0x36028c.strokeStyle = _0x36028c.fillStyle, _0x36028c.lineWidth -= 10, _0x36028c.stroke();
+    } else {
+      _0x36028c.lineCap = "round";
+      let _0x35b8ba = 0;
+      const _0x415d13 = this.segments.length - 1;
+      for (let _0x334510 = 1; _0x334510 <= _0x415d13; _0x334510++) {
+        const _0x2eb9fd = this.segments[_0x334510 - 1],
+          _0xf7d1b4 = this.segments[_0x334510],
+          _0x986c0c = _0xf7d1b4.interpX - _0x2eb9fd.interpX,
+          _0x3398d9 = _0xf7d1b4.interpY - _0x2eb9fd.interpY;
+        let _0x420478 = Math.hypot(_0x986c0c, _0x3398d9);
+        const _0x4aa476 = Math.atan2(_0x3398d9, _0x986c0c);
+        if (_0x35b8ba += _0x420478, _0xf7d1b4.d = _0x420478, _0xf7d1b4.angle = _0x4aa476, _0x420478 = _0x420478 || 1, _0xf7d1b4.dirX = _0x986c0c / _0x420478, _0xf7d1b4.dirY = _0x3398d9 / _0x420478, _0xf7d1b4.norX = -_0xf7d1b4.dirY, _0xf7d1b4.norY = _0xf7d1b4.dirX, 1 !== _0x334510) {
+          _0x2eb9fd.norX += _0xf7d1b4.norX, _0x2eb9fd.norY += _0xf7d1b4.norY;
+          const _0x4e6434 = Math.hypot(_0x2eb9fd.norX, _0x2eb9fd.norY);
+          _0x2eb9fd.norX /= _0x4e6434, _0x2eb9fd.norY /= _0x4e6434;
+        } else _0x2eb9fd.norX = _0xf7d1b4.norX, _0x2eb9fd.norY = _0xf7d1b4.norY, _0x2eb9fd.angle = _0xf7d1b4.angle, _0x2eb9fd.distance = 0;
+        _0xf7d1b4.distance = _0x35b8ba;
       }
-      this[jo(367)] || this === dz || "" === this["nickname"][jo(616)]() || (jn[jo(808)](), jn[jo(383)](0, -50), jn[jo(389)] = 1, jn[jo(696)] = "bolder 24px Ubuntu", jn[jo(599)] = jo(576), jn[jo(697)] = 3, jn[jo(844)] = "center", jn["textBaseline"] = "bottom", jn[jo(649)](this["nickname"], 0, 0), jn[jo(395)] = jo(546), jn[jo(459)](this[jo(558)], 0, 0), jn["restore"]()), jn["restore"]();
-    } [aq(415)](js, jt, ju = !0) {
-      const jv = aq,
-        jw = Date[jv(853)]();
-      if (jt[jv(697)] = 5, jt[jv(697)], this[jv(367)]) {
-        const jx = (jw - this[jv(586)]) / 500;
-        if (jx > 1) return void jy[jv(440)](js, 1);
-        jt["globalAlpha"] = Math[jv(516)](Math[jv(478)](jx * Math["PI"] * 2)) * (1 - jx) * 0.7;
-      } else jt["globalAlpha"] = 1;
-      const jz = (jw - this[jv(760)]) / 200,
-        ka = kb(this[jv(506)]),
-        kc = ka[jv(875)](kd => 0.81 * kd);
-      if (jz < 1) {
-        const ke = [255, 0, 0],
-          kf = 0.5 * (1 - jz),
-          kg = 1 - kf;
-        for (let kh = 0; kh < 3; kh++) ka[kh] = ka[kh] * kg + ke[kh] * kf, kc[kh] = kc[kh] * kg + ke[kh] * kf;
+      _0x36028c.lineWidth = 5;
+      const _0x5f075f = this.segments[_0x415d13];
+      _0x36028c.beginPath(), _0x36028c.arc(_0x5f075f.interpX, _0x5f075f.interpY, _0x17f074, 0, 2 * Math.PI), _0x36028c.fill(), _0x36028c.stroke();
+      for (let _0x30c33b = _0x415d13; _0x30c33b >= 1; _0x30c33b--) {
+        const _0x5cd7c0 = this.segments[_0x30c33b],
+          _0x45e1fd = this.segments[_0x30c33b - 1];
+        _0x5cd7c0.interpX === _0x45e1fd.interpX && _0x5cd7c0.interpY === _0x45e1fd.interpY || (_0x36028c.beginPath(), _0x36028c.moveTo(_0x5cd7c0.interpX + _0x5cd7c0.norX * _0x17f074, _0x5cd7c0.interpY + _0x5cd7c0.norY * _0x17f074), _0x36028c.lineTo(_0x5cd7c0.interpX - _0x5cd7c0.norX * _0x17f074, _0x5cd7c0.interpY - _0x5cd7c0.norY * _0x17f074), _0x36028c.lineTo(_0x45e1fd.interpX - _0x45e1fd.norX * _0x17f074, _0x45e1fd.interpY - _0x45e1fd.norY * _0x17f074), _0x36028c.lineTo(_0x45e1fd.interpX + _0x45e1fd.norX * _0x17f074, _0x45e1fd.interpY + _0x45e1fd.norY * _0x17f074), _0x36028c.fill(), _0x36028c.beginPath(), _0x36028c.moveTo(_0x45e1fd.interpX - _0x45e1fd.norX * _0x17f074, _0x45e1fd.interpY - _0x45e1fd.norY * _0x17f074), _0x36028c.lineTo(_0x45e1fd.interpX + _0x45e1fd.norX * _0x17f074, _0x45e1fd.interpY + _0x45e1fd.norY * _0x17f074), _0x36028c.strokeStyle = _0x1d0222, _0x36028c.stroke(), _0x36028c.beginPath(), _0x36028c.moveTo(_0x5cd7c0.interpX + _0x5cd7c0.norX * _0x17f074, _0x5cd7c0.interpY + _0x5cd7c0.norY * _0x17f074), _0x36028c.lineTo(_0x45e1fd.interpX + _0x45e1fd.norX * _0x17f074, _0x45e1fd.interpY + _0x45e1fd.norY * _0x17f074), _0x36028c.moveTo(_0x45e1fd.interpX - _0x45e1fd.norX * _0x17f074, _0x45e1fd.interpY - _0x45e1fd.norY * _0x17f074), _0x36028c.lineTo(_0x5cd7c0.interpX - _0x5cd7c0.norX * _0x17f074, _0x5cd7c0.interpY - _0x5cd7c0.norY * _0x17f074), _0x36028c.strokeStyle = _0x47a7bd, _0x36028c.stroke());
       }
-      let ki = jt["fillStyle"] = jv(437) + ka[jv(905)](",") + ")",
-        kj = jt[jv(599)] = jv(437) + kc[jv(905)](",") + ")";
-      const kk = 1 * this[jv(379)],
-        kl = this[jv(890)][0];
-      if (this["isDead"] || hc[jv(433)]) {
-        jt[jv(504)]();
-        for (let km = 0; km < this[jv(890)][jv(771)]; km++) {
-          const {
-            interpX: kn,
-            interpY: kp
-          } = this["segments"][km];
-          0 === km ? jt["moveTo"](kn, kp) : jt["lineTo"](kn, kp);
+      _0x36028c.beginPath();
+      const _0x21f5ab = _0x487612.angle + Math.PI / 2;
+      _0x36028c.arc(_0x487612.interpX, _0x487612.interpY, _0x17f074, _0x21f5ab, _0x21f5ab + Math.PI), _0x36028c.fill(), _0x36028c.stroke();
+    }
+    const _0x5b2818 = (_0x13b2af.faceSkins[this.faceSkin] || {
+      "name": "idk"
+    }).name;
+    if ("Faceless" === _0x5b2818) return;
+    _0x36028c.save(), _0x36028c.translate(_0x487612.interpX, _0x487612.interpY);
+    const _0x3f7417 = _0x17f074 / 30 * (_0x5b2818.startsWith("Kirk") ? 0.7 : 1);
+    let _0x5637af = 0;
+    if ("Gear" === _0x5b2818) {
+      _0x36028c.scale(_0x3f7417, _0x3f7417), _0x36028c.fillStyle = "#111", _0x36028c.fill(_0x351eee), _0x36028c.fillStyle = _0x1d0222, _0x36028c.save();
+      const _0x52c728 = Date.now() / 500 % Math.PI * 2;
+      _0x36028c.rotate(_0x52c728), _0x36028c.translate(10, 0), _0x36028c.rotate(2 * -_0x52c728), _0x36028c.fill(_0x231a1a), _0x36028c.rotate(_0x52c728), _0x36028c.scale(0.35, 0.35), _0x36028c.scale(1 / _0x3f7417, 1 / _0x3f7417);
+    }
+    if ("Cute" === _0x5b2818) {
+      _0x36028c.scale(_0x3f7417, _0x3f7417);
+      const _0x7faf8 = this.isDead ? 1 : this.sad + this.angry,
+        _0x698a89 = 1 - _0x7faf8;
+      _0x36028c.strokeStyle = "#222", _0x36028c.scale(1.15, 1.15), _0x36028c.save(), _0x36028c.translate(0, 9.25 + 1.5 * (this.isDead ? -1 : this.dirY)), _0x698a89 > 0 && (_0x36028c.beginPath(), _0x36028c.ellipse(0, 0, 1.6 * _0x698a89, 2 * _0x698a89, 0, 0, 2 * Math.PI), _0x36028c.fillStyle = "#222", _0x36028c.fill()), _0x7faf8 > 0 && (_0x36028c.beginPath(), _0x36028c.moveTo(-3 * _0x7faf8, 0.7), _0x36028c.quadraticCurveTo(0, -2, 3 * _0x7faf8, 0.7), _0x36028c.lineWidth = 1.5 * _0x7faf8, _0x36028c.stroke()), _0x36028c.restore();
+      for (let _0x493fe4 = 0; _0x493fe4 < 2; _0x493fe4++) {
+        const _0x2b7bba = 9 * (2 * _0x493fe4 - 1),
+          _0x1160b0 = 0 === _0x493fe4 ? 1 : 0,
+          _0x283608 = 1 ^ _0x1160b0;
+        this.isDead ? _0x233622(0.8 * _0x2b7bba, -6, 6, 2) : (_0x36028c.save(), _0x36028c.beginPath(), _0x36028c.moveTo(_0x2b7bba - 6, 4 * _0x1160b0 * this.sad - 15 + 5 * _0x283608 * this.angry), _0x36028c.lineTo(_0x2b7bba + 6, 4 * _0x283608 * this.sad - 15 + 5 * _0x1160b0 * this.angry), _0x36028c.lineTo(_0x2b7bba + 6, 5), _0x36028c.lineTo(_0x2b7bba - 6, 5), _0x36028c.clip(), _0x36028c.beginPath(), _0x36028c.ellipse(_0x2b7bba, -6, 5.5, 8, 0, 0, 2 * Math.PI), _0x36028c.fillStyle = "#222", _0x36028c.lineWidth = 1.25, _0x36028c.fill(), _0x36028c.stroke(), _0x36028c.clip(), _0x36028c.fillStyle = "#fff", _0x36028c.beginPath(), _0x36028c.arc(_0x2b7bba + 3 * this.dirX, 6 * this.dirY - 6, 4.5, 0, 2 * Math.PI), _0x36028c.fill(), _0x36028c.restore());
+      }
+    } else {
+      "Kirkier" === _0x5b2818 && _0x36028c.translate(13 * this.dirX, 13 * this.dirY), "Sarcastic" === _0x5b2818 ? _0x5637af = Math.PI : "Dizzy" === _0x5b2818 && (_0x5637af = Date.now() / 200 % (2 * Math.PI)), _0x36028c.rotate(_0x5637af), _0x36028c.scale(_0x3f7417, _0x3f7417), "Bot" === _0x5b2818 ? (_0x36028c.beginPath(), _0x36028c.moveTo(-13, 14), _0x36028c.lineTo(13, 14), _0x36028c.strokeStyle = _0x36028c.fillStyle = "#333", _0x36028c.lineWidth = 8, _0x36028c.stroke(), _0x36028c.beginPath(), _0x36028c.moveTo(-3, 4), _0x36028c.lineTo(3, 4), _0x36028c.lineTo(0, -2), _0x36028c.closePath(), _0x36028c.lineWidth = 4, _0x36028c.lineJoin = _0x36028c.lineCap = "round", _0x36028c.stroke(), _0x36028c.fill()) : "Moyai" === _0x5b2818 ? (_0x36028c.fillStyle = "#333", function(_0x4ac605, _0x355878) {
+        _0x4ac605.save();
+        const _0x5cd9b1 = 1.5 * 1.15;
+        _0x4ac605.translate(-31, 35), _0x4ac605.scale(_0x5cd9b1, -_0x5cd9b1);
+        for (let _0x3171cc = 0; _0x3171cc < _0x28ea71.length; _0x3171cc++) {
+          _0x4ac605.save();
+          const _0x2ad690 = _0x28ea71[_0x3171cc];
+          _0x4ac605.translate(..._0x2ad690[0]), _0x4ac605.fill(_0x2ad690[1]), _0x4ac605.restore();
         }
-        jt["lineWidth"] = 2 * kk + 10, jt[jv(886)] = jv(796), jt["lineJoin"] = jv(796), jt[jv(368)](), jt[jv(599)] = jt[jv(395)], jt[jv(697)] -= 10, jt["stroke"]();
-      } else {
-        jt[jv(886)] = jv(796);
-        let kq = 0;
-        const kr = this["segments"]["length"] - 1;
-        for (let ks = 1; ks <= kr; ks++) {
-          const kt = this[jv(890)][ks - 1],
-            ku = this["segments"][ks],
-            kv = ku[jv(464)] - kt[jv(464)],
-            kw = ku[jv(680)] - kt[jv(680)];
-          let kx = Math["hypot"](kv, kw);
-          const ky = Math[jv(496)](kw, kv);
-          if (kq += kx, ku["d"] = kx, ku[jv(430)] = ky, kx = kx || 1, ku["dirX"] = kv / kx, ku[jv(883)] = kw / kx, ku["norX"] = -ku[jv(883)], ku[jv(778)] = ku[jv(743)], 1 !== ks) {
-            kt[jv(577)] += ku["norX"], kt["norY"] += ku[jv(778)];
-            const kz = Math["hypot"](kt[jv(577)], kt[jv(778)]);
-            kt[jv(577)] /= kz, kt[jv(778)] /= kz;
-          } else kt["norX"] = ku["norX"], kt[jv(778)] = ku[jv(778)], kt[jv(430)] = ku["angle"], kt[jv(721)] = 0;
-          ku[jv(721)] = kq;
-        }
-        jt[jv(697)] = 5;
-        const la = this[jv(890)][kr];
-        jt[jv(504)](), jt[jv(846)](la[jv(464)], la[jv(680)], kk, 0, 2 * Math["PI"]), jt[jv(414)](), jt[jv(368)]();
-        for (let lc = kr; lc >= 1; lc--) {
-          const ld = this[jv(890)][lc],
-            lf = this[jv(890)][lc - 1];
-          ld["interpX"] === lf[jv(464)] && ld[jv(680)] === lf[jv(680)] || (jt["beginPath"](), jt[jv(436)](ld[jv(464)] + ld[jv(577)] * kk, ld["interpY"] + ld["norY"] * kk), jt[jv(434)](ld["interpX"] - ld[jv(577)] * kk, ld["interpY"] - ld[jv(778)] * kk), jt[jv(434)](lf["interpX"] - lf[jv(577)] * kk, lf[jv(680)] - lf[jv(778)] * kk), jt[jv(434)](lf[jv(464)] + lf[jv(577)] * kk, lf[jv(680)] + lf[jv(778)] * kk), jt[jv(414)](), jt["beginPath"](), jt[jv(436)](lf[jv(464)] - lf["norX"] * kk, lf["interpY"] - lf[jv(778)] * kk), jt[jv(434)](lf["interpX"] + lf["norX"] * kk, lf[jv(680)] + lf[jv(778)] * kk), jt[jv(599)] = ki, jt["stroke"](), jt["beginPath"](), jt[jv(436)](ld[jv(464)] + ld[jv(577)] * kk, ld[jv(680)] + ld[jv(778)] * kk), jt[jv(434)](lf[jv(464)] + lf[jv(577)] * kk, lf[jv(680)] + lf["norY"] * kk), jt[jv(436)](lf["interpX"] - lf[jv(577)] * kk, lf[jv(680)] - lf[jv(778)] * kk), jt[jv(434)](ld[jv(464)] - ld[jv(577)] * kk, ld["interpY"] - ld[jv(778)] * kk), jt[jv(599)] = kj, jt[jv(368)]());
-        }
-        jt[jv(504)]();
-        const lh = kl["angle"] + Math["PI"] / 2;
-        jt["arc"](kl[jv(464)], kl[jv(680)], kk, lh, lh + Math["PI"]), jt["fill"](), jt[jv(368)]();
-      }
-      const li = (bh[jv(545)][this[jv(483)]] || {
-        "name": jv(736)
-      })["name"];
-      if (jv(872) === li) return;
-      jt[jv(808)](), jt["translate"](kl["interpX"], kl[jv(680)]);
-      const lj = kk / 30 * (li[jv(815)](jv(421)) ? 0.7 : 1);
-      let lm = 0;
-      if (jv(818) === li) {
-        jt[jv(422)](lj, lj), jt[jv(395)] = jv(617), jt[jv(414)](ix), jt[jv(395)] = ki, jt[jv(808)]();
-        const ln = Date[jv(853)]() / 500 % Math["PI"] * 2;
-        jt["rotate"](ln), jt[jv(383)](10, 0), jt[jv(913)](2 * -ln), jt[jv(414)](iy), jt["rotate"](ln), jt["scale"](0.35, 0.35), jt["scale"](1 / lj, 1 / lj);
-      }
-      if (jv(364) === li) {
-        jt["scale"](lj, lj);
-        const lo = this["isDead"] ? 1 : this[jv(541)] + this[jv(607)],
-          lp = 1 - lo;
-        jt[jv(599)] = "#222", jt["scale"](1.15, 1.15), jt[jv(808)](), jt[jv(383)](0, 9.25 + 1.5 * (this["isDead"] ? -1 : this[jv(883)])), lp > 0 && (jt[jv(504)](), jt[jv(403)](0, 0, 1.6 * lp, 2 * lp, 0, 0, 2 * Math["PI"]), jt["fillStyle"] = jv(880), jt[jv(414)]()), lo > 0 && (jt[jv(504)](), jt[jv(436)](-3 * lo, 0.7), jt[jv(896)](0, -2, 3 * lo, 0.7), jt["lineWidth"] = 1.5 * lo, jt[jv(368)]()), jt[jv(511)]();
-        for (let lq = 0; lq < 2; lq++) {
-          const lr = 9 * (2 * lq - 1),
-            ls = 0 === lq ? 1 : 0,
-            lt = 1 ^ ls;
-          this[jv(367)] ? lu(0.8 * lr, -6, 6, 2) : (jt["save"](), jt[jv(504)](), jt["moveTo"](lr - 6, 4 * ls * this[jv(541)] - 15 + 5 * lt * this[jv(607)]), jt[jv(434)](lr + 6, 4 * lt * this[jv(541)] - 15 + 5 * ls * this[jv(607)]), jt[jv(434)](lr + 6, 5), jt[jv(434)](lr - 6, 5), jt[jv(871)](), jt[jv(504)](), jt[jv(403)](lr, -6, 5.5, 8, 0, 0, 2 * Math["PI"]), jt[jv(395)] = jv(880), jt["lineWidth"] = 1.25, jt["fill"](), jt["stroke"](), jt["clip"](), jt[jv(395)] = jv(546), jt[jv(504)](), jt[jv(846)](lr + 3 * this[jv(743)], 6 * this[jv(883)] - 6, 4.5, 0, 2 * Math["PI"]), jt[jv(414)](), jt[jv(511)]());
-        }
-      } else {
-        jv(851) === li && jt[jv(383)](13 * this["dirX"], 13 * this[jv(883)]), jv(498) === li ? lm = Math["PI"] : jv(552) === li && (lm = Date["now"]() / 200 % (2 * Math["PI"])), jt["rotate"](lm), jt[jv(422)](lj, lj), jv(491) === li ? (jt[jv(504)](), jt[jv(436)](-13, 14), jt[jv(434)](13, 14), jt[jv(599)] = jt["fillStyle"] = jv(859), jt[jv(697)] = 8, jt[jv(368)](), jt[jv(504)](), jt[jv(436)](-3, 4), jt[jv(434)](3, 4), jt[jv(434)](0, -2), jt[jv(857)](), jt[jv(697)] = 4, jt["lineJoin"] = jt[jv(886)] = jv(796), jt[jv(368)](), jt[jv(414)]()) : jv(613) === li ? (jt[jv(395)] = "#333", function(lv, lw) {
-          const lx = jv;
-          lv[lx(808)]();
-          const ly = 1.5 * 1.15;
-          lv[lx(383)](-31, 35), lv[lx(422)](ly, -ly);
-          for (let lz = 0; lz < iz["length"]; lz++) {
-            lv[lx(808)]();
-            const md = iz[lz];
-            lv["translate"](...md[0]), lv[lx(414)](md[1]), lv[lx(511)]();
-          }
-          lv[lx(511)]();
-        }(jt)) : jv(675) === li ? (jt["save"](), jt[jv(913)](Math["PI"] / 2), jt[jv(395)] = jv(880), jt[jv(696)] = jv(529), jt["textAlign"] = jv(454), jt[jv(531)] = jv(800), this[jv(367)] ? jt[jv(459)]("x(", 0, 0) : 1 === this[jv(350)] ? (jt[jv(459)](":(", 0, 0), jt[jv(459)](">", -18, 0)) : 2 === this[jv(350)] ? jt[jv(459)](":(", 0, 0) : jt[jv(459)](":)", 0, 0), jt["restore"]()) : jv(357) !== li && (jt[jv(504)](), jt["moveTo"](-7, 9.25), jt[jv(896)](0, 6 + (this["isDead"] ? -10 : -10 * this[jv(541)] - 12 * this[jv(607)]) + 9.25, 7, 9.25), jt[jv(599)] = jv(880), jt[jv(697)] = 1.75, jt[jv(368)]());
-        let mf = 7.5;
-        const mg = Math[jv(478)](-lm),
-          mh = Math["cos"](-lm),
-          mj = this["dirX"] * mh - mg * this["dirY"],
-          mk = this[jv(743)] * mg + mh * this["dirY"];
-        if (jv(897) === li) jt["save"](), jt["translate"](-27.5, 7), jt[jv(422)](0.1 * 0.042, 0.042 * -0.1), jt[jv(395)] = jv(880), jt["fill"](jb), jt["restore"]();
+        _0x4ac605.restore();
+      }(_0x36028c)) : "Ascii" === _0x5b2818 ? (_0x36028c.save(), _0x36028c.rotate(Math.PI / 2), _0x36028c.fillStyle = "#222", _0x36028c.font = "bolder 22px monospace", _0x36028c.textAlign = "center", _0x36028c.textBaseline = "middle", this.isDead ? _0x36028c.fillText("x(", 0, 0) : 1 === this.mood ? (_0x36028c.fillText(":(", 0, 0), _0x36028c.fillText(">", -18, 0)) : 2 === this.mood ? _0x36028c.fillText(":(", 0, 0) : _0x36028c.fillText(":)", 0, 0), _0x36028c.restore()) : "All Seeing" !== _0x5b2818 && (_0x36028c.beginPath(), _0x36028c.moveTo(-7, 9.25), _0x36028c.quadraticCurveTo(0, 6 + (this.isDead ? -10 : -10 * this.sad - 12 * this.angry) + 9.25, 7, 9.25), _0x36028c.strokeStyle = "#222", _0x36028c.lineWidth = 1.75, _0x36028c.stroke());
+      let _0x26a620 = 7.5;
+      const _0x4a395b = Math.sin(-_0x5637af),
+        _0x5d498e = Math.cos(-_0x5637af),
+        _0x2faa54 = this.dirX * _0x5d498e - _0x4a395b * this.dirY,
+        _0x59ca49 = this.dirX * _0x4a395b + _0x5d498e * this.dirY;
+      if ("Too cool" === _0x5b2818) _0x36028c.save(), _0x36028c.translate(-27.5, 7), _0x36028c.scale(0.1 * 0.042, 0.042 * -0.1), _0x36028c.fillStyle = "#222", _0x36028c.fill(_0x12659b), _0x36028c.restore();
+      else {
+        if ("Ascii" === _0x5b2818 || "Moyai" === _0x5b2818);
         else {
-          if (jv(675) === li || jv(613) === li);
-          else {
-            if ("Cyclops" === li) {
-              if (this[jv(367)]) lu(0, -6, 6, 3);
-              else {
-                jt[jv(808)](), jt[jv(504)]();
-                const ml = 2 * this[jv(541)],
-                  mn = 4;
-                jt[jv(436)](-mn, -11 + ml), jt[jv(434)](0, 2 * this["angry"] - 11), jt[jv(434)](mn, -11 + ml), jt["lineTo"](mn, 0), jt[jv(434)](-mn, 0), jt[jv(857)](), jt["fillStyle"] = "#222", jt[jv(697)] = 1, jt[jv(414)](), jt["stroke"](), jt[jv(871)](), jt[jv(395)] = "#fff", jt[jv(715)](1.75 * mj - 2.5, 4.25 * mk - 8, 5, 5), jt[jv(511)]();
-              }
-            } else {
-              if (jv(357) === li) this["isDead"] ? lu(0, 0, 20, 7) : (jt[jv(504)](), jt[jv(846)](0, 0, 18, 0, 2 * Math["PI"]), jt[jv(395)] = jv(880), jt[jv(414)](), jt[jv(504)](), jt[jv(846)](7 * mj, 7 * mk, 8, 0, 2 * Math["PI"]), jt["fillStyle"] = jv(546), jt["fill"]());
-              else {
-                if ("Bot" === li) {
-                  const mq = -9,
-                    mr = 7;
-                  mf *= 1.5;
-                  for (let mu = 0; mu < 2; mu++) {
-                    const mv = (2 * mu - 1) * mf,
-                      mw = 0 === mu ? 1 : 0,
-                      mx = 1 ^ mw;
-                    this[jv(367)] ? lu(mv, mq, 6, 5) : (jt[jv(808)](), jt[jv(504)](), jt["moveTo"](mv - mr, mq - mr + (this[jv(541)] * mw * 4 + this[jv(607)] * mx * 6)), jt["lineTo"](mv - mr, mq + mr), jt[jv(434)](mv + mr, mq + mr), jt["lineTo"](mv + mr, mq - mr + (this[jv(607)] * mw * 6 + this[jv(541)] * mx * 4)), jt[jv(857)](), jt[jv(871)](), jt["fillStyle"] = jv(859), jt[jv(504)](), jt[jv(846)](mv, mq, mr, 0, 2 * Math["PI"]), jt["fill"](), jt[jv(511)]());
+          if ("Cyclops" === _0x5b2818) {
+            if (this.isDead) _0x233622(0, -6, 6, 3);
+            else {
+              _0x36028c.save(), _0x36028c.beginPath();
+              const _0x55b413 = 2 * this.sad,
+                _0x20f8a5 = 4;
+              _0x36028c.moveTo(-_0x20f8a5, -11 + _0x55b413), _0x36028c.lineTo(0, 2 * this.angry - 11), _0x36028c.lineTo(_0x20f8a5, -11 + _0x55b413), _0x36028c.lineTo(_0x20f8a5, 0), _0x36028c.lineTo(-_0x20f8a5, 0), _0x36028c.closePath(), _0x36028c.fillStyle = "#222", _0x36028c.lineWidth = 1, _0x36028c.fill(), _0x36028c.stroke(), _0x36028c.clip(), _0x36028c.fillStyle = "#fff", _0x36028c.fillRect(1.75 * _0x2faa54 - 2.5, 4.25 * _0x59ca49 - 8, 5, 5), _0x36028c.restore();
+            }
+          } else {
+            if ("All Seeing" === _0x5b2818) this.isDead ? _0x233622(0, 0, 20, 7) : (_0x36028c.beginPath(), _0x36028c.arc(0, 0, 18, 0, 2 * Math.PI), _0x36028c.fillStyle = "#222", _0x36028c.fill(), _0x36028c.beginPath(), _0x36028c.arc(7 * _0x2faa54, 7 * _0x59ca49, 8, 0, 2 * Math.PI), _0x36028c.fillStyle = "#fff", _0x36028c.fill());
+            else {
+              if ("Bot" === _0x5b2818) {
+                const _0x25a341 = -9,
+                  _0x230082 = 7;
+                _0x26a620 *= 1.5;
+                for (let _0xe4ad6 = 0; _0xe4ad6 < 2; _0xe4ad6++) {
+                  const _0x45b231 = (2 * _0xe4ad6 - 1) * _0x26a620,
+                    _0x375eed = 0 === _0xe4ad6 ? 1 : 0,
+                    _0x1371b8 = 1 ^ _0x375eed;
+                  this.isDead ? _0x233622(_0x45b231, _0x25a341, 6, 5) : (_0x36028c.save(), _0x36028c.beginPath(), _0x36028c.moveTo(_0x45b231 - _0x230082, _0x25a341 - _0x230082 + (this.sad * _0x375eed * 4 + this.angry * _0x1371b8 * 6)), _0x36028c.lineTo(_0x45b231 - _0x230082, _0x25a341 + _0x230082), _0x36028c.lineTo(_0x45b231 + _0x230082, _0x25a341 + _0x230082), _0x36028c.lineTo(_0x45b231 + _0x230082, _0x25a341 - _0x230082 + (this.angry * _0x375eed * 6 + this.sad * _0x1371b8 * 4)), _0x36028c.closePath(), _0x36028c.clip(), _0x36028c.fillStyle = "#333", _0x36028c.beginPath(), _0x36028c.arc(_0x45b231, _0x25a341, _0x230082, 0, 2 * Math.PI), _0x36028c.fill(), _0x36028c.restore());
+                }
+              } else {
+                if ("Creepy" === _0x5b2818) {
+                  const _0x3ccb4e = -7,
+                    _0x2d84d9 = 3.5;
+                  for (let _0x1fabd8 = 0; _0x1fabd8 < 2; _0x1fabd8++) {
+                    const _0x5af6bb = (2 * _0x1fabd8 - 1) * _0x26a620,
+                      _0x365b9e = 0 === _0x1fabd8 ? 1 : 0,
+                      _0x4a59ec = 1 ^ _0x365b9e;
+                    this.isDead ? _0x233622(_0x5af6bb, _0x3ccb4e, 4, 2) : (_0x36028c.save(), _0x36028c.beginPath(), _0x36028c.moveTo(_0x5af6bb - _0x2d84d9, _0x3ccb4e - _0x2d84d9 + (this.sad * _0x365b9e * 2 + this.angry * _0x4a59ec * 3)), _0x36028c.lineTo(_0x5af6bb - _0x2d84d9, _0x3ccb4e + _0x2d84d9), _0x36028c.lineTo(_0x5af6bb + _0x2d84d9, _0x3ccb4e + _0x2d84d9), _0x36028c.lineTo(_0x5af6bb + _0x2d84d9, _0x3ccb4e - _0x2d84d9 + (this.angry * _0x365b9e * 3 + this.sad * _0x4a59ec * 2)), _0x36028c.closePath(), _0x36028c.clip(), _0x36028c.fillStyle = "#222", _0x36028c.beginPath(), _0x36028c.arc(_0x5af6bb, _0x3ccb4e, _0x2d84d9, 0, 2 * Math.PI), _0x36028c.fill(), _0x36028c.restore());
                   }
                 } else {
-                  if ("Creepy" === li) {
-                    const mz = -7,
-                      na = 3.5;
-                    for (let nb = 0; nb < 2; nb++) {
-                      const nf = (2 * nb - 1) * mf,
-                        nh = 0 === nb ? 1 : 0,
-                        ni = 1 ^ nh;
-                      this[jv(367)] ? lu(nf, mz, 4, 2) : (jt[jv(808)](), jt["beginPath"](), jt[jv(436)](nf - na, mz - na + (this["sad"] * nh * 2 + this[jv(607)] * ni * 3)), jt[jv(434)](nf - na, mz + na), jt[jv(434)](nf + na, mz + na), jt[jv(434)](nf + na, mz - na + (this[jv(607)] * nh * 3 + this[jv(541)] * ni * 2)), jt["closePath"](), jt[jv(871)](), jt[jv(395)] = jv(880), jt[jv(504)](), jt[jv(846)](nf, mz, na, 0, 2 * Math["PI"]), jt[jv(414)](), jt[jv(511)]());
+                  for (let _0x26c511 = 0; _0x26c511 < 2; _0x26c511++) {
+                    const _0x49c354 = (2 * _0x26c511 - 1) * _0x26a620;
+                    if (this.isDead) {
+                      _0x233622(_0x49c354, -6, 5, 2.5);
+                      continue;
                     }
-                  } else {
-                    for (let nj = 0; nj < 2; nj++) {
-                      const nk = (2 * nj - 1) * mf;
-                      if (this["isDead"]) {
-                        lu(nk, -6, 5, 2.5);
-                        continue;
-                      }
-                      const nl = 0 === nj ? 1 : 0,
-                        nm = 1 ^ nl;
-                      jt[jv(808)](), jt["beginPath"](), jt[jv(436)](nk + -2.75, 2 * nl * this["sad"] - 11 + 2.5 * nm * this[jv(607)]), jt[jv(434)](nk + 2.75, 2 * nm * this[jv(541)] - 11 + 2.5 * nl * this["angry"]), jt[jv(434)](nk + 2.75, 0), jt[jv(434)](nk + -2.75, 0), jt[jv(857)](), jt[jv(395)] = jv(880), jt["lineWidth"] = 1, jt["fill"](), jt["stroke"](), jt[jv(871)](), jt[jv(395)] = "#fff", jt[jv(715)](nk - 2.5 + 1.75 * mj, 4.25 * mk - 8, 5, 5), jt[jv(511)]();
-                    }
-                    jv(786) === li ? (jt[jv(808)](), jt[jv(504)](), jt["arc"](0, 0, 30, 0, 2 * Math["PI"]), jt["clip"](), jt["translate"](7.5, -5.7), jt[jv(504)](), jt[jv(846)](0, 0, 8.5, 0, 2 * Math["PI"]), jt["fillStyle"] = "#222", jt[jv(414)](), jt[jv(599)] = jv(880), jt["beginPath"](), jt[jv(436)](-20, -30), jt["quadraticCurveTo"](-3, 0, 30, 0), jt[jv(697)] = 4, jt[jv(368)](), jt[jv(511)]()) : jv(345) === li && (jt[jv(808)](), jt["translate"](7.5, -5.7), jt[jv(504)](), jt[jv(846)](0, 0, 8.5, 0, 2 * Math["PI"]), jt["fillStyle"] = jv(439), jt[jv(414)](), jt[jv(697)] = 1, jt[jv(599)] = jv(859), jt["stroke"](), jt[jv(383)](8.5, 0), jt[jv(504)](), jt[jv(436)](0, 0), jt[jv(434)](0, 18), jt["stroke"](), jt[jv(511)]());
+                    const _0x4c8715 = 0 === _0x26c511 ? 1 : 0,
+                      _0x3dd8e2 = 1 ^ _0x4c8715;
+                    _0x36028c.save(), _0x36028c.beginPath(), _0x36028c.moveTo(_0x49c354 + -2.75, 2 * _0x4c8715 * this.sad - 11 + 2.5 * _0x3dd8e2 * this.angry), _0x36028c.lineTo(_0x49c354 + 2.75, 2 * _0x3dd8e2 * this.sad - 11 + 2.5 * _0x4c8715 * this.angry), _0x36028c.lineTo(_0x49c354 + 2.75, 0), _0x36028c.lineTo(_0x49c354 + -2.75, 0), _0x36028c.closePath(), _0x36028c.fillStyle = "#222", _0x36028c.lineWidth = 1, _0x36028c.fill(), _0x36028c.stroke(), _0x36028c.clip(), _0x36028c.fillStyle = "#fff", _0x36028c.fillRect(_0x49c354 - 2.5 + 1.75 * _0x2faa54, 4.25 * _0x59ca49 - 8, 5, 5), _0x36028c.restore();
                   }
+                  "Pirate" === _0x5b2818 ? (_0x36028c.save(), _0x36028c.beginPath(), _0x36028c.arc(0, 0, 30, 0, 2 * Math.PI), _0x36028c.clip(), _0x36028c.translate(7.5, -5.7), _0x36028c.beginPath(), _0x36028c.arc(0, 0, 8.5, 0, 2 * Math.PI), _0x36028c.fillStyle = "#222", _0x36028c.fill(), _0x36028c.strokeStyle = "#222", _0x36028c.beginPath(), _0x36028c.moveTo(-20, -30), _0x36028c.quadraticCurveTo(-3, 0, 30, 0), _0x36028c.lineWidth = 4, _0x36028c.stroke(), _0x36028c.restore()) : "Intellectual" === _0x5b2818 && (_0x36028c.save(), _0x36028c.translate(7.5, -5.7), _0x36028c.beginPath(), _0x36028c.arc(0, 0, 8.5, 0, 2 * Math.PI), _0x36028c.fillStyle = "hsla(0,0%,100%,0.5)", _0x36028c.fill(), _0x36028c.lineWidth = 1, _0x36028c.strokeStyle = "#333", _0x36028c.stroke(), _0x36028c.translate(8.5, 0), _0x36028c.beginPath(), _0x36028c.moveTo(0, 0), _0x36028c.lineTo(0, 18), _0x36028c.stroke(), _0x36028c.restore());
                 }
               }
             }
           }
         }
       }
-
-      function lu(nn, np, nr = 10, ns = 5) {
-        const nt = jv;
-        jt[nt(808)](), jt[nt(383)](nn, np), jt[nt(913)](Math["PI"] / 4), jt[nt(422)](nr, nr), jt["beginPath"](), jt[nt(436)](0, -1), jt[nt(434)](0, 1), jt["moveTo"](-1, 0), jt[nt(434)](1, 0), jt[nt(697)] = ns / nr, jt["strokeStyle"] = nt(859), jt["stroke"](), jt[nt(511)]();
-      }
-      jv(818) === li && jt[jv(511)](), jt[jv(511)]();
     }
-  }
 
-  function nu(nv) {
-    return function(nx) {
-      const nz = a0_0x36aa,
-        oc = Math[nz(653)](5 * Math[nz(878)]());
-      for (let oe = 0; oe < nx[nz(771)]; oe++) nx[oe] = Math[nz(774)](0, nx[oe] - oc);
-      return nx;
-    }(cf(nv));
-  }
-  crypto[aq(485)] = crypto[aq(485)] || function() {
-    const of = aq;
-    return ([10000000] + -1000 + -4000 + -8000 + -100000000000)[of(569)](/[018]/g, og => (og ^ crypto["getRandomValues"](new Uint8Array(1))[0] & 15 >> og / 4)[of(348)](16));
-  }, window[aq(438)] = function() {
-    const oh = aq;
-    oi["style"][oh(729)] = oh(501), oj(window[oh(790)][oh(520)][oh(569)](oh(602), "ws")), ok();
-  }, document["body"]["oncontextmenu"] = function() {
-    return !1;
-  };
-  const ol = function(om) {
-      const oq = {};
-      for (let or in om) oq[om[or]] = or;
-      return oq;
-    }({
-      "invalidProtocol": 0,
-      "outdatedVersion": 1,
-      "tooManyConnections": 2,
-      "AFK": 3
-    }),
-    oi = document[aq(644)](".loader"),
-    ot = document[aq(644)](aq(754)),
-    gu = document[aq(644)](aq(665)),
-    ou = document[aq(644)](".lb"),
-    ov = document[aq(644)](aq(636)),
-    ow = document[aq(644)](aq(659));
-  if (gh) {
-    ou[aq(894)][aq(452)](aq(655)), ou[aq(830)][aq(597)] = "all";
-    const ox = document[aq(644)](aq(794));
-    ox[aq(894)][aq(399)](aq(655)), ox["ontouchstart"] = ou[aq(807)] = function() {
-      const oy = aq;
-      ox[oy(894)][oy(461)](oy(655)), ou[oy(894)][oy(461)](oy(655));
-    };
-  }
-  const oz = document[aq(644)](".menu"),
-    pa = document[aq(644)](".settings"),
-    pb = document[aq(644)](aq(723)),
-    pc = document[aq(644)](aq(705)),
-    pd = document[aq(644)](aq(609));
-  pe(aq(682), "/docs/pp.html"), pe("#tosBtn", aq(688));
-  const pf = document[aq(644)](aq(776));
-  pf[aq(673)] = function() {
-    const ph = aq;
-    pj || (window[ph(790)][ph(584)] = "https://discord.com/api/oauth2/authorize?client_id=995547764983341057&redirect_uri=" + encodeURIComponent(window["location"][ph(520)] + ph(351)) + ph(879) + encodeURIComponent(btoa(pk)));
-  };
-  const pm = document[aq(644)](aq(384));
-
-  function pe(pq, pr) {
-    const ps = aq;
-    document[ps(644)](pq)["onclick"] = function() {
-      const pu = ps;
-      window[pu(562)](pr, pu(784));
-    };
-  }
-  pm[aq(673)] = function() {
-    const pv = aq;
-    pk == localStorage[pv(867)] && delete localStorage[pv(867)], delete localStorage[pv(691)], pw && pw[pv(788)]();
-  }, pe(aq(455), aq(396)), pe(aq(737), aq(663));
-  const py = document[aq(644)](aq(608)),
-    pz = (document[aq(644)](aq(834)), document[aq(644)](".shop"));
-  gh && pz[aq(894)][aq(452)](aq(662));
-  const gs = document[aq(644)](aq(671)),
-    qb = document[aq(644)](aq(530)),
-    qd = document[aq(644)](aq(363)),
-    qe = document["querySelector"](aq(876)),
-    qf = document[aq(644)](aq(432)),
-    qg = document[aq(820)]("div"),
-    qh = document["querySelector"](aq(526)),
-    qi = [],
-    qj = document[aq(644)](aq(548));
-  qj[aq(673)] = function() {
-    const qk = aq;
-    for (let ql = 0; ql < 2; ql++) {
-      const qm = document[qk(644)]("." + (0 === ql ? "face" : qk(463)) + qk(735));
-      qm && qm[qk(615)](qk(368), qk(623));
+    function _0x233622(_0x16597b, _0x44e117, _0x358c02 = 10, _0x1cb78f = 5) {
+      _0x36028c.save(), _0x36028c.translate(_0x16597b, _0x44e117), _0x36028c.rotate(Math.PI / 4), _0x36028c.scale(_0x358c02, _0x358c02), _0x36028c.beginPath(), _0x36028c.moveTo(0, -1), _0x36028c.lineTo(0, 1), _0x36028c.moveTo(-1, 0), _0x36028c.lineTo(1, 0), _0x36028c.lineWidth = _0x1cb78f / _0x358c02, _0x36028c.strokeStyle = "#333", _0x36028c.stroke(), _0x36028c.restore();
     }
-    localStorage[qk(809)] = -1, localStorage["equipped_face_skin"] = -1, this["classList"][qk(452)]("btn-disabled");
+    "Gear" === _0x5b2818 && _0x36028c.restore(), _0x36028c.restore();
+  }
+}
+
+function _0x5dad13(_0x5551ff) {
+  return function(_0x51f024) {
+    const _0x4e60c2 = Math.floor(5 * Math.random());
+    for (let _0x5d921e = 0; _0x5d921e < _0x51f024.length; _0x5d921e++) _0x51f024[_0x5d921e] = Math.max(0, _0x51f024[_0x5d921e] - _0x4e60c2);
+    return _0x51f024;
+  }(_0xa8836b(_0x5551ff));
+}
+crypto.randomUUID = crypto.randomUUID || function() {
+  return ([10000000] + -1000 + -4000 + -8000 + -100000000000).replace(/[018]/g, _0x490ac0 => (_0x490ac0 ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> _0x490ac0 / 4).toString(16));
+}, window.onload = function() {
+  _0x12c763.style.display = "none", _0x2c57cb("https://digworm.io".replace("http", "ws")), _0x22c229();
+}, document.body.oncontextmenu = function() {
+  return false;
+};
+const _0x2bc59b = function(_0x5f1a29) {
+    const _0x160d15 = {};
+    for (let _0x4a21fc in _0x5f1a29) _0x160d15[_0x5f1a29[_0x4a21fc]] = _0x4a21fc;
+    return _0x160d15;
+  }({
+    "invalidProtocol": 0,
+    "outdatedVersion": 1,
+    "tooManyConnections": 2,
+    "AFK": 3
+  }),
+  _0x12c763 = document.querySelector(".loader"),
+  _0x1c2450 = document.querySelector(".connecting"),
+  _0x3bef3e = document.querySelector(".grid"),
+  _0x13b57e = document.querySelector(".lb"),
+  _0x14a726 = document.querySelector(".lb-content"),
+  _0x273fb7 = document.querySelector(".lb-header span");
+if (_0x300310) {
+  _0x13b57e.classList.add("slide-up"), _0x13b57e.style.pointerEvents = "all";
+  const _0x1aa954 = document.querySelector(".lb-btn");
+  _0x1aa954.classList.remove("slide-up"), _0x1aa954.ontouchstart = _0x13b57e.ontouchstart = function() {
+    _0x1aa954.classList.toggle("slide-up"), _0x13b57e.classList.toggle("slide-up");
   };
-  const qn = [];
+}
+const _0x275119 = document.querySelector(".menu"),
+  _0x5cf790 = document.querySelector(".settings"),
+  _0x4fc487 = document.querySelector(".changelog"),
+  _0x449e60 = document.querySelector(".settings-btn"),
+  _0x1f10aa = document.querySelector(".changelog-btn");
+_0x4b4f37("#ppBtn", "/docs/pp.html"), _0x4b4f37("#tosBtn", "/docs/tos.html");
+const _0xe9a438 = document.querySelector(".login-btn");
+_0xe9a438.onclick = function() {
+  _0x2f807e || (window.location.href = "https://discord.com/api/oauth2/authorize?client_id=995547764983341057&redirect_uri=" + encodeURIComponent(window.location.origin + "/discord") + "&response_type=code&scope=identify&state=" + encodeURIComponent(btoa(_0x5c51f7)));
+};
+const _0x5d345a = document.querySelector(".logout-btn");
 
-  function qo(qp, qq, qr) {
-    const qs = aq;
-    let qt;
-    qp = qp["map"]((qu, qv) => (qu["id"] = qv, qu))[qs(666)](function(qw, qx) {
-      const qy = qs;
-      return qw[qy(502)] - qx[qy(502)];
-    }), qq[qs(903)] = "";
-    for (let qz = 0; qz < qp["length"]; qz++) {
-      qz % 4 == 0 && (qt = document["createElement"](qs(773)), qt[qs(894)]["add"](qs(605)), qq[qs(812)](qt));
-      const ra = qp[qz];
-      qg[qs(903)] = qs(717) + qr + qs(906) + qr + "Skin" + qz + "\">\n\t\t\t<div class=\"shop-item-preview\"></div>\n\t\t\t<span stroke=\"" + ra[qs(517)] + qs(661) + ra[qs(502)][qs(366)]() + qs(826);
-      const rb = qg[qs(522)][0];
-      ra[qs(592)] = rb, rf(rb)[qr + "Skin"] = ra["id"], qt[qs(812)](rb), rb[qs(629)] = qt, rb["tempDiv"] = document[qs(820)](qs(773));
-    }
+function _0x4b4f37(_0x2a413a, _0x3ef207) {
+  document.querySelector(_0x2a413a).onclick = function() {
+    window.open(_0x3ef207, "_blank");
+  };
+}
+_0x5d345a.onclick = function() {
+  _0x5c51f7 == localStorage.account_id && delete localStorage.account_id, delete localStorage.discord_data, _0x81c091 && _0x81c091.close();
+}, _0x4b4f37(".discord-btn", "https://discord.gg/WkYHsUQF5a"), _0x4b4f37(".reddit-btn", "https://www.reddit.com/r/digworm/");
+const _0x5a64b3 = document.querySelector(".overlay"),
+  _0x2c8c09 = (document.querySelector(".game .overlay"), document.querySelector(".shop"));
+_0x300310 && _0x2c8c09.classList.add("fullsize-shop");
+const _0x3af8d3 = document.querySelector(".game"),
+  _0x369b80 = document.querySelector(".gameover"),
+  _0x55f3f5 = document.querySelector(".continue-btn"),
+  _0xb883b5 = document.querySelector(".face-skins"),
+  _0x3ce74a = document.querySelector(".body-skins"),
+  _0x1d54fb = document.createElement("div"),
+  _0x39eeab = document.querySelector(".new-skins"),
+  _0x478f63 = [],
+  _0x2becd8 = document.querySelector(".unequip-btn");
+_0x2becd8.onclick = function() {
+  for (let _0x2610c0 = 0; _0x2610c0 < 2; _0x2610c0++) {
+    const _0xfdf35c = document.querySelector("." + (0 === _0x2610c0 ? "face" : "body") + "-skin [stroke=Unequip]");
+    _0xfdf35c && _0xfdf35c.setAttribute("stroke", "Equip");
   }
+  localStorage.equipped_body_skin = -1, localStorage.equipped_face_skin = -1, this.classList.add("btn-disabled");
+};
+const _0x16234b = [];
 
-  function kb(rh) {
-    switch (rh) {
-      case 0:
-        return [181, 136, 95];
-      case 1:
-        return [96, 150, 181];
-      case 2:
-        return [109, 181, 96];
-      case -1:
-        return [153, 153, 153];
-    }
+function _0x2867f8(_0x447abd, _0x492629, _0x49aeec) {
+  let _0x48fa09;
+  _0x447abd = _0x447abd.map((_0xfb1f36, _0x15510e) => (_0xfb1f36.id = _0x15510e, _0xfb1f36)).sort(function(_0x39449a, _0x435a32) {
+    return _0x39449a.price - _0x435a32.price;
+  }), _0x492629.innerHTML = "";
+  for (let _0x2c34c7 = 0; _0x2c34c7 < _0x447abd.length; _0x2c34c7++) {
+    _0x2c34c7 % 4 == 0 && (_0x48fa09 = document.createElement("div"), _0x48fa09.classList.add("shop-row"), _0x492629.appendChild(_0x48fa09));
+    const _0x2a3be0 = _0x447abd[_0x2c34c7];
+    _0x1d54fb.innerHTML = "\n\t\t<div class=\"shop-item " + _0x49aeec + "-skin " + _0x49aeec + "Skin" + _0x2c34c7 + "\">\n\t\t\t<div class=\"shop-item-preview\"></div>\n\t\t\t<span stroke=\"" + _0x2a3be0.name + "\" class=\"shop-item-name\"></span>\n\t\t\t<div class=\"btn gold-btn btn-disabled\">\n\t\t\t\t<i class=\"fa fa-circle\"></i>\n\t\t\t\t<span stroke=\"" + _0x2a3be0.price.toLocaleString() + "\"></span>\n\t\t\t</div>\n\t\t</div>";
+    const _0x104f6a = _0x1d54fb.children[0];
+    _0x2a3be0.shopItemEl = _0x104f6a, _0x172d18(_0x104f6a)[_0x49aeec + "Skin"] = _0x2a3be0.id, _0x48fa09.appendChild(_0x104f6a), _0x104f6a.initialParent = _0x48fa09, _0x104f6a.tempDiv = document.createElement("div");
   }
-  document["onmousemove"] = function(rj) {
-    const rk = aq;
-    for (let rl = 0; rl < qn[rk(771)]; rl++) {
-      const rm = qn[rl],
-        rp = rm[rk(518)],
-        rq = rm[rk(670)][rk(767)](),
-        rr = Math["atan2"](rj[rk(764)] - (rq[rk(719)] + rq[rk(843)] / 2), rj[rk(887)] - (rq[rk(583)] + rq[rk(512)] / 2));
-      rp[rk(589)] = rp[rk(743)], rp["oldDirY"] = rp[rk(883)], rp[rk(365)] = Math["cos"](rr), rp[rk(573)] = Math["sin"](rr);
+}
+
+function _0x7318e0(_0x4b9a51) {
+  switch (_0x4b9a51) {
+    case 0:
+      return [181, 136, 95];
+    case 1:
+      return [96, 150, 181];
+    case 2:
+      return [109, 181, 96];
+    case -1:
+      return [153, 153, 153];
+  }
+}
+document.onmousemove = function(_0x294734) {
+  for (let _0x223282 = 0; _0x223282 < _0x16234b.length; _0x223282++) {
+    const _0x4a4caf = _0x16234b[_0x223282],
+      _0x28c182 = _0x4a4caf.previewPlayer,
+      _0x55c3de = _0x4a4caf.previewEl.getBoundingClientRect(),
+      _0x525de3 = Math.atan2(_0x294734.clientY - (_0x55c3de.top + _0x55c3de.height / 2), _0x294734.clientX - (_0x55c3de.left + _0x55c3de.width / 2));
+    _0x28c182.oldDirX = _0x28c182.dirX, _0x28c182.oldDirY = _0x28c182.dirY, _0x28c182.newDirX = Math.cos(_0x525de3), _0x28c182.newDirY = Math.sin(_0x525de3);
+  }
+};
+let _0x6a2f21 = 0;
+const _0x1f17e2 = _0x172d18(document.querySelector(".my-skin-preview"));
+
+function _0x172d18(_0xa9446b) {
+  const _0x30064e = document.createElement("canvas");
+  _0x30064e.style.position = "absolute", _0x30064e.style.top = "0", _0x30064e.style.left = "0", _0x30064e.style.width = "100%", _0xa9446b.style.position = "relative", _0xa9446b.insertBefore(_0x30064e, _0xa9446b.children[0]);
+  const _0x504413 = _0x30064e.getContext("2d"),
+    _0x557ce0 = _0xa9446b.querySelector(".shop-item-preview"),
+    _0xeabb01 = new _0x1d5e9a(0, 0, 30);
+  for (let _0x4803a2 = 0; _0x4803a2 < 2; _0x4803a2++) _0xeabb01.segments.push({
+    "interpX": -100 * _0x4803a2,
+    "interpY": 0
+  });
+  const _0x59cc30 = {
+    "previewPlayer": _0xeabb01,
+    "el": _0xa9446b,
+    "previewEl": _0x557ce0,
+    "faceSkin": -1,
+    "bodySkin": -1,
+    "render"() {
+      if (0 === _0x2c8c09.getBoundingClientRect().width) return;
+      const _0x1acc9c = _0xa9446b.getBoundingClientRect();
+      if (0 === _0x1acc9c.height || 0 === _0x1acc9c.width) return;
+      const _0x18e24f = _0x1acc9c.width * window.devicePixelRatio,
+        _0x42e7df = _0x1acc9c.height * window.devicePixelRatio;
+      _0x30064e.width === _0x18e24f && _0x30064e.height === _0x42e7df || (_0x30064e.width = _0x18e24f, _0x30064e.height = _0x42e7df);
+      const _0x576a95 = _0x557ce0.getBoundingClientRect();
+      _0x504413.clearRect(0, 0, _0x30064e.width, _0x30064e.height), _0x504413.save(), _0x504413.scale(window.devicePixelRatio, window.devicePixelRatio);
+      const _0x854180 = _0xeabb01.segments[0],
+        _0x36335a = _0x576a95.width / 2;
+      _0x504413.translate(_0x576a95.left - _0x1acc9c.left + _0x36335a, _0x576a95.top - _0x1acc9c.top + _0x36335a);
+      const _0x292c06 = _0x36335a / _0xeabb01.interpR;
+      _0x504413.scale(_0x292c06, _0x292c06), _0x504413.translate(-_0x854180.x, -_0x854180.y), _0xeabb01.faceSkin = this.faceSkin, _0xeabb01.bodySkin = this.bodySkin, _0xeabb01.mood = _0x6a2f21, _0xeabb01.dirX += 0.2 * (_0xeabb01.newDirX - _0xeabb01.dirX), _0xeabb01.dirY += 0.2 * (_0xeabb01.newDirY - _0xeabb01.dirY), _0xeabb01.interpFace(), _0xeabb01.draw(0, _0x504413, false), _0x504413.restore();
     }
   };
-  let rs = 0;
-  const ru = rf(document["querySelector"](aq(579)));
+  return _0x16234b.push(_0x59cc30), _0x59cc30;
+}
+_0x55f3f5.onclick = function() {
+  _0x58a27d.classList.remove("minimize-show"), _0x3af8d3.classList.remove("game-show"), _0x81c091 && _0x81c091.readyState === _0x81c091.OPEN && setTimeout(function() {
+    _0x3bef3e.classList.add("grid-show");
+  }, 500);
+}, _0x5a64b3.onclick = function() {
+  _0x2c8c09.classList.remove("dialog-show"), _0x5a64b3.classList.remove("overlay-show");
+}, _0x449e60.onclick = _0x1f10aa.onclick = function() {
+  const _0x505984 = this == _0x449e60 ? _0x4fc487 : _0x5cf790;
+  (this == _0x449e60 ? _0x5cf790 : _0x4fc487).classList.toggle("dialog-show"), _0x505984.classList.remove("dialog-show"), this === _0x1f10aa && (_0x3467f9 = false);
+}, _0x275119.onclick = function(_0x34cc8e) {
+  _0x34cc8e.target == this && (_0x4fc487.classList.remove("dialog-show"), _0x5cf790.classList.remove("dialog-show"));
+};
+const _0xce418f = document.querySelectorAll(".dialog-close");
+for (let _0x1fbdf7 = 0; _0x1fbdf7 < _0xce418f.length; _0x1fbdf7++) _0xce418f[_0x1fbdf7].onclick = function() {
+  const _0x174a52 = this.parentNode.parentNode;
+  _0x174a52.classList.remove("dialog-show"), _0x174a52 == _0x2c8c09 ? _0x5a64b3.classList.remove("overlay-show") : _0x174a52 == _0xc957a5 && _0x3bef3e.classList.remove("grid-pushup");
+};
+const _0x2e659c = document.querySelector(".shop-btn"),
+  _0xf5135f = document.querySelector(".squad-btn"),
+  _0xc957a5 = document.querySelector(".squad"),
+  _0x14bf3b = document.querySelectorAll(".shop .dialog-content"),
+  _0x10a115 = document.querySelector(".play-btn");
+let _0x3467f9 = true,
+  _0xd875fd = {};
 
-  function rf(rv) {
-    const rw = aq,
-      rx = document[rw(820)](rw(865));
-    rx[rw(830)][rw(557)] = rw(407), rx[rw(830)][rw(719)] = "0", rx[rw(830)][rw(583)] = "0", rx["style"]["width"] = rw(712), rv[rw(830)][rw(557)] = rw(462), rv[rw(566)](rx, rv[rw(522)][0]);
-    const ry = rx["getContext"]("2d"),
-      rz = rv[rw(644)](".shop-item-preview"),
-      sb = new ed(0, 0, 30);
-    for (let sd = 0; sd < 2; sd++) sb["segments"]["push"]({
-      "interpX": -100 * sd,
-      "interpY": 0
-    });
-    const sf = {
-      "previewPlayer": sb,
-      "el": rv,
-      "previewEl": rz,
-      "faceSkin": -1,
-      "bodySkin": -1,
-      "render"() {
-        const sg = rw;
-        if (0 === pz[sg(767)]()[sg(512)]) return;
-        const sj = rv[sg(767)]();
-        if (0 === sj[sg(843)] || 0 === sj["width"]) return;
-        const sn = sj[sg(512)] * window[sg(426)],
-          sq = sj[sg(843)] * window[sg(426)];
-        rx["width"] === sn && rx[sg(843)] === sq || (rx[sg(512)] = sn, rx[sg(843)] = sq);
-        const sr = rz[sg(767)]();
-        ry[sg(565)](0, 0, rx[sg(512)], rx[sg(843)]), ry[sg(808)](), ry["scale"](window[sg(426)], window[sg(426)]);
-        const ss = sb[sg(890)][0],
-          st = sr[sg(512)] / 2;
-        ry[sg(383)](sr[sg(583)] - sj["left"] + st, sr[sg(719)] - sj[sg(719)] + st);
-        const su = st / sb[sg(379)];
-        ry[sg(422)](su, su), ry[sg(383)](-ss["x"], -ss["y"]), sb[sg(483)] = this[sg(483)], sb[sg(398)] = this[sg(398)], sb[sg(350)] = rs, sb[sg(743)] += 0.2 * (sb[sg(365)] - sb[sg(743)]), sb[sg(883)] += 0.2 * (sb[sg(573)] - sb["dirY"]), sb["interpFace"](), sb[sg(415)](0, ry, !1), ry[sg(511)]();
-      }
-    };
-    return qn[rw(745)](sf), sf;
+function _0x25c5a6() {
+  if (!_0x270468.checked) return;
+  let _0x122389 = 0,
+    _0x2279b5 = 0;
+  _0xd875fd.KeyW || _0xd875fd.ArrowUp ? _0x2279b5 = -1 : (_0xd875fd.KeyS || _0xd875fd.ArrowDown) && (_0x2279b5 = 1), _0xd875fd.KeyA || _0xd875fd.ArrowLeft ? _0x122389 = -1 : (_0xd875fd.KeyD || _0xd875fd.ArrowRight) && (_0x122389 = 1), (0 !== _0x122389 || 0 !== _0x2279b5) && _0x34c76f(Math.atan2(_0x2279b5, _0x122389));
+}
+
+function _0x6870d5() {
+  const _0x5aa417 = parseInt(localStorage.equipped_face_skin),
+    _0x30a305 = parseInt(localStorage.equipped_body_skin);
+  return [_0x351fa8(_0x5aa417), _0x351fa8(_0x30a305)];
+
+  function _0x351fa8(_0x4d9a9e) {
+    return isNaN(_0x4d9a9e) ? -1 : _0x4d9a9e;
   }
-  qd["onclick"] = function() {
-    const sv = aq;
-    gn[sv(894)][sv(399)]("minimize-show"), gs[sv(894)][sv(399)]("game-show"), pw && pw["readyState"] === pw[sv(381)] && setTimeout(function() {
-      const sw = sv;
-      gu[sw(894)]["add"](sw(417));
-    }, 500);
-  }, py[aq(673)] = function() {
-    const sz = aq;
-    pz["classList"][sz(399)]("dialog-show"), py["classList"][sz(399)]("overlay-show");
-  }, pc[aq(673)] = pd["onclick"] = function() {
-    const tb = aq,
-      td = this == pc ? pb : pa;
-    (this == pc ? pa : pb)[tb(894)]["toggle"](tb(594)), td[tb(894)][tb(399)](tb(594)), this === pd && (tg = !1);
-  }, oz[aq(673)] = function(th) {
-    const tj = aq;
-    th[tj(361)] == this && (pb["classList"][tj(399)](tj(594)), pa[tj(894)][tj(399)](tj(594)));
-  };
-  const tk = document[aq(753)](".dialog-close");
-  for (let tl = 0; tl < tk[aq(771)]; tl++) tk[tl][aq(673)] = function() {
-    const tm = aq,
-      tn = this["parentNode"][tm(356)];
-    tn[tm(894)][tm(399)](tm(594)), tn == pz ? py[tm(894)]["remove"](tm(515)) : tn == tq && gu[tm(894)]["remove"](tm(746));
-  };
-  const tr = document[aq(644)](".shop-btn"),
-    tt = document[aq(644)](aq(386)),
-    tq = document[aq(644)](".squad"),
-    tu = document[aq(753)](aq(646)),
-    tv = document[aq(644)](".play-btn");
-  let tg = !0,
-    tw = {};
+}
 
-  function ty() {
-    const tz = aq;
-    if (!he["checked"]) return;
-    let ua = 0,
-      ub = 0;
-    tw[tz(912)] || tw[tz(824)] ? ub = -1 : (tw["KeyS"] || tw[tz(635)]) && (ub = 1), tw[tz(690)] || tw["ArrowLeft"] ? ua = -1 : (tw[tz(373)] || tw[tz(686)]) && (ua = 1), (0 !== ua || 0 !== ub) && ud(Math[tz(496)](ub, ua));
-  }
+function _0x51ba04() {
+  _0x4fc487.classList.remove("dialog-show"), _0x5cf790.classList.remove("dialog-show");
+}
 
-  function ue() {
-    const uf = aq,
-      ug = parseInt(localStorage[uf(726)]),
-      uh = parseInt(localStorage["equipped_body_skin"]);
-    return [uj(ug), uj(uh)];
-
-    function uj(uk) {
-      return isNaN(uk) ? -1 : uk;
-    }
-  }
-
-  function gz() {
-    const um = aq;
-    pb[um(894)][um(399)](um(594)), pa[um(894)][um(399)](um(594));
-  }
-
-  function uo(uq) {
-    const ur = aq,
-      ut = document["querySelectorAll"](uq + ur(814));
-    for (let uu = 0; uu < ut[ur(771)]; uu++) ut[uu][ur(673)] = function() {
-      const uw = ur,
-        ux = document[uw(644)](uq + uw(418));
-      if (ux && ux[uw(894)][uw(399)](uw(837)), this["classList"]["add"](uw(837)), uw(492) === uq) localStorage[uw(813)] = this[uw(801)]("data-gamemode");
-      else {
-        if (uw(783) === uq) {
-          for (let uy = 0; uy < qi[uw(771)]; uy++) {
-            const uz = qi[uy];
-            0 !== uu ? uz[uw(356)] !== uz[uw(629)] && (uz[uw(629)][uw(566)](uz, uz["tempDiv"]), uz["tempDiv"][uw(399)]()) : uz[uw(356)] !== qh && (uz[uw(629)][uw(566)](uz[uw(588)], uz), qh[uw(812)](uz));
-          }
-          for (let vb = 0; vb < tu[uw(771)]; vb++) tu[vb]["style"]["display"] = vb === uu ? "" : uw(501);
+function _0x5459e6(_0x4ec0c1) {
+  const _0x4b0bdd = document.querySelectorAll(_0x4ec0c1 + " .btn");
+  for (let _0x43de47 = 0; _0x43de47 < _0x4b0bdd.length; _0x43de47++) _0x4b0bdd[_0x43de47].onclick = function() {
+    const _0x32664d = document.querySelector(_0x4ec0c1 + " .btn-active");
+    if (_0x32664d && _0x32664d.classList.remove("btn-active"), this.classList.add("btn-active"), ".gamemodes" === _0x4ec0c1) localStorage.gamemode = this.getAttribute("data-gamemode");
+    else {
+      if (".tabs" === _0x4ec0c1) {
+        for (let _0x2c19a7 = 0; _0x2c19a7 < _0x478f63.length; _0x2c19a7++) {
+          const _0x461b9a = _0x478f63[_0x2c19a7];
+          0 !== _0x43de47 ? _0x461b9a.parentNode !== _0x461b9a.initialParent && (_0x461b9a.initialParent.insertBefore(_0x461b9a, _0x461b9a.tempDiv), _0x461b9a.tempDiv.remove()) : _0x461b9a.parentNode !== _0x39eeab && (_0x461b9a.initialParent.insertBefore(_0x461b9a.tempDiv, _0x461b9a), _0x39eeab.appendChild(_0x461b9a));
         }
+        for (let _0x11c872 = 0; _0x11c872 < _0x14bf3b.length; _0x11c872++) _0x14bf3b[_0x11c872].style.display = _0x11c872 === _0x43de47 ? "" : "none";
       }
-    };
-  }
+    }
+  };
+}
 
-  function vc() {
-    const vd = aq,
-      vf = document["querySelector"](vd(741) + localStorage["gamemode"] + "\"]");
-    vf && vf[vd(819)]();
+function _0x4f3a31() {
+  const _0x2e4a4e = document.querySelector("[data-gamemode=\"" + localStorage.gamemode + "\"]");
+  _0x2e4a4e && _0x2e4a4e.click();
+}
+document.onkeydown = function(_0xd31696) {
+  if (9 === _0xd31696.which) return false;
+  _0xd31696.repeat || (_0xd875fd[_0xd31696.code] = true, _0x25c5a6(), _0x38f741());
+}, document.onkeyup = function(_0x162e63) {
+  delete _0xd875fd[_0x162e63.code], _0x25c5a6(), _0x38f741(), "KeyC" === _0x162e63.code ? _0x39e650.toBlob(function(_0x57cfb3) {
+    navigator.clipboard.write([new ClipboardItem({
+      "image/png": _0x57cfb3
+    })]);
+  }) : "Escape" === _0x162e63.code ? _0x3af8d3.classList.contains("game-show") ? _0x4ddb7f.click() : _0x58a27d.classList.contains("minimize-show") && _0x176966.click() : "Enter" === _0x162e63.code && (_0x3bef3e.classList.contains("grid-show") ? _0x10a115.click() : "" === _0x369b80.style.display && _0x3af8d3.classList.contains("game-show") && _0x55f3f5.click());
+}, _0x10a115.onclick = function() {
+  _0x51ba04(), _0x3bef3e.classList.remove("grid-show"), setTimeout(function() {
+    const [_0x3d03d3, _0x404441] = _0x6870d5(),
+      _0x4a7fe4 = new TextEncoder().encode(_0x4e19d2.value.slice(0, 15)),
+      _0x3dd1bf = new DataView(new ArrayBuffer(1 + (-1 !== _0x3d03d3 ? 1 : 0) + (-1 !== _0x404441 ? 1 : 0) + _0x4a7fe4.length));
+    let _0xea347b = 0,
+      _0x51e856 = parseInt(localStorage.gamemode);
+    (isNaN(_0x51e856) || _0x51e856 > 2) && (_0x51e856 = 0), _0x3dd1bf.setUint8(_0xea347b++, _0x168cd0(0, _0x51e856 << 2 | (-1 !== _0x3d03d3 ? 1 : 0) | (-1 !== _0x404441 ? 2 : 0))), -1 !== _0x3d03d3 && _0x3dd1bf.setUint8(_0xea347b++, _0x3d03d3), -1 !== _0x404441 && _0x3dd1bf.setUint8(_0xea347b++, _0x404441);
+    for (let _0x1502f3 = 0; _0x1502f3 < _0x4a7fe4.length; _0x1502f3++) _0x3dd1bf.setUint8(_0xea347b++, _0x4a7fe4[_0x1502f3]);
+    _0x5f0f6b(_0x3dd1bf);
+  }, 200);
+}, _0x2e659c.onclick = function() {
+  _0x2c8c09.querySelector(".tabs .btn").click(), _0x2c8c09.classList.add("dialog-show"), _0x5a64b3.classList.add("overlay-show"), _0x308366 = _0x129df8 = null, _0x6a2f21 = 0;
+}, _0xf5135f.onclick = function() {
+  _0xc957a5.classList.add("dialog-show"), _0x3bef3e.classList.add("grid-pushup");
+}, _0x5459e6(".gamemodes"), _0x5459e6(".tabs"), _0x4f3a31(), (function() {
+  const _0x28960a = document.createElement("canvas");
+  _0x28960a.width = _0x28960a.height = 20;
+  const _0x219f42 = _0x28960a.getContext("2d"),
+    _0x2127c9 = _0x219f42.createImageData(20, 20),
+    _0x2ba584 = _0x2127c9.data;
+  for (let _0x1f0b99 = 0; _0x1f0b99 < _0x2ba584.length; _0x1f0b99 += 4) _0x5dad13(_0x5df57f.dirt), _0x2ba584[_0x1f0b99] = 0, _0x2ba584[_0x1f0b99 + 1] = 0, _0x2ba584[_0x1f0b99 + 2] = 0, _0x2ba584[_0x1f0b99 + 3] = 10 * Math.random();
+  _0x219f42.putImageData(_0x2127c9, 0, 0);
+  const _0x41619d = document.createElement("style");
+  _0x41619d.innerText = "\n\t.bg {\n\t\tbackground-image: url(" + _0x28960a.toDataURL() + ");\n\t\tbackground-size: 200px;\n\t\tanimation: bg 15s linear infinite;\n\t\timage-rendering: pixelated;\n\t}\n\n\t@keyframes bg {\n\t\tfrom {\n\t\t\tbackground-position: 0 0;\n\t\t}\n\t\tto {\n\t\t\tbackground-position: -200px -200px;\n\t\t}\n\t}\n\t", document.body.appendChild(_0x41619d), _0x275119.classList.add("bg");
+}());
+const _0x3bfee1 = [];
+let _0x4ed6b3 = 0;
+
+function _0x583b94(_0x1a4408) {
+  _0x4d9fc5.score = _0x1a4408, _0x4ed6b3 = Math.max(_0x1a4408, _0x4ed6b3), _0x3bfee1.push(_0x1a4408);
+}
+let _0x50f852 = document.querySelector(".score-graph");
+const _0x313112 = document.querySelectorAll(".gold-preview span"),
+  _0x524d74 = document.getElementById("goldCanvas"),
+  _0x3e1028 = _0x524d74.getContext("2d"),
+  _0x39e650 = document.getElementById("canvas");
+_0x1f31f7();
+const _0x540ea8 = _0x39e650.getContext("2d");
+
+function _0x1f31f7() {
+  const _0x3797ee = _0x421c4c.checked ? window.devicePixelRatio : 1;
+  _0x39e650.width = _0x524d74.width = window.innerWidth * _0x3797ee, _0x39e650.height = _0x524d74.height = window.innerHeight * _0x3797ee, _0x39e650.style.width = _0x524d74.style.width = window.innerWidth + "px", _0x39e650.style.height = _0x524d74.style.height = window.innerHeight + "px";
+}
+window.onresize = function() {
+  _0x1f31f7(), _0xb61337(), _0x1acd51(), _0x160376();
+};
+const _0x136be1 = document.querySelector(".alert"),
+  _0x5e7a48 = _0x136be1.querySelector(".alert-desc"),
+  _0x1b3468 = document.querySelector(".hud"),
+  _0x2dc90f = [_0x275119, _0x1b3468, _0x369b80, _0x4b31bc, _0x136be1];
+let _0x3e54c8 = 1;
+
+function _0xb61337() {
+  _0x3e54c8 = Math.max(window.innerWidth / 1366, window.innerHeight / 657) * (_0x300310 && !_0x5c1a36 ? 1.6 : 1);
+  for (let _0x4b0ccd = 0; _0x4b0ccd < _0x2dc90f.length; _0x4b0ccd++) {
+    const _0x53ce59 = _0x2dc90f[_0x4b0ccd];
+    let _0x21259c = _0x3e54c8;
+    _0x53ce59.style.transform = "scale(" + _0x21259c + ")", _0x53ce59.style.transformOrigin = "0 0", _0x53ce59.style.width = window.innerWidth / _0x21259c + "px", _0x53ce59.style.height = window.innerHeight / _0x21259c + "px";
   }
-  document[aq(578)] = function(vg) {
-    const vh = aq;
-    if (9 === vg[vh(798)]) return !1;
-    vg[vh(683)] || (tw[vg[vh(429)]] = !0, ty(), vj());
-  }, document["onkeyup"] = function(vl) {
-    const vm = aq;
-    delete tw[vl[vm(429)]], ty(), vj(), vm(751) === vl["code"] ? fm["toBlob"](function(vn) {
-      const vo = vm;
-      navigator[vo(835)][vo(513)]([new ClipboardItem({
-        "image/png": vn
-      })]);
-    }) : vm(582) === vl[vm(429)] ? gs[vm(894)][vm(431)]("game-show") ? gp[vm(819)]() : gn["classList"][vm(431)](vm(524)) && gw[vm(819)]() : vm(378) === vl["code"] && (gu[vm(894)][vm(431)](vm(417)) ? tv[vm(819)]() : "" === qb["style"][vm(729)] && gs[vm(894)][vm(431)]("game-show") && qd[vm(819)]());
-  }, tv["onclick"] = function() {
-    const vp = aq;
-    gz(), gu[vp(894)]["remove"](vp(417)), setTimeout(function() {
-      const vq = vp,
-        [vr, vs] = ue(),
-        vt = new TextEncoder()[vq(679)](hf[vq(758)]["slice"](0, 15)),
-        vu = new DataView(new ArrayBuffer(1 + (-1 !== vr ? 1 : 0) + (-1 !== vs ? 1 : 0) + vt[vq(771)]));
-      let vv = 0,
-        vw = parseInt(localStorage[vq(813)]);
-      (isNaN(vw) || vw > 2) && (vw = 0), vu["setUint8"](vv++, bc(0, vw << 2 | (-1 !== vr ? 1 : 0) | (-1 !== vs ? 2 : 0))), -1 !== vr && vu[vq(469)](vv++, vr), -1 !== vs && vu[vq(469)](vv++, vs);
-      for (let vz = 0; vz < vt[vq(771)]; vz++) vu[vq(469)](vv++, vt[vz]);
-      hb(vu);
-    }, 200);
-  }, tr[aq(673)] = function() {
-    const wb = aq;
-    pz[wb(644)](wb(685))[wb(819)](), pz[wb(894)][wb(452)](wb(594)), py["classList"][wb(452)](wb(515)), wc = wd = null, rs = 0;
-  }, tt[aq(673)] = function() {
-    const we = aq;
-    tq["classList"][we(452)]("dialog-show"), gu[we(894)][we(452)]("grid-pushup");
-  }, uo(aq(492)), uo(aq(783)), vc(), (function() {
-    const wh = aq,
-      wj = document[wh(820)](wh(865));
-    wj[wh(512)] = wj[wh(843)] = 20;
-    const wk = wj[wh(634)]("2d"),
-      wl = wk["createImageData"](20, 20),
-      wm = wl[wh(694)];
-    for (let wn = 0; wn < wm["length"]; wn += 4) nu(cd[wh(449)]), wm[wn] = 0, wm[wn + 1] = 0, wm[wn + 2] = 0, wm[wn + 3] = 10 * Math[wh(878)]();
-    wk[wh(706)](wl, 0, 0);
-    const wo = document[wh(820)](wh(830));
-    wo[wh(406)] = wh(672) + wj[wh(626)]() + wh(523), document["body"]["appendChild"](wo), oz[wh(894)][wh(452)]("bg");
+}
+_0xb61337();
+let _0x3960c7 = 0,
+  _0x3e16bb = 0;
+
+function _0x27ec78(_0x1fa5aa) {
+  return _0x1fa5aa < 0.01 ? "0" : (_0x1fa5aa = Math.floor(_0x1fa5aa)) >= 1000000 ? parseFloat((_0x1fa5aa / 1000000).toFixed(2)) + "m" : _0x1fa5aa >= 1000 ? parseFloat((_0x1fa5aa / 1000).toFixed(1)) + "k" : _0x1fa5aa;
+}
+const _0x5d723c = document.querySelector(".stats");
+
+function _0x120c1c(_0x2280ab) {
+  const _0x34942d = [Math.floor(_0x2280ab / 3600000), Math.floor(_0x2280ab % 3600000 / 60000), Math.floor(_0x2280ab % 60000 / 1000)],
+    _0x563146 = ["h", "m", "s"];
+  let _0x384a21 = "";
+  for (let _0x3a29bd = 0; _0x3a29bd < _0x34942d.length; _0x3a29bd++) {
+    const _0x6c151d = _0x34942d[_0x3a29bd];
+    (_0x6c151d > 0 || 2 == _0x3a29bd) && (_0x384a21 += _0x6c151d + _0x563146[_0x3a29bd] + " ");
+  }
+  return _0x384a21;
+}
+
+function _0x160376() {
+  if ("none" === _0x369b80.style.display) return;
+  for (; _0x3bfee1.length < 2;) _0x3bfee1.push(0);
+  const _0xd17652 = Math.max(_0x4ed6b3, 1000);
+  let _0x38ebe7 = "-2,2 ";
+  const _0x40e923 = _0x3bfee1.length - 1;
+  for (let _0x3090f2 = 0; _0x3090f2 < _0x3bfee1.length; _0x3090f2++) {
+    const _0x3158b3 = 0.975 - _0x3bfee1[_0x3090f2] / _0xd17652 * 0.95;
+    _0x38ebe7 += _0x3090f2 / _0x40e923 + "," + _0x3158b3 + " ", _0x3090f2 === _0x40e923 && (_0x38ebe7 += "2," + _0x3158b3 + " ");
+  }
+  _0x38ebe7 += "2,2";
+  const _0x308e3d = _0x7318e0(_0x30f1bc.team),
+    _0x15e10e = "rgb(" + _0x308e3d.join(",") + ")",
+    _0x2c3705 = "rgb(" + _0x308e3d.map(_0x321237 => 1.3 * _0x321237) + ")";
+  _0x1d54fb.innerHTML = "\n\t<svg class=\"score-graph\" width=\"100%\" height=\"100\" viewBox=\"0 0 1 1\" preserveAspectRatio=\"none\">\n\t\t<polygon points=\"" + _0x38ebe7 + "\" stroke=\"" + _0x2c3705 + "\" fill=\"" + _0x15e10e + "\" stroke-width=\"4\" vector-effect=\"non-scaling-stroke\" opacity=\"0.35\"/>\n\t</svg>";
+  const _0x19d256 = _0x1d54fb.children[0];
+  _0x50f852.parentNode.insertBefore(_0x19d256, _0x50f852), _0x50f852.remove(), _0x50f852 = _0x19d256;
+}
+const _0x600e07 = [];
+let _0x2049c4, _0x30f1bc, _0x81c091, _0x10429d, _0x547ef1;
+
+function _0x88d960() {
+  _0x18e6b2 = false, _0x14a726.innerHTML = "", _0x352372.length = 0, _0x30f1bc = null, _0x2049c4 = null, _0x26fa79 = null, _0x5e0aec.length = 0, _0x600e07.length = 0, _0x2a89f4.length = 0, _0x3960c7 = 0, _0x3e16bb = 0;
+}
+
+function _0x2c57cb(_0x3c9d22) {
+  if (console.log("Connecting to " + _0x3c9d22 + "..."), _0x1c2450.classList.add("connecting-show"), _0x58a27d.classList.remove("minimize-show"), _0x55f3f5.click(), _0x3bef3e.classList.remove("grid-show"), _0x5a64b3.onclick(), _0x40a389.length = 0, _0x88d960(), _0x10429d = null, _0x547ef1 = 0, _0x5c4116 = null, _0x39411e = 0, _0x2f807e = null, _0x5d345a.style.display = _0xe9a438.style.display = _0x31a6c2.style.display = "none", _0x81c091) {
+    try {
+      _0x81c091.close();
+    } catch (_0x4bf6c5) {}
+    _0x81c091.onopen = _0x81c091.onmessage = _0x81c091.onclose = null, _0x81c091 = null;
+  }
+  _0x81c091 = new WebSocket(_0x3c9d22);
+  _0x81c091.binaryType = "arraybuffer", _0x81c091.onopen = _0x13813b, _0x81c091.onmessage = _0x985610, _0x81c091.onclose = _0x504edd;
+}
+const _0x2227ac = document.querySelector(".avatar"),
+  _0x299268 = document.querySelector(".username"),
+  _0x31a6c2 = document.querySelector(".user");
+let _0x5c51f7, _0x2f807e;
+
+function _0x13813b() {
+  var _0x3b4a12;
+  if (console.log("Connected!"), (function() {
+      _0x16234b.length = 1;
+      for (let _0x4d0d86 in _0x13b2af) {
+        const _0x28ce40 = _0x13b2af[_0x4d0d86];
+        for (let _0x1bbb9f = 0; _0x1bbb9f < _0x28ce40.length; _0x1bbb9f++) delete _0x28ce40[_0x1bbb9f].owned, delete _0x28ce40[_0x1bbb9f].purchaseSent;
+      }
+      _0x2867f8(_0x13b2af.faceSkins, _0xb883b5, "face"), _0x2867f8(_0x13b2af.bodySkins, _0x3ce74a, "body"), _0x478f63.length = 0, _0x39eeab.innerHTML = "";
+      const _0x3b3cfa = _0x13b2af.faceSkins.concat(_0x13b2af.bodySkins).sort(function(_0x3cd08b, _0x2ae957) {
+          return _0x2ae957.createdAt - _0x3cd08b.createdAt;
+        }),
+        _0x1482b3 = Math.min(4, _0x3b3cfa.length);
+      for (let _0x1c5c7e = 0; _0x1c5c7e < _0x1482b3; _0x1c5c7e++) _0x478f63.push(_0x3b3cfa[_0x1c5c7e].shopItemEl);
+    }()), _0xca1554(localStorage.account_id) || (localStorage.account_id = crypto.randomUUID()), _0x5c51f7 = localStorage.account_id, _0x2f807e = localStorage.discord_data, _0x2f807e || ("discord_data", _0x3b4a12 = document.cookie.match(RegExp("(?:^|;\\s*)" + "discord_data".replace(/([.*+?\^$(){}|\[\]\/\\])/g, "\\$1") + "=([^;]*)")), _0x2f807e = _0x3b4a12 ? _0x3b4a12[1] : null, _0x2f807e && (_0x2f807e = decodeURIComponent(_0x2f807e)), document.cookie = "discord_data=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;"), _0x2f807e) try {
+    const _0x3f774a = _0x2f807e;
+    if (_0x2f807e = JSON.parse(decodeURIComponent(escape(atob(_0x3f774a)))), !_0xca1554(_0x2f807e.accountId)) throw new Error("invalid uuid");
+    _0x5c51f7 = _0x2f807e.accountId, _0x299268.setAttribute("stroke", _0x2f807e.name), _0x2f807e.avatar && (_0x2227ac.style.backgroundImage = "url(" + _0x2f807e.avatar + ")"), localStorage.discord_data = _0x3f774a;
+  } catch (_0xa944ca) {
+    _0x2f807e = null, delete localStorage.discord_data, console.error(_0xa944ca);
+  }
+  const _0xcb1fa3 = new DataView(new ArrayBuffer(5 + _0x5c51f7.length));
+  _0xcb1fa3.setUint8(0, _0x168cd0(3, 0)), _0xcb1fa3.setUint32(1, 6);
+  for (let _0x55108b = 0; _0x55108b < _0x5c51f7.length; _0x55108b++) _0xcb1fa3.setUint8(5 + _0x55108b, _0x5c51f7.charCodeAt(_0x55108b));
+  _0x5f0f6b(_0xcb1fa3);
+}
+let _0x1f334c = 0;
+const _0x5e0aec = [];
+let _0x18e6b2 = false,
+  _0x352372 = [];
+
+function _0x5308d7(_0x370618, _0x1f828f, _0x29f254) {
+  const _0x183f66 = document.createElement("div");
+  _0x183f66.classList.add("lb-item");
+  const _0x1d2495 = document.createElement("div");
+  _0x1d2495.classList.add("lb-bar"), _0x183f66.appendChild(_0x1d2495);
+  const _0x48c7d1 = document.createElement("span");
+  _0x183f66.appendChild(_0x48c7d1), _0x14a726.appendChild(_0x183f66);
+  const _0x5533c7 = {
+    "name": _0x370618,
+    "score": _0x1f828f,
+    "iScore": 0,
+    "percent": 0,
+    "iPercent": 0,
+    "lbItemEl": _0x183f66,
+    "lbBarEl": _0x1d2495,
+    "lbTextEl": _0x48c7d1,
+    "team": -1,
+    "update": function() {
+      this.iScore += 0.1 * (this.score - this.iScore), this.iPercent += 0.1 * (this.percent - this.iPercent), this.lbTextEl.setAttribute("stroke", (this.name ? this.name + " - " : "") + _0x27ec78(this.iScore)), this.lbBarEl.style.width = this.iPercent + "%";
+    },
+    "setTeam": function(_0x479182 = -1) {
+      _0x5533c7.team = _0x479182, this.lbBarEl.style.background = -1 === _0x479182 ? "" : "rgb(" + _0x7318e0(_0x479182).join(",") + ")";
+    }
+  };
+  return _0x5533c7.setTeam(_0x29f254), _0x5533c7.update(), _0x352372.push(_0x5533c7), _0x5533c7;
+}
+const _0x4d9fc5 = _0x5308d7("", 0);
+
+function _0x4083d5() {
+  if (0 === _0x352372.length) return;
+  const _0x23ec83 = _0x352372[0];
+  _0x23ec83.percent = _0x23ec83.iPercent = 100;
+  let _0x15d7c8 = _0x23ec83.isMe;
+  for (let _0x5dd368 = 1; _0x5dd368 < _0x352372.length; _0x5dd368++) {
+    const _0x3e5aec = _0x352372[_0x5dd368];
+    _0x23d427(_0x3e5aec, _0x23ec83);
+    const _0x454362 = _0x3e5aec.lbItemEl;
+    _0x454362.parentNode.appendChild(_0x454362), _0x3e5aec.isMe && (_0x15d7c8 = true);
+  }
+  _0x15d7c8 || (_0x23d427(_0x4d9fc5, _0x23ec83), _0x14a726.appendChild(_0x4d9fc5.lbItemEl));
+}
+
+function _0x23d427(_0x3d2160, _0x4fb937) {
+  _0x3d2160.percent = 100 * Math.min(1, _0x3d2160.score / _0x4fb937.score || 0);
+}
+_0x4d9fc5.lbItemEl.classList.add("my-lb-item"), _0x4d9fc5.isMe = true;
+const _0x2a89f4 = [];
+let _0x4a4951 = 0;
+Math.sqrt(2);
+let _0x403b0e = 0;
+const _0x40a389 = [];
+
+function _0x49cfb1(_0x2aacdf, _0x2e946b) {
+  const _0x2924c0 = _0x13b2af[_0x2aacdf + "Skins"][_0x2e946b];
+  _0x2924c0.owned = true;
+  const _0x3c6e5f = _0x2924c0.shopItemEl.querySelector(".btn");
+  _0x3c6e5f.classList.remove("gold-btn"), _0x3c6e5f.classList.add("blue-btn"), _0x3c6e5f.classList.remove("btn-disabled"), _0x3c6e5f.innerHTML = "<span stroke=\"Equip\"></span>";
+  const _0x2333ff = "equipped_" + _0x2aacdf + "_skin";
+  _0x3c6e5f.onclick = function() {
+    const _0x59ec84 = document.querySelector("." + _0x2aacdf + "-skin [stroke=Unequip]");
+    _0x59ec84 && _0x59ec84.setAttribute("stroke", "Equip");
+    const _0xfa4f2 = _0x59ec84 && _0x59ec84.parentNode === this;
+    _0xfa4f2 || _0x3c6e5f.children[0].setAttribute("stroke", "Unequip"), localStorage[_0x2333ff] = _0xfa4f2 ? -1 : _0x2e946b;
+    const _0x4408dd = _0x6870d5();
+    _0x2becd8.classList[-1 === _0x4408dd[0] && -1 === _0x4408dd[1] ? "add" : "remove"]("btn-disabled");
+  }, parseInt(localStorage[_0x2333ff]) === _0x2e946b && _0x3c6e5f.onclick();
+}
+
+function _0x7b638f() {
+  _0x1c27f0("face"), _0x1c27f0("body");
+}
+
+function _0x1c27f0(_0x4f149d) {
+  const _0x3ba59a = _0x13b2af[_0x4f149d + "Skins"];
+  for (let _0x1d8e04 = 0; _0x1d8e04 < _0x3ba59a.length; _0x1d8e04++) {
+    const _0x3f9dee = _0x3ba59a[_0x1d8e04];
+    if (_0x3f9dee.owned) continue;
+    const _0x378a56 = _0x3f9dee.shopItemEl.querySelector(".btn");
+    _0x403b0e >= _0x3f9dee.price ? (_0x378a56.classList.remove("btn-disabled"), _0x378a56.onclick = function() {
+      if (_0x3f9dee.purchaseSent || _0x40a389.length > 0) return;
+      _0x3f9dee.purchaseSent = true;
+      const _0xb0d6dd = new DataView(new ArrayBuffer(2));
+      _0xb0d6dd.setUint8(0, _0x168cd0(4, "face" === _0x4f149d ? 0 : 1)), _0xb0d6dd.setUint8(1, _0x1d8e04), _0x5f0f6b(_0xb0d6dd), _0x378a56.classList.add("btn-disabled"), _0x378a56.blur(), _0x40a389.push({
+        "skin": _0x3f9dee,
+        "i": _0x1d8e04,
+        "prefix": _0x4f149d
+      });
+    }) : (_0x378a56.classList.add("btn-disabled"), _0x378a56.onclick = null);
+  }
+}
+
+function _0x35beb4() {
+  const _0x57a42f = _0x403b0e.toLocaleString("en", {
+      "notation": "compact"
+    }).toLowerCase();
+  for (let _0x1c0b5c = 0; _0x1c0b5c < _0x313112.length; _0x1c0b5c++) _0x313112[_0x1c0b5c].innerText = _0x57a42f;
+}
+
+function _0x3ad8a1(_0x20d47f) {
+  for (_0x20d47f = Math.ceil(_0x20d47f / 2); _0x20d47f--;) _0x340b44.push({
+    "spawnTime": (_0x340b44[_0x340b44.length - 1] || {
+      "spawnTime": 0
+    }).spawnTime + 0.03,
+    "x": 0,
+    "y": -20,
+    "vx": 1.5 * (2 * Math.random() - 1),
+    "vy": 1 * (2 * Math.random() - 1),
+    "angle": 6.28 * Math.random(),
+    "angleSpeed": 0.1 * Math.random() + 0.1
+  });
+}
+let _0x3880e2, _0x405b8c;
+const _0x55a969 = document.querySelector(".reward-btns"),
+  _0x546592 = _0x55a969.querySelector(".arrow"),
+  _0x1e0bb0 = document.getElementById("rewardStatus");
+
+function _0x685918(_0x42053e) {
+  let _0x3ecc0a = Math.ceil(_0x42053e / 1000 / 60);
+  const _0xb5555f = Math.floor(_0x3ecc0a / 60);
+  _0x3ecc0a %= 60;
+  let _0x241b96 = "";
+
+  function _0x25b7c1(_0x5ea8ce) {
+    return _0x5ea8ce > 1 ? "s " : " ";
+  }
+  return _0xb5555f > 0 && (_0x241b96 += _0xb5555f + " hour" + _0x25b7c1(_0xb5555f)), 0 != _0xb5555f && 0 == _0x3ecc0a || (_0x241b96 += _0x3ecc0a + " min" + _0x25b7c1(_0x3ecc0a)), _0x241b96;
+}
+_0x55a969.innerHTML = "";
+for (let _0x5d4283 = 0; _0x5d4283 < _0x2c79c4.length; _0x5d4283++) _0x55a969.innerHTML += "<div class=\"btn btn-disabled\"><span stroke=\"" + _0x2c79c4[_0x5d4283] + "\"></span></div>";
+let _0x4fd577;
+
+function _0x17d3a6() {
+  const _0x23e8af = _0x55a969.querySelector(".gold-btn");
+  _0x23e8af && (_0x23e8af.classList.remove("gold-btn"), _0x23e8af.classList.add("btn-disabled"), _0x23e8af.onclick = null);
+  const _0x53254 = _0x55a969.children[Math.min(_0x2c79c4.length - 1, _0x3880e2)];
+  _0x3880e2 < _0x2c79c4.length && (_0x4fd577 = _0x53254, _0x53254.classList.add("gold-btn"), _0x53254.classList.add("btn-disabled"), _0x53254.onclick = function() {
+    this.rewardSent = true, this.classList.add("btn-disabled"), _0x5f0f6b(new Uint8Array([_0x168cd0(5, 0)]));
+  }), _0x53254.appendChild(_0x546592);
+}
+const _0x46f427 = document.querySelector(".lb-footer");
+let _0x211aa4, _0x26fa79, _0x54c0ce = {};
+
+function _0x3c9e42(_0x2095ac) {
+  _0x51ef71.style.display = _0x17ca8f.style.display = _0x2095ac ? "" : "none", _0x2095ac || (_0x5ec28b.style.display = "none", _0x1a7b7a = _0xc6a4b9 = _0x570b18 = null);
+}
+let _0x5c4116, _0x4c550f = 0;
+
+function _0x985610(_0x4067dc) {
+  if ("string" == typeof _0x4067dc.data) return;
+  !(function() {
+    const _0x515e57 = _0x4067dc.data;
+    if (_0x10429d) {
+      const _0x154d67 = new Uint8Array(_0x515e57),
+        _0x1d6eb6 = new Uint8Array(_0x154d67.length);
+      for (let _0x4c6c1e = 0; _0x4c6c1e < _0x154d67.length; _0x4c6c1e++) _0x1d6eb6[_0x4c6c1e] = _0x154d67[_0x4c6c1e], _0x154d67[_0x4c6c1e] ^= _0x10429d[(_0x547ef1 + _0x4c6c1e) % _0x10429d.length];
+      _0x10429d = _0x1d6eb6;
+    } else _0x10429d = new Uint8Array(_0x515e57);
+    _0x547ef1 = (_0x547ef1 + 1) % 1000;
   }());
-  const wq = [];
-  let wr = 0;
+  const _0x27e714 = new DataView(_0x4067dc.data);
+  _0x1f334c += _0x27e714.byteLength;
+  let _0x2b6093 = 0;
 
-  function wu(ww) {
-    const wx = aq;
-    wy[wx(533)] = ww, wr = Math["max"](ww, wr), wq[wx(745)](ww);
-  }
-  let wz = document[aq(644)](aq(630));
-  const xa = document[aq(753)](aq(628)),
-    xb = document[aq(493)](aq(410)),
-    xc = xb[aq(634)]("2d"),
-    fm = document[aq(493)](aq(865));
-  ho();
-  const fn = fm[aq(634)]("2d");
-
-  function ho() {
-    const xd = aq,
-      xe = dr[xd(433)] ? window[xd(426)] : 1;
-    fm[xd(512)] = xb[xd(512)] = window[xd(852)] * xe, fm[xd(843)] = xb[xd(843)] = window[xd(420)] * xe, fm[xd(830)][xd(512)] = xb[xd(830)][xd(512)] = window[xd(852)] + "px", fm["style"][xd(843)] = xb[xd(830)][xd(843)] = window["innerHeight"] + "px";
-  }
-  window[aq(549)] = function() {
-    ho(), xf(), dx(), xg();
-  };
-  const xh = document[aq(644)](aq(829)),
-    xj = xh["querySelector"](aq(651)),
-    xk = document["querySelector"](".hud"),
-    xl = [oz, xk, qb, gv, xh];
-  let eb = 1;
-
-  function xf() {
-    const xm = aq;
-    eb = Math[xm(774)](window[xm(852)] / 1366, window[xm(420)] / 657) * (gh && !gm ? 1.6 : 1);
-    for (let xn = 0; xn < xl[xm(771)]; xn++) {
-      const xp = xl[xn];
-      let xq = eb;
-      xp[xm(830)][xm(621)] = "scale(" + xq + ")", xp[xm(830)][xm(606)] = xm(755), xp["style"][xm(512)] = window[xm(852)] / xq + "px", xp["style"]["height"] = window[xm(420)] / xq + "px";
+  function _0x2336da() {
+    const _0x45aff8 = _0x27e714.getUint8(_0x2b6093++),
+      _0x3292ac = 2 === _0x4c550f ? _0x45aff8 >> 6 : -1,
+      _0x17ccb4 = 63 & _0x45aff8;
+    if (_0x17ccb4 > 0) {
+      const _0x5346bc = new Uint8Array(_0x17ccb4);
+      for (let _0x276ac0 = 0; _0x276ac0 < _0x17ccb4; _0x276ac0++) _0x5346bc[_0x276ac0] = _0x27e714.getUint8(_0x2b6093++);
+      return [_0x3292ac, new TextDecoder().decode(_0x5346bc)];
     }
+    return [_0x3292ac, ""];
   }
-  xf();
-  let xr = 0,
-    xs = 0;
-
-  function xt(xu) {
-    const xv = aq;
-    return xu < 0.01 ? "0" : (xu = Math["floor"](xu)) >= 1000000 ? parseFloat((xu / 1000000)[xv(500)](2)) + "m" : xu >= 1000 ? parseFloat((xu / 1000)["toFixed"](1)) + "k" : xu;
-  }
-  const xw = document["querySelector"](aq(441));
-
-  function xx(xy) {
-    const xz = aq,
-      ya = [Math["floor"](xy / 3600000), Math[xz(653)](xy % 3600000 / 60000), Math[xz(653)](xy % 60000 / 1000)],
-      yb = ["h", "m", "s"];
-    let yc = "";
-    for (let yd = 0; yd < ya["length"]; yd++) {
-      const ye = ya[yd];
-      (ye > 0 || 2 == yd) && (yc += ye + yb[yd] + " ");
-    }
-    return yc;
-  }
-
-  function xg() {
-    const yf = aq;
-    if (yf(501) === qb["style"][yf(729)]) return;
-    for (; wq[yf(771)] < 2;) wq[yf(745)](0);
-    const yg = Math["max"](wr, 1000);
-    let yh = yf(822);
-    const yi = wq[yf(771)] - 1;
-    for (let yj = 0; yj < wq[yf(771)]; yj++) {
-      const yk = 0.975 - wq[yj] / yg * 0.95;
-      yh += yj / yi + "," + yk + " ", yj === yi && (yh += "2," + yk + " ");
-    }
-    yh += yf(412);
-    const yl = kb(dz[yf(506)]),
-      ym = yf(437) + yl["join"](",") + ")",
-      yn = "rgb(" + yl[yf(875)](yo => 1.3 * yo) + ")";
-    qg[yf(903)] = yf(768) + yh + yf(444) + yn + yf(344) + ym + yf(622);
-    const yp = qg[yf(522)][0];
-    wz[yf(356)][yf(566)](yp, wz), wz[yf(399)](), wz = yp;
-  }
-  const jy = [];
-  let yq, dz, pw, yr, ys;
-
-  function yt() {
-    const yu = aq;
-    yv = !1, ov[yu(903)] = "", yx["length"] = 0, dz = null, yq = null, yy = null, yz["length"] = 0, jy[yu(771)] = 0, za[yu(771)] = 0, xr = 0, xs = 0;
-  }
-
-  function oj(zb) {
-    const zc = aq;
-    if (console["log"]("Connecting to " + zb + zc(791)), ot[zc(894)][zc(452)](zc(354)), gn[zc(894)]["remove"](zc(524)), qd[zc(819)](), gu["classList"]["remove"](zc(417)), py["onclick"](), zd[zc(771)] = 0, yt(), yr = null, ys = 0, zf = null, zg = 0, pj = null, pm["style"]["display"] = pf[zc(830)][zc(729)] = zh["style"][zc(729)] = zc(501), pw) {
-      try {
-        pw[zc(788)]();
-      } catch (zi) {}
-      pw[zc(349)] = pw[zc(720)] = pw[zc(550)] = null, pw = null;
-    }
-    pw = new WebSocket(zb), pw["binaryType"] = "arraybuffer", pw[zc(349)] = zj, pw[zc(720)] = zk, pw[zc(550)] = zl;
-  }
-  const zm = document[aq(644)](aq(803)),
-    zn = document[aq(644)](aq(854)),
-    zh = document[aq(644)](".user");
-  let pk, pj;
-
-  function zj() {
-    const zp = aq;
-    var zq;
-    if (console[zp(765)](zp(456)), (function() {
-        const zr = zp;
-        qn[zr(771)] = 1;
-        for (let zs in bh) {
-          const zt = bh[zs];
-          for (let zu = 0; zu < zt[zr(771)]; zu++) delete zt[zu]["owned"], delete zt[zu][zr(620)];
-        }
-        qo(bh[zr(545)], qe, zr(804)), qo(bh[zr(806)], qf, zr(463)), qi[zr(771)] = 0, qh[zr(903)] = "";
-        const zv = bh[zr(545)][zr(884)](bh[zr(806)])[zr(666)](function(zw, zx) {
-            const zy = zr;
-            return zx["createdAt"] - zw[zy(858)];
-          }),
-          aaa = Math[zr(759)](4, zv[zr(771)]);
-        for (let aab = 0; aab < aaa; aab++) qi[zr(745)](zv[aab]["shopItemEl"]);
-      }()), dg(localStorage[zp(867)]) || (localStorage[zp(867)] = crypto[zp(485)]()), pk = localStorage[zp(867)], pj = localStorage[zp(691)], pj || ("discord_data", zq = document["cookie"]["match"](RegExp(zp(375) + zp(691)["replace"](/([.*+?\^$(){}|\[\]\/\\])/g, zp(900)) + zp(540))), pj = zq ? zq[1] : null, pj && (pj = decodeURIComponent(pj)), document["cookie"] = zp(709)), pj) try {
-      const aac = pj;
-      if (pj = JSON[zp(442)](decodeURIComponent(escape(atob(aac)))), !dg(pj["accountId"])) throw new Error(zp(885));
-      pk = pj["accountId"], zn[zp(615)](zp(368), pj[zp(517)]), pj[zp(749)] && (zm[zp(830)]["backgroundImage"] = zp(539) + pj["avatar"] + ")"), localStorage["discord_data"] = aac;
-    } catch (aad) {
-      pj = null, delete localStorage[zp(691)], console[zp(642)](aad);
-    }
-    const aae = new DataView(new ArrayBuffer(5 + pk[zp(771)]));
-    aae["setUint8"](0, bc(3, 0)), aae[zp(428)](1, 6);
-    for (let aaf = 0; aaf < pk["length"]; aaf++) aae[zp(469)](5 + aaf, pk[zp(860)](aaf));
-    hb(aae);
-  }
-  let aag = 0;
-  const yz = [];
-  let yv = !1,
-    yx = [];
-
-  function aah(aai, aaj, aak) {
-    const aal = aq,
-      aam = document[aal(820)](aal(773));
-    aam[aal(894)][aal(452)](aal(554));
-    const aan = document[aal(820)](aal(773));
-    aan["classList"][aal(452)](aal(825)), aam["appendChild"](aan);
-    const aao = document[aal(820)](aal(402));
-    aam[aal(812)](aao), ov[aal(812)](aam);
-    const aap = {
-      "name": aai,
-      "score": aaj,
-      "iScore": 0,
-      "percent": 0,
-      "iPercent": 0,
-      "lbItemEl": aam,
-      "lbBarEl": aan,
-      "lbTextEl": aao,
-      "team": -1,
-      "update": function() {
-        const aaq = aal;
-        this[aaq(509)] += 0.1 * (this[aaq(533)] - this[aaq(509)]), this["iPercent"] += 0.1 * (this[aaq(435)] - this[aaq(371)]), this[aaq(674)]["setAttribute"](aaq(368), (this[aaq(517)] ? this[aaq(517)] + " - " : "") + xt(this[aaq(509)])), this[aaq(722)]["style"][aaq(512)] = this["iPercent"] + "%";
-      },
-      "setTeam": function(aar = -1) {
-        const aas = aal;
-        aap["team"] = aar, this[aas(722)][aas(830)]["background"] = -1 === aar ? "" : aas(437) + kb(aar)[aas(905)](",") + ")";
-      }
-    };
-    return aap["setTeam"](aak), aap["update"](), yx["push"](aap), aap;
-  }
-  const wy = aah("", 0);
-
-  function aat() {
-    const aau = aq;
-    if (0 === yx["length"]) return;
-    const aav = yx[0];
-    aav["percent"] = aav[aau(371)] = 100;
-    let aaw = aav[aau(380)];
-    for (let aax = 1; aax < yx[aau(771)]; aax++) {
-      const aay = yx[aax];
-      aaz(aay, aav);
-      const aba = aay["lbItemEl"];
-      aba[aau(356)][aau(812)](aba), aay[aau(380)] && (aaw = !0);
-    }
-    aaw || (aaz(wy, aav), ov["appendChild"](wy[aau(473)]));
-  }
-
-  function aaz(abb, abc) {
-    const abd = aq;
-    abb[abd(435)] = 100 * Math["min"](1, abb[abd(533)] / abc[abd(533)] || 0);
-  }
-  wy["lbItemEl"][aq(894)][aq(452)]("my-lb-item"), wy[aq(380)] = !0;
-  const za = [];
-  let abe = 0;
-  Math[aq(347)](2);
-  let abf = 0;
-  const zd = [];
-
-  function abg(abh, abi) {
-    const abj = aq,
-      abk = bh[abh + abj(669)][abi];
-    abk[abj(561)] = !0;
-    const abl = abk[abj(592)][abj(644)](".btn");
-    abl[abj(894)][abj(399)](abj(821)), abl[abj(894)][abj(452)](abj(707)), abl[abj(894)][abj(399)](abj(904)), abl["innerHTML"] = "<span stroke=\"Equip\"></span>";
-    const abm = abj(514) + abh + abj(740);
-    abl["onclick"] = function() {
-      const abn = abj,
-        abo = document[abn(644)]("." + abh + abn(735));
-      abo && abo[abn(615)](abn(368), abn(623));
-      const abp = abo && abo[abn(356)] === this;
-      abp || abl[abn(522)][0]["setAttribute"](abn(368), "Unequip"), localStorage[abm] = abp ? -1 : abi;
-      const abq = ue();
-      qj[abn(894)][-1 === abq[0] && -1 === abq[1] ? abn(452) : abn(399)](abn(904));
-    }, parseInt(localStorage[abm]) === abi && abl["onclick"]();
-  }
-
-  function abr() {
-    const abt = aq;
-    abu(abt(804)), abu(abt(463));
-  }
-
-  function abu(abv) {
-    const abw = aq,
-      abx = bh[abv + "Skins"];
-    for (let aby = 0; aby < abx[abw(771)]; aby++) {
-      const abz = abx[aby];
-      if (abz["owned"]) continue;
-      const aca = abz[abw(592)]["querySelector"](abw(467));
-      abf >= abz[abw(502)] ? (aca[abw(894)][abw(399)]("btn-disabled"), aca[abw(673)] = function() {
-        const acb = abw;
-        if (abz[acb(620)] || zd["length"] > 0) return;
-        abz[acb(620)] = !0;
-        const acc = new DataView(new ArrayBuffer(2));
-        acc["setUint8"](0, bc(4, acb(804) === abv ? 0 : 1)), acc["setUint8"](1, aby), hb(acc), aca[acb(894)]["add"]("btn-disabled"), aca[acb(847)](), zd[acb(745)]({
-          "skin": abz,
-          "i": aby,
-          "prefix": abv
-        });
-      }) : (aca[abw(894)][abw(452)](abw(904)), aca[abw(673)] = null);
-    }
-  }
-
-  function acd() {
-    const ace = aq,
-      acf = abf[ace(366)]("en", {
-        "notation": ace(744)
-      })[ace(848)]();
-    for (let acg = 0; acg < xa[ace(771)]; acg++) xa[acg][ace(406)] = acf;
-  }
-
-  function ach(aci) {
-    const acj = aq;
-    for (aci = Math["ceil"](aci / 2); aci--;) ack[acj(745)]({
-      "spawnTime": (ack[ack[acj(771)] - 1] || {
-        "spawnTime": 0
-      })[acj(711)] + 0.03,
-      "x": 0,
-      "y": -20,
-      "vx": 1.5 * (2 * Math[acj(878)]() - 1),
-      "vy": 1 * (2 * Math[acj(878)]() - 1),
-      "angle": 6.28 * Math["random"](),
-      "angleSpeed": 0.1 * Math[acj(878)]() + 0.1
-    });
-  }
-  let acl, acm;
-  const acn = document[aq(644)](".reward-btns"),
-    aco = acn[aq(644)](aq(392)),
-    acp = document[aq(493)]("rewardStatus");
-
-  function acq(acr) {
-    const acs = aq;
-    let act = Math[acs(527)](acr / 1000 / 60);
-    const acu = Math[acs(653)](act / 60);
-    act %= 60;
-    let acv = "";
-
-    function acw(acx) {
-      return acx > 1 ? "s " : " ";
-    }
-    return acu > 0 && (acv += acu + " hour" + acw(acu)), 0 != acu && 0 == act || (acv += act + " min" + acw(act)), acv;
-  }
-  acn[aq(903)] = "";
-  for (let acy = 0; acy < dl[aq(771)]; acy++) acn[aq(903)] += aq(424) + dl[acy] + "\"></span></div>";
-  let acz;
-
-  function ada() {
-    const adb = aq,
-      adc = acn["querySelector"](adb(833));
-    adc && (adc[adb(894)][adb(399)](adb(821)), adc[adb(894)][adb(452)](adb(904)), adc[adb(673)] = null);
-    const ade = acn["children"][Math[adb(759)](dl["length"] - 1, acl)];
-    acl < dl["length"] && (acz = ade, ade[adb(894)][adb(452)](adb(821)), ade[adb(894)][adb(452)](adb(904)), ade[adb(673)] = function() {
-      const adf = adb;
-      this[adf(580)] = !0, this[adf(894)][adf(452)](adf(904)), hb(new Uint8Array([bc(5, 0)]));
-    }), ade[adb(812)](aco);
-  }
-  const adg = document[aq(644)](aq(544));
-  let adh, yy, adi = {};
-
-  function adj(adk) {
-    const adl = aq;
-    adm[adl(830)][adl(729)] = adn[adl(830)][adl(729)] = adk ? "" : adl(501), adk || (ado["style"]["display"] = "none", adp = adq = adr = null);
-  }
-  let zf, ads = 0;
-
-  function zk(adt) {
-    const adu = aq;
-    if (adu(411) == typeof adt[adu(694)]) return;
-    !(function() {
-      const adv = adu,
-        adw = adt[adv(694)];
-      if (yr) {
-        const adx = new Uint8Array(adw),
-          ady = new Uint8Array(adx["length"]);
-        for (let adz = 0; adz < adx["length"]; adz++) ady[adz] = adx[adz], adx[adz] ^= yr[(ys + adz) % yr[adv(771)]];
-        yr = ady;
-      } else yr = new Uint8Array(adw);
-      ys = (ys + 1) % 1000;
-    }());
-    const aea = new DataView(adt[adu(694)]);
-    aag += aea[adu(487)];
-    let aeb = 0;
-
-    function aec() {
-      const aed = adu,
-        aee = aea[aed(453)](aeb++),
-        aef = 2 === ads ? aee >> 6 : -1,
-        aeg = 63 & aee;
-      if (aeg > 0) {
-        const aeh = new Uint8Array(aeg);
-        for (let aei = 0; aei < aeg; aei++) aeh[aei] = aea["getUint8"](aeb++);
-        return [aef, new TextDecoder()[aed(761)](aeh)];
-      }
-      return [aef, ""];
-    }
-    const [aej, aek] = [(ael = aea[adu(453)](aeb++)) >> 4, 15 & ael];
-    var ael;
-    switch (aej) {
-      case 4:
-        const {
-          skin: aem, i: aen, prefix: aeo
-        } = zd["shift"]();
-        abg(aeo, aen), abf -= aem[adu(502)], abr(), acd();
-        break;
-      case 5:
-        const aep = dl[acl++];
-        abf += aep, abr(), acd(), ada(), acm = Date[adu(853)]() + dk, ach(aep / 2);
-        break;
-      case 3:
-        if (pj ? (pm[adu(830)][adu(729)] = "", zh[adu(830)][adu(729)] = "") : pf[adu(830)][adu(729)] = "", abf = 0, 0 === aek) abf = 0, localStorage["equipped_body_skin"] = -1, localStorage[adu(726)] = -1, acl = 0, acm = 0;
-        else {
-          abf = aea[adu(888)](aeb), aeb += 4;
-          const aeq = aea["getUint16"](aeb);
-          aeb += 2, acl = aeq >> 11;
-          const aer = 2047 & aeq;
-          acm = Date[adu(853)]() + 60 * aer * 1000;
-          let aes = !1,
-            aet = !1;
-          if (aeb < aea["byteLength"]) {
-            let aeu = !1;
-            const [aev, aew] = ue(), aex = aea["getUint8"](aeb++);
-            for (let aey = 0; aey < aex; aey++) {
-              const aez = aea[adu(453)](aeb++);
-              aez === aev && (aes = !0), abg(adu(804), aez);
-            }
-            for (; aeb < aea["byteLength"];) {
-              const afa = aea[adu(453)](aeb++);
-              afa === aew && (aeu = !0), abg(adu(463), afa);
-            }
-          }
-          aet || (localStorage[adu(809)] = -1), aes || (localStorage[adu(726)] = -1);
-        }
-        ada(), qj[adu(894)][adu(452)](adu(904)), "-1" == localStorage[adu(726)] && "-1" == localStorage[adu(809)] || qj[adu(894)][adu(399)](adu(904)), abr(), acd(), ot[adu(894)][adu(399)]("connecting-show"), gu["classList"]["add"](adu(417));
-        break;
-      case 0:
-        const afb = ol[aek] || adu(831);
-        console[adu(765)](adu(692) + afb + ")"), xj[adu(615)](adu(368), "reason: " + afb), xh[adu(830)][adu(729)] = "", oj = function() {};
-        break;
-      case 1:
-        ads !== aek && yt(), 5 == aea[adu(487)] && (yq = aea["getUint32"](aeb)), ads = localStorage[adu(813)] = aek, vc(), afc = afd = 1, afe = null, aff = null, adh = Date[adu(853)](), xr = 0, yy = null, gx[adu(894)][adu(399)]("btn-disabled"), gu[adu(894)]["remove"]("grid-show"), gs["classList"][adu(452)](adu(863)), qb[adu(830)][adu(729)] = adu(501), wq["length"] = 0, afg = {}, wr = 0, adj(gh);
-        break;
-      case 2:
-        const afh = 4 & aek,
-          afi = 8 & aek,
-          afj = (3 & aek) << 2 | aea["getUint8"](aeb++),
-          afl = {},
-          afm = Date[adu(853)]();
-        for (let afn = 0; afn < afj; afn++) {
-          const afo = aea[adu(888)](aeb);
-          aeb += 4, afl[afo] = !0;
-          let afp = jy[adu(572)](afq => afq["id"] === afo);
-          const afr = aea[adu(453)](aeb++) / 255 * Math["PI"] * 2,
-            afs = aea[adu(453)](aeb++),
-            aft = afs >> 6,
-            afu = (63 & afs) / 63;
-          if (afp) {
-            afp["oldR"] = afp["r"];
-            const afv = afp["segments"][0];
-            afv[adu(555)] = afv["x"], afv[adu(731)] = afv["y"], afv["x"] += aea[adu(698)](aeb++), afv["y"] += aea[adu(698)](aeb++), afv[adu(575)] = afv["interpX"], afv[adu(359)] = afv[adu(680)];
-            let afw = aea[adu(698)](aeb++);
-            for (; afw < 0;) afp[adu(890)][adu(423)](), afw++;
-            hq(afp);
-            const afx = afp["segments"][afp[adu(890)][adu(771)] - 1];
-            for (; afw > 0;) afp[adu(890)][adu(745)](Object[adu(486)]({}, afx)), afw--;
-            afp["interpOldR"] = afp[adu(379)], afp["r"] = cx(afp), afp[adu(589)] = afp[adu(743)], afp[adu(458)] = afp[adu(883)], afp["newDirX"] = Math[adu(725)](afr), afp[adu(573)] = Math["sin"](afr), afp[adu(687)] = afm;
-          } else {
-            afp = new ed(afo, afr), afp[adu(483)] = aea[adu(453)](aeb++) - 1, afp[adu(398)] = aea["getUint8"](aeb++) - 1, afp[adu(908)] = afu, afo == yq && (dz = afp), jy[adu(745)](afp);
-            const afy = aea[adu(727)](aeb);
-            aeb += 2;
-            const afz = aea[adu(727)](aeb);
-            aeb += 2, afp[adu(890)][0] = {
-              "x": afy,
-              "y": afz,
-              "oldX": afy,
-              "oldY": afz,
-              "interpOldX": afy,
-              "interpOldY": afz,
-              "interpX": afy,
-              "interpY": afz
-            };
-            const aga = aea[adu(727)](aeb);
-            aeb += 2;
-            for (let agb = 0; agb < aga; agb++) {
-              let agc = afp[adu(890)][agb];
-              const agd = {
-                "x": agc["x"] + aea[adu(698)](aeb++),
-                "y": agc["y"] + aea[adu(698)](aeb++)
-              };
-              agd[adu(555)] = agd["interpOldX"] = agd["interpX"] = agd["x"], agd[adu(731)] = agd[adu(359)] = agd["interpY"] = agd["y"], afp[adu(890)]["push"](agd);
-            } [afp[adu(506)], afp[adu(558)]] = aec(), adi[afp["id"]] = afp[adu(558)], dz === afp && (age = afy, agf = afz, wy[adu(517)] = afp[adu(558)], wy[adu(382)](afp[adu(506)])), afp["r"] = afp[adu(465)] = afp[adu(379)] = cx(afp);
-          }
-          afp[adu(350)] = aft, afp["oldEnergy"] = afp[adu(482)], afu < afp[adu(908)] && (afp["energyChangeCounter"] = 1), afp[adu(908)] = afu;
-        }
-        const agg = bn(yy || dz);
-        let agh = aea[adu(453)](aeb++);
-        for (; agh--;) {
-          const agi = aea["getUint8"](aeb++),
-            agj = agg["sx"] + (15 & agi),
-            agk = agg["sy"] + (agi >> 4),
-            agl = [];
-          for (let agm = 0; agm < 128; agm++) {
-            const agn = aea[adu(453)](aeb++),
-              ago = 15 & agn,
-              agp = agn >> 4;
-            agl[adu(745)](ago, agp);
-          }
-          yz[64 * agk + agj] = agl, agq(agl);
-        }
-        dz[adu(890)][0];
-        let agr = aea["getUint8"](aeb++);
-        for (let ags = 0; ags < agr; ags++) {
-          const agt = aea[adu(453)](aeb++),
-            agu = agg["sx"] + (15 & agt),
-            agv = agg["sy"] + (agt >> 4),
-            agw = yz[64 * agv + agu],
-            agx = aea["getUint8"](aeb++) + 1;
-          let agy = 0,
-            agz = 0,
-            aha = 0;
-          for (let ahb = 0; ahb < agx; ahb++) {
-            const ahc = aea[adu(453)](aeb + ahb),
-              ahd = agw[ahc];
-            0 == agz ? (agy = aea[adu(453)](aeb + agx + aha++), agz = 1, agw[ahc] = 15 & agy) : (agw[ahc] = agy >> 4, agz = 0);
-            const ahe = ahc % at,
-              ahf = Math[adu(653)](ahc / at),
-              ahg = agw[ahc];
-            if (ahg === cd[adu(413)]) {
-              const ahh = agu * at + ahe,
-                ahi = agv * at + ahf,
-                ahj = agw[adu(556)]["getImageData"](ahe, ahf, 1, 1)[adu(694)];
-              if (za[adu(745)]({
-                  "x": ahh * ax,
-                  "y": ahi * ax,
-                  "dir": Math[adu(878)]() > 0.5 ? -1 : 1,
-                  "angle": Math[adu(878)]() * Math["PI"] * 2,
-                  "time": Date[adu(853)](),
-                  "color": adu(882) + ahj[adu(905)](",") + ")"
-                }), agw[adu(556)][adu(565)](ahe, ahf, 1, 1), ahd === cd["lava"])
-                for (let ahk = 0; ahk < jy[adu(771)]; ahk++) {
-                  const ahl = jy[ahk],
-                    ahm = ahl[adu(890)][0];
-                  cj(ahh, ahi, ahl[adu(593)], ahm) && (ahl["diggedLavaAt"] = afm, ahl != dz && ahl != yy || (ahn = 1));
-                }
-            } else {
-              const aho = nu(ahg);
-              agw[adu(556)][adu(395)] = adu(437) + aho[adu(905)](",") + ")", agw[adu(556)][adu(715)](ahe, ahf, 1, 1);
-            }
-          }
-          aeb += agx, aeb += Math[adu(527)](0.5 * agx);
-        }
-        const ahp = aea[adu(727)](aeb);
-        aeb += 2, adg["setAttribute"](adu(368), ahp + adu(795) + (1 !== ahp ? "s" : "") + " online");
-        const ahq = wq["length"],
-          ahr = aea["getUint16"](aeb);
-        aeb += 2, abe = 1023 & ahr;
-        const ahs = ahr >> 11,
-          aht = 1024 & ahr;
-        ow[adu(615)](adu(368), abe + adu(700) + (1 != abe ? "s" : ""));
-        let ahu = -1;
-        if (afh && (ahu = aea[adu(453)](aeb++)), yv) {
-          let ahv = 0,
-            ahw = 0;
-          if (aht) {
-            const ahx = aea["getUint8"](aeb++);
-            ahv = ahx >> 4, ahw = 15 & ahx;
-          }
-          const ahy = ahs + ahw,
-            ahz = [];
-          let aia = 0,
-            aib = 0;
-          for (let aic = 0; aic < ahy; aic++) 0 == aib ? (aia = aea[adu(453)](aeb++), aib = 1, ahz[adu(745)](15 & aia)) : (ahz[adu(745)](aia >> 4), aib = 0);
-          for (let aid = 0; aid < ahs; aid++) {
-            const aie = ahz[aid],
-              aif = yx[aie];
-            aif[adu(533)] = db(aea[adu(727)](aeb)), aeb += 2, aif[adu(380)] && wu(aif["score"]);
-          }
-          const aig = [];
-          for (let aih = 0; aih < ahw; aih++) {
-            const aii = ahz[ahs + aih];
-            aig[adu(745)](aii);
-          }
-          aig[adu(666)](function(aij, aik) {
-            return aik - aij;
-          });
-          for (let ail = 0; ail < aig[adu(771)]; ail++) {
-            const aim = aig[ail];
-            yx[aim][adu(473)][adu(399)](), yx[adu(440)](aim, 1);
-          }
-          for (let ain = 0; ain < ahv; ain++) {
-            const aio = db(aea[adu(727)](aeb));
-            aeb += 2;
-            const [aip, aiq] = aec();
-            aah(aiq, aio, aip);
-          }
-          yx = yx[adu(666)](function(air, ais) {
-            const ait = adu;
-            return ais[ait(533)] - air[ait(533)];
-          }), aat();
-        } else {
-          yx[adu(771)] = 0;
-          const aiu = Math[adu(759)](10, abe);
-          for (let aiv = 0; aiv < aiu; aiv++) {
-            const aiw = db(aea[adu(727)](aeb));
-            aeb += 2;
-            const [aix, aiy] = aec();
-            aah(aiy, aiw, aix);
-          }
-          aat(), yv = !0;
-        }
-        if (afh) {
-          const aiz = yx[ahu],
-            aja = aiz[adu(473)];
-          wy[adu(533)] = aiz["score"], ov[adu(566)](wy[adu(473)], aja), aja[adu(399)](), yx[ahu] = wy;
-        }
-        let ajb = !1,
-          ajc = Math[adu(653)]((aea[adu(487)] - aeb) / 4);
-        afi && ajc--;
-        for (let ajd = 0; ajd < ajc; ajd++) {
-          const aje = aea["getUint32"](aeb);
-          aeb += 4;
-          const ajf = jy["findIndex"](ajg => ajg["id"] === aje),
-            ajh = jy[ajf];
-          ajh[adu(367)] = !0, ajh[adu(586)] = afm, ajh["id"] = -1, ajh === dz && (ajb = !0, wy["score"] = 0, wy[adu(435)] = 0, dx(), adj(!1));
-        }
-        let aji = aea[adu(487)] - aeb;
-        if (ajb) {
-          let ajj = -1;
-          if (afi) {
-            const ajk = aea[adu(888)](aeb);
-            aeb += 4, yy = jy["find"](ajl => ajl["id"] === ajk), gc["setAttribute"](adu(368), adi[ajk] || adu(770)), aji -= 4;
-          } else ajj = aea[adu(453)](aeb++), 0 === ajj && gc[adu(615)](adu(368), "Walls"), aji--;
-          gc[adu(830)][adu(647)] = dt[adu(830)]["visibility"] = gc[adu(756)][adu(830)][adu(647)] = 1 === ajj ? adu(718) : "", 1 === aji && (xr = aea[adu(453)](aeb++)), qb[adu(830)]["display"] = "", gx[adu(894)]["add"](adu(904)), xg(), abr(), acd(), (function() {
-            const ajm = adu;
-            for (; xw["children"][ajm(771)] > 1;) xw[ajm(522)][1][ajm(399)]();
-            const ajn = [
-              [ajm(401), xt(wr)]
-            ];
-            xs > 0 && ajn[ajm(745)]([ajm(481), xs["toLocaleString"](ajm(716))]), xr > 0 && ajn["push"](["Players destroyed", 255 === xr ? xr - 1 + "+" : xr]), ajn[ajm(745)](["Time alive", xx(Date[ajm(853)]() - adh)]);
-            for (let ajo = 0; ajo < ajn[ajm(771)]; ajo++) {
-              const [ajp, ajq] = ajn[ajo], ajr = document["createElement"](ajm(402));
-              ajr[ajm(615)](ajm(368), ajp + ": " + ajq), xw[ajm(812)](ajr);
-            }
-          }());
-        } else {
-          if (!dz["isDead"]) {
-            if (aji % 2 != 0) {
-              const ajs = aea[adu(453)](aeb++);
-              ach(ajs), abf += ajs, xs += ajs, aji--;
-            }
-            if (2 === aji) {
-              const ajt = db(aea[adu(727)](aeb));
-              aeb += 2, wu(ajt);
-            }
-          }
-        }
-        for (let aju = jy[adu(771)] - 1; aju >= 0; aju--) {
-          const ajv = jy[aju];
-          ajv[adu(367)] || afl[ajv["id"]] || jy[adu(440)](aju, 1);
-        }
-        ahq === wq[adu(771)] && ahq > 0 && wq[adu(745)](wq[wq[adu(771)] - 1]);
-    }
-  }
-
-  function zl() {
-    const ajw = aq;
-    console["log"](ajw(775)), oj(pw[ajw(568)]);
-  }
-  let zg = 0;
-
-  function hb(ajx) {
-    const ajy = aq;
-    if (pw && pw["readyState"] === pw[ajy(381)]) {
-      if (aag += ajx[ajy(487)], zf) {
-        const ajz = new Uint8Array(ajx["buffer"]);
-        for (let aka = 0; aka < ajz[ajy(771)]; aka++) ajz[aka] ^= zf[(zg + aka) % zf[ajy(771)]];
-      }
-      zg = (zg + 1) % 1000, zf = new Uint8Array(ajx[ajy(358)]), pw["send"](ajx);
-    }
-  }
-  const akb = 2 * Math["PI"];
-
-  function ud(akc) {
-    const akd = aq;
-    if (!dz || dz[akd(367)]) return;
-    (akc %= akb) < 0 && (akc += akb), akc /= akb, akc = Math[0.75 === akc ? akd(527) : "floor"](4095 * akc);
-    const ake = new DataView(new ArrayBuffer(2));
-    ake[akd(469)](0, bc(1, akc >> 8)), ake[akd(469)](1, akc), hb(ake);
-  }
-  let afg = {};
-  document[aq(777)] = function(akf) {
-    const akg = aq;
-    afg[akf[akg(708)]] = !0, vj();
-  }, document[aq(811)] = function(akh) {
-    const aki = aq;
-    delete afg[akh[aki(708)]], vj();
-  }, fm["onmousemove"] = function(akj) {
-    const akk = aq;
-    he[akk(433)] || ud(Math[akk(496)](akj[akk(764)] - window["innerHeight"] / 2, akj[akk(887)] - window["innerWidth"] / 2));
-  };
-  const adm = document[aq(644)](aq(600)),
-    adn = document[aq(644)](aq(747)),
-    ado = document[aq(644)](".joystick"),
-    akl = document[aq(644)](aq(553));
-  let wc, wd, adq = null,
-    adp = null,
-    adr = null;
-  if (gh) {
-    let akm, akn;
-
-    function ako() {
-      const akp = aq;
-      ado[akp(830)]["left"] = akm + "px", ado[akp(830)][akp(719)] = akn + "px";
-    }
-
-    function akq(akr) {
-      const aks = aq;
-      return [akr["clientX"] / eb, akr[aks(764)] / eb];
-    }
-    fm["onmousemove"] = null, document[aq(807)] = function(akt) {
-      const aku = aq,
-        akv = akt[aku(391)][0];
-      let akw = akv[aku(362)];
-
-      function akx(aky) {
-        const akz = aku;
-        return akt[akz(361)] === aky || akt["target"][akz(356)] === aky;
-      }
-      akt[aku(361)] === fm ? null === adr && (akl[aku(830)]["width"] = akl["style"]["transform"] = "0", ado["style"][aku(729)] = "", [akm, akn] = akq(akv), ako(), adr = akw) : akx(adm) ? null === adp && (document[aku(777)]({
-        "button": 0
-      }), adp = akw) : akx(adn) && null === adq && (document[aku(777)]({
-        "button": 2
-      }), adq = akw);
-    }, document["ontouchmove"] = function(ala) {
-      const alb = aq,
-        alc = ala[alb(391)][0];
-      if (alc[alb(362)] === adr) {
-        const [ald, ale] = akq(alc), alf = ald - akm, alg = ale - akn, alh = ado[alb(767)]();
-        let ali = Math[alb(676)](alf, alg);
-        const alj = alh["width"] / 2 / eb;
-        if (ali > alj) {
-          if (!gd[alb(433)]) {
-            const alk = ali - alj;
-            akm += alk * alf / ali, akn += alk * alg / ali, ako();
-          }
-          ali = alj;
-        }
-        const alm = Math[alb(496)](alg, alf);
-        ud(alm), akl[alb(830)][alb(621)] = alb(393) + alm + "rad)", akl["style"]["width"] = ali + "px";
-      }
-    }, pz[aq(807)] = function(aln) {
-      const alo = aq,
-        alp = aln["changedTouches"][0];
-      alp[alo(887)] < window["innerWidth"] / 2 ? (wc = alp["identifier"], null === wd && (rs = 2)) : (wd = alp[alo(362)], rs = 1);
-    }, window["ontouchend"] = function(alq) {
-      const alr = aq,
-        als = alq["changedTouches"][0][alr(362)];
-      als === wc ? (wc = null, rs = null !== wd ? 1 : 0) : als === wd && (wd = null, rs = null !== wc ? 2 : 0), als === adp ? (adp = null, document["onmouseup"]({
-        "button": 0
-      })) : als === adq ? (adq = null, document[alr(811)]({
-        "button": 2
-      })) : als === adr && (ado["style"][alr(729)] = alr(501), adr = null);
-    };
-  }
-
-  function vj() {
-    const alt = aq;
-    let alu;
-    alu = afg[0] || tw[alt(543)] ? 1 : afg[2] || tw["ShiftLeft"] || tw[alt(488)] ? 2 : 0, rs = alu, dz && function(alv) {
-      const alw = new Uint8Array(1);
-      alw[0] = bc(2, alv), hb(alw);
-    }(alu);
-  }
-
-  function agq(alx) {
-    const aly = aq,
-      alz = document[aly(820)](aly(865));
-    alz[aly(512)] = alz[aly(843)] = at;
-    const ama = alz[aly(634)]("2d"),
-      amb = ama[aly(911)](at, at);
-    for (let amc = 0; amc < alx[aly(771)]; amc++) {
-      if (alx[amc] === cd[aly(413)]) continue;
-      const amd = nu(alx[amc]),
-        ame = 4 * amc;
-      amb[aly(694)][ame] = amd[0], amb[aly(694)][ame + 1] = amd[1], amb[aly(694)][ame + 2] = amd[2], amb[aly(694)][ame + 3] = 255;
-    }
-    ama[aly(706)](amb, 0, 0), alx[aly(865)] = alz, alx[aly(556)] = ama, alx[aly(627)] = document["createElement"](aly(865)), alx["fogCanvas"][aly(512)] = alx[aly(627)][aly(843)] = at, alx[aly(494)] = alx["fogCanvas"]["getContext"]("2d"), alx["fogBgCanvas"] = document[aly(820)](aly(865)), alx[aly(810)]["width"] = alx[aly(810)]["height"] = at, alx[aly(870)] = alx[aly(627)][aly(634)]("2d");
-  }
-  let ahn = 0,
-    jk = 0,
-    afc = 1,
-    afd = 1,
-    afe = null,
-    aff = null,
-    age = 0,
-    agf = 0;
-  document[aq(645)] = function(amf) {
-    const amg = aq;
-    amf["deltaY"] < 0 ? afc *= 1.1 : afc *= 0.9, afc = Math[amg(774)](1, Math["min"](5, afc));
-  };
-  let amh = Date[aq(853)]();
-  const ack = [],
-    ami = function(amj = 80) {
-      const amk = aq,
-        aml = amj / 2,
-        amm = document[amk(820)]("canvas");
-      amm[amk(512)] = amm[amk(843)] = amj;
-      const amn = amm[amk(634)]("2d");
-      return amn[amk(599)] = amk(873), amn[amk(504)](), amn[amk(436)](aml, 0), amn[amk(434)](aml, amj), amn[amk(436)](0, aml), amn["lineTo"](amj, aml), amn["lineWidth"] = 2, amn["stroke"](), amn[amk(914)](amm, amk(683));
-    }();
-
-  function ok() {
-    const amo = aq;
-    let amp = !1;
-    for (let amq = 0; amq < yx["length"]; amq++) {
-      const amr = yx[amq];
-      amr[amo(703)](), amr[amo(380)] && (amp = !0);
-    }
-    if (amp || wy["update"](), tg) {
-      const ams = Date[amo(853)]() / 80,
-        amt = 7 * Math[amo(478)](ams),
-        amu = 0.15 * Math[amo(516)](Math[amo(478)](ams / 4)) + 0.85;
-      pd["style"][amo(621)] = amo(393) + amt + "deg) scale(" + amu + ")";
-    } else pd[amo(830)][amo(621)] = "none";
-    !(function() {
-      const amv = amo;
-      let amw;
-      if (acl >= dl["length"]) amw = amv(895);
-      else {
-        const amx = acm - Date[amv(853)]();
-        amx < 0 ? (amw = amv(581) + acq(dk), acz[amv(580)] || acz[amv(894)]["remove"](amv(904))) : amw = "Available again in " + acq(amx);
-      }
-      acp[amv(801)]("stroke") !== amw && acp[amv(615)](amv(368), amw);
-    }());
-    const [amy, amz] = ue();
-    ru[amo(483)] = amy, ru[amo(398)] = amz;
-    const ana = Date[amo(853)]();
-    jk = (ana - amh) / 1000, amh = ana, ahn -= jk / 0.3, ahn = Math[amo(774)](0, ahn), fn[amo(395)] = amo(648), fn["fillRect"](0, 0, fm[amo(512)], fm[amo(843)]);
-    for (let anb = 0; anb < jy["length"]; anb++) jy[anb][amo(408)]();
-    if (afd += 0.3 * (afc - afd), dz) {
-      const anc = yy || dz,
-        {
-          sx: and,
-          sy: ane,
-          ex: anf,
-          ey: ang,
-          minX: anh,
-          minY: ani,
-          maxX: anj,
-          maxY: ank,
-          viewWidth: anl,
-          viewHeight: anm
-        } = bn(anc, !0);
-      null === afe ? (afe = anl, aff = anm) : (afe += 0.1 * (anl - afe), aff += 0.1 * (anm - aff));
-      const ann = anc["segments"][0],
-        ano = 2 * Math[amo(878)]() * Math["PI"],
-        anp = 6 * ahn;
-      let anq = ann[amo(464)],
-        anr = ann[amo(680)];
-      if (yy) {
-        const ans = (Date[amo(853)]() - dz[amo(586)]) / 500;
-        if (ans < 1) {
-          const ant = dz[amo(890)][0],
-            anu = yy[amo(890)][0];
-          anq = ant[amo(464)] + (anu[amo(464)] - ant[amo(464)]) * ans, anr = ant[amo(680)] + (anu["interpY"] - ant["interpY"]) * ans;
-        }
-      }
-
-      function anv() {
-        const anw = amo;
-        fn[anw(383)](fm[anw(512)] / 2 + anp * Math[anw(725)](ano), fm["height"] / 2 + anp * Math[anw(478)](ano));
-        const anx = Math["max"](fm[anw(512)] / afe, fm[anw(843)] / aff);
-        fn[anw(422)](anx, anx), fn[anw(383)](-anq, -anr);
-      }
-      fn[amo(808)](), fn[amo(504)](), fn[amo(457)](0, 0, fm[amo(512)], fm[amo(843)]), anv(), fn[amo(395)] = ami, fn["fill"](), fn[amo(355)] = !1;
-      for (let any = ane - 1; any <= ang + 1; any++)
-        for (let anz = and - 1; anz <= anf + 1; anz++) {
-          const aoa = ba * anz,
-            aob = ba * any,
-            aoc = yz[64 * any + anz];
-          aoc && fn[amo(861)](aoc["canvas"], aoa, aob, ba, ba);
-        }
-      anc && bn(anc);
-      for (let aod = jy["length"] - 1; aod >= 0; aod--) jy[aod][amo(415)](aod, fn);
-      fn[amo(697)] = 1, fn[amo(504)](), fn["rect"](0, 0, 30720, 30720), fn[amo(511)](), fn["rect"](0, 0, fm[amo(512)], fm["height"]), fn["fillStyle"] = amo(525), fn[amo(414)](amo(841)), dw && dw(), fn[amo(808)](), anv();
-      for (let aoe = za[amo(771)] - 1; aoe >= 0; aoe--) {
-        const aof = za[aoe],
-          aog = (ana - aof[amo(585)]) / 600;
-        if (aog >= 1) za[amo(440)](aoe, 1);
-        else {
-          fn[amo(808)](), fn[amo(383)](aof["x"], aof["y"]), fn["rotate"](aof[amo(519)] * aog * Math["PI"]);
-          const aoh = ax * (1 + 2 * aog);
-          fn[amo(395)] = aof[amo(387)], fn[amo(389)] = 0.75 * (1 - aog), fn["fillRect"](0, 0, aoh, aoh), fn[amo(511)]();
-        }
-      }
-      for (let aoi = 0; aoi < jy[amo(771)]; aoi++) jy[aoi]["drawEnergyAndNickname"](fn);
-      fn[amo(511)]();
-    }
-    for (let aoj = 0; aoj < qn[amo(771)]; aoj++) qn[aoj][amo(785)]();
-    if (ack[amo(771)] > 0) {
-      xb["style"][amo(729)] = "", xc["clearRect"](0, 0, xb["width"], xb["height"]);
-      const aok = xb[amo(843)] / 657;
-      xc[amo(808)](), xc[amo(383)](xb[amo(512)] / 2, 0), xc[amo(422)](aok, aok);
-      const aol = 10,
-        aom = 6;
-      xc[amo(504)]();
-      for (let aon = ack[amo(771)] - 1; aon >= 0; aon--) {
-        const aoo = ack[aon];
-        aoo["spawnTime"] > 0 ? aoo[amo(711)] -= jk : (aoo["vy"] += 8 * jk, aoo["y"] += aoo["vy"] * jk * 80, aoo["x"] += aoo["vx"] * jk * 100, aoo[amo(430)] += aoo[amo(805)], aoo["y"] > 657 && (aoo[amo(780)] ? aoo["vy"] > 0 && ack[amo(440)](aon, 1) : (aoo["vy"] *= -(0.2 * Math[amo(878)]() + 0.55), aoo[amo(780)] = !0)), xc["save"](), xc["translate"](aoo["x"], aoo["y"]), xc[amo(913)](aoo["angle"]), xc[amo(436)](aol, 0), xc["ellipse"](0, 0, aol, aom, 0, 0, 2 * Math["PI"]), xc[amo(511)]());
-      }
-      xc["lineWidth"] = 6, xc["strokeStyle"] = amo(839), xc[amo(368)](), xc["fillStyle"] = "#e9e21c", xc[amo(414)](), xc[amo(511)]();
-    } else xb[amo(830)]["display"] = amo(501);
-    window[amo(640)](ok);
-  }
-  const aop = document[aq(753)](aq(479));
-  for (let aoq = 0; aoq < aop["length"]; aoq++) {
-    const aor = aop[aoq];
-    aor[aq(673)] = function() {}, aor[aq(894)][aq(452)](aq(904)), aor[aq(830)][aq(597)] = aq(910), aor[aq(830)][aq(559)] = aq(475), aor["setAttribute"]("tooltip", aq(601));
-  }
-  const aos = pb[aq(644)](".dialog-content");
-  aos[aq(903)] = "", (function() {
-    const aot = aq;
-    let aou = "";
-    for (let aov = 0; aov < dm[aot(771)]; aov++) {
+  const [_0x287125, _0x53eb76] = [(_0x1d37a3 = _0x27e714.getUint8(_0x2b6093++)) >> 4, 15 & _0x1d37a3];
+  var _0x1d37a3;
+  switch (_0x287125) {
+    case 4:
       const {
-        title: aow,
-        content: aox
-      } = dm[aov];
-      aou += aot(738) + aow + aot(471), aox[aot(782)](aoy => {
-        aou += "<div stroke=\"- " + aoy + "\"></div>";
-      }), aou += aot(842);
+        skin: _0x1442e7, i: _0xb4395b, prefix: _0x57ed08
+      } = _0x40a389.shift();
+      _0x49cfb1(_0x57ed08, _0xb4395b), _0x403b0e -= _0x1442e7.price, _0x7b638f(), _0x35beb4();
+      break;
+    case 5:
+      const _0x45d94f = _0x2c79c4[_0x3880e2++];
+      _0x403b0e += _0x45d94f, _0x7b638f(), _0x35beb4(), _0x17d3a6(), _0x405b8c = Date.now() + _0x3152df, _0x3ad8a1(_0x45d94f / 2);
+      break;
+    case 3:
+      if (_0x2f807e ? (_0x5d345a.style.display = "", _0x31a6c2.style.display = "") : _0xe9a438.style.display = "", _0x403b0e = 0, 0 === _0x53eb76) _0x403b0e = 0, localStorage.equipped_body_skin = -1, localStorage.equipped_face_skin = -1, _0x3880e2 = 0, _0x405b8c = 0;
+      else {
+        _0x403b0e = _0x27e714.getUint32(_0x2b6093), _0x2b6093 += 4;
+        const _0x5d3af8 = _0x27e714.getUint16(_0x2b6093);
+        _0x2b6093 += 2, _0x3880e2 = _0x5d3af8 >> 11;
+        const _0x5f0ea3 = 2047 & _0x5d3af8;
+        _0x405b8c = Date.now() + 60 * _0x5f0ea3 * 1000;
+        let _0x325b12 = false,
+          _0x2ef639 = false;
+        if (_0x2b6093 < _0x27e714.byteLength) {
+          let _0x5da4f1 = false;
+          const [_0x5895d0, _0x1600b9] = _0x6870d5(), _0x34cf6a = _0x27e714.getUint8(_0x2b6093++);
+          for (let _0x411fcc = 0; _0x411fcc < _0x34cf6a; _0x411fcc++) {
+            const _0x212c37 = _0x27e714.getUint8(_0x2b6093++);
+            _0x212c37 === _0x5895d0 && (_0x325b12 = true), _0x49cfb1("face", _0x212c37);
+          }
+          for (; _0x2b6093 < _0x27e714.byteLength;) {
+            const _0x42da72 = _0x27e714.getUint8(_0x2b6093++);
+            _0x42da72 === _0x1600b9 && (_0x5da4f1 = true), _0x49cfb1("body", _0x42da72);
+          }
+        }
+        _0x2ef639 || (localStorage.equipped_body_skin = -1), _0x325b12 || (localStorage.equipped_face_skin = -1);
+      }
+      _0x17d3a6(), _0x2becd8.classList.add("btn-disabled"), "-1" == localStorage.equipped_face_skin && "-1" == localStorage.equipped_body_skin || _0x2becd8.classList.remove("btn-disabled"), _0x7b638f(), _0x35beb4(), _0x1c2450.classList.remove("connecting-show"), _0x3bef3e.classList.add("grid-show");
+      break;
+    case 0:
+      const _0x1e44f2 = _0x2bc59b[_0x53eb76] || "unknown";
+      console.log("Kicked! (reason: " + _0x1e44f2 + ")"), _0x5e7a48.setAttribute("stroke", "reason: " + _0x1e44f2), _0x136be1.style.display = "", _0x2c57cb = function() {};
+      break;
+    case 1:
+      _0x4c550f !== _0x53eb76 && _0x88d960(), 5 == _0x27e714.byteLength && (_0x2049c4 = _0x27e714.getUint32(_0x2b6093)), _0x4c550f = localStorage.gamemode = _0x53eb76, _0x4f3a31(), _0x521fce = _0x3fe016 = 1, _0x33c6b2 = null, _0x29ae9c = null, _0x211aa4 = Date.now(), _0x3960c7 = 0, _0x26fa79 = null, _0x2aaf3d.classList.remove("btn-disabled"), _0x3bef3e.classList.remove("grid-show"), _0x3af8d3.classList.add("game-show"), _0x369b80.style.display = "none", _0x3bfee1.length = 0, _0x5aed42 = {}, _0x4ed6b3 = 0, _0x3c9e42(_0x300310);
+      break;
+    case 2:
+      const _0x1c3096 = 4 & _0x53eb76,
+        _0x36f77b = 8 & _0x53eb76,
+        _0x107f2b = (3 & _0x53eb76) << 2 | _0x27e714.getUint8(_0x2b6093++),
+        _0x22e031 = {},
+        _0x42d123 = Date.now();
+      for (let _0x5b425b = 0; _0x5b425b < _0x107f2b; _0x5b425b++) {
+        const _0x43f0ce = _0x27e714.getUint32(_0x2b6093);
+        _0x2b6093 += 4, _0x22e031[_0x43f0ce] = true;
+        let _0x3a3577 = _0x600e07.find(_0x15e414 => _0x15e414.id === _0x43f0ce);
+        const _0x5c8fca = _0x27e714.getUint8(_0x2b6093++) / 255 * Math.PI * 2,
+          _0x5d3b38 = _0x27e714.getUint8(_0x2b6093++),
+          _0x4e70ea = _0x5d3b38 >> 6,
+          _0x17eae3 = (63 & _0x5d3b38) / 63;
+        if (_0x3a3577) {
+          _0x3a3577.oldR = _0x3a3577.r;
+          const _0x3c2d88 = _0x3a3577.segments[0];
+          _0x3c2d88.oldX = _0x3c2d88.x, _0x3c2d88.oldY = _0x3c2d88.y, _0x3c2d88.x += _0x27e714.getInt8(_0x2b6093++), _0x3c2d88.y += _0x27e714.getInt8(_0x2b6093++), _0x3c2d88.interpOldX = _0x3c2d88.interpX, _0x3c2d88.interpOldY = _0x3c2d88.interpY;
+          let _0x116ef7 = _0x27e714.getInt8(_0x2b6093++);
+          for (; _0x116ef7 < 0;) _0x3a3577.segments.pop(), _0x116ef7++;
+          _0x2b50af(_0x3a3577);
+          const _0x1b9841 = _0x3a3577.segments[_0x3a3577.segments.length - 1];
+          for (; _0x116ef7 > 0;) _0x3a3577.segments.push(Object.assign({}, _0x1b9841)), _0x116ef7--;
+          _0x3a3577.interpOldR = _0x3a3577.interpR, _0x3a3577.r = _0x2ed340(_0x3a3577), _0x3a3577.oldDirX = _0x3a3577.dirX, _0x3a3577.oldDirY = _0x3a3577.dirY, _0x3a3577.newDirX = Math.cos(_0x5c8fca), _0x3a3577.newDirY = Math.sin(_0x5c8fca), _0x3a3577.updateTime = _0x42d123;
+        } else {
+          _0x3a3577 = new _0x1d5e9a(_0x43f0ce, _0x5c8fca), _0x3a3577.faceSkin = _0x27e714.getUint8(_0x2b6093++) - 1, _0x3a3577.bodySkin = _0x27e714.getUint8(_0x2b6093++) - 1, _0x3a3577.energy = _0x17eae3, _0x43f0ce == _0x2049c4 && (_0x30f1bc = _0x3a3577), _0x600e07.push(_0x3a3577);
+          const _0x4f0b28 = _0x27e714.getUint16(_0x2b6093);
+          _0x2b6093 += 2;
+          const _0x38699e = _0x27e714.getUint16(_0x2b6093);
+          _0x2b6093 += 2, _0x3a3577.segments[0] = {
+            "x": _0x4f0b28,
+            "y": _0x38699e,
+            "oldX": _0x4f0b28,
+            "oldY": _0x38699e,
+            "interpOldX": _0x4f0b28,
+            "interpOldY": _0x38699e,
+            "interpX": _0x4f0b28,
+            "interpY": _0x38699e
+          };
+          const _0x758099 = _0x27e714.getUint16(_0x2b6093);
+          _0x2b6093 += 2;
+          for (let _0x59e50d = 0; _0x59e50d < _0x758099; _0x59e50d++) {
+            let _0x2a5db1 = _0x3a3577.segments[_0x59e50d];
+            const _0x52fbbb = {
+              "x": _0x2a5db1.x + _0x27e714.getInt8(_0x2b6093++),
+              "y": _0x2a5db1.y + _0x27e714.getInt8(_0x2b6093++)
+            };
+            _0x52fbbb.oldX = _0x52fbbb.interpOldX = _0x52fbbb.interpX = _0x52fbbb.x, _0x52fbbb.oldY = _0x52fbbb.interpOldY = _0x52fbbb.interpY = _0x52fbbb.y, _0x3a3577.segments.push(_0x52fbbb);
+          } [_0x3a3577.team, _0x3a3577.nickname] = _0x2336da(), _0x54c0ce[_0x3a3577.id] = _0x3a3577.nickname, _0x30f1bc === _0x3a3577 && (_0x56d656 = _0x4f0b28, _0x861a9e = _0x38699e, _0x4d9fc5.name = _0x3a3577.nickname, _0x4d9fc5.setTeam(_0x3a3577.team)), _0x3a3577.r = _0x3a3577.interpOldR = _0x3a3577.interpR = _0x2ed340(_0x3a3577);
+        }
+        _0x3a3577.mood = _0x4e70ea, _0x3a3577.oldEnergy = _0x3a3577.iEnergy, _0x17eae3 < _0x3a3577.energy && (_0x3a3577.energyChangeCounter = 1), _0x3a3577.energy = _0x17eae3;
+      }
+      const _0x52ef01 = _0x4001aa(_0x26fa79 || _0x30f1bc);
+      let _0x23ce85 = _0x27e714.getUint8(_0x2b6093++);
+      for (; _0x23ce85--;) {
+        const _0x55e0a6 = _0x27e714.getUint8(_0x2b6093++),
+          _0x143727 = _0x52ef01.sx + (15 & _0x55e0a6),
+          _0x18ca75 = _0x52ef01.sy + (_0x55e0a6 >> 4),
+          _0x507e57 = [];
+        for (let _0xc1fa51 = 0; _0xc1fa51 < 128; _0xc1fa51++) {
+          const _0xbf7b74 = _0x27e714.getUint8(_0x2b6093++),
+            _0x31a455 = 15 & _0xbf7b74,
+            _0x5e9b76 = _0xbf7b74 >> 4;
+          _0x507e57.push(_0x31a455, _0x5e9b76);
+        }
+        _0x5e0aec[64 * _0x18ca75 + _0x143727] = _0x507e57, _0x574f90(_0x507e57);
+      }
+      _0x30f1bc.segments[0];
+      let _0xcad676 = _0x27e714.getUint8(_0x2b6093++);
+      for (let _0x19636b = 0; _0x19636b < _0xcad676; _0x19636b++) {
+        const _0x4a6a3c = _0x27e714.getUint8(_0x2b6093++),
+          _0x53acef = _0x52ef01.sx + (15 & _0x4a6a3c),
+          _0x1d481d = _0x52ef01.sy + (_0x4a6a3c >> 4),
+          _0x1487b7 = _0x5e0aec[64 * _0x1d481d + _0x53acef],
+          _0x311b5d = _0x27e714.getUint8(_0x2b6093++) + 1;
+        let _0xa48d90 = 0,
+          _0x45bb78 = 0,
+          _0x4fad4e = 0;
+        for (let _0x400baa = 0; _0x400baa < _0x311b5d; _0x400baa++) {
+          const _0x4e0e47 = _0x27e714.getUint8(_0x2b6093 + _0x400baa),
+            _0x13804c = _0x1487b7[_0x4e0e47];
+          0 == _0x45bb78 ? (_0xa48d90 = _0x27e714.getUint8(_0x2b6093 + _0x311b5d + _0x4fad4e++), _0x45bb78 = 1, _0x1487b7[_0x4e0e47] = 15 & _0xa48d90) : (_0x1487b7[_0x4e0e47] = _0xa48d90 >> 4, _0x45bb78 = 0);
+          const _0x41052f = _0x4e0e47 % _0x48549a,
+            _0x3c8bb5 = Math.floor(_0x4e0e47 / _0x48549a),
+            _0x3feef4 = _0x1487b7[_0x4e0e47];
+          if (_0x3feef4 === _0x5df57f.empty) {
+            const _0x5f9323 = _0x53acef * _0x48549a + _0x41052f,
+              _0x325ec7 = _0x1d481d * _0x48549a + _0x3c8bb5,
+              _0x1c2e26 = _0x1487b7.ctx.getImageData(_0x41052f, _0x3c8bb5, 1, 1).data;
+            if (_0x2a89f4.push({
+                "x": _0x5f9323 * _0x26c6d0,
+                "y": _0x325ec7 * _0x26c6d0,
+                "dir": Math.random() > 0.5 ? -1 : 1,
+                "angle": Math.random() * Math.PI * 2,
+                "time": Date.now(),
+                "color": "rgba(" + _0x1c2e26.join(",") + ")"
+              }), _0x1487b7.ctx.clearRect(_0x41052f, _0x3c8bb5, 1, 1), _0x13804c === _0x5df57f.lava)
+              for (let _0x7865f3 = 0; _0x7865f3 < _0x600e07.length; _0x7865f3++) {
+                const _0xb7baa3 = _0x600e07[_0x7865f3],
+                  _0x4ddf1c = _0xb7baa3.segments[0];
+                _0x4abc58(_0x5f9323, _0x325ec7, _0xb7baa3.oldR, _0x4ddf1c) && (_0xb7baa3.diggedLavaAt = _0x42d123, _0xb7baa3 != _0x30f1bc && _0xb7baa3 != _0x26fa79 || (_0x534410 = 1));
+              }
+          } else {
+            const _0x6ee7db = _0x5dad13(_0x3feef4);
+            _0x1487b7.ctx.fillStyle = "rgb(" + _0x6ee7db.join(",") + ")", _0x1487b7.ctx.fillRect(_0x41052f, _0x3c8bb5, 1, 1);
+          }
+        }
+        _0x2b6093 += _0x311b5d, _0x2b6093 += Math.ceil(0.5 * _0x311b5d);
+      }
+      const _0x1d35d9 = _0x27e714.getUint16(_0x2b6093);
+      _0x2b6093 += 2, _0x46f427.setAttribute("stroke", _0x1d35d9 + " player" + (1 !== _0x1d35d9 ? "s" : "") + " online");
+      const _0x8c70df = _0x3bfee1.length,
+        _0x50f269 = _0x27e714.getUint16(_0x2b6093);
+      _0x2b6093 += 2, _0x4a4951 = 1023 & _0x50f269;
+      const _0x635527 = _0x50f269 >> 11,
+        _0x2a2784 = 1024 & _0x50f269;
+      _0x273fb7.setAttribute("stroke", _0x4a4951 + " worm" + (1 != _0x4a4951 ? "s" : ""));
+      let _0x55dc51 = -1;
+      if (_0x1c3096 && (_0x55dc51 = _0x27e714.getUint8(_0x2b6093++)), _0x18e6b2) {
+        let _0x2c0611 = 0,
+          _0x568aae = 0;
+        if (_0x2a2784) {
+          const _0x4c4f1c = _0x27e714.getUint8(_0x2b6093++);
+          _0x2c0611 = _0x4c4f1c >> 4, _0x568aae = 15 & _0x4c4f1c;
+        }
+        const _0x8544f2 = _0x635527 + _0x568aae,
+          _0x2c90e2 = [];
+        let _0x434f81 = 0,
+          _0x10fadc = 0;
+        for (let _0x7905b0 = 0; _0x7905b0 < _0x8544f2; _0x7905b0++) 0 == _0x10fadc ? (_0x434f81 = _0x27e714.getUint8(_0x2b6093++), _0x10fadc = 1, _0x2c90e2.push(15 & _0x434f81)) : (_0x2c90e2.push(_0x434f81 >> 4), _0x10fadc = 0);
+        for (let _0x334654 = 0; _0x334654 < _0x635527; _0x334654++) {
+          const _0xe63a13 = _0x2c90e2[_0x334654],
+            _0x24556f = _0x352372[_0xe63a13];
+          _0x24556f.score = _0x3848f4(_0x27e714.getUint16(_0x2b6093)), _0x2b6093 += 2, _0x24556f.isMe && _0x583b94(_0x24556f.score);
+        }
+        const _0x147c5e = [];
+        for (let _0x55f241 = 0; _0x55f241 < _0x568aae; _0x55f241++) {
+          const _0x1213fb = _0x2c90e2[_0x635527 + _0x55f241];
+          _0x147c5e.push(_0x1213fb);
+        }
+        _0x147c5e.sort(function(_0xd0026d, _0x5cca06) {
+          return _0x5cca06 - _0xd0026d;
+        });
+        for (let _0x11bfe1 = 0; _0x11bfe1 < _0x147c5e.length; _0x11bfe1++) {
+          const _0x19b439 = _0x147c5e[_0x11bfe1];
+          _0x352372[_0x19b439].lbItemEl.remove(), _0x352372.splice(_0x19b439, 1);
+        }
+        for (let _0x22bd12 = 0; _0x22bd12 < _0x2c0611; _0x22bd12++) {
+          const _0x51ab41 = _0x3848f4(_0x27e714.getUint16(_0x2b6093));
+          _0x2b6093 += 2;
+          const [_0xd2d671, _0xa6429b] = _0x2336da();
+          _0x5308d7(_0xa6429b, _0x51ab41, _0xd2d671);
+        }
+        _0x352372 = _0x352372.sort(function(_0x1237d0, _0x16ef5c) {
+          return _0x16ef5c.score - _0x1237d0.score;
+        }), _0x4083d5();
+      } else {
+        _0x352372.length = 0;
+        const _0x32e995 = Math.min(10, _0x4a4951);
+        for (let _0x3499b8 = 0; _0x3499b8 < _0x32e995; _0x3499b8++) {
+          const _0x1a0332 = _0x3848f4(_0x27e714.getUint16(_0x2b6093));
+          _0x2b6093 += 2;
+          const [_0x43da61, _0x291fc6] = _0x2336da();
+          _0x5308d7(_0x291fc6, _0x1a0332, _0x43da61);
+        }
+        _0x4083d5(), _0x18e6b2 = true;
+      }
+      if (_0x1c3096) {
+        const _0x46fa52 = _0x352372[_0x55dc51],
+          _0x48ed32 = _0x46fa52.lbItemEl;
+        _0x4d9fc5.score = _0x46fa52.score, _0x14a726.insertBefore(_0x4d9fc5.lbItemEl, _0x48ed32), _0x48ed32.remove(), _0x352372[_0x55dc51] = _0x4d9fc5;
+      }
+      let _0x439f78 = false,
+        _0x10fb39 = Math.floor((_0x27e714.byteLength - _0x2b6093) / 4);
+      _0x36f77b && _0x10fb39--;
+      for (let _0x53dc2e = 0; _0x53dc2e < _0x10fb39; _0x53dc2e++) {
+        const _0x139f02 = _0x27e714.getUint32(_0x2b6093);
+        _0x2b6093 += 4;
+        const _0x24d8dd = _0x600e07.findIndex(_0x55c406 => _0x55c406.id === _0x139f02),
+          _0x31241a = _0x600e07[_0x24d8dd];
+        _0x31241a.isDead = true, _0x31241a.diedAt = _0x42d123, _0x31241a.id = -1, _0x31241a === _0x30f1bc && (_0x439f78 = true, _0x4d9fc5.score = 0, _0x4d9fc5.percent = 0, _0x1acd51(), _0x3c9e42(false));
+      }
+      let _0x1cf62c = _0x27e714.byteLength - _0x2b6093;
+      if (_0x439f78) {
+        let _0x1b9a67 = -1;
+        if (_0x36f77b) {
+          const _0x2c4654 = _0x27e714.getUint32(_0x2b6093);
+          _0x2b6093 += 4, _0x26fa79 = _0x600e07.find(_0x540594 => _0x540594.id === _0x2c4654), _0x22a69a.setAttribute("stroke", _0x54c0ce[_0x2c4654] || "An unnamed worm"), _0x1cf62c -= 4;
+        } else _0x1b9a67 = _0x27e714.getUint8(_0x2b6093++), 0 === _0x1b9a67 && _0x22a69a.setAttribute("stroke", "Walls"), _0x1cf62c--;
+        _0x22a69a.style.visibility = _0x450727.style.visibility = _0x22a69a.previousElementSibling.style.visibility = 1 === _0x1b9a67 ? "hidden" : "", 1 === _0x1cf62c && (_0x3960c7 = _0x27e714.getUint8(_0x2b6093++)), _0x369b80.style.display = "", _0x2aaf3d.classList.add("btn-disabled"), _0x160376(), _0x7b638f(), _0x35beb4(), (function() {
+          for (; _0x5d723c.children.length > 1;) _0x5d723c.children[1].remove();
+          const _0x372461 = [
+            ["Max points", _0x27ec78(_0x4ed6b3)]
+          ];
+          _0x3e16bb > 0 && _0x372461.push(["Gold digged", _0x3e16bb.toLocaleString("en-US")]), _0x3960c7 > 0 && _0x372461.push(["Players destroyed", 255 === _0x3960c7 ? _0x3960c7 - 1 + "+" : _0x3960c7]), _0x372461.push(["Time alive", _0x120c1c(Date.now() - _0x211aa4)]);
+          for (let _0x53b0ca = 0; _0x53b0ca < _0x372461.length; _0x53b0ca++) {
+            const [_0x254e4d, _0x138345] = _0x372461[_0x53b0ca], _0xff366a = document.createElement("span");
+            _0xff366a.setAttribute("stroke", _0x254e4d + ": " + _0x138345), _0x5d723c.appendChild(_0xff366a);
+          }
+        }());
+      } else {
+        if (!_0x30f1bc.isDead) {
+          if (_0x1cf62c % 2 != 0) {
+            const _0x38d049 = _0x27e714.getUint8(_0x2b6093++);
+            _0x3ad8a1(_0x38d049), _0x403b0e += _0x38d049, _0x3e16bb += _0x38d049, _0x1cf62c--;
+          }
+          if (2 === _0x1cf62c) {
+            const _0x290f9c = _0x3848f4(_0x27e714.getUint16(_0x2b6093));
+            _0x2b6093 += 2, _0x583b94(_0x290f9c);
+          }
+        }
+      }
+      for (let _0x31dc4b = _0x600e07.length - 1; _0x31dc4b >= 0; _0x31dc4b--) {
+        const _0x52cb41 = _0x600e07[_0x31dc4b];
+        _0x52cb41.isDead || _0x22e031[_0x52cb41.id] || _0x600e07.splice(_0x31dc4b, 1);
+      }
+      _0x8c70df === _0x3bfee1.length && _0x8c70df > 0 && _0x3bfee1.push(_0x3bfee1[_0x3bfee1.length - 1]);
+  }
+}
+
+function _0x504edd() {
+  console.log("Disconnected."), _0x2c57cb(_0x81c091.url);
+}
+let _0x39411e = 0;
+
+function _0x5f0f6b(_0x522a7d) {
+  if (_0x81c091 && _0x81c091.readyState === _0x81c091.OPEN) {
+    if (_0x1f334c += _0x522a7d.byteLength, _0x5c4116) {
+      const _0x119dce = new Uint8Array(_0x522a7d.buffer);
+      for (let _0x1874f8 = 0; _0x1874f8 < _0x119dce.length; _0x1874f8++) _0x119dce[_0x1874f8] ^= _0x5c4116[(_0x39411e + _0x1874f8) % _0x5c4116.length];
     }
-    const aoz = localStorage[aot(596)];
-    tg = void 0 !== aoz && parseInt(aoz) < 32, localStorage[aot(596)] = 32, aos[aot(903)] = aou;
-  }()), document[aq(644)](aq(783))[aq(522)][2][aq(830)]["display"] = aq(501);
-})()));
+    _0x39411e = (_0x39411e + 1) % 1000, _0x5c4116 = new Uint8Array(_0x522a7d.buffer), _0x81c091.send(_0x522a7d);
+  }
+}
+const _0x45b928 = 2 * Math.PI;
+
+function _0x34c76f(_0x36e697) {
+  if (!_0x30f1bc || _0x30f1bc.isDead) return;
+  (_0x36e697 %= _0x45b928) < 0 && (_0x36e697 += _0x45b928), _0x36e697 /= _0x45b928, _0x36e697 = Math[0.75 === _0x36e697 ? "ceil" : "floor"](4095 * _0x36e697);
+  const _0x1820e9 = new DataView(new ArrayBuffer(2));
+  _0x1820e9.setUint8(0, _0x168cd0(1, _0x36e697 >> 8)), _0x1820e9.setUint8(1, _0x36e697), _0x5f0f6b(_0x1820e9);
+}
+let _0x5aed42 = {};
+document.onmousedown = function(_0x5dc7de) {
+  _0x5aed42[_0x5dc7de.button] = true, _0x38f741();
+}, document.onmouseup = function(_0x18cd16) {
+  delete _0x5aed42[_0x18cd16.button], _0x38f741();
+}, _0x39e650.onmousemove = function(_0x3b3185) {
+  _0x270468.checked || _0x34c76f(Math.atan2(_0x3b3185.clientY - window.innerHeight / 2, _0x3b3185.clientX - window.innerWidth / 2));
+};
+const _0x51ef71 = document.querySelector(".angry-btn"),
+  _0x17ca8f = document.querySelector(".sad-btn"),
+  _0x5ec28b = document.querySelector(".joystick"),
+  _0x5ed5b7 = document.querySelector(".joystick-knob");
+let _0x308366, _0x129df8, _0xc6a4b9 = null,
+  _0x1a7b7a = null,
+  _0x570b18 = null;
+if (_0x300310) {
+  let _0x579003, _0x4b0a10;
+
+  function _0x3cce7e() {
+    _0x5ec28b.style.left = _0x579003 + "px", _0x5ec28b.style.top = _0x4b0a10 + "px";
+  }
+
+  function _0x44698a(_0x4068b0) {
+    return [_0x4068b0.clientX / _0x3e54c8, _0x4068b0.clientY / _0x3e54c8];
+  }
+  _0x39e650.onmousemove = null, document.ontouchstart = function(_0x43b2cf) {
+    const _0x2e4dea = _0x43b2cf.changedTouches[0];
+    let _0x52e0ca = _0x2e4dea.identifier;
+
+    function _0x257960(_0xef70e7) {
+      return _0x43b2cf.target === _0xef70e7 || _0x43b2cf.target.parentNode === _0xef70e7;
+    }
+    _0x43b2cf.target === _0x39e650 ? null === _0x570b18 && (_0x5ed5b7.style.width = _0x5ed5b7.style.transform = "0", _0x5ec28b.style.display = "", [_0x579003, _0x4b0a10] = _0x44698a(_0x2e4dea), _0x3cce7e(), _0x570b18 = _0x52e0ca) : _0x257960(_0x51ef71) ? null === _0x1a7b7a && (document.onmousedown({
+      "button": 0
+    }), _0x1a7b7a = _0x52e0ca) : _0x257960(_0x17ca8f) && null === _0xc6a4b9 && (document.onmousedown({
+      "button": 2
+    }), _0xc6a4b9 = _0x52e0ca);
+  }, document.ontouchmove = function(_0x58c0d2) {
+    const _0x5f5c71 = _0x58c0d2.changedTouches[0];
+    if (_0x5f5c71.identifier === _0x570b18) {
+      const [_0x40d8c4, _0x3e533e] = _0x44698a(_0x5f5c71), _0x583cc2 = _0x40d8c4 - _0x579003, _0x5269f3 = _0x3e533e - _0x4b0a10, _0x3157e3 = _0x5ec28b.getBoundingClientRect();
+      let _0x178ec5 = Math.hypot(_0x583cc2, _0x5269f3);
+      const _0x42099b = _0x3157e3.width / 2 / _0x3e54c8;
+      if (_0x178ec5 > _0x42099b) {
+        if (!_0x45a0c5.checked) {
+          const _0x894475 = _0x178ec5 - _0x42099b;
+          _0x579003 += _0x894475 * _0x583cc2 / _0x178ec5, _0x4b0a10 += _0x894475 * _0x5269f3 / _0x178ec5, _0x3cce7e();
+        }
+        _0x178ec5 = _0x42099b;
+      }
+      const _0x1db10a = Math.atan2(_0x5269f3, _0x583cc2);
+      _0x34c76f(_0x1db10a), _0x5ed5b7.style.transform = "rotate(" + _0x1db10a + "rad)", _0x5ed5b7.style.width = _0x178ec5 + "px";
+    }
+  }, _0x2c8c09.ontouchstart = function(_0x4e7305) {
+    const _0x2f4257 = _0x4e7305.changedTouches[0];
+    _0x2f4257.clientX < window.innerWidth / 2 ? (_0x308366 = _0x2f4257.identifier, null === _0x129df8 && (_0x6a2f21 = 2)) : (_0x129df8 = _0x2f4257.identifier, _0x6a2f21 = 1);
+  }, window.ontouchend = function(_0x738bcc) {
+    const _0x835f6e = _0x738bcc.changedTouches[0].identifier;
+    _0x835f6e === _0x308366 ? (_0x308366 = null, _0x6a2f21 = null !== _0x129df8 ? 1 : 0) : _0x835f6e === _0x129df8 && (_0x129df8 = null, _0x6a2f21 = null !== _0x308366 ? 2 : 0), _0x835f6e === _0x1a7b7a ? (_0x1a7b7a = null, document.onmouseup({
+      "button": 0
+    })) : _0x835f6e === _0xc6a4b9 ? (_0xc6a4b9 = null, document.onmouseup({
+      "button": 2
+    })) : _0x835f6e === _0x570b18 && (_0x5ec28b.style.display = "none", _0x570b18 = null);
+  };
+}
+
+function _0x38f741() {
+  let _0x44b868;
+  _0x44b868 = _0x5aed42[0] || _0xd875fd.Space ? 1 : _0x5aed42[2] || _0xd875fd.ShiftLeft || _0xd875fd.ShiftRight ? 2 : 0, _0x6a2f21 = _0x44b868, _0x30f1bc && function(_0x2b50c2) {
+    const _0x34245e = new Uint8Array(1);
+    _0x34245e[0] = _0x168cd0(2, _0x2b50c2), _0x5f0f6b(_0x34245e);
+  }(_0x44b868);
+}
+
+function _0x574f90(_0x247fc6) {
+  const _0x4413ad = document.createElement("canvas");
+  _0x4413ad.width = _0x4413ad.height = _0x48549a;
+  const _0x130749 = _0x4413ad.getContext("2d"),
+    _0x1ac589 = _0x130749.createImageData(_0x48549a, _0x48549a);
+  for (let _0x2da87f = 0; _0x2da87f < _0x247fc6.length; _0x2da87f++) {
+    if (_0x247fc6[_0x2da87f] === _0x5df57f.empty) continue;
+    const _0x2fdfab = _0x5dad13(_0x247fc6[_0x2da87f]),
+      _0x5dace1 = 4 * _0x2da87f;
+    _0x1ac589.data[_0x5dace1] = _0x2fdfab[0], _0x1ac589.data[_0x5dace1 + 1] = _0x2fdfab[1], _0x1ac589.data[_0x5dace1 + 2] = _0x2fdfab[2], _0x1ac589.data[_0x5dace1 + 3] = 255;
+  }
+  _0x130749.putImageData(_0x1ac589, 0, 0), _0x247fc6.canvas = _0x4413ad, _0x247fc6.ctx = _0x130749, _0x247fc6.fogCanvas = document.createElement("canvas"), _0x247fc6.fogCanvas.width = _0x247fc6.fogCanvas.height = _0x48549a, _0x247fc6.fogCtx = _0x247fc6.fogCanvas.getContext("2d"), _0x247fc6.fogBgCanvas = document.createElement("canvas"), _0x247fc6.fogBgCanvas.width = _0x247fc6.fogBgCanvas.height = _0x48549a, _0x247fc6.fogBgCtx = _0x247fc6.fogCanvas.getContext("2d");
+}
+let _0x534410 = 0,
+  _0x6b0948 = 0,
+  _0x521fce = 1,
+  _0x3fe016 = 1,
+  _0x33c6b2 = null,
+  _0x29ae9c = null,
+  _0x56d656 = 0,
+  _0x861a9e = 0;
+document.onmousewheel = function(_0x1dcd06) {
+  _0x1dcd06.deltaY < 0 ? _0x521fce *= 1.1 : _0x521fce *= 0.9, _0x521fce = Math.max(1, Math.min(5, _0x521fce));
+};
+let _0x24df24 = Date.now();
+const _0x340b44 = [],
+  _0x589dd8 = function(_0x2b1fe3 = 80) {
+    const _0x581237 = _0x2b1fe3 / 2,
+      _0x299deb = document.createElement("canvas");
+    _0x299deb.width = _0x299deb.height = _0x2b1fe3;
+    const _0x2acbe1 = _0x299deb.getContext("2d");
+    return _0x2acbe1.strokeStyle = "rgba(0,0,0,0.07)", _0x2acbe1.beginPath(), _0x2acbe1.moveTo(_0x581237, 0), _0x2acbe1.lineTo(_0x581237, _0x2b1fe3), _0x2acbe1.moveTo(0, _0x581237), _0x2acbe1.lineTo(_0x2b1fe3, _0x581237), _0x2acbe1.lineWidth = 2, _0x2acbe1.stroke(), _0x2acbe1.createPattern(_0x299deb, "repeat");
+  }();
+
+function _0x22c229() {
+  let _0x58597f = false;
+  for (let _0x31fcdd = 0; _0x31fcdd < _0x352372.length; _0x31fcdd++) {
+    const _0xc2296d = _0x352372[_0x31fcdd];
+    _0xc2296d.update(), _0xc2296d.isMe && (_0x58597f = true);
+  }
+  if (_0x58597f || _0x4d9fc5.update(), _0x3467f9) {
+    const _0x131f40 = Date.now() / 80,
+      _0x1e4ff3 = 7 * Math.sin(_0x131f40),
+      _0x4b64e7 = 0.15 * Math.abs(Math.sin(_0x131f40 / 4)) + 0.85;
+    _0x1f10aa.style.transform = "rotate(" + _0x1e4ff3 + "deg) scale(" + _0x4b64e7 + ")";
+  } else _0x1f10aa.style.transform = "none";
+  !(function() {
+    let _0x519713;
+    if (_0x3880e2 >= _0x2c79c4.length) _0x519713 = "You have claimed all your rewards.";
+    else {
+      const _0x299cbf = _0x405b8c - Date.now();
+      _0x299cbf < 0 ? (_0x519713 = "Available every " + _0x685918(_0x3152df), _0x4fd577.rewardSent || _0x4fd577.classList.remove("btn-disabled")) : _0x519713 = "Available again in " + _0x685918(_0x299cbf);
+    }
+    _0x1e0bb0.getAttribute("stroke") !== _0x519713 && _0x1e0bb0.setAttribute("stroke", _0x519713);
+  }());
+  const [_0xe2b65f, _0x2bf3a2] = _0x6870d5();
+  _0x1f17e2.faceSkin = _0xe2b65f, _0x1f17e2.bodySkin = _0x2bf3a2;
+  const _0xd3ea6b = Date.now();
+  _0x6b0948 = (_0xd3ea6b - _0x24df24) / 1000, _0x24df24 = _0xd3ea6b, _0x534410 -= _0x6b0948 / 0.3, _0x534410 = Math.max(0, _0x534410), _0x540ea8.fillStyle = "#522e00", _0x540ea8.fillRect(0, 0, _0x39e650.width, _0x39e650.height);
+  for (let _0x27212 = 0; _0x27212 < _0x600e07.length; _0x27212++) _0x600e07[_0x27212].interpolate();
+  if (_0x3fe016 += 0.3 * (_0x521fce - _0x3fe016), _0x30f1bc) {
+    const _0x11d462 = _0x26fa79 || _0x30f1bc,
+      {
+        sx: _0x13cfb3,
+        sy: _0x55db0c,
+        ex: _0xf9faa0,
+        ey: _0x34e685,
+        minX: _0x29730c,
+        minY: _0x2b70e1,
+        maxX: _0x469954,
+        maxY: _0x193d3,
+        viewWidth: _0x1fee8f,
+        viewHeight: _0x172076
+      } = _0x4001aa(_0x11d462, true);
+    null === _0x33c6b2 ? (_0x33c6b2 = _0x1fee8f, _0x29ae9c = _0x172076) : (_0x33c6b2 += 0.1 * (_0x1fee8f - _0x33c6b2), _0x29ae9c += 0.1 * (_0x172076 - _0x29ae9c));
+    const _0xf2d327 = _0x11d462.segments[0],
+      _0x277eb1 = 2 * Math.random() * Math.PI,
+      _0x1a8762 = 6 * _0x534410;
+    let _0x24a56f = _0xf2d327.interpX,
+      _0x30fd34 = _0xf2d327.interpY;
+    if (_0x26fa79) {
+      const _0x406228 = (Date.now() - _0x30f1bc.diedAt) / 500;
+      if (_0x406228 < 1) {
+        const _0x4ea417 = _0x30f1bc.segments[0],
+          _0x8c32f3 = _0x26fa79.segments[0];
+        _0x24a56f = _0x4ea417.interpX + (_0x8c32f3.interpX - _0x4ea417.interpX) * _0x406228, _0x30fd34 = _0x4ea417.interpY + (_0x8c32f3.interpY - _0x4ea417.interpY) * _0x406228;
+      }
+    }
+
+    function _0x41013d() {
+      _0x540ea8.translate(_0x39e650.width / 2 + _0x1a8762 * Math.cos(_0x277eb1), _0x39e650.height / 2 + _0x1a8762 * Math.sin(_0x277eb1));
+      const _0x133880 = Math.max(_0x39e650.width / _0x33c6b2, _0x39e650.height / _0x29ae9c);
+      _0x540ea8.scale(_0x133880, _0x133880), _0x540ea8.translate(-_0x24a56f, -_0x30fd34);
+    }
+    _0x540ea8.save(), _0x540ea8.beginPath(), _0x540ea8.rect(0, 0, _0x39e650.width, _0x39e650.height), _0x41013d(), _0x540ea8.fillStyle = _0x589dd8, _0x540ea8.fill(), _0x540ea8.imageSmoothingEnabled = false;
+    for (let _0x57f922 = _0x55db0c - 1; _0x57f922 <= _0x34e685 + 1; _0x57f922++)
+      for (let _0xd7f9de = _0x13cfb3 - 1; _0xd7f9de <= _0xf9faa0 + 1; _0xd7f9de++) {
+        const _0x29b55a = _0x37b83b * _0xd7f9de,
+          _0x4b2e27 = _0x37b83b * _0x57f922,
+          _0x2226e0 = _0x5e0aec[64 * _0x57f922 + _0xd7f9de];
+        _0x2226e0 && _0x540ea8.drawImage(_0x2226e0.canvas, _0x29b55a, _0x4b2e27, _0x37b83b, _0x37b83b);
+      }
+    _0x11d462 && _0x4001aa(_0x11d462);
+    for (let _0x2c2f62 = _0x600e07.length - 1; _0x2c2f62 >= 0; _0x2c2f62--) _0x600e07[_0x2c2f62].draw(_0x2c2f62, _0x540ea8);
+    _0x540ea8.lineWidth = 1, _0x540ea8.beginPath(), _0x540ea8.rect(0, 0, 30720, 30720), _0x540ea8.restore(), _0x540ea8.rect(0, 0, _0x39e650.width, _0x39e650.height), _0x540ea8.fillStyle = "#222222", _0x540ea8.fill("evenodd"), _0x1ed826 && _0x1ed826(), _0x540ea8.save(), _0x41013d();
+    for (let _0x59f30d = _0x2a89f4.length - 1; _0x59f30d >= 0; _0x59f30d--) {
+      const _0x2b90ec = _0x2a89f4[_0x59f30d],
+        _0x24e4a9 = (_0xd3ea6b - _0x2b90ec.time) / 600;
+      if (_0x24e4a9 >= 1) _0x2a89f4.splice(_0x59f30d, 1);
+      else {
+        _0x540ea8.save(), _0x540ea8.translate(_0x2b90ec.x, _0x2b90ec.y), _0x540ea8.rotate(_0x2b90ec.dir * _0x24e4a9 * Math.PI);
+        const _0x1d9d6b = _0x26c6d0 * (1 + 2 * _0x24e4a9);
+        _0x540ea8.fillStyle = _0x2b90ec.color, _0x540ea8.globalAlpha = 0.75 * (1 - _0x24e4a9), _0x540ea8.fillRect(0, 0, _0x1d9d6b, _0x1d9d6b), _0x540ea8.restore();
+      }
+    }
+    for (let _0x304639 = 0; _0x304639 < _0x600e07.length; _0x304639++) _0x600e07[_0x304639].drawEnergyAndNickname(_0x540ea8);
+    _0x540ea8.restore();
+  }
+  for (let _0x9994d = 0; _0x9994d < _0x16234b.length; _0x9994d++) _0x16234b[_0x9994d].render();
+  if (_0x340b44.length > 0) {
+    _0x524d74.style.display = "", _0x3e1028.clearRect(0, 0, _0x524d74.width, _0x524d74.height);
+    const _0x2634b5 = _0x524d74.height / 657;
+    _0x3e1028.save(), _0x3e1028.translate(_0x524d74.width / 2, 0), _0x3e1028.scale(_0x2634b5, _0x2634b5);
+    const _0x44d299 = 10,
+      _0x2b4f3d = 6;
+    _0x3e1028.beginPath();
+    for (let _0x26601c = _0x340b44.length - 1; _0x26601c >= 0; _0x26601c--) {
+      const _0x5a529e = _0x340b44[_0x26601c];
+      _0x5a529e.spawnTime > 0 ? _0x5a529e.spawnTime -= _0x6b0948 : (_0x5a529e.vy += 8 * _0x6b0948, _0x5a529e.y += _0x5a529e.vy * _0x6b0948 * 80, _0x5a529e.x += _0x5a529e.vx * _0x6b0948 * 100, _0x5a529e.angle += _0x5a529e.angleSpeed, _0x5a529e.y > 657 && (_0x5a529e.bounced ? _0x5a529e.vy > 0 && _0x340b44.splice(_0x26601c, 1) : (_0x5a529e.vy *= -(0.2 * Math.random() + 0.55), _0x5a529e.bounced = true)), _0x3e1028.save(), _0x3e1028.translate(_0x5a529e.x, _0x5a529e.y), _0x3e1028.rotate(_0x5a529e.angle), _0x3e1028.moveTo(_0x44d299, 0), _0x3e1028.ellipse(0, 0, _0x44d299, _0x2b4f3d, 0, 0, 2 * Math.PI), _0x3e1028.restore());
+    }
+    _0x3e1028.lineWidth = 6, _0x3e1028.strokeStyle = "#a7a217", _0x3e1028.stroke(), _0x3e1028.fillStyle = "#e9e21c", _0x3e1028.fill(), _0x3e1028.restore();
+  } else _0x524d74.style.display = "none";
+  window.requestAnimationFrame(_0x22c229);
+}
+const _0x37862b = document.querySelectorAll(".coming-soon");
+for (let _0x35ca2b = 0; _0x35ca2b < _0x37862b.length; _0x35ca2b++) {
+  const _0x244981 = _0x37862b[_0x35ca2b];
+  _0x244981.onclick = function() {}, _0x244981.classList.add("btn-disabled"), _0x244981.style.pointerEvents = "all", _0x244981.style.cursor = "default", _0x244981.setAttribute("tooltip", "Coming soon");
+}
+const _0x32b96e = _0x4fc487.querySelector(".dialog-content");
+_0x32b96e.innerHTML = "", (function() {
+  let _0x542054 = "";
+  for (let _0x5a100f = 0; _0x5a100f < _0x59489b.length; _0x5a100f++) {
+    const {
+      title: _0x2016eb,
+      content: _0x243202
+    } = _0x59489b[_0x5a100f];
+    _0x542054 += "<span class=\"log-title\" stroke=\"" + _0x2016eb + "\"></span><div class=\"log-content\">", _0x243202.forEach(_0x307a50 => {
+      _0x542054 += "<div stroke=\"- " + _0x307a50 + "\"></div>";
+    }), _0x542054 += "</div><div class=\"log-line\"></div>";
+  }
+  const _0x81c4e5 = localStorage.changelog;
+  _0x3467f9 = undefined !== _0x81c4e5 && parseInt(_0x81c4e5) < 32, localStorage.changelog = 32, _0x32b96e.innerHTML = _0x542054;
+}()), document.querySelector(".tabs").children[2].style.display = "none";
